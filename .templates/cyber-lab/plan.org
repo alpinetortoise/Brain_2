@@ -1,0 +1,10 @@
+* Hosts
+| | |
+* IOCs provided
+* Evidence
+* Initial Access
+* Privilege Escalation
+* Lateral Movement
+* Persistence
+* Post Exploitation
+* Signatures
