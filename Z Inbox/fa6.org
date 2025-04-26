@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       f9eb144a-516f-4097-b5a9-bfe09a69d530
-:END:
-#+title: FA6
-        #+created: [2025-03-28 Fri 09:17]
-        #+last_modified: [2025-03-28 Fri 09:17]

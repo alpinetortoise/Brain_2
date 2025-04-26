@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       ae9fc4ba-b78c-4212-9314-983bf2552b0f
-:END:
-#+title: nix (language)
-        #+created: [2025-03-05 Wed 06:25]
-        #+last_modified: [2025-03-05 Wed 06:25]

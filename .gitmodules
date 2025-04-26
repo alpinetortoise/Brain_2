@@ -1,0 +1,21 @@
+[submodule "07 Cyber/07.01 Work"]
+	path = 07 Cyber/07.01 Work
+	url = git@github.com:alpinetortoise/Work.git
+[submodule "06 Theology"]
+	path = 06 Theology
+	url = git@git.gilead.jpc.id.au:alpinetortoise/Theology.git
+[submodule "02 Journal"]
+	path = 02 Journal
+	url = git@git.gilead.jpc.id.au:alpinetortoise/Journals.git
+[submodule "04 Literature"]
+	path = 04 Literature
+	url = git@git.gilead.jpc.id.au:alpinetortoise/LitNotes.git
+[submodule "05 General/05.03 Projects"]
+	path = 05 General/05.03 Projects
+	url = git@git.gilead.jpc.id.au:alpinetortoise/Projects.git
+[submodule "05 General/05.02 Hobbies"]
+	path = 05 General/05.02 Hobbies
+	url = git@git.gilead.jpc.id.au:alpinetortoise/Hobbies.git
+[submodule "05 General/05.04 Dotfiles"]
+	path = 05 General/05.04 Dotfiles
+	url = git@git.gilead.jpc.id.au:alpinetortoise/dots.git

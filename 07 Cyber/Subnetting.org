@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       c101295e-0351-4b3f-a0cc-f0e1252cccae
+:END:
+#+title: Subnetting
+* Subnetting
+
+A network address is split into two distinct parts, the network part and the host part. Classless Inter-Domain Routing (**CIDR**) notation tells us how many bits are reserved for the network address.
+
+Configuring subnets comes down to choosing an appropriate sized subnet for our needs. This choice can either be made by choosing the number of subnets required, or by creating subnets that only have the number of hosts required for the network.
+
+For the purposes of learning we will be working from the subnet `192.168.0.64/26`
+
+** Subnets required.
+
+The simplest way of dividing up a host space is to do so by the number of subnets required. If there are `x` subnets required then the number of extra bits to reserve for the subnets is defined by the lowest `y` whereby $2^y \ge x$
+
+Thus if we required 4 subnets on our network, we'd reserve another 2 bits. This would make the **CIDR** /28
+
+Our significant octet is the final one, currently `64` to evaluate these new subnets it is simplest to convert to binary. `0100 0000` is the binary representation of the decimal `64` so the two bits that we will reserve are the 5th and 6th bits. If we map out what our address space would look like it will look something like this:
+
+|       Address | 128 | 64 | 32      | 16      | 8 | 4 | 2 | 1 |
+|---------------+-----+----+---------+---------+---+---+---+---|
+|  192.168.0.64 |   0 |  1 | ***0*** | ***0*** | 0 | 0 | 0 | 0 |
+|  192.168.0.80 |   0 |  1 | ***0*** | ***1*** | 0 | 0 | 0 | 0 |
+|  192.168.0.96 |   0 |  1 | ***1*** | ***0*** | 0 | 0 | 0 | 0 |
+| 192.168.0.112 |   0 |  1 | ***1*** | ***1*** | 0 | 0 | 0 | 0 |
+
+** Hosts per Subnet
+
+This methodology is also called variable length subnetting. However it is better to think of this as subnetting based on the number of hosts required per subnet. As with dividing the network by subnets required this can also be expressed in mathematical notation. In this case we are reserving bits for the host space, the number of bits required for the host space is also constrained by our required two addresses for broadcast and network respectively. Thus the equation can be expressed as $2^y \ge x + 2.$ If for instance we have a network which we require; 
+ - 1 x 12 host network
+ - 1 x 8 host network
+ - 1 x 5 host network
+ - 1 x 2 host network
+
+For the first and second networks we will require 4 bits, for the third we will require only three and for the last we will require 2.
+
+| Address          | 128 | 64 | 32      | 16      |       8 |       4 | 2 | 1 |
+|------------------+-----+----+---------+---------+---------+---------+---+---|
+| 192.168.0.64/28  |   0 |  1 | ***0*** | ***0*** |       0 |       0 | 0 | 0 |
+| 192.168.0.80/28  |   0 |  1 | ***0*** | ***1*** |       0 |       0 | 0 | 0 |
+| 192.168.0.96/29  |   0 |  1 | ***1*** | ***0*** | ***0*** |       0 | 0 | 0 |
+| 192.168.0.104/30 |   0 |  1 | ***1*** | ***0*** | ***1*** | ***0*** | 0 | 0 |
+
+As we can see the number of address that we have usable is far less than if we simply were subnetting based on number of networks required. The advantages of doing this are easily apparent, in comparison such a use case would not be as extensible as simply assigning equidistant subnets.
