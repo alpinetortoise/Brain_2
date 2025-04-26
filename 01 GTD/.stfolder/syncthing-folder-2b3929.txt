@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: gcdz5-zyfku
-created: 2025-04-26T11:03:38+10:00
