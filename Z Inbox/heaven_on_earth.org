@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       8eb98ce7-558a-43a9-8a59-300209b46cac
-:END:
-#+title: heaven on earth
-        #+created: [2024-11-21 Thu 21:04]
-        #+last_modified: [2024-11-21 Thu 21:04]
-

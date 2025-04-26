@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       d4fa0cc1-b6aa-4849-a3e2-c86e1eaef6e0
-:END:
-#+title: Altar
-        #+created: [2024-11-24 Sun 14:23]
-        #+last_modified: [2024-11-24 Sun 14:23]

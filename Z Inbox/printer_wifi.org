@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       5038cd82-1df6-4c00-9ebd-f7f23a13b89a
-:END:
-#+title: Printer WiFi
-        #+created: [2024-11-21 Thu 09:03]
-        #+last_modified: [2024-11-21 Thu 09:03]
-To reset the printer WiFi press the WiFi button 7 times, then do WPS on AP and then press and hold WiFi button for 2 secs

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       271cd27d-c9ad-4ca5-9423-87e3a289b3b3
-:END:
-#+title: Meat eating in the Old Testament
-        #+created: [2024-11-24 Sun 14:21]
-        #+last_modified: [2024-11-24 Sun 14:21]
-[[[id:LEB/09-1SA14][1Sa 14]]:31-35] has the people of Israel eating meat with the blood still in it, [[id:a806ff04-f778-4d95-9837-4c7c1eeb63b9][Saul]]'s response and corrective is to establish an [[id:d4fa0cc1-b6aa-4849-a3e2-c86e1eaef6e0][Altar]] in order that the consumption of the meat might be done in accordance with the program of worship

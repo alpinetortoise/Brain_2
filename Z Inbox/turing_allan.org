@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       ae8ebbe6-3103-42fd-b92d-5150d6a5de43
-:END:
-#+title: Turing, Allan
-        #+created: [2024-11-08 Fri 18:44]
-        #+last_modified: [2024-11-08 Fri 18:44]
-[[id:589b86e7-0bd7-41bd-a79b-964395ff146c][Biographies]]
-[[id:609bacb2-1380-4fcc-8b39-851d949f9587][Computation]]

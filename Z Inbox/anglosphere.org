@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       4fce0c55-fc3c-4030-b5c1-8e7aa92975ba
-:END:
-#+title: Anglosphere
-        #+created: [2024-11-21 Thu 21:09]
-        #+last_modified: [2024-11-21 Thu 21:09]
-

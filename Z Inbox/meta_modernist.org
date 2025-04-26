@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       fd71b408-0b9c-49ad-bac6-c19abdb97149
-:END:
-#+title: Meta-Modernist
-        #+created: [2024-11-24 Sun 09:26]
-        #+last_modified: [2024-11-24 Sun 09:26]

@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       45edd769-f914-4def-8c02-0b2c76b153a5
-:END:
-#+title: New-Thought
-        #+created: [2024-11-24 Sun 14:07]
-        #+last_modified: [2024-11-24 Sun 14:07]

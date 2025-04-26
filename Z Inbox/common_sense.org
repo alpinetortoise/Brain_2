@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       22377a87-2138-4382-9be8-f1c6b1764e77
-:END:
-#+title: common sense
-        #+created: [2024-11-24 Sun 14:18]
-        #+last_modified: [2024-11-24 Sun 14:18]

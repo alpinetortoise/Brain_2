@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       6b365d07-f1f6-4935-9737-307181d84e65
-:END:
-#+title: unplugging
-        #+created: [2024-11-13 Wed 20:05]
-        #+last_modified: [2024-11-13 Wed 20:05]
-
-Some people talk of a real [[id:a69acec1-2c33-4538-a67a-7c5ee2b991c0][existential dread]] when they discuss their experiences with unplugging

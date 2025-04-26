@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       4a1452a1-54aa-46b7-bf31-4b590c9fb62a
-:END:
-#+title: Recipes
-        #+created: [2024-11-24 Sun 07:43]
-        #+last_modified: [2024-11-24 Sun 07:43]
-[[id:7d2f6030-22ad-43c2-a633-a65f8b8838d1][Sourdough starter]]

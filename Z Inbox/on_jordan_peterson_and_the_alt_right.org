@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       40f244a6-9bc6-4a66-b13c-4278173e9469
-:END:
-#+title: On Jordan Peterson and the Alt-Right
-        #+created: [2024-11-13 Wed 21:10]
-        #+last_modified: [2024-11-13 Wed 21:10]
-It seems somewhat strange to me that commentary has come down so hard on [[id:9c7108b6-ab3f-41aa-9f0a-1696b73910f3][Peterson]] with regards to his relationship with the [[id:e66388f2-27f1-4ff0-88f3-ea2eac31438f][Alt-Right]] in some ways it was actually dealing with his [[id:e6a0a7c4-3b11-4ca1-9d0b-a8f5c360e848][reading list]] that I believe was part of the catalyst that helped me overcome my biases and [[id:50bb03fc-3ef6-4826-94cf-2be8bfbfc5c2][deconstruct]] in a healthy way, that and the realisation of needing to [[id:6b365d07-f1f6-4935-9737-307181d84e65][unplug]]

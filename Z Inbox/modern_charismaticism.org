@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       5f8fe3c1-a0a2-49ca-957a-e012646c0080
-:END:
-#+title: Modern Charismaticism
-        #+created: [2024-11-21 Thu 20:10]
-        #+last_modified: [2024-11-21 Thu 20:10]
-

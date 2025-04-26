@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       42650ac0-ea2e-4167-8808-8cfe0842e4e5
-:END:
-#+title: society
-        #+created: [2024-11-21 Thu 20:46]
-        #+last_modified: [2024-11-21 Thu 20:46]
-

@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       4119ed29-3a38-43e0-a1ac-cf13018ef55c
-:END:
-#+title: offspring
-        #+created: [2024-11-24 Sun 10:40]
-        #+last_modified: [2024-11-24 Sun 10:40]

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       034c93d0-2eb6-4473-9316-4db87bb1391f
-:END:
-#+title: history
-        #+created: [2024-11-21 Thu 21:26]
-        #+last_modified: [2024-11-21 Thu 21:26]
-

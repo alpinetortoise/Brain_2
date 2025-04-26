@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       fb37c936-58b8-4ebe-8b1a-b7f9e86381c0
-:END:
-#+title: Enlightenment
-        #+created: [2024-11-24 Sun 09:19]
-        #+last_modified: [2024-11-24 Sun 09:19]

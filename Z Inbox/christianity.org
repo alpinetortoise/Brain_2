@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       1ac4dac1-07eb-4eda-b0f8-2e3d05b47e00
-:END:
-#+title: Christianity
-        #+created: [2024-11-24 Sun 09:23]
-        #+last_modified: [2024-11-24 Sun 09:23]

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       1dbcd238-681d-4131-942c-852b927f2475
-:END:
-#+title: Platonic forms
-        #+created: [2024-11-21 Thu 20:28]
-        #+last_modified: [2024-11-21 Thu 20:28]
-

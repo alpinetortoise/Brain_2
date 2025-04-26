@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       5fcd86f7-24d5-42c0-bbed-c30ce9ca558a
-:END:
-#+title: Fall
-        #+created: [2024-11-24 Sun 06:57]
-        #+last_modified: [2024-11-24 Sun 06:57]
-[[id:LEB/01-GEN03][Genesis 3 (LEB)]]

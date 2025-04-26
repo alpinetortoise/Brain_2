@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       047c3922-2074-45b3-a197-6779a659a0a4
-:END:
-#+title: Modernism
-        #+created: [2024-11-24 Sun 09:26]
-        #+last_modified: [2024-11-24 Sun 09:26]

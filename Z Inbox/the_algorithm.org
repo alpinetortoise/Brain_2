@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       5a141f2f-f445-43a1-9911-e57289b88e02
-:END:
-#+title: The Algorithm*
-        #+created: [2024-11-13 Wed 20:27]
-        #+last_modified: [2024-11-13 Wed 20:27]
-

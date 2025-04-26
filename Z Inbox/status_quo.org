@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       6fed262d-7304-4dd6-9382-3f99ba44cd68
-:END:
-#+title: status quo
-        #+created: [2024-11-13 Wed 20:25]
-        #+last_modified: [2024-11-13 Wed 20:25]
-

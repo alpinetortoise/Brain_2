@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       f51da4ed-f059-4b4a-a5c0-fe1e908d3128
-:END:
-#+title: Hero's Journey
-        #+created: [2024-11-21 Thu 20:45]
-        #+last_modified: [2024-11-21 Thu 20:45]
-

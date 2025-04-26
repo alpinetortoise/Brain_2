@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       0623dc01-9888-426f-a545-7b2b2ecddcc0
-:END:
-#+title: rationalism
-        #+created: [2024-11-24 Sun 07:55]
-        #+last_modified: [2024-11-24 Sun 07:55]

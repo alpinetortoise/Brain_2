@@ -1,6 +1,0 @@
-#+caption: Destination MAC Address found in an Ethernet II Frame
-[[../../img/Ethdstmac.png]]
-#+caption: Source MAC Address found in an Ethernet II frame
-[[../../img/ethsrcmac.png]]
-#+caption: IP version byte found in an Ethernet II frame
-[[../../img/ethipver.png]]

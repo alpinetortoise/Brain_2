@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       3aca1e9b-f86d-4293-ad0e-ef714b706f26
-:END:
-#+title: thinking slow
-        #+created: [2024-11-13 Wed 20:24]
-        #+last_modified: [2024-11-13 Wed 20:24]
-

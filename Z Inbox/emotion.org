@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       b29e4045-6a6b-48ef-b4cc-a6fdcc18c03d
-:END:
-#+title: emotion
-        #+created: [2024-11-24 Sun 07:57]
-        #+last_modified: [2024-11-24 Sun 07:57]

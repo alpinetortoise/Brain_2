@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       acc5dd95-383f-4fa0-9102-3090259c8ee4
-:END:
-#+title: divinity
-        #+created: [2024-11-24 Sun 10:32]
-        #+last_modified: [2024-11-24 Sun 10:32]
