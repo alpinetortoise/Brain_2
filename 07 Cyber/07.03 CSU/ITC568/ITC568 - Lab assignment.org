@@ -238,7 +238,7 @@ https://c88361a1902273l4712779t1w801724649369-imagebucket-1dva0effaonf6.s3.us-ea
 ?
 response-content-disposition=inline
 &
-X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0yIkcwRQIgdhQkVVvbe5WU2qFEI6or668zntUY3qnTFyIbsSme7eQCIQD8pThVLczdAQQavWu1UbugFjUvVoqDiVCKsmk%2BihtE7iqCAwjR%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDgwMTcyNDY0OTM2OSIMO2mOCR%2BO6SaFeB86KtYCujojYbRxt7ZELtqDR3Q10nA1wMHTt8vcukuzKNc1jWnCv%2BVPxtmnygQTVDfs%2BfWen2rD9yX%2FzyJBqJ2LDVDPQeIOc%2BFxqr0WsKeTASA9qpiLYoF8R9mryiUD3ply8XzAhb7EkxRqJY7o%2F4WdozoHhMlSdqHhY4cI7lqArOyldkXdpvM2o6vbipNG5aPkuAqqDbAHVcbbvRfpMcmsnBXOCzdz0jRAtWv0wps0oX95EmAc%2Bo%2BFmcQb7gSHZ2cFHFBb3nVcqnCeJR5iaNnwdte5jQp1ytKoFBgao6wRJyUUZX%2BpDxvZl3yQfcSHK%2B2z4DGL9yMqXIUTebSgMR%2F%2F1kYb8gTzqfVwrtvWLEmPfBl65g%2Bg028fzZ7A3qm3%2BStETDydg1Hw6EwzluDs1DnbqoASEtPgSTEDjv59ci9lUX1ifvlaIfkvaraMnc68%2FcUg%2F9uEcc4K1ppmMIzj9acGOocCPH0TNTjxRTA%2Fcx%2BzM%2BNcei0GQIVCDDwqaY3iYeUAJIqxJ3ssE0U1MIQS9iEFch5lvXPQmdfwQrjDICZU5EYjh2%2FpfJOhwtaSvEmBKSElsxH%2BDP4UHCfYCnfbyt8aOxh8FR8MHUfVn2fF%2FyxGcpX17Sz4NaOrkrPj%2BlFWPP12u%2Bzo9Nid3x7MgXjyHktbXgLe6gX%2FWV1hRk0fJIULvT22m%2BVVhkS0pd%2B62aTh40gnn5QzyTJbeLo11tNpy4sGuNPhnzjKQJcLlX7lzpvaeOpNgHp93qKrlZhHjl8oF888uln7Q%2FdqUME9wZyD0LXP3wfXxxxisSg7mIZx6gNGmyg6wva6G718g30%3D
+X-Amz-Security-Token=<>
 &
 X-Amz-Algorithm=AWS4-HMAC-SHA256
 &
@@ -248,9 +248,9 @@ X-Amz-SignedHeaders=host
 &
 X-Amz-Expires=300
 &
-X-Amz-Credential=ASIA3VKUDJ6M7YLI3NMO%2F20230910%2Fus-east-1%2Fs3%2Faws4_request
+X-Amz-Credential=<>
 &
-X-Amz-Signature=608e75471c18549f541fa1578cadcf4868bae9a31c8174783925f89cccd1af23
+X-Amz-Signature=<>
 #+end_src
 
 We can see that opening the image file from inside the Amazon S3 console provides a number of arguments to decrypt the image.
@@ -286,8 +286,8 @@ Availability Zone: us-east-1b
         "type": "AssumedRole",
         "principalId": "AROA3VKUDJ6MZJPGSEIZ5:user2684850=alpinetortoise@jpc.id.au",
         "arn": "arn:aws:sts::801724649369:assumed-role/voclabs/user2684850=alpinetortoise@jpc.id.au",
-        "accountId": "801724649369",
-        "accessKeyId": "ASIA3VKUDJ6MXXYAS74D",
+        "accountId": <>
+        "accessKeyId": <>
         "sessionContext": {
             "sessionIssuer": {
                 "type": "Role",
@@ -346,7 +346,7 @@ Availability Zone: us-east-1b
         "principalId": "AROA3VKUDJ6MZJPGSEIZ5:user2684850=alpinetortoise@jpc.id.au",
         "arn": "arn:aws:sts::801724649369:assumed-role/voclabs/user2684850=alpinetortoise@jpc.id.au",
         "accountId": "801724649369",
-        "accessKeyId": "ASIA3VKUDJ6M4NQSD3AI",
+        "accessKeyId": <>
         "sessionContext": {
             "sessionIssuer": {
                 "type": "Role",
@@ -414,11 +414,11 @@ Availability Zone: us-east-1b
         "principalId": "AROA3VKUDJ6MZJPGSEIZ5:user2684850=alpinetortoise@jpc.id.au",
         "arn": "arn:aws:sts::801724649369:assumed-role/voclabs/user2684850=alpinetortoise@jpc.id.au",
         "accountId": "801724649369",
-        "accessKeyId": "ASIA3VKUDJ6MU7RVY4O7",
+        "accessKeyId": <>
         "sessionContext": {
             "sessionIssuer": {
                 "type": "Role",
-                "principalId": "AROA3VKUDJ6MZJPGSEIZ5",
+                "principalId": <>
                 "arn": "arn:aws:iam::801724649369:role/voclabs",
                 "accountId": "801724649369",
                 "userName": "voclabs"
@@ -442,7 +442,7 @@ Availability Zone: us-east-1b
     "requestParameters": {
         "granteePrincipal": "arn:aws:sts::801724649369:assumed-role/aws:ec2-infrastructure/i-0013016824d5a9be9",
         "retiringPrincipal": "ec2.us-east-1.amazonaws.com",
-        "keyId": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069",
+        "keyId": <>
         "constraints": {
             "encryptionContextSubset": {
                 "aws:ebs:id": "vol-0f02f9a5a22874af0"
@@ -460,7 +460,7 @@ Availability Zone: us-east-1b
         {
             "accountId": "801724649369",
             "type": "AWS::KMS::Key",
-            "ARN": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069"
+            "ARN": <>
         }
     ],
     "eventType": "AwsApiCall",
