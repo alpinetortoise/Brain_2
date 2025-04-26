@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       484ebb05-aa21-43da-af56-58bfd7a067f3
+:END:
+#+title: Plato
+        #+created: [2024-11-21 Thu 20:28]
+        #+last_modified: [2024-11-21 Thu 20:28]
+

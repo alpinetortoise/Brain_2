@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6420a04c-8217-416d-a63c-f6ce50eefdaf
+:END:
+#+title: Surfability
+
+Surfing within a PKMS is the aspect of moving from one topic to another, it can be quick within a digital system and can take time within an analog system.
+

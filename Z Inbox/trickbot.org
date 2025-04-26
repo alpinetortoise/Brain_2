@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       277b7b64-cc7b-4636-b50a-5c59547e9556
+:END:
+#+title: trickbot
+        #+created: [2025-04-04 Fri 12:15]
+        #+last_modified: [2025-04-04 Fri 12:15]
+* Indicators of Compromise
+ - HTTPS traffic over TCP ports 447 or 449 without an associated domain or hostname.
+ - HTTP POST requests over standard or non-standard TCP ports for HTTP traffic that end with /81/, /83/ or /90, which are associated with data exfiltration.
+ - With Trickbot from Emotet infections, the above HTTP POST requests start with /mor followed by a number (only one or two digits seen so far).
+ - HTTP GET requests for URLs that end in .png that return additional Trickbot binaries.

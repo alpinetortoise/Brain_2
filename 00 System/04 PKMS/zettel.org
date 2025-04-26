@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       7fcd2eeb-a490-4435-83bc-e033d684bde7
+:END:
+#+title: Zettel
+
+- A Zettel is an atomic note
+- A Zettel is made of:
+  - ID
+  - Body
+  - Reference

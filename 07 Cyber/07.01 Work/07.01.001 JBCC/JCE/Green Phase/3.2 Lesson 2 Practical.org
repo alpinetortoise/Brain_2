@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       52244492-f984-491c-9de1-c4219815bce2
+:END:
+#+title: CVE ID: CVE-2022-34691
+
+Windows Version:
+Windows 7, 8, 10, 11
+Windows Server 2008, 2012, 2016, 2019, 2022
+
+CVE Overview: A Zero Day vulnerability. Active Directory Domain Services Elevation Vulnerability
+
+Impact of the CVE: Allows for privilege elevations through the use of a certificate that is created before the account.
+
+Fix for the CVE: Patch the systems. Audit events allows for mitigation of these particular events.
+
+Supporting article or story:
+[[https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16][Support]]
+
+https://krebsonsecurity.com/2022/08/microsoft-patch-tuesday-august-2022-edition/

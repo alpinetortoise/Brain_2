@@ -1,0 +1,54 @@
+:PROPERTIES:
+:ID:       84e32c94-bf6f-48f9-b6a7-09fdb0d08a36
+:END:
+#+Title: Powershell
+
+Powershell (PS) is an object-oriented shell scripting language, primarily utilised for Windows automation. PS being object oriented coherese with Windows' object oriented design philosophy.
+
+.ps1 extension
+* Cmdlets and commands
+** Help
+Functions similar to man, infact man is an Unix inspired alias for help
+ - [] denote optional parameters
+ - Utilises Cisco-like abbreviation
+
+** Cmdlets
+verb-noun format
+ - Get
+ - Start
+ - Out
+ - Stop
+ - Set
+ - New
+** Common
+Get-Command
+Get-Member
+Select
+* Typing
+- Bool
+  - -eq/-ne
+  - -gt/-lt
+  - -ge/-le
+  - -Like/-NotLike
+  - -Match/-NotMatch
+  - -Contains/-NotContains
+  - -In/-NotIn
+  - -Replace
+- Byte
+- Char
+- Date
+- Decimal
+- Double
+- int
+- Long
+- Object
+- Short
+- Single
+- String
+* Providers
+Providers are an adapter that gives access to some form of data store, whether that be the actual filesystem of the computer (C:\ or /) or the registry keys in Windows etc.
+[[./img/ps1.png]]
+Here we see a number of providers including such as the crypto certificates, registry and alias'
+As you would expect we can Set-Location to any of the "Drives" that the PSProviders give access to.
+* Links
+[[id:54d6a069-b8f6-4014-a5bf-6016b3f4fb1b][Powershell Commands]]

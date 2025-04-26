@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       da146e18-ff60-422a-a9ab-aab0dc15b3b1
+:END:
+#+title: Lambda Calculus
+        #+created: [2024-11-08 Fri 13:35]
+        #+last_modified: [2024-11-08 Fri 13:35]
+
+Lambda Calculus is a formal system for expressing computation introduced by [[id:6345243e-fa55-492a-afb1-d50b48d986e6][Alonzo Church]]
+* Form
+
+ 1. x: A [[id:3b94eedd-13e3-4897-a365-d6df3e81f99f][variable]] is a character or string representing a parameter
+ 2. (\lambda x. M): a lambda abstraction/function definition
+ 3. (M N): an application of M to N
+* Reductions
+ 1. (\lambda x. M[x]) -> (\lambda y. M[y]) \alpha-conversion (renaming bound variables in the expressions)[fn:1]
+ 2. ((\lambda x. M) N) -> (M [x := N]) \beta-conversion (replacing bound variables with the argument expression in the body of the abstraction)
+
+* A working
+if we were to take the simple function
+  sumSquares(x,y) = x^2 + y^2
+rewritten:
+  (x,y) -> x^2 + y^2
+This too can be rewritten through currying
+  x -> (y -> x^2 + y^2)
+Or in \lambda-Calculus
+  \lambda x. \lambda y. x^2 + y^2
+Applying our new function:
+  (\lambda x. \lambda y. x^2 + y^2) (5,2)
+  5^2 + 2^2 // by \beta-reduction
+  29 // by arithmetic
+
+* Footnotes
+
+[fn:1] \alpha-conversion can be done away with using de Bruijn index
+(\lambda \lambda 4 2 (\lambda 1 3)) (\lambda 5 1) \equiv (\lambda x. \lambda y. z x (\lambda u. u x)) (\lambda x. w x)

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       43b84603-16e8-43b7-a1de-d3a6b7f19f0b
+:END:
+#+title: router
+        #+created: [2025-03-18 Tue 09:53]
+        #+last_modified: [2025-03-18 Tue 09:53]

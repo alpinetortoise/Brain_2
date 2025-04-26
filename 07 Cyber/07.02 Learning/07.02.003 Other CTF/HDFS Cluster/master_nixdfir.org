@@ -1,0 +1,1766 @@
+:PROPERTIES:
+:ID:       8bff3573-fee5-4c1e-a76b-4c44ee150e28
+:END:
+#+title: Master nixdfir output
+==============================| DEVICE SETTINGS |==============================
+
+[+] OS Version: Ubuntu 16.04.3 LTS
+[+] Kernel Version: 4.4.0-31-generic 4.4.0-98-generic
+[+] Processor Architecture: generic generic
+[+] Time Zone: Asia/Amman
+sqlite_read_all: SQL error: file is not a database
+[+] Last Shutdown:  ()
+[+] Hostname: master.champforensics.com
+
+==============================| USERS |==============================
+
+[+] root (0):
+  Creation: -
+  Password: False
+  Disabled: False
+  Groups:
+  Home: /root
+
+[+] hadoop (1000):
+  Creation: -
+  Password: True
+  Disabled: False
+  Groups: adm, cdrom, sudo, dip, plugdev, lxd, hadoop, lpadmin, sambashare
+  Home: /home/hadoop
+
+==============================| COMMAND HISTORY |==============================
+
+[+] root (/bin/bash):
+hdfs namenode -format
+/usr/local/hadoop/bin/hdfs namenode -format
+cd ../../
+ls
+cd sbin/
+ll
+./start-dfs.sh
+logout
+exit
+
+[+] hadoop (/bin/bash):
+sudo init 0
+sudo apt-get update
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java7-installer
+sudo apt-get install oracle-java8-installer
+sudo apt-get install -f
+ll
+mkdir temp
+cd temp/
+sudo apt-get install oracle-java9-installer
+ll
+ls ~/.cache/
+ls ~/.cache/motd.legal-displayed
+ll /etc/udev/rules.d/49-teensy.rules
+ll /etc/udev/rules.d/49-teensy
+ll /etc/udev/rules.d/
+sudo apt-get upgrade
+sudo reboot
+ifconfig
+netstat -plunt
+echo $PATH
+vi .bashrc
+. .bashrc
+c
+echo $PATH
+java -version
+vi /etc/hosts
+sudo vi /etc/hosts
+ssh-keygen -t rsa
+cd temp/
+wget -c https://www-us.apache.org/dist/hadoop/common/stable2/hadoop-2.8.2.tar.gz
+tar -xzvf hadoop-2.8.2.tar.gz
+sudo mv hadoop-2.8.2 /usr/local/hadoop
+ll /usr/local/hadoop
+sudo mkdir -p /usr/local/hadoop-work/hdfs/namenode
+sudo mkdir -p /usr/local/hadoop-work/hdfs/namesecondary
+cd /usr/lib/jvm/
+ll
+cd
+chown -R hadoop /usr/local/hadoop*
+sudo chown -R hadoop /usr/local/hadoop*
+ll /usr/local/hadoop*
+cd /usr/local/hadoop
+l
+vi etc/hadoop/core-site.xml
+vi etc/hadoop/hdfs-site.xml
+ll /usr/local/hadoop/hadoop/dfs/name/data
+ll /usr/local/hadoop/dfs/name/data
+ll /usr/local/hadoop/dfs/name/
+ll /usr/local/hadoop/dfs/
+ll /usr/local/hadoop/
+sudo init 0
+ls
+echo $PATH
+sudo apt-get install -f
+sudo apt-get remove oracle-java7-installer
+sudo apt-get remove oracle-java8-installer
+sudo apt-get remove oracle-java9-installer
+sudo apt-get update
+java -version
+mv jdk-8u151-linux-x64.tar.gz temp/
+cd temp/
+c
+ls
+tar zxf jdk-8u151-linux-x64.tar.gz
+ls
+sudo mv jdk1.8.0_151/ /usr/local/
+ll /usr/local/jdk1.8.0_151/
+export JAVA_HOME=/usr/local/jdk1.8.0_151
+export PATH=PATH:$JAVA_HOME/bin
+vi ~/.bashrc
+nano ~/.bashrc
+bash
+/bin/bash
+sudo vi /etc/hostname
+sudo vi /etc/hosts
+sudo reboot
+ifconfig
+logout
+ping master
+ping slave1
+ping slave2
+c
+sudo vi /etc/hosts
+ssh-keygen
+ssh-copy-id hadoop@slave1
+ssh hadoop@slave1
+ssh-copy-id hadoop@slave2
+ssh hadoop@slave2
+ll
+cd /usr/local/hadoop
+ll
+vi etc/hadoop/core-site.xml
+vi etc/hadoop/hdfs-site.xml
+vi etc/hadoop/yarn-site.xml
+ll ~/temp/
+/usr/local/hadoop version
+/usr/local/hadoop/bin/hadoop version
+ls /usr/local/jdk1.8.0_151/
+vu etc/hadoop/hadoop-env.sh
+vi etc/hadoop/hadoop-env.sh
+cp /usr/local/hadoop/etc/hadoop/*.xml ~/temp/
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.0.jar grep ~/temp/
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.2.jar grep ~/temp/
+mkdir ~/input
+mv ~/temp/*.xml ~/input/
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.2.jar grep ~/input
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.2.jar grep ~/input/
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.2.jar grep ~/input/ ~/grep_example 'principal[.]*'
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.2.jar grep ~/input/  'principal[.]*'
+/usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.8.2.jar grep ~/input  'principal[.]*'
+vi ~/.profile
+source .profile
+source ~/.profile
+cd $HADOOP_HOME/etc/hadoop
+sudo su
+cd ../../
+./sbin/start-dfs.sh
+sudo netstat -plunt
+vi etc/hadoop/core-site.xml
+mkdir ~/orig
+cd etc/hadoop/
+ll
+cp * ~/orig/
+vi core-site.xml
+vi hdfs-site.xml
+vi mapred-site.xml.template
+cp mapred-site.xml.template mapred-site.xml
+vi slaves
+vi yarn-site.xml
+$HADOOP_HOME/sbin/start-dfs.sh
+vi hadoop-env.sh
+$HADOOP_HOME/sbin/start-dfs.sh
+/usr/local/hadoop/sbin/start-dfs.sh
+echo $JAVA_HOME
+cat ~/.bash
+cat ~/.bashrc
+vi hadoop-env.sh
+/usr/local/hadoop/sbin/start-dfs.sh
+ll
+scp * hadoop@slave1:/usr/local/hadoop/etc/hadoop
+ll
+scp -r ../hadoop/ hadoop@slave1:/usr/local/hadoop/etc/hadoop/
+scp -R ../hadoop/ hadoop@slave1:/usr/local/hadoop/etc/hadoop/
+ll
+tar cvf config.tar *
+ll
+scp config.tar hadoop@slave1:
+/usr/local/hadoop/sbin/start-dfs.sh
+c
+l
+ll /usr/local/hadoop
+vi .bashrc
+. .bashrc
+vi /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+mkdir -p $HADOOP_HOME/hadoop2_data/hdfs/namenode
+mkdir -p $HADOOP_HOME/hadoop2_data/hdfs/datanode
+cd /usr/local/hadoop/etc/
+ll
+cd hadoop/
+ll
+vi core-site.xml
+vi hdfs-site.xml
+vi yarn-site.xml
+vi mapred-site.xml
+vi core-site.xml
+vi hdfs-site.xml
+vi yarn-
+vi yarn-site.xml
+vi mapred-site.xml
+cat ~/.bashrc
+cd ../../bin/
+hadoop namenode -format
+hdfs namenode -format
+vi ../etc/hadoop/hdfs-site.xml
+hdfs namenode -format
+clear
+hdfs namenode -format
+cd ..
+sbin/start-dfs.sh
+sbin/start-yarn.sh
+jps
+hdfs dfs -ls /
+ls
+cd
+ls
+ll
+cd temp/
+ll
+cd ../input/
+ll
+cd ..
+ls
+rm -rf input/
+ll orig/
+rm -rf orig/
+c
+vim .bashrc
+. .bashrc
+c
+ll
+ls
+ssh slave1
+ls
+cd temp/
+ll
+cat sources.list
+hdfs dfs -put sources.list /text/AptSource
+hdfs
+hdfs dfs
+hdfs dfs -mkdir /text/
+hdfs dfs -put sources.list /text/AptSource
+stop-dfs.sh
+sudo vim /etc/ssh/ssh_config
+sudo systemctl restart ssh
+start-dfs.sh
+cd
+cd .ssh/
+ll
+cat authorized_keys
+cat known_hosts
+cat id_rsa.pub
+cat id_rsa.pub >> authorized_keys
+cat authorized_keys
+cd
+c
+stop-dfs.sh
+start-dfs.sh
+jps
+stop-dfs.sh
+sudo shutdown -h now
+logout
+sudo vim /etc/motd.txt
+sudo vim /etc/ssh/sshd_config
+vim .bashrc
+. .bashrc
+restartssh
+ssh master
+sudo vim /etc/motd.txt
+ssh master
+sudo vim /etc/motd.txt
+ssh master
+cd /usr/local/hadoop/etc/hadoop/
+ll
+rm -rf config.tar
+c
+ll
+vim core-site.xml
+vim hadoop-env.sh
+vim hadoop-env.cmd
+vim hdfs-site.xml
+vim log4j.properties
+vim slaves
+vim mapred-site.xml
+vim yarn-site.xml
+scp /etc/motd.txt hadoop@slave1:
+vim yarn-site.xml
+cat ~/.bashrc
+c
+ll
+vim core-site.xml
+vim hadoop-env.sh
+vim hdfs-site.xml
+vim log4j.properties
+vim mapred-site.xml
+vim yarn-site.xml
+ll /usr/local/hadoop/logs/
+cd ..
+ll
+cd ..
+ls
+cd ..
+ls
+ll hadoop-work/
+cd -
+ll
+cd ..
+ll
+rm -rf hadoop-work/
+sudo rm -rf /usr/local/hadoop-work/
+start-dfs.sh
+jps
+ll
+cd hadoop/etc/hadoop/
+ll
+vim log4j.properties
+vim hadoop-env.sh
+stop-dfs.sh
+start-dfs.sh
+cd
+ll
+cd temp/
+ll
+cat /etc/services > services
+cat services
+c
+ll
+hdfs dfs -put services /text/
+ll /usr/local/hadoop/logs/
+cat /usr/local/hadoop/logs/hdfs-audit.log
+hdfs dfs -ls /
+hdfs dfs -ls /text
+hdfs dfs -cat /text/services
+stop-dfs.sh
+sudo poweroff
+ifconfig
+sudo vim /etc/motd.txt
+sudo vim /etc/network/interfaces
+ifconfig
+dmesg |grep eth
+sudo vim /etc/network/interfaces
+sudo systemctl restart networking.service
+ifconfig
+sudo vim /etc/hosts
+ll
+ll temp/
+cat temp/services
+ll
+ifconfig
+sudo hostnamectl set-hostname master.champforensics.com --static
+hostname
+sudo reboot
+ifconfig
+sudo shutdown now
+logout
+dmesg |grep eth
+sudo vim /etc/network/interfaces
+sudo systemctl restart networking
+ifconfig
+ping google.com
+sudo vim /etc/network/interfaces
+sudo systemctl restart networking
+ping google.com
+sudo vim /etc/motd.txt
+ifconfig
+history
+vim .bashrc
+ll
+vim .bash_history
+ssh slave1
+slave2
+ssh slave2
+ssh master
+c
+sudo reboot
+ifconfig
+ssh slave1
+ssh slave2
+start-dfs.sh
+sudo netstat -lpeanut
+sudo netstat -lpnut
+sudo netstat -lpnuta
+hdfs dfs -ls /
+hdfs dfs -ls /text
+hdfs dfs -ls /text/services
+logout
+ls -lha
+./45010
+ll
+ls temp/
+ll /usr/local/hadoop/bin/
+./45010
+ll /usr/local/hadoop/bin/cluster.php
+ssh slave2
+cd temp/
+ls
+ll
+scp ../45010 hadoop@192.168.2.102:/home/hadoop/temp/
+ssh slave1
+scp ../45010 hadoop@192.168.2.101:/home/hadoop/temp/
+ssh slave2
+ssh slave1
+logout
+
+==============================| USER FILES |==============================
+
+ls: cannot access '/home/kali/Labspace/Case2-HDFS/Master/fs/root/*': No such file or directory
+[+] root (/root):
+
+
+[+] hadoop (/home/hadoop):
+-rwxr-xr-x 1 kali kali 22288 Oct  7  2019 /home/kali/Labspace/Case2-HDFS/Master/fs/home/hadoop/45010
+
+/home/kali/Labspace/Case2-HDFS/Master/fs/home/hadoop/temp:
+total 423540
+-rw-rw-r-- 1 kali kali 243900138 Oct 27  2017 hadoop-2.8.2.tar.gz
+-rw-rw-r-- 1 kali kali 189736377 Nov  8  2017 jdk-8u151-linux-x64.tar.gz
+-rwxr-xr-x 1 kali kali     35520 Oct  7  2019 master
+-rw-rw-r-- 1 kali kali     19605 Nov  9  2017 services
+-rw-r--r-- 1 kali kali      2980 Nov  8  2017 sources.list
+
+
+==============================| TMP FILES |==============================
+
+total 32K
+drwxrwxr-x 3 kali kali 4.0K Oct  7  2019 hadoop-hadoop
+-rw-rw-r-- 1 kali kali    5 Oct  7  2019 hadoop-hadoop-namenode.pid
+-rw-rw-r-- 1 kali kali    5 Oct  7  2019 hadoop-hadoop-secondarynamenode.pid
+drwxr-xr-x 2 kali kali 4.0K Oct  7  2019 hsperfdata_hadoop
+drwxrwxr-x 3 kali kali 4.0K Oct  7  2019 Jetty_0_0_0_0_50070_hdfs____w2cu08
+drwxrwxr-x 3 kali kali 4.0K Oct  7  2019 Jetty_0_0_0_0_50090_secondary____y6aanv
+drwx------ 3 root root 4.0K Oct  7  2019 systemd-private-939e739c74ee41bb959c3a6f1eb51eda-systemd-timesyncd.service-VsFWtM
+drwx------ 2 root root 4.0K Oct  7  2019 vmware-root
+
+==============================| BACKUP DIFF |==============================
+
+[+] shadow:
+Modified: 2017-11-07 23:18:24
+
+< hadoop:!:17477:0:99999:7:::
+---
+> hadoop:$6$1UWgPzqO$ir4Gg7ShLAQTVR61sqkSu0sDFDwMMbKWXFcMVlWXneBt5YFzgwBU8t2F6A1qXTgRep5Q.88kZEpZD0ZLcDIEw.:17477:0:99999:7:::
+
+[+] passwd:
+Modified: 2017-11-07 23:18:24
+
+< hadoop:x:1000:1000::/home/hadoop:/bin/bash
+---
+> hadoop:x:1000:1000:Hadoop Cluster,,,:/home/hadoop:/bin/bash
+
+[+] group:
+Modified: 2017-11-07 23:18:24
+
+< sudo:x:27:
+---
+> sudo:x:27:hadoop
+
+==============================| INSTALLED SOFTWARE |==============================
+
+2016-07-19 20:43:06 status installed base-passwd:amd64 3.5.39
+2016-07-19 20:43:06 status installed base-files:amd64 9.4ubuntu4
+2016-07-19 20:43:06 status installed dpkg:amd64 1.18.4ubuntu1
+2016-07-19 20:43:07 status installed libc6:amd64 2.23-0ubuntu3
+2016-07-19 20:43:07 status installed perl-base:amd64 5.22.1-9
+2016-07-19 20:43:07 status installed mawk:amd64 1.3.3-17ubuntu2
+2016-07-19 20:43:08 status installed debconf:all 1.5.58ubuntu1
+2016-07-19 20:43:15 status installed gcc-6-base:amd64 6.0.1-0ubuntu1
+2016-07-19 20:43:15 status installed lsb-base:all 9.20160110
+2016-07-19 20:43:15 status installed sensible-utils:all 0.0.9
+2016-07-19 20:43:15 status installed ncurses-base:all 6.0+20160213-1ubuntu1
+2016-07-19 20:43:15 status installed libsemanage-common:all 2.3-1build3
+2016-07-19 20:43:15 status installed libaudit-common:all 1:2.4.5-1ubuntu2
+2016-07-19 20:43:16 status installed libc6:amd64 2.23-0ubuntu3
+2016-07-19 20:43:16 status installed libbz2-1.0:amd64 1.0.6-8
+2016-07-19 20:43:16 status installed libkmod2:amd64 22-1ubuntu4
+2016-07-19 20:43:16 status installed libgpg-error0:amd64 1.21-2ubuntu1
+2016-07-19 20:43:16 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:16 status installed libseccomp2:amd64 2.2.3-3ubuntu3
+2016-07-19 20:43:16 status installed libapparmor1:amd64 2.10.95-0ubuntu2
+2016-07-19 20:43:16 status installed libdebconfclient0:amd64 0.198ubuntu1
+2016-07-19 20:43:16 status installed diffutils:amd64 1:3.3-3
+2016-07-19 20:43:16 status installed insserv:amd64 1.14.0-5ubuntu3
+2016-07-19 20:43:16 status installed libcomerr2:amd64 1.42.13-1ubuntu1
+2016-07-19 20:43:16 status installed libsepol1:amd64 2.4-2
+2016-07-19 20:43:16 status installed libgcc1:amd64 1:6.0.1-0ubuntu1
+2016-07-19 20:43:16 status installed libustr-1.0-1:amd64 1.0.4-5
+2016-07-19 20:43:16 status installed libsmartcols1:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:16 status installed libaudit1:amd64 1:2.4.5-1ubuntu2
+2016-07-19 20:43:16 status installed libtinfo5:amd64 6.0+20160213-1ubuntu1
+2016-07-19 20:43:16 status installed libudev1:amd64 229-4ubuntu4
+2016-07-19 20:43:16 status installed libss2:amd64 1.42.13-1ubuntu1
+2016-07-19 20:43:16 status installed base-passwd:amd64 3.5.39
+2016-07-19 20:43:16 status installed e2fslibs:amd64 1.42.13-1ubuntu1
+2016-07-19 20:43:16 status installed debianutils:amd64 4.7
+2016-07-19 20:43:16 status installed libgcrypt20:amd64 1.6.5-2
+2016-07-19 20:43:16 status installed libncursesw5:amd64 6.0+20160213-1ubuntu1
+2016-07-19 20:43:16 status installed libdb5.3:amd64 5.3.28-11
+2016-07-19 20:43:16 status installed zlib1g:amd64 1:1.2.8.dfsg-2ubuntu4
+2016-07-19 20:43:16 status installed hostname:amd64 3.16ubuntu2
+2016-07-19 20:43:16 status installed multiarch-support:amd64 2.23-0ubuntu3
+2016-07-19 20:43:16 status installed mawk:amd64 1.3.3-17ubuntu2
+2016-07-19 20:43:16 status installed libcap2:amd64 1:2.24-12
+2016-07-19 20:43:16 status installed libpcre3:amd64 2:8.38-3.1
+2016-07-19 20:43:16 status installed base-files:amd64 9.4ubuntu4
+2016-07-19 20:43:16 status installed libselinux1:amd64 2.4-3build2
+2016-07-19 20:43:16 status installed findutils:amd64 4.6.0+git+20160126-2
+2016-07-19 20:43:16 status installed ncurses-bin:amd64 6.0+20160213-1ubuntu1
+2016-07-19 20:43:16 status installed libncurses5:amd64 6.0+20160213-1ubuntu1
+2016-07-19 20:43:19 status installed makedev:all 2.3.1-93ubuntu1
+2016-07-19 20:43:19 status installed libattr1:amd64 1:2.4.47-2
+2016-07-19 20:43:19 status installed liblzma5:amd64 5.1.1alpha+20120614-2ubuntu2
+2016-07-19 20:43:19 status installed libcap2-bin:amd64 1:2.24-12
+2016-07-19 20:43:19 status installed libsystemd0:amd64 229-4ubuntu4
+2016-07-19 20:43:19 status installed libdevmapper1.02.1:amd64 2:1.02.110-1ubuntu10
+2016-07-19 20:43:19 status installed libsemanage1:amd64 2.3-1build3
+2016-07-19 20:43:19 status installed libacl1:amd64 2.2.52-3
+2016-07-19 20:43:19 status installed libprocps4:amd64 2:3.3.10-4ubuntu2
+2016-07-19 20:43:19 status installed bsdutils:amd64 1:2.27.1-6ubuntu3
+2016-07-19 20:43:19 status installed coreutils:amd64 8.25-2ubuntu2
+2016-07-19 20:43:19 status installed tar:amd64 1.28-2.1
+2016-07-19 20:43:19 status installed dpkg:amd64 1.18.4ubuntu1
+2016-07-19 20:43:19 status installed sed:amd64 4.2.2-7
+2016-07-19 20:43:19 status installed perl-base:amd64 5.22.1-9
+2016-07-19 20:43:19 status installed grep:amd64 2.24-1
+2016-07-19 20:43:19 status installed debconf:all 1.5.58ubuntu1
+2016-07-19 20:43:19 status installed tzdata:all 2016d-0ubuntu0.16.04
+2016-07-19 20:43:19 status installed gzip:amd64 1.6-4ubuntu1
+2016-07-19 20:43:20 status installed dash:amd64 0.5.8-2.1ubuntu2
+2016-07-19 20:43:20 status installed init-system-helpers:all 1.29ubuntu1
+2016-07-19 20:43:20 status installed sysvinit-utils:amd64 2.88dsf-59.3ubuntu2
+2016-07-19 20:43:20 status installed sysv-rc:all 2.88dsf-59.3ubuntu2
+2016-07-19 20:43:20 status installed libpam0g:amd64 1.1.8-3.2ubuntu2
+2016-07-19 20:43:21 status installed locales:all 2.23-0ubuntu3
+2016-07-19 20:43:21 status installed libpam-modules-bin:amd64 1.1.8-3.2ubuntu2
+2016-07-19 20:43:21 status installed bash:amd64 4.3-14ubuntu1
+2016-07-19 20:43:21 status installed libpam-modules:amd64 1.1.8-3.2ubuntu2
+2016-07-19 20:43:21 status installed libpam-runtime:all 1.1.8-3.2ubuntu2
+2016-07-19 20:43:21 status installed passwd:amd64 1:4.2-3.1ubuntu5
+2016-07-19 20:43:21 status installed login:amd64 1:4.2-3.1ubuntu5
+2016-07-19 20:43:21 status installed adduser:all 3.113+nmu3ubuntu4
+2016-07-19 20:43:21 status installed libuuid1:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:21 status installed libblkid1:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:21 status installed libmount1:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:21 status installed libcryptsetup4:amd64 2:1.6.6-5ubuntu2
+2016-07-19 20:43:21 status installed mount:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:21 status installed libfdisk1:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:22 status installed initscripts:amd64 2.88dsf-59.3ubuntu2
+2016-07-19 20:43:22 status installed util-linux:amd64 2.27.1-6ubuntu3
+2016-07-19 20:43:22 status installed e2fsprogs:amd64 1.42.13-1ubuntu1
+2016-07-19 20:43:22 status installed procps:amd64 2:3.3.10-4ubuntu2
+2016-07-19 20:43:22 status installed systemd:amd64 229-4ubuntu4
+2016-07-19 20:43:22 status installed systemd-sysv:amd64 229-4ubuntu4
+2016-07-19 20:43:22 status installed init:amd64 1.29ubuntu1
+2016-07-19 20:43:22 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:29 status installed libexpat1:amd64 2.1.0-7
+2016-07-19 20:43:29 status installed libssl1.0.0:amd64 1.0.2g-1ubuntu4
+2016-07-19 20:43:29 status installed libpython3.5-minimal:amd64 3.5.1-10
+2016-07-19 20:43:30 status installed python3.5-minimal:amd64 3.5.1-10
+2016-07-19 20:43:30 status installed python3-minimal:amd64 3.5.1-3
+2016-07-19 20:43:30 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:36 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:36 status installed systemd:amd64 229-4ubuntu4
+2016-07-19 20:43:36 status installed readline-common:all 6.3-8ubuntu2
+2016-07-19 20:43:36 status installed libnettle6:amd64 3.2-1
+2016-07-19 20:43:36 status installed cpio:amd64 2.11+dfsg-5ubuntu1
+2016-07-19 20:43:36 status installed libpopt0:amd64 1.16-10
+2016-07-19 20:43:36 status installed kmod:amd64 22-1ubuntu4
+2016-07-19 20:43:36 status installed libestr0:amd64 0.1.10-1
+2016-07-19 20:43:36 status installed less:amd64 481-2.1
+2016-07-19 20:43:36 status installed libisc-export160:amd64 1:9.10.3.dfsg.P4-8
+2016-07-19 20:43:36 status installed liblz4-1:amd64 0.0~r131-2ubuntu2
+2016-07-19 20:43:36 status installed mime-support:all 3.59ubuntu1
+2016-07-19 20:43:36 status installed sudo:amd64 1.8.16-0ubuntu1
+2016-07-19 20:43:36 status installed isc-dhcp-common:amd64 4.3.3-5ubuntu12
+2016-07-19 20:43:36 status installed libklibc:amd64 2.0.4-8ubuntu1
+2016-07-19 20:43:36 status installed gpgv:amd64 1.4.20-1ubuntu3
+2016-07-19 20:43:36 status installed xkb-data:all 2.16-1ubuntu1
+2016-07-19 20:43:36 status installed linux-base:all 4.0ubuntu1
+2016-07-19 20:43:36 status installed libxtables11:amd64 1.6.0-2ubuntu3
+2016-07-19 20:43:36 status installed libdns-export162:amd64 1:9.10.3.dfsg.P4-8
+2016-07-19 20:43:36 status installed distro-info-data:all 0.28
+2016-07-19 20:43:36 status installed libbsd0:amd64 0.8.2-1
+2016-07-19 20:43:36 status installed libpng12-0:amd64 1.2.54-1ubuntu1
+2016-07-19 20:43:36 status installed ucf:all 3.0036
+2016-07-19 20:43:36 status installed libtasn1-6:amd64 4.7-3
+2016-07-19 20:43:36 status installed bzip2:amd64 1.0.6-8
+2016-07-19 20:43:36 status installed libmagic1:amd64 1:5.25-2ubuntu1
+2016-07-19 20:43:36 status installed netcat-openbsd:amd64 1.105-7ubuntu1
+2016-07-19 20:43:36 status installed busybox-initramfs:amd64 1:1.22.0-15ubuntu1
+2016-07-19 20:43:36 status installed libgmp10:amd64 2:6.1.0+dfsg-2
+2016-07-19 20:43:36 status installed libatm1:amd64 1:2.5.1-1.5
+2016-07-19 20:43:37 status installed udev:amd64 229-4ubuntu4
+2016-07-19 20:43:37 status installed libtext-iconv-perl:amd64 1.7-5build4
+2016-07-19 20:43:37 status installed vim-common:amd64 2:7.4.1689-3ubuntu1
+2016-07-19 20:43:37 status installed libsqlite3-0:amd64 3.11.0-1ubuntu1
+2016-07-19 20:43:37 status installed libfribidi0:amd64 0.19.7-1
+2016-07-19 20:43:37 status installed liblocale-gettext-perl:amd64 1.07-1build1
+2016-07-19 20:43:37 status installed libffi6:amd64 3.2.1-4
+2016-07-19 20:43:37 status installed libtext-charwidth-perl:amd64 0.04-7build5
+2016-07-19 20:43:37 status installed initramfs-tools-bin:amd64 0.122ubuntu8
+2016-07-19 20:43:37 status installed net-tools:amd64 1.60-26ubuntu1
+2016-07-19 20:43:37 status installed libslang2:amd64 2.3.0-2ubuntu1
+2016-07-19 20:43:37 status installed cron:amd64 3.0pl1-128ubuntu2
+2016-07-19 20:43:37 status installed libmnl0:amd64 1.0.3-5
+2016-07-19 20:43:37 status installed libusb-0.1-4:amd64 2:0.1.12-28
+2016-07-19 20:43:37 status installed libnih1:amd64 1.0.3-4.3ubuntu1
+2016-07-19 20:43:37 status installed logrotate:amd64 3.8.7-2ubuntu2
+2016-07-19 20:43:37 status installed libidn11:amd64 1.32-3ubuntu1
+2016-07-19 20:43:37 status installed libmpdec2:amd64 2.4.2-1
+2016-07-19 20:43:37 status installed ubuntu-keyring:all 2012.05.19
+2016-07-19 20:43:37 status installed libreadline6:amd64 6.3-8ubuntu2
+2016-07-19 20:43:37 status installed gcc-5-base:amd64 5.3.1-14ubuntu2
+2016-07-19 20:43:37 status installed libjson-c2:amd64 0.11-4ubuntu2
+2016-07-19 20:43:37 status installed eject:amd64 2.1.5+deb1+cvs20081104-13.1
+2016-07-19 20:43:37 status installed netbase:all 5.3
+2016-07-19 20:43:37 status installed vim-tiny:amd64 2:7.4.1689-3ubuntu1
+2016-07-19 20:43:39 status installed keyboard-configuration:all 1.108ubuntu15
+2016-07-19 20:43:39 status installed klibc-utils:amd64 2.0.4-8ubuntu1
+2016-07-19 20:43:39 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:43:39 status installed initramfs-tools-core:all 0.122ubuntu8
+2016-07-19 20:43:39 status installed libpython3.5-stdlib:amd64 3.5.1-10
+2016-07-19 20:43:39 status installed gnupg:amd64 1.4.20-1ubuntu3
+2016-07-19 20:43:39 status installed initramfs-tools:all 0.122ubuntu8
+2016-07-19 20:43:39 status installed file:amd64 1:5.25-2ubuntu1
+2016-07-19 20:43:39 status installed iproute2:amd64 4.3.0-1ubuntu3
+2016-07-19 20:43:39 status installed isc-dhcp-client:amd64 4.3.3-5ubuntu12
+2016-07-19 20:43:39 status installed libhogweed4:amd64 3.2-1
+2016-07-19 20:43:39 status installed libtext-wrapi18n-perl:all 0.06-7.1
+2016-07-19 20:43:39 status installed libp11-kit0:amd64 0.23.2-3
+2016-07-19 20:43:39 status installed libstdc++6:amd64 5.3.1-14ubuntu2
+2016-07-19 20:43:39 status installed libnewt0.52:amd64 0.52.18-1ubuntu2
+2016-07-19 20:43:40 status installed rsyslog:amd64 8.16.0-1ubuntu3
+2016-07-19 20:43:41 status installed python3.5:amd64 3.5.1-10
+2016-07-19 20:43:41 status installed libpython3-stdlib:amd64 3.5.1-3
+2016-07-19 20:43:41 status installed libapt-pkg5.0:amd64 1.2.10ubuntu1
+2016-07-19 20:43:41 status installed libapt-inst2.0:amd64 1.2.10ubuntu1
+2016-07-19 20:43:42 status installed ifupdown:amd64 0.8.10ubuntu1
+2016-07-19 20:43:42 status installed debconf-i18n:all 1.5.58ubuntu1
+2016-07-19 20:43:42 status installed whiptail:amd64 0.52.18-1ubuntu2
+2016-07-19 20:43:42 status installed libgnutls30:amd64 3.4.10-4ubuntu1
+2016-07-19 20:43:42 status installed libgnutls-openssl27:amd64 3.4.10-4ubuntu1
+2016-07-19 20:43:42 status installed apt:amd64 1.2.10ubuntu1
+2016-07-19 20:43:43 status installed resolvconf:all 1.78ubuntu2
+2016-07-19 20:43:43 status installed iputils-ping:amd64 3:20121221-5ubuntu2
+2016-07-19 20:43:43 status installed apt-utils:amd64 1.2.10ubuntu1
+2016-07-19 20:43:43 status installed kbd:amd64 1.15.5-1ubuntu4
+2016-07-19 20:43:43 status installed console-setup-linux:all 1.108ubuntu15
+2016-07-19 20:43:44 status installed console-setup:all 1.108ubuntu15
+2016-07-19 20:43:44 status installed python3:amd64 3.5.1-3
+2016-07-19 20:43:44 status installed lsb-release:all 9.20160110
+2016-07-19 20:43:44 status installed ubuntu-minimal:amd64 1.361
+2016-07-19 20:43:45 status installed dh-python:all 2.20151103ubuntu1
+2016-07-19 20:43:45 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:45 status installed systemd:amd64 229-4ubuntu4
+2016-07-19 20:43:45 status installed initramfs-tools:all 0.122ubuntu8
+2016-07-19 20:43:45 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:43:45 status installed resolvconf:all 1.78ubuntu2
+2016-07-19 20:43:56 status installed base-files:amd64 9.4ubuntu4.2
+2016-07-19 20:43:57 status installed bash:amd64 4.3-14ubuntu1.1
+2016-07-19 20:43:57 status installed bsdutils:amd64 1:2.27.1-6ubuntu3.1
+2016-07-19 20:43:57 status installed dpkg:amd64 1.18.4ubuntu1.1
+2016-07-19 20:43:57 status installed grep:amd64 2.25-1~16.04.1
+2016-07-19 20:43:57 status installed init-system-helpers:all 1.29ubuntu2
+2016-07-19 20:43:57 status installed init:amd64 1.29ubuntu2
+2016-07-19 20:43:57 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:57 status installed libudev1:amd64 229-4ubuntu7
+2016-07-19 20:43:57 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:58 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:43:58 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:58 status installed libsystemd0:amd64 229-4ubuntu7
+2016-07-19 20:43:58 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:43:59 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:44:00 status installed systemd:amd64 229-4ubuntu7
+2016-07-19 20:44:00 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:00 status installed libuuid1:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:00 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:00 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:00 status installed libblkid1:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:00 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:00 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:00 status installed libmount1:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:00 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:01 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:44:01 status installed systemd:amd64 229-4ubuntu7
+2016-07-19 20:44:01 status installed lsb-base:all 9.20160110ubuntu0.2
+2016-07-19 20:44:01 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:44:01 status installed mime-support:all 3.59ubuntu1
+2016-07-19 20:44:01 status installed util-linux:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:01 status installed systemd:amd64 229-4ubuntu7
+2016-07-19 20:44:02 status installed mount:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:02 status installed gcc-5-base:amd64 5.4.0-6ubuntu1~16.04.1
+2016-07-19 20:44:02 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:02 status installed libstdc++6:amd64 5.4.0-6ubuntu1~16.04.1
+2016-07-19 20:44:02 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:02 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:02 status installed libapt-pkg5.0:amd64 1.2.12~ubuntu16.04.1
+2016-07-19 20:44:02 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:02 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:03 status installed apt:amd64 1.2.12~ubuntu16.04.1
+2016-07-19 20:44:03 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:03 status installed systemd-sysv:amd64 229-4ubuntu7
+2016-07-19 20:44:04 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:04 status installed mime-support:all 3.59ubuntu1
+2016-07-19 20:44:04 status installed libfdisk1:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:04 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:04 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:04 status installed libsmartcols1:amd64 2.27.1-6ubuntu3.1
+2016-07-19 20:44:05 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:06 status installed libc-bin:amd64 2.23-0ubuntu3
+2016-07-19 20:44:06 status installed mime-support:all 3.59ubuntu1
+2016-07-19 20:44:07 status installed udev:amd64 229-4ubuntu7
+2016-07-19 20:44:09 status installed keyboard-configuration:all 1.108ubuntu15.2
+2016-07-19 20:44:09 status installed console-setup-linux:all 1.108ubuntu15.2
+2016-07-19 20:44:09 status installed initramfs-tools-bin:amd64 0.122ubuntu8.1
+2016-07-19 20:44:09 status installed libklibc:amd64 2.0.4-8ubuntu1.16.04.1
+2016-07-19 20:44:09 status installed klibc-utils:amd64 2.0.4-8ubuntu1.16.04.1
+2016-07-19 20:44:09 status installed initramfs-tools-core:all 0.122ubuntu8.1
+2016-07-19 20:44:09 status installed initramfs-tools:all 0.122ubuntu8.1
+2016-07-19 20:44:11 status installed console-setup:all 1.108ubuntu15.2
+2016-07-19 20:44:11 status installed libapt-inst2.0:amd64 1.2.12~ubuntu16.04.1
+2016-07-19 20:44:11 status installed apt-utils:amd64 1.2.12~ubuntu16.04.1
+2016-07-19 20:44:11 status installed libssl1.0.0:amd64 1.0.2g-1ubuntu4.1
+2016-07-19 20:44:11 status installed libpython3.5-minimal:amd64 3.5.2-2~16.01
+2016-07-19 20:44:11 status installed libexpat1:amd64 2.1.0-7ubuntu0.16.04.2
+2016-07-19 20:44:12 status installed python3.5-minimal:amd64 3.5.2-2~16.01
+2016-07-19 20:44:12 status installed libpython3.5-stdlib:amd64 3.5.2-2~16.01
+2016-07-19 20:44:14 status installed python3.5:amd64 3.5.2-2~16.01
+2016-07-19 20:44:14 status installed tzdata:all 2016f-0ubuntu0.16.04
+2016-07-19 20:44:14 status installed dh-python:all 2.20151103ubuntu1.1
+2016-07-19 20:44:14 status installed distro-info-data:all 0.28ubuntu0.1
+2016-07-19 20:44:14 status installed libisc-export160:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2016-07-19 20:44:14 status installed libdns-export162:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2016-07-19 20:44:14 status installed isc-dhcp-client:amd64 4.3.3-5ubuntu12.1
+2016-07-19 20:44:14 status installed isc-dhcp-common:amd64 4.3.3-5ubuntu12.1
+2016-07-19 20:44:14 status installed libtasn1-6:amd64 4.7-3ubuntu0.16.04.1
+2016-07-19 20:44:14 status installed libgnutls30:amd64 3.4.10-4ubuntu1.1
+2016-07-19 20:44:14 status installed libgnutls-openssl27:amd64 3.4.10-4ubuntu1.1
+2016-07-19 20:44:14 status installed lsb-release:all 9.20160110ubuntu0.2
+2016-07-19 20:44:14 status installed sudo:amd64 1.8.16-0ubuntu1.1
+2016-07-19 20:44:14 status installed vim-common:amd64 2:7.4.1689-3ubuntu1.1
+2016-07-19 20:44:14 status installed vim-tiny:amd64 2:7.4.1689-3ubuntu1.1
+2016-07-19 20:44:14 status installed systemd:amd64 229-4ubuntu7
+2016-07-19 20:44:14 status installed ureadahead:amd64 0.100.0-19
+2016-07-19 20:44:14 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:06:53 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-07 23:06:54 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-07 23:07:12 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:07:12 status installed libnl-3-200:amd64 3.2.27-1
+2017-11-07 23:07:12 status installed libnl-genl-3-200:amd64 3.2.27-1
+2017-11-07 23:07:12 status installed wireless-regdb:all 2015.07.20-1ubuntu1
+2017-11-07 23:07:12 status installed iw:amd64 3.17-1
+2017-11-07 23:07:12 status installed crda:amd64 3.13-1
+2017-11-07 23:07:12 status installed linux-firmware:all 1.157.2
+2017-11-07 23:07:18 status installed linux-image-4.4.0-31-generic:amd64 4.4.0-31.50
+2017-11-07 23:07:23 status installed linux-image-extra-4.4.0-31-generic:amd64 4.4.0-31.50
+2017-11-07 23:07:24 status installed linux-image-generic:amd64 4.4.0.31.33
+2017-11-07 23:07:24 status installed linux-headers-4.4.0-31:all 4.4.0-31.50
+2017-11-07 23:07:24 status installed linux-headers-4.4.0-31-generic:amd64 4.4.0-31.50
+2017-11-07 23:07:24 status installed linux-headers-generic:amd64 4.4.0.31.33
+2017-11-07 23:07:24 status installed linux-generic:amd64 4.4.0.31.33
+2017-11-07 23:07:24 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:07:24 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:07:24 status installed libpci3:amd64 1:3.3.1-1.1ubuntu1
+2017-11-07 23:07:24 status installed pciutils:amd64 1:3.3.1-1.1ubuntu1
+2017-11-07 23:07:24 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:07:25 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:07:25 status installed libusb-1.0-0:amd64 2:1.0.20-1
+2017-11-07 23:07:25 status installed usbutils:amd64 1:007-4
+2017-11-07 23:07:25 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:12:23 status installed dmidecode:amd64 3.0-2ubuntu0.1
+2017-11-07 23:12:23 status installed laptop-detect:amd64 0.13.7ubuntu2
+2017-11-07 23:12:23 status installed tasksel:all 3.34ubuntu3
+2017-11-07 23:12:23 status installed tasksel-data:all 3.34ubuntu3
+2017-11-07 23:12:26 status installed installation-report:all 2.60ubuntu1
+2017-11-07 23:12:37 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:12:37 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:12:37 status installed iso-codes:all 3.65-1
+2017-11-07 23:12:37 status installed python-apt-common:all 1.1.0~beta1build1
+2017-11-07 23:12:37 status installed python3-apt:amd64 1.1.0~beta1build1
+2017-11-07 23:12:37 status installed xz-utils:amd64 5.1.1alpha+20120614-2ubuntu2
+2017-11-07 23:12:38 status installed unattended-upgrades:all 0.90
+2017-11-07 23:12:38 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:12:38 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:12:48 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-07 23:12:51 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:12:51 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:12:51 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:12:51 status installed mime-support:all 3.59ubuntu1
+2017-11-07 23:12:51 status installed libfuse2:amd64 2.9.4-1ubuntu3
+2017-11-07 23:12:51 status installed fuse:amd64 2.9.4-1ubuntu3
+2017-11-07 23:12:51 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:12:51 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-07 23:12:51 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:12:51 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:12:51 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:12:51 status installed libmpfr4:amd64 3.1.4-1
+2017-11-07 23:12:51 status installed libsigsegv2:amd64 2.10-4
+2017-11-07 23:12:51 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:13:06 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:13:06 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:13:06 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:13:06 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-07 23:13:06 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-07 23:13:06 status installed mime-support:all 3.59ubuntu1
+2017-11-07 23:13:07 status installed bash-completion:all 1:2.1-4.2ubuntu1.1
+2017-11-07 23:13:07 status installed libdbus-1-3:amd64 1.10.6-1ubuntu3
+2017-11-07 23:13:07 status installed libglib2.0-0:amd64 2.48.1-1~ubuntu16.04.1
+2017-11-07 23:13:07 status installed libdbus-glib-1-2:amd64 0.106-1
+2017-11-07 23:13:07 status installed python3-dbus:amd64 1.2.0-3
+2017-11-07 23:13:07 status installed libcap-ng0:amd64 0.7.7-1
+2017-11-07 23:13:07 status installed dbus:amd64 1.10.6-1ubuntu3
+2017-11-07 23:13:07 status installed libaccountsservice0:amd64 0.6.40-2ubuntu11.1
+2017-11-07 23:13:07 status installed libpolkit-gobject-1-0:amd64 0.105-14.1
+2017-11-07 23:13:07 status installed accountsservice:amd64 0.6.40-2ubuntu11.1
+2017-11-07 23:13:07 status installed language-selector-common:all 0.165.3
+2017-11-07 23:13:07 status installed libgdbm3:amd64 1.8.3-13.1
+2017-11-07 23:13:07 status installed libnfnetlink0:amd64 1.0.1-3
+2017-11-07 23:13:07 status installed libxau6:amd64 1:1.0.8-1
+2017-11-07 23:13:07 status installed libxdmcp6:amd64 1:1.1.2-1.1
+2017-11-07 23:13:07 status installed libxcb1:amd64 1.11.1-1ubuntu1
+2017-11-07 23:13:07 status installed libx11-data:all 2:1.6.3-1ubuntu2
+2017-11-07 23:13:07 status installed libx11-6:amd64 2:1.6.3-1ubuntu2
+2017-11-07 23:13:07 status installed libxext6:amd64 2:1.3.3-1
+2017-11-07 23:13:08 status installed groff-base:amd64 1.22.3-7
+2017-11-07 23:13:08 status installed bsdmainutils:amd64 9.0.6ubuntu3
+2017-11-07 23:13:08 status installed libpipeline1:amd64 1.4.1-2
+2017-11-07 23:13:10 status installed man-db:amd64 2.7.5-1
+2017-11-07 23:13:11 status installed popularity-contest:all 1.64ubuntu2
+2017-11-07 23:13:11 status installed sgml-base:all 1.26+nmu4ubuntu1
+2017-11-07 23:13:11 status installed uuid-runtime:amd64 2.27.1-6ubuntu3.1
+2017-11-07 23:13:11 status installed gawk:amd64 1:4.1.3+dfsg-0.1
+2017-11-07 23:13:11 status installed libevent-2.0-5:amd64 2.0.21-stable-2
+2017-11-07 23:13:11 status installed libgpm2:amd64 1.20.4-6.1
+2017-11-07 23:13:11 status installed liblzo2-2:amd64 2.08-1.2
+2017-11-07 23:13:11 status installed libmspack0:amd64 0.5-1
+2017-11-07 23:13:11 status installed libwrap0:amd64 7.6.q-25
+2017-11-07 23:13:11 status installed acl:amd64 2.2.52-3
+2017-11-07 23:13:11 status installed libnetfilter-conntrack3:amd64 1.0.5-1
+2017-11-07 23:13:11 status installed dnsmasq-base:amd64 2.75-1ubuntu0.16.04.1
+2017-11-07 23:13:11 status installed iptables:amd64 1.6.0-2ubuntu3
+2017-11-07 23:13:11 status installed libapparmor-perl:amd64 2.10.95-0ubuntu2
+2017-11-07 23:13:11 status installed apparmor:amd64 2.10.95-0ubuntu2
+2017-11-07 23:13:12 status installed rsync:amd64 3.1.1-3ubuntu1
+2017-11-07 23:13:12 status installed lxcfs:amd64 2.0.2-0ubuntu1~ubuntu16.04.1
+2017-11-07 23:13:12 status installed squashfs-tools:amd64 1:4.3-3ubuntu2
+2017-11-07 23:13:12 status installed uidmap:amd64 1:4.2-3.1ubuntu5
+2017-11-07 23:13:13 status installed perl-modules-5.22:all 5.22.1-9
+2017-11-07 23:13:13 status installed libperl5.22:amd64 5.22.1-9
+2017-11-07 23:13:13 status installed perl:amd64 5.22.1-9
+2017-11-07 23:13:13 status installed python3-pkg-resources:all 20.7.0-1
+2017-11-07 23:13:13 status installed python3-chardet:all 2.3.0-2
+2017-11-07 23:13:13 status installed python3-six:all 1.10.0-3
+2017-11-07 23:13:13 status installed python3-debian:all 0.1.27ubuntu2
+2017-11-07 23:13:13 status installed patch:amd64 2.7.5-1
+2017-11-07 23:13:13 status installed update-notifier-common:all 3.168.1
+2017-11-07 23:13:14 status installed libkrb5support0:amd64 1.13.2+dfsg-5
+2017-11-07 23:13:14 status installed libk5crypto3:amd64 1.13.2+dfsg-5
+2017-11-07 23:13:14 status installed libkeyutils1:amd64 1.5.9-8ubuntu1
+2017-11-07 23:13:14 status installed libkrb5-3:amd64 1.13.2+dfsg-5
+2017-11-07 23:13:14 status installed libgssapi-krb5-2:amd64 1.13.2+dfsg-5
+2017-11-07 23:13:14 status installed libroken18-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libasn1-8-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libhcrypto4-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libheimbase1-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libwind0-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libhx509-5-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libkrb5-26-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libheimntlm0-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libgssapi3-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1
+2017-11-07 23:13:14 status installed libsasl2-modules-db:amd64 2.1.26.dfsg1-14build1
+2017-11-07 23:13:14 status installed libsasl2-2:amd64 2.1.26.dfsg1-14build1
+2017-11-07 23:13:14 status installed libldap-2.4-2:amd64 2.4.42+dfsg-2ubuntu3.1
+2017-11-07 23:13:14 status installed librtmp1:amd64 2.4+20151223.gitfa8646d-1build1
+2017-11-07 23:13:14 status installed libcurl3-gnutls:amd64 7.47.0-1ubuntu2
+2017-11-07 23:13:14 status installed apt-transport-https:amd64 1.2.12~ubuntu16.04.1
+2017-11-07 23:13:14 status installed libgeoip1:amd64 1.6.9-1
+2017-11-07 23:13:14 status installed libicu55:amd64 55.1-7
+2017-11-07 23:13:14 status installed libxml2:amd64 2.9.3+dfsg1-1ubuntu0.1
+2017-11-07 23:13:14 status installed libisc160:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed libdns162:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed libisccc140:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed libisccfg140:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed libbind9-140:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed liblwres141:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed bind9-host:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed busybox-static:amd64 1:1.22.0-15ubuntu1
+2017-11-07 23:13:14 status installed openssl:amd64 1.0.2g-1ubuntu4.1
+2017-11-07 23:13:14 status installed ca-certificates:all 20160104ubuntu1
+2017-11-07 23:13:14 status installed command-not-found-data:amd64 0.3ubuntu16.04.2
+2017-11-07 23:13:14 status installed python3-gdbm:amd64 3.5.1-1
+2017-11-07 23:13:14 status installed python3-commandnotfound:all 0.3ubuntu16.04.2
+2017-11-07 23:13:14 status installed command-not-found:all 0.3ubuntu16.04.2
+2017-11-07 23:13:14 status installed dnsutils:amd64 1:9.10.3.dfsg.P4-8ubuntu1
+2017-11-07 23:13:14 status installed dosfstools:amd64 3.0.28-2ubuntu0.1
+2017-11-07 23:13:14 status installed ed:amd64 1.10-2
+2017-11-07 23:13:14 status installed friendly-recovery:all 0.2.31
+2017-11-07 23:13:14 status installed ftp:amd64 0.17-33
+2017-11-07 23:13:14 status installed geoip-database:all 20160408-1
+2017-11-07 23:13:14 status installed libasprintf0v5:amd64 0.19.7-2ubuntu3
+2017-11-07 23:13:14 status installed gettext-base:amd64 0.19.7-2ubuntu3
+2017-11-07 23:13:14 status installed libgirepository-1.0-1:amd64 1.46.0-3ubuntu1
+2017-11-07 23:13:14 status installed gir1.2-glib-2.0:amd64 1.46.0-3ubuntu1
+2017-11-07 23:13:15 status installed hdparm:amd64 9.48+ds-1
+2017-11-07 23:13:15 status installed info:amd64 6.1.0.dfsg.1-5
+2017-11-07 23:13:15 status installed iputils-tracepath:amd64 3:20121221-5ubuntu2
+2017-11-07 23:13:15 status installed libnuma1:amd64 2.0.11-1ubuntu1
+2017-11-07 23:13:15 status installed irqbalance:amd64 1.1.0-2ubuntu1
+2017-11-07 23:13:15 status installed krb5-locales:all 1.13.2+dfsg-5
+2017-11-07 23:13:15 status installed libdrm2:amd64 2.4.67-1ubuntu0.16.04.1
+2017-11-07 23:13:15 status installed libedit2:amd64 3.1-20150325-1ubuntu2
+2017-11-07 23:13:15 status installed libelf1:amd64 0.165-3ubuntu1
+2017-11-07 23:13:15 status installed libglib2.0-data:all 2.48.1-1~ubuntu16.04.1
+2017-11-07 23:13:15 status installed libpam-systemd:amd64 229-4ubuntu7
+2017-11-07 23:13:15 status installed libparted2:amd64 3.2-15
+2017-11-07 23:13:15 status installed libpcap0.8:amd64 1.7.4-2
+2017-11-07 23:13:15 status installed libplymouth4:amd64 0.9.2-3ubuntu13.1
+2017-11-07 23:13:15 status installed libsasl2-modules:amd64 2.1.26.dfsg1-14build1
+2017-11-07 23:13:15 status installed libxmuu1:amd64 2:1.1.2-2
+2017-11-07 23:13:15 status installed lshw:amd64 02.17-1.1ubuntu3.2
+2017-11-07 23:13:15 status installed lsof:amd64 4.89+dfsg-0.1
+2017-11-07 23:13:15 status installed ltrace:amd64 0.7.3-5.1ubuntu4
+2017-11-07 23:13:15 status installed manpages:all 4.04-2
+2017-11-07 23:13:15 status installed mlocate:amd64 0.26-1ubuntu2
+2017-11-07 23:13:15 status installed mtr-tiny:amd64 0.86-1ubuntu0.1
+2017-11-07 23:13:15 status installed nano:amd64 2.5.3-2
+2017-11-07 23:13:15 status installed openssh-client:amd64 1:7.2p2-4ubuntu1
+2017-11-07 23:13:15 status installed parted:amd64 3.2-15
+2017-11-07 23:13:15 status installed plymouth:amd64 0.9.2-3ubuntu13.1
+2017-11-07 23:13:15 status installed plymouth-theme-ubuntu-text:amd64 0.9.2-3ubuntu13.1
+2017-11-07 23:13:15 status installed powermgmt-base:all 1.31+nmu1
+2017-11-07 23:13:15 status installed psmisc:amd64 22.21-2.1build1
+2017-11-07 23:13:15 status installed python3-gi:amd64 3.20.0-0ubuntu1
+2017-11-07 23:13:16 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-07 23:13:16 status installed strace:amd64 4.11-1ubuntu3
+2017-11-07 23:13:17 status installed tcpdump:amd64 4.7.4-1ubuntu1
+2017-11-07 23:13:17 status installed telnet:amd64 0.17-40
+2017-11-07 23:13:17 status installed time:amd64 1.7-25.1
+2017-11-07 23:13:17 status installed wget:amd64 1.17.1-1ubuntu1.1
+2017-11-07 23:13:17 status installed ubuntu-standard:amd64 1.361
+2017-11-07 23:13:17 status installed ufw:all 0.35-0ubuntu2
+2017-11-07 23:13:17 status installed xauth:amd64 1:1.0.9-1ubuntu2
+2017-11-07 23:13:17 status installed xdg-user-dirs:amd64 0.15-2ubuntu6
+2017-11-07 23:13:18 status installed acpid:amd64 1:2.0.26-1ubuntu2
+2017-11-07 23:13:18 status installed python3-problem-report:all 2.20.1-0ubuntu2.1
+2017-11-07 23:13:18 status installed python3-apport:all 2.20.1-0ubuntu2.1
+2017-11-07 23:13:18 status installed apport:all 2.20.1-0ubuntu2.1
+2017-11-07 23:13:18 status installed apport-symptoms:all 0.20
+2017-11-07 23:13:18 status installed at:amd64 3.1.18-2ubuntu1
+2017-11-07 23:13:18 status installed bcache-tools:amd64 1.0.8-2
+2017-11-07 23:13:18 status installed btrfs-tools:amd64 4.4-1
+2017-11-07 23:13:18 status installed python3-newt:amd64 0.52.18-1ubuntu2
+2017-11-07 23:13:18 status installed libutempter0:amd64 1.1.6-3
+2017-11-07 23:13:18 status installed tmux:amd64 2.1-3build1
+2017-11-07 23:13:18 status installed screen:amd64 4.3.1-2build1
+2017-11-07 23:13:18 status installed byobu:all 5.106-0ubuntu1
+2017-11-07 23:13:18 status installed dmsetup:amd64 2:1.02.110-1ubuntu10
+2017-11-07 23:13:18 status installed cryptsetup-bin:amd64 2:1.6.6-5ubuntu2
+2017-11-07 23:13:19 status installed cryptsetup:amd64 2:1.6.6-5ubuntu2
+2017-11-07 23:13:19 status installed curl:amd64 7.47.0-1ubuntu2
+2017-11-07 23:13:19 status installed libdevmapper-event1.02.1:amd64 2:1.02.110-1ubuntu10
+2017-11-07 23:13:19 status installed dns-root-data:all 2015052300+h+1
+2017-11-07 23:13:19 status installed ethtool:amd64 1:4.5-1
+2017-11-07 23:13:19 status installed fonts-ubuntu-font-family-console:all 1:0.83-0ubuntu2
+2017-11-07 23:13:19 status installed liberror-perl:all 0.17-1.2
+2017-11-07 23:13:19 status installed git-man:all 1:2.7.4-0ubuntu1
+2017-11-07 23:13:19 status installed git:amd64 1:2.7.4-0ubuntu1
+2017-11-07 23:13:19 status installed ifenslave:all 2.7ubuntu1
+2017-11-07 23:13:19 status installed libdumbnet1:amd64 1.12-7
+2017-11-07 23:13:19 status installed liblvm2app2.2:amd64 2.02.133-1ubuntu10
+2017-11-07 23:13:19 status installed libpolkit-agent-1-0:amd64 0.105-14.1
+2017-11-07 23:13:19 status installed libpolkit-backend-1-0:amd64 0.105-14.1
+2017-11-07 23:13:19 status installed libpython3.5:amd64 3.5.2-2~16.01
+2017-11-07 23:13:19 status installed libreadline5:amd64 5.2+dfsg-3build1
+2017-11-07 23:13:19 status installed lxd-client:amd64 2.0.3-0ubuntu1~ubuntu16.04.2
+2017-11-07 23:13:19 status installed mdadm:amd64 3.3-2ubuntu7.1
+2017-11-07 23:13:19 status installed ncurses-term:all 6.0+20160213-1ubuntu1
+2017-11-07 23:13:19 status installed openssh-sftp-server:amd64 1:7.2p2-4ubuntu1
+2017-11-07 23:13:20 status installed openssh-server:amd64 1:7.2p2-4ubuntu1
+2017-11-07 23:13:20 status installed pastebinit:all 1.5-1
+2017-11-07 23:13:20 status installed policykit-1:amd64 0.105-14.1
+2017-11-07 23:13:20 status installed python3-pycurl:amd64 7.43.0-1ubuntu1
+2017-11-07 23:13:20 status installed python3-urllib3:all 1.13.1-2ubuntu0.16.04.1
+2017-11-07 23:13:20 status installed python3-requests:all 2.9.1-3
+2017-11-07 23:13:20 status installed python3-software-properties:all 0.96.20.2
+2017-11-07 23:13:20 status installed python3-systemd:amd64 231-2build1
+2017-11-07 23:13:20 status installed rename:all 0.20-4
+2017-11-07 23:13:20 status installed run-one:all 1.17-0ubuntu1
+2017-11-07 23:13:20 status installed ubuntu-core-launcher:amd64 1.0.27.1
+2017-11-07 23:13:21 status installed snapd:amd64 2.0.10
+2017-11-07 23:13:21 status installed software-properties-common:all 0.96.20.2
+2017-11-07 23:13:21 status installed sosreport:amd64 3.2+git276-g7da50d6-3ubuntu1
+2017-11-07 23:13:21 status installed tcpd:amd64 7.6.q-25
+2017-11-07 23:13:21 status installed ubuntu-cloudimage-keyring:all 2013.11.11
+2017-11-07 23:13:21 status installed cloud-guest-utils:all 0.27-0ubuntu24
+2017-11-07 23:13:21 status installed cloud-initramfs-copymods:all 0.27ubuntu1
+2017-11-07 23:13:21 status installed cloud-initramfs-dyn-netconf:all 0.27ubuntu1
+2017-11-07 23:13:21 status installed grub-legacy-ec2:all 0.7.7~bzr1246-0ubuntu1~16.04.1
+2017-11-07 23:13:22 status installed open-vm-tools:amd64 2:10.0.7-3227872-2ubuntu1
+2017-11-07 23:13:22 status installed overlayroot:all 0.27ubuntu1
+2017-11-07 23:13:22 status installed vim-runtime:all 2:7.4.1689-3ubuntu1.1
+2017-11-07 23:13:22 status installed vim:amd64 2:7.4.1689-3ubuntu1.1
+2017-11-07 23:13:22 status installed vlan:amd64 1.9-3.2ubuntu1
+2017-11-07 23:13:22 status installed xfsprogs:amd64 4.3.0+nmu1ubuntu1
+2017-11-07 23:13:22 status installed ssh-import-id:all 5.5-0ubuntu1
+2017-11-07 23:13:22 status installed zerofree:amd64 1.0.3-1
+2017-11-07 23:13:22 status installed liblxc1:amd64 2.0.3-0ubuntu1~ubuntu16.04.1
+2017-11-07 23:13:22 status installed lxd:amd64 2.0.3-0ubuntu1~ubuntu16.04.2
+2017-11-07 23:13:23 status installed python3-distupgrade:all 1:16.04.14
+2017-11-07 23:13:23 status installed ubuntu-release-upgrader-core:all 1:16.04.14
+2017-11-07 23:13:23 status installed liblvm2cmd2.02:amd64 2.02.133-1ubuntu10
+2017-11-07 23:13:23 status installed dmeventd:amd64 2:1.02.110-1ubuntu10
+2017-11-07 23:13:23 status installed lvm2:amd64 2.02.133-1ubuntu10
+2017-11-07 23:13:23 status installed lxc-common:amd64 2.0.3-0ubuntu1~ubuntu16.04.1
+2017-11-07 23:13:24 status installed python3-update-manager:all 1:16.04.3
+2017-11-07 23:13:24 status installed update-manager-core:all 1:16.04.3
+2017-11-07 23:13:24 status installed overlayroot:all 0.27ubuntu1
+2017-11-07 23:13:24 status installed cloud-initramfs-dyn-netconf:all 0.27ubuntu1
+2017-11-07 23:13:24 status installed cloud-initramfs-copymods:all 0.27ubuntu1
+2017-11-07 23:13:24 status installed open-iscsi:amd64 2.0.873+git0.3b4b4500-14ubuntu3
+2017-11-07 23:13:24 status installed ntfs-3g:amd64 1:2015.3.14AR.1-1build1
+2017-11-07 23:13:24 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-07 23:13:24 status installed ubuntu-server:amd64 1.361
+2017-11-07 23:13:24 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:13:24 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:13:24 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:13:24 status installed dbus:amd64 1.10.6-1ubuntu3
+2017-11-07 23:13:29 status installed ca-certificates:all 20160104ubuntu1
+2017-11-07 23:13:29 status installed xml-core:all 0.13+nmu2
+2017-11-07 23:13:29 status installed sgml-base:all 1.26+nmu4ubuntu1
+2017-11-07 23:13:29 status installed ufw:all 0.35-0ubuntu2
+2017-11-07 23:14:06 status installed language-pack-en:all 1:16.04+20161009
+2017-11-07 23:14:14 status installed language-pack-en-base:all 1:16.04+20160627
+2017-11-07 23:16:06 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:16:07 status installed man-db:amd64 2.7.5-1
+2017-11-07 23:16:07 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:16:07 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:16:07 status installed libfreetype6:amd64 2.6.1-0.1ubuntu2.3
+2017-11-07 23:16:07 status installed grub-common:amd64 2.02~beta2-36ubuntu3.14
+2017-11-07 23:16:07 status installed os-prober:amd64 1.70ubuntu3.3
+2017-11-07 23:16:07 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-07 23:16:07 status installed systemd:amd64 229-4ubuntu7
+2017-11-07 23:16:07 status installed ureadahead:amd64 0.100.0-19
+2017-11-07 23:17:45 status installed man-db:amd64 2.7.5-1
+2017-11-07 23:17:45 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-07 23:17:45 status installed grub2-common:amd64 2.02~beta2-36ubuntu3.14
+2017-11-07 23:17:45 status installed grub-pc-bin:amd64 2.02~beta2-36ubuntu3.14
+2017-11-07 23:17:45 status installed grub-pc:amd64 2.02~beta2-36ubuntu3.14
+2017-11-07 23:17:45 status installed grub-gfxpayload-lists:amd64 0.7
+2017-11-08 01:17:06 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-08 01:17:06 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:17:06 status installed binutils:amd64 2.26.1-1ubuntu1~16.04.5
+2017-11-08 01:17:06 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-08 01:19:52 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:19:55 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:19:55 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-08 01:19:55 status installed systemd:amd64 229-4ubuntu7
+2017-11-08 01:19:56 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:19:56 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:19:56 status installed java-common:all 0.56ubuntu2
+2017-11-08 01:20:05 status installed gsfonts:all 1:8.11+urwcyr1.0.7~pre44-4.2ubuntu1
+2017-11-08 01:20:05 status installed libfontenc1:amd64 1:1.1.3-1
+2017-11-08 01:20:05 status installed libxfont1:amd64 1:1.5.1-1ubuntu0.16.04.3
+2017-11-08 01:20:06 status installed x11-common:all 1:7.7+13ubuntu3
+2017-11-08 01:20:06 status installed xfonts-encodings:all 1:1.0.4-2
+2017-11-08 01:20:06 status installed xfonts-utils:amd64 1:7.7+3ubuntu0.16.04.2
+2017-11-08 01:20:06 status installed gsfonts-x11:all 0.24
+2017-11-08 01:20:06 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-08 01:20:06 status installed systemd:amd64 229-4ubuntu7
+2017-11-08 01:20:06 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:23:15 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:23:18 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:28:10 status installed oracle-java8-installer:all 8u151-1~webupd8~0
+2017-11-08 01:28:31 status installed oracle-java8-set-default:all 8u151-1~webupd8~0
+2017-11-08 01:32:53 status installed oracle-java8-set-default:all 8u151-1~webupd8~0
+2017-11-08 01:32:53 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:32:57 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:36:30 status installed oracle-java9-installer:amd64 9.0.1-1~webupd8~0
+2017-11-08 01:36:48 status installed oracle-java9-set-default:amd64 9.0.1-1~webupd8~0
+2017-11-08 01:45:10 status installed libc6:amd64 2.23-0ubuntu9
+2017-11-08 01:45:10 status installed libc-bin:amd64 2.23-0ubuntu3
+2017-11-08 01:45:12 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:12 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:13 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:13 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-08 01:45:13 status installed plymouth-theme-ubuntu-text:amd64 0.9.2-3ubuntu13.1
+2017-11-08 01:45:25 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-08 01:45:26 status installed base-files:amd64 9.4ubuntu4.5
+2017-11-08 01:45:26 status installed plymouth-theme-ubuntu-text:amd64 0.9.2-3ubuntu13.1
+2017-11-08 01:45:32 status installed initramfs-tools:all 0.122ubuntu8.1
+2017-11-08 01:45:33 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-08 01:45:33 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:33 status installed bash:amd64 4.3-14ubuntu1.2
+2017-11-08 01:45:34 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:34 status installed bsdutils:amd64 1:2.27.1-6ubuntu3.3
+2017-11-08 01:45:35 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-08 01:45:35 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:35 status installed coreutils:amd64 8.25-2ubuntu3~16.04
+2017-11-08 01:45:35 status installed dpkg:amd64 1.18.4ubuntu1.2
+2017-11-08 01:45:36 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:36 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:36 status installed init-system-helpers:all 1.29ubuntu4
+2017-11-08 01:45:36 status installed init:amd64 1.29ubuntu4
+2017-11-08 01:45:37 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:37 status installed login:amd64 1:4.2-3.1ubuntu5.3
+2017-11-08 01:45:38 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:38 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:45:39 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:45:39 status installed util-linux:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:45:39 status installed systemd:amd64 229-4ubuntu7
+2017-11-08 01:45:39 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:39 status installed mount:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:45:40 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:40 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:45:40 status installed tar:amd64 1.28-2.1ubuntu0.1
+2017-11-08 01:45:40 status installed gcc-5-base:amd64 5.4.0-6ubuntu1~16.04.5
+2017-11-08 01:45:40 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:40 status installed libstdc++6:amd64 5.4.0-6ubuntu1~16.04.5
+2017-11-08 01:45:40 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:40 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:40 status installed zlib1g:amd64 1:1.2.8.dfsg-2ubuntu4.1
+2017-11-08 01:45:40 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:41 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:41 status installed libapt-pkg5.0:amd64 1.2.24
+2017-11-08 01:45:41 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:41 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:41 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:42 status installed apt:amd64 1.2.24
+2017-11-08 01:45:42 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:42 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:42 status installed gpgv:amd64 1.4.20-1ubuntu3.1
+2017-11-08 01:45:43 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-08 01:45:43 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:43 status installed gnupg:amd64 1.4.20-1ubuntu3.1
+2017-11-08 01:45:43 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:43 status installed libsystemd0:amd64 229-4ubuntu21
+2017-11-08 01:45:43 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:44 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:45 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:45:45 status installed dbus:amd64 1.10.6-1ubuntu3
+2017-11-08 01:45:45 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:45:46 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:46 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:45:47 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:45:47 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:47 status installed libudev1:amd64 229-4ubuntu21
+2017-11-08 01:45:47 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:47 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:45:48 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:48 status installed passwd:amd64 1:4.2-3.1ubuntu5.3
+2017-11-08 01:45:48 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:48 status installed libuuid1:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:45:48 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:48 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:48 status installed libblkid1:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:45:48 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:49 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:45:49 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:49 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:49 status installed libkmod2:amd64 22-1ubuntu5
+2017-11-08 01:45:49 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:45:49 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:50 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:50 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:45:50 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:50 status installed libapparmor1:amd64 2.10.95-0ubuntu2.7
+2017-11-08 01:45:50 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:45:50 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:51 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:51 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:51 status installed systemd-sysv:amd64 229-4ubuntu21
+2017-11-08 01:45:51 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:45:51 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:51 status installed libgcrypt20:amd64 1.6.5-2ubuntu0.3
+2017-11-08 01:45:52 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:52 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:52 status installed libcryptsetup4:amd64 2:1.6.6-5ubuntu2.1
+2017-11-08 01:45:52 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:52 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:45:52 status installed libmount1:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:45:52 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:46:02 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:46:02 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:46:02 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:46:02 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:46:02 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:46:03 status installed ufw:all 0.35-0ubuntu2
+2017-11-08 01:46:04 status installed libfdisk1:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:46:04 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:46:04 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:46:04 status installed libsmartcols1:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:46:04 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:46:04 status installed multiarch-support:amd64 2.23-0ubuntu9
+2017-11-08 01:46:21 status installed man-db:amd64 2.7.5-1
+2017-11-08 01:46:22 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:46:22 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:46:22 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:46:22 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:46:22 status installed install-info:amd64 6.1.0.dfsg.1-5
+2017-11-08 01:46:31 status installed locales:all 2.23-0ubuntu9
+2017-11-08 01:46:31 status installed libidn11:amd64 1.32-3ubuntu1.2
+2017-11-08 01:46:31 status installed libssl1.0.0:amd64 1.0.2g-1ubuntu4.9
+2017-11-08 01:46:31 status installed wget:amd64 1.17.1-1ubuntu1.3
+2017-11-08 01:46:49 status installed libapt-inst2.0:amd64 1.2.24
+2017-11-08 01:46:49 status installed apt-utils:amd64 1.2.24
+2017-11-08 01:46:49 status installed libdbus-1-3:amd64 1.10.6-1ubuntu3.3
+2017-11-08 01:46:49 status installed libexpat1:amd64 2.1.0-7ubuntu0.16.04.3
+2017-11-08 01:46:49 status installed dbus:amd64 1.10.6-1ubuntu3.3
+2017-11-08 01:46:50 status installed libpam-systemd:amd64 229-4ubuntu21
+2017-11-08 01:46:50 status installed iproute2:amd64 4.3.0-1ubuntu3.16.04.2
+2017-11-08 01:46:50 status installed ifupdown:amd64 0.8.10ubuntu1.2
+2017-11-08 01:46:50 status installed libprocps4:amd64 2:3.3.10-4ubuntu2.3
+2017-11-08 01:46:50 status installed procps:amd64 2:3.3.10-4ubuntu2.3
+2017-11-08 01:46:51 status installed udev:amd64 229-4ubuntu21
+2017-11-08 01:46:52 status installed mdadm:amd64 3.3-2ubuntu7.5
+2017-11-08 01:46:52 status installed kmod:amd64 22-1ubuntu5
+2017-11-08 01:46:52 status installed libklibc:amd64 2.0.4-8ubuntu1.16.04.3
+2017-11-08 01:46:52 status installed klibc-utils:amd64 2.0.4-8ubuntu1.16.04.3
+2017-11-08 01:46:52 status installed initramfs-tools-bin:amd64 0.122ubuntu8.9
+2017-11-08 01:46:52 status installed initramfs-tools-core:all 0.122ubuntu8.9
+2017-11-08 01:46:52 status installed initramfs-tools:all 0.122ubuntu8.9
+2017-11-08 01:46:52 status installed libpython3.5-minimal:amd64 3.5.2-2ubuntu0~16.04.3
+2017-11-08 01:46:52 status installed libpython3.5-stdlib:amd64 3.5.2-2ubuntu0~16.04.3
+2017-11-08 01:46:52 status installed libpython3.5:amd64 3.5.2-2ubuntu0~16.04.3
+2017-11-08 01:46:53 status installed python3.5-minimal:amd64 3.5.2-2ubuntu0~16.04.3
+2017-11-08 01:46:54 status installed python3.5:amd64 3.5.2-2ubuntu0~16.04.3
+2017-11-08 01:46:54 status installed libglib2.0-0:amd64 2.48.2-0ubuntu1
+2017-11-08 01:46:54 status installed libaccountsservice0:amd64 0.6.40-2ubuntu11.3
+2017-11-08 01:46:54 status installed accountsservice:amd64 0.6.40-2ubuntu11.3
+2017-11-08 01:46:54 status installed language-selector-common:all 0.165.4
+2017-11-08 01:46:54 status installed libnettle6:amd64 3.2-1ubuntu0.16.04.1
+2017-11-08 01:46:54 status installed libhogweed4:amd64 3.2-1ubuntu0.16.04.1
+2017-11-08 01:46:54 status installed libp11-kit0:amd64 0.23.2-5~ubuntu16.04.1
+2017-11-08 01:46:54 status installed libtasn1-6:amd64 4.7-3ubuntu0.16.04.2
+2017-11-08 01:46:54 status installed libgnutls30:amd64 3.4.10-4ubuntu1.4
+2017-11-08 01:46:54 status installed libgnutls-openssl27:amd64 3.4.10-4ubuntu1.4
+2017-11-08 01:46:54 status installed libfuse2:amd64 2.9.4-1ubuntu3.1
+2017-11-08 01:46:54 status installed fuse:amd64 2.9.4-1ubuntu3.1
+2017-11-08 01:46:55 status installed uuid-runtime:amd64 2.27.1-6ubuntu3.3
+2017-11-08 01:46:55 status installed dnsmasq-base:amd64 2.75-1ubuntu0.16.04.3
+2017-11-08 01:46:55 status installed libapparmor-perl:amd64 2.10.95-0ubuntu2.7
+2017-11-08 01:46:56 status installed apparmor:amd64 2.10.95-0ubuntu2.7
+2017-11-08 01:46:56 status installed lxd-client:amd64 2.0.10-0ubuntu1~16.04.2
+2017-11-08 01:46:56 status installed lxcfs:amd64 2.0.7-0ubuntu1~16.04.2
+2017-11-08 01:46:56 status installed uidmap:amd64 1:4.2-3.1ubuntu5.3
+2017-11-08 01:46:58 status installed openssl:amd64 1.0.2g-1ubuntu4.9
+2017-11-08 01:47:00 status installed ca-certificates:all 20170717~16.04.1
+2017-11-08 01:47:00 status installed libkrb5support0:amd64 1.13.2+dfsg-5ubuntu2
+2017-11-08 01:47:00 status installed libk5crypto3:amd64 1.13.2+dfsg-5ubuntu2
+2017-11-08 01:47:00 status installed libkrb5-3:amd64 1.13.2+dfsg-5ubuntu2
+2017-11-08 01:47:00 status installed libgssapi-krb5-2:amd64 1.13.2+dfsg-5ubuntu2
+2017-11-08 01:47:00 status installed openssh-client:amd64 1:7.2p2-4ubuntu2.2
+2017-11-08 01:47:00 status installed openssh-sftp-server:amd64 1:7.2p2-4ubuntu2.2
+2017-11-08 01:47:00 status installed openssh-server:amd64 1:7.2p2-4ubuntu2.2
+2017-11-08 01:47:02 status installed snapd:amd64 2.27.5
+2017-11-08 01:47:02 status installed ubuntu-core-launcher:amd64 2.27.5
+2017-11-08 01:47:02 status installed makedev:all 2.3.1-93ubuntu2~ubuntu16.04.1
+2017-11-08 01:47:03 status installed tzdata:all 2016j-0ubuntu0.16.04
+2017-11-08 01:47:04 status installed keyboard-configuration:all 1.108ubuntu15.3
+2017-11-08 01:47:04 status installed distro-info-data:all 0.28ubuntu0.5
+2017-11-08 01:47:04 status installed eject:amd64 2.1.5+deb1+cvs20081104-13.1ubuntu0.16.04.1
+2017-11-08 01:47:04 status installed libisc-export160:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:04 status installed libdns-export162:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:04 status installed isc-dhcp-client:amd64 4.3.3-5ubuntu12.7
+2017-11-08 01:47:04 status installed isc-dhcp-common:amd64 4.3.3-5ubuntu12.7
+2017-11-08 01:47:04 status installed less:amd64 481-2.1ubuntu0.2
+2017-11-08 01:47:04 status installed logrotate:amd64 3.8.7-2ubuntu2.16.04.2
+2017-11-08 01:47:04 status installed resolvconf:all 1.78ubuntu5
+2017-11-08 01:47:04 status installed sudo:amd64 1.8.16-0ubuntu1.5
+2017-11-08 01:47:04 status installed vim-common:amd64 2:7.4.1689-3ubuntu1.2
+2017-11-08 01:47:05 status installed vim-runtime:all 2:7.4.1689-3ubuntu1.2
+2017-11-08 01:47:05 status installed vim:amd64 2:7.4.1689-3ubuntu1.2
+2017-11-08 01:47:05 status installed vim-tiny:amd64 2:7.4.1689-3ubuntu1.2
+2017-11-08 01:47:05 status installed libroken18-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libasn1-8-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libhcrypto4-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libheimbase1-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libwind0-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libhx509-5-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libkrb5-26-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libheimntlm0-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libgssapi3-heimdal:amd64 1.7~git20150920+dfsg-4ubuntu1.16.04.1
+2017-11-08 01:47:05 status installed libldap-2.4-2:amd64 2.4.42+dfsg-2ubuntu3.2
+2017-11-08 01:47:05 status installed librtmp1:amd64 2.4+20151223.gitfa8646d-1ubuntu0.1
+2017-11-08 01:47:05 status installed libcurl3-gnutls:amd64 7.47.0-1ubuntu2.4
+2017-11-08 01:47:05 status installed curl:amd64 7.47.0-1ubuntu2.4
+2017-11-08 01:47:05 status installed apt-transport-https:amd64 1.2.24
+2017-11-08 01:47:05 status installed libicu55:amd64 55.1-7ubuntu0.3
+2017-11-08 01:47:05 status installed libxml2:amd64 2.9.3+dfsg1-1ubuntu0.3
+2017-11-08 01:47:05 status installed libisc160:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed libdns162:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed libisccc140:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed libisccfg140:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed libbind9-140:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed liblwres141:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed bind9-host:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed dnsutils:amd64 1:9.10.3.dfsg.P4-8ubuntu1.8
+2017-11-08 01:47:05 status installed krb5-locales:all 1.13.2+dfsg-5ubuntu2
+2017-11-08 01:47:05 status installed libdrm2:amd64 2.4.76-1~ubuntu16.04.1
+2017-11-08 01:47:05 status installed libglib2.0-data:all 2.48.2-0ubuntu1
+2017-11-08 01:47:05 status installed libpci3:amd64 1:3.3.1-1.1ubuntu1.1
+2017-11-08 01:47:05 status installed pciutils:amd64 1:3.3.1-1.1ubuntu1.1
+2017-11-08 01:47:05 status installed libplymouth4:amd64 0.9.2-3ubuntu13.2
+2017-11-08 01:47:05 status installed lshw:amd64 02.17-1.1ubuntu3.3
+2017-11-08 01:47:05 status installed nano:amd64 2.5.3-2ubuntu2
+2017-11-08 01:47:05 status installed plymouth:amd64 0.9.2-3ubuntu13.2
+2017-11-08 01:47:05 status installed plymouth-theme-ubuntu-text:amd64 0.9.2-3ubuntu13.2
+2017-11-08 01:47:05 status installed tcpdump:amd64 4.9.2-0ubuntu0.16.04.1
+2017-11-08 01:47:05 status installed python3-problem-report:all 2.20.1-0ubuntu2.10
+2017-11-08 01:47:06 status installed python3-apport:all 2.20.1-0ubuntu2.10
+2017-11-08 01:47:06 status installed btrfs-tools:amd64 4.4-1ubuntu1
+2017-11-08 01:47:06 status installed cryptsetup-bin:amd64 2:1.6.6-5ubuntu2.1
+2017-11-08 01:47:06 status installed cryptsetup:amd64 2:1.6.6-5ubuntu2.1
+2017-11-08 01:47:06 status installed git-man:all 1:2.7.4-0ubuntu1.3
+2017-11-08 01:47:06 status installed git:amd64 1:2.7.4-0ubuntu1.3
+2017-11-08 01:47:06 status installed libevent-2.0-5:amd64 2.0.21-stable-2ubuntu0.16.04.1
+2017-11-08 01:47:06 status installed libmspack0:amd64 0.5-1ubuntu0.16.04.1
+2017-11-08 01:47:06 status installed libnl-3-200:amd64 3.2.27-1ubuntu0.16.04.1
+2017-11-08 01:47:06 status installed libnl-genl-3-200:amd64 3.2.27-1ubuntu0.16.04.1
+2017-11-08 01:47:14 status installed linux-firmware:all 1.157.13
+2017-11-08 01:47:14 status installed python3-software-properties:all 0.96.20.7
+2017-11-08 01:47:14 status installed software-properties-common:all 0.96.20.7
+2017-11-08 01:47:15 status installed sosreport:amd64 3.4-1~ubuntu16.04.1
+2017-11-08 01:47:16 status installed unattended-upgrades:all 0.90ubuntu0.8
+2017-11-08 01:47:16 status installed xfsprogs:amd64 4.3.0+nmu1ubuntu1.1
+2017-11-08 01:47:16 status installed cloud-initramfs-copymods:all 0.27ubuntu1.4
+2017-11-08 01:47:16 status installed cloud-initramfs-dyn-netconf:all 0.27ubuntu1.4
+2017-11-08 01:47:16 status installed grub-legacy-ec2:all 0.7.9-233-ge586fe35-0ubuntu1~16.04.2
+2017-11-08 01:47:17 status installed open-vm-tools:amd64 2:10.0.7-3227872-5ubuntu1~16.04.1
+2017-11-08 01:47:17 status installed overlayroot:all 0.27ubuntu1.4
+2017-11-08 01:47:17 status installed vlan:amd64 1.9-3.2ubuntu1.16.04.4
+2017-11-08 01:47:17 status installed python3-update-manager:all 1:16.04.10
+2017-11-08 01:47:18 status installed console-setup:all 1.108ubuntu15.3
+2017-11-08 01:47:18 status installed kbd:amd64 1.15.5-1ubuntu5
+2017-11-08 01:47:18 status installed console-setup-linux:all 1.108ubuntu15.3
+2017-11-08 01:47:18 status installed liblxc1:amd64 2.0.8-0ubuntu1~16.04.2
+2017-11-08 01:47:19 status installed lxc-common:amd64 2.0.8-0ubuntu1~16.04.2
+2017-11-08 01:47:19 status installed lxd:amd64 2.0.10-0ubuntu1~16.04.2
+2017-11-08 01:47:19 status installed python3-distupgrade:all 1:16.04.23
+2017-11-08 01:47:20 status installed ubuntu-release-upgrader-core:all 1:16.04.23
+2017-11-08 01:47:20 status installed update-manager-core:all 1:16.04.10
+2017-11-08 01:47:20 status installed update-notifier-common:all 3.168.5
+2017-11-08 01:47:20 status installed apport:all 2.20.1-0ubuntu2.10
+2017-11-08 01:47:21 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:47:21 status installed libc-bin:amd64 2.23-0ubuntu9
+2017-11-08 01:47:21 status installed systemd:amd64 229-4ubuntu21
+2017-11-08 01:47:21 status installed ureadahead:amd64 0.100.0-19
+2017-11-08 01:47:21 status installed overlayroot:all 0.27ubuntu1.4
+2017-11-08 01:47:21 status installed cloud-initramfs-dyn-netconf:all 0.27ubuntu1.4
+2017-11-08 01:47:21 status installed cloud-initramfs-copymods:all 0.27ubuntu1.4
+2017-11-08 01:47:21 status installed open-iscsi:amd64 2.0.873+git0.3b4b4500-14ubuntu3.4
+2017-11-08 01:47:21 status installed ntfs-3g:amd64 1:2015.3.14AR.1-1ubuntu0.1
+2017-11-08 01:47:29 status installed initramfs-tools:all 0.122ubuntu8.9
+2017-11-08 01:47:30 status installed ca-certificates:all 20170717~16.04.1
+2017-11-08 01:47:30 status installed resolvconf:all 1.78ubuntu5
+2017-11-08 01:50:48 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:50:48 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:52:44 status installed oracle-java8-installer:all 8u151-1~webupd8~0
+2017-11-08 01:52:45 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:52:45 status installed mime-support:all 3.59ubuntu1
+2017-11-08 01:52:54 status installed oracle-java9-set-default:amd64 9.0.1-1~webupd8~0
+2017-11-08 01:52:54 status installed oracle-java9-installer:amd64 9.0.1-1~webupd8~0
+2017-11-08 01:52:55 status installed shared-mime-info:amd64 1.5-2ubuntu0.1
+2017-11-08 01:52:55 status installed mime-support:all 3.59ubuntu1
+2017-11-08 06:13:34 status installed linux-image-4.4.0-98-generic:amd64 4.4.0-98.121
+2017-11-08 06:13:42 status installed linux-image-extra-4.4.0-98-generic:amd64 4.4.0-98.121
+2017-11-08 06:13:42 status installed linux-image-generic:amd64 4.4.0.98.103
+2017-11-08 06:13:42 status installed linux-headers-4.4.0-98:all 4.4.0-98.121
+2017-11-08 06:13:42 status installed linux-headers-4.4.0-98-generic:amd64 4.4.0-98.121
+2017-11-08 06:13:42 status installed linux-headers-generic:amd64 4.4.0.98.103
+2017-11-08 06:13:42 status installed linux-generic:amd64 4.4.0.98.103
+2019-10-07 01:30:36 status installed man-db:amd64 2.7.5-1
+2019-10-07 01:30:36 status installed systemd:amd64 229-4ubuntu21
+2019-10-07 01:30:36 status installed ureadahead:amd64 0.100.0-19
+2019-10-07 01:30:36 status installed php-common:all 1:35ubuntu6.1
+2019-10-07 01:30:39 status installed php7.0-common:amd64 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:40 status installed php7.0-json:amd64 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:40 status installed php7.0-opcache:amd64 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:40 status installed php7.0-readline:amd64 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:40 status installed php7.0-cli:amd64 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:41 status installed php7.0-fpm:amd64 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:41 status installed php7.0:all 7.0.33-0ubuntu0.16.04.6
+2019-10-07 01:30:41 status installed php:all 1:7.0+35ubuntu6.1
+2019-10-07 01:30:41 status installed systemd:amd64 229-4ubuntu21
+2019-10-07 01:30:41 status installed ureadahead:amd64 0.100.0-19
+
+==============================| CRON JOBS |==============================
+
+[+] /home/kali/Labspace/Case2-HDFS/Master/fs/etc/cron.d/php:
+09,39 *     * * *     root   [ -x /usr/lib/php/sessionclean ] && /usr/lib/php/sessionclean
+
+[+] /home/kali/Labspace/Case2-HDFS/Master/fs/etc/cron.daily/apport:
+[ -d /var/crash ] || exit 0
+find /var/crash/. ! -name . -prune -type f \( \( -size 0 -a \! -name '*.upload*' -a \! -name '*.drkonqi*' \) -o -mtime +7 \) -exec rm -f -- '{}' \;
+find /var/crash/. ! -name . -prune -type d -regextype posix-extended -regex '.*/[0-9]{12}$' \( -mtime +7 \) -exec rm -Rf -- '{}' \;
+
+[+] /home/kali/Labspace/Case2-HDFS/Master/fs/etc/cron.daily/apt-compat:
+exec /usr/lib/apt/apt.systemd.daily
+
+[+] /home/kali/Labspace/Case2-HDFS/Master/fs/etc/cron.daily/man-db:
+  start-stop-daemon --start --pidfile /dev/null --startas /bin/sh \
+
+[+] /home/kali/Labspace/Case2-HDFS/Master/fs/etc/cron.daily/mdadm:
+exec $MDADM --monitor --scan --oneshot
+
+[+] /home/kali/Labspace/Case2-HDFS/Master/fs/etc/cron.daily/popularity-contest:
+	runuser -s /bin/sh -c "/usr/sbin/popularity-contest" nobody
+
+==============================| NETWORK |==============================
+
+[+] Hosts:
+127.0.0.1	localhost
+
+192.168.2.100 master.champforensics.com		master
+192.168.2.101 slave1.champforensics.com		slave1
+192.168.2.102 slave2.champforensics.com		slave2
+
+[+] DNS:
+/etc/resolv.conf file does not exist...
+
+[+] Interfaces:
+lo:
+  Type: loopback
+
+ens33:
+  Type: static
+
+ens36:
+  Type: dhcp
+  IP: 172.16.64.137
+  Mask: 255.255.255.0
+  Gateway: 172.16.64.2
+  Set Time: 2019/10/06 22:49:17
+
+ens33:
+cat: /home/kali/Labspace/Case2-HDFS/Master/fs/var/lib/dhcp/dhclient.ens33.leases: No such file or directory
+  Type: dhcp
+  IP:
+  Mask:
+  Gateway:
+  Set Time:
+
+==============================| REMOTE SESSIONS |==============================
+
+Nov  7 23:21:26 hadoop-master login[2196]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Nov  7 23:21:26 hadoop-master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  7 23:25:35 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  7 23:25:35 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 00:53:02 hadoop-master login[2204]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Nov  8 00:53:02 hadoop-master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  8 00:53:28 hadoop-master sshd[2295]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 01:03:01 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:03:46 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:03:58 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:04:31 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:06:59 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:11:47 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:15:17 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:17:01 hadoop-master CRON[2826]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 01:17:01 hadoop-master CRON[2826]: pam_unix(cron:session): session closed for user root
+Nov  8 01:20:07 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:20:30 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:28:32 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:28:54 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:29:13 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:30:07 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:36:51 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:40:38 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:44:00 hadoop-master sshd[5267]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 01:47:33 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:49:22 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:49:22 hadoop-master sshd[2295]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 01:49:22 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:49:53 hadoop-master sshd[1205]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 01:49:53 hadoop-master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  8 01:50:05 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:50:24 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:50:42 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:50:49 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:52:42 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:52:46 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:52:51 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:52:56 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:52:59 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:53:00 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:53:04 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:53:46 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 01:57:14 hadoop-master sshd[2072]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 01:57:15 hadoop-master sshd[2072]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 01:58:12 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 01:58:12 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:00:10 hadoop-master sshd[2197]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 02:02:09 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:02:21 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:06:08 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:06:08 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:06:51 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:06:51 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:07:06 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:07:06 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:08:44 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:08:44 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:17:01 hadoop-master CRON[2469]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 02:17:01 hadoop-master CRON[2469]: pam_unix(cron:session): session closed for user root
+Nov  8 02:42:53 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:42:53 hadoop-master sshd[2197]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 02:57:11 hadoop-master sshd[1200]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 02:57:11 hadoop-master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  8 02:57:24 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:57:28 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:58:03 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:58:15 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 02:58:18 hadoop-master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 02:58:18 hadoop-master sshd[1200]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 02:58:18 hadoop-master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 03:00:06 master login[1158]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Nov  8 03:00:06 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  8 03:01:03 master sshd[1269]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 03:13:02 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 03:13:02 master sshd[1269]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 03:13:02 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 03:14:05 master login[1155]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Nov  8 03:14:05 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  8 03:16:28 master sshd[1274]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 03:17:01 master CRON[1319]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 03:17:01 master CRON[1319]: pam_unix(cron:session): session closed for user root
+Nov  8 03:51:08 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 03:51:25 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 03:56:56 master sshd[1453]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 03:56:57 master sshd[1453]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 03:57:04 master sshd[1489]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 03:57:06 master sshd[1489]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 03:57:23 master sshd[1538]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 03:57:23 master sshd[1538]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 03:57:30 master sshd[1573]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 03:57:32 master sshd[1573]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 04:17:01 master CRON[1711]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 04:17:01 master CRON[1711]: pam_unix(cron:session): session closed for user root
+Nov  8 05:03:10 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 05:03:10 master su[2052]: pam_unix(su:session): session opened for user root by hadoop(uid=0)
+Nov  8 05:04:54 master su[2052]: pam_unix(su:session): session closed for user root
+Nov  8 05:04:54 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 05:05:20 master sshd[2420]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 05:05:24 master sshd[2420]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 05:05:30 master sshd[2566]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 05:05:34 master sshd[2566]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 05:05:40 master sshd[2738]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 05:05:44 master sshd[2738]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 05:05:55 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 05:05:55 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 05:17:01 master CRON[2938]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 05:17:01 master CRON[2938]: pam_unix(cron:session): session closed for user root
+Nov  8 06:17:01 master CRON[19171]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 06:17:01 master CRON[19171]: pam_unix(cron:session): session closed for user root
+Nov  8 06:25:01 master CRON[19174]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 06:26:04 master CRON[19174]: pam_unix(cron:session): session closed for user root
+Nov  8 07:17:01 master CRON[19501]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 07:17:01 master CRON[19501]: pam_unix(cron:session): session closed for user root
+Nov  8 08:17:01 master CRON[19506]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 08:17:01 master CRON[19506]: pam_unix(cron:session): session closed for user root
+Nov  8 09:17:01 master CRON[19511]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 09:17:01 master CRON[19511]: pam_unix(cron:session): session closed for user root
+Nov  8 10:17:01 master CRON[19516]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 10:17:01 master CRON[19516]: pam_unix(cron:session): session closed for user root
+Nov  8 11:17:01 master CRON[19520]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 11:17:01 master CRON[19520]: pam_unix(cron:session): session closed for user root
+Nov  8 12:17:01 master CRON[19529]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 12:17:01 master CRON[19529]: pam_unix(cron:session): session closed for user root
+Nov  8 13:17:01 master CRON[19533]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 13:17:01 master CRON[19533]: pam_unix(cron:session): session closed for user root
+Nov  8 14:17:02 master CRON[19857]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 14:17:02 master CRON[19857]: pam_unix(cron:session): session closed for user root
+Nov  8 15:17:01 master CRON[19872]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 15:17:01 master CRON[19872]: pam_unix(cron:session): session closed for user root
+Nov  8 16:17:01 master CRON[19878]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 16:17:01 master CRON[19878]: pam_unix(cron:session): session closed for user root
+Nov  8 17:17:01 master CRON[19883]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 17:17:01 master CRON[19883]: pam_unix(cron:session): session closed for user root
+Nov  8 17:20:01 master CRON[19886]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 17:20:01 master CRON[19886]: pam_unix(cron:session): session closed for user root
+Nov  8 18:17:01 master CRON[19897]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 18:17:01 master CRON[19897]: pam_unix(cron:session): session closed for user root
+Nov  8 19:17:01 master CRON[19903]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 19:17:01 master CRON[19903]: pam_unix(cron:session): session closed for user root
+Nov  8 20:10:32 master sshd[19919]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:17:01 master CRON[20088]: pam_unix(cron:session): session opened for user root by (uid=0)
+Nov  8 20:17:01 master CRON[20088]: pam_unix(cron:session): session closed for user root
+Nov  8 20:32:07 master sshd[20460]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:32:11 master sshd[20460]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:32:16 master sshd[20687]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:32:16 master sshd[20687]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:47:25 master sshd[21489]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:47:30 master sshd[21489]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:47:40 master sshd[21637]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:47:46 master sshd[21637]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:47:58 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 20:48:16 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 20:48:26 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 20:48:26 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  8 20:49:24 master sshd[21913]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:49:28 master sshd[21913]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:49:37 master sshd[22132]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:49:41 master sshd[22132]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:50:47 master sshd[22397]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:50:52 master sshd[22397]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:50:59 master sshd[22544]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:51:04 master sshd[22544]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:51:14 master sshd[22744]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:51:18 master sshd[22744]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:51:24 master sshd[22963]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:51:28 master sshd[22963]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:53:47 master sshd[23222]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:53:52 master sshd[23222]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:53:58 master sshd[23370]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  8 20:54:03 master sshd[23370]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:55:56 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  8 20:55:56 master sshd[1274]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:55:56 master sshd[19919]: pam_unix(sshd:session): session closed for user hadoop
+Nov  8 20:55:56 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:31:01 master sshd[1114]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 01:31:01 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Nov  9 01:31:16 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:35:13 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:35:23 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:35:35 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:36:07 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:36:07 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:36:12 master sshd[1289]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 01:36:18 master sshd[1289]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 01:36:24 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:36:44 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:36:45 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:42:17 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:42:18 master sshd[1357]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 01:42:48 master sshd[1357]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 01:42:49 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:43:10 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:43:25 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 01:45:39 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 01:45:40 master sshd[1412]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 01:45:45 master sshd[1412]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:01:29 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 02:01:29 master sudo: pam_unix(sudo:session): session closed for user root
+Nov  9 02:02:26 master sshd[1862]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:02:30 master sshd[1862]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:02:37 master sshd[2058]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:02:41 master sshd[2058]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:11:43 master sshd[2400]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:11:48 master sshd[2400]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:11:54 master sshd[2547]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:11:59 master sshd[2547]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:12:14 master sshd[2746]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:12:18 master sshd[2746]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:12:23 master sshd[2965]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:12:28 master sshd[2965]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:14:19 master sshd[3397]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:14:24 master sshd[3397]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:14:30 master sshd[3543]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Nov  9 02:14:36 master sshd[3543]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:14:42 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Nov  9 02:14:42 master sshd[1114]: pam_unix(sshd:session): session closed for user hadoop
+Nov  9 02:14:42 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:11:56 master login[1163]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Oct  6 23:11:56 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Oct  6 23:12:36 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:13:23 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:13:39 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:15:25 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:15:39 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:17:01 master CRON[1457]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  6 23:17:01 master CRON[1457]: pam_unix(cron:session): session closed for user root
+Oct  6 23:18:01 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:18:41 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:18:41 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:19:34 master sshd[1632]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  6 23:22:59 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:23:58 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:32:48 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:32:48 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:33:38 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:39:20 master login[1124]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Oct  6 23:39:20 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Oct  6 23:39:32 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:39:32 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:40:26 master login[1178]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Oct  6 23:40:26 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Oct  6 23:40:45 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:41:11 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:41:20 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:41:22 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:41:39 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:41:44 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:41:46 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:41:48 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:47:11 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  6 23:49:35 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  6 23:50:56 master sshd[1905]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  6 23:50:57 master sshd[1905]: pam_unix(sshd:session): session closed for user hadoop
+Oct  6 23:52:11 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  7 00:17:01 master CRON[1301]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  7 00:17:01 master CRON[1301]: pam_unix(cron:session): session closed for user root
+Oct  7 00:20:17 master login[1274]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Oct  7 00:20:17 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Oct  7 00:20:28 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  7 00:20:28 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  7 00:23:19 master login[1271]: pam_unix(login:session): session opened for user hadoop by LOGIN(uid=0)
+Oct  7 00:23:19 master systemd: pam_unix(systemd-user:session): session opened for user hadoop by (uid=0)
+Oct  7 00:24:23 master sshd[1432]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 00:24:27 master sshd[1432]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 00:24:33 master sshd[1642]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 00:24:38 master sshd[1642]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 00:24:50 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  7 00:24:50 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  7 00:25:13 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  7 00:25:13 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  7 00:25:23 master sudo: pam_unix(sudo:session): session opened for user root by hadoop(uid=0)
+Oct  7 00:25:23 master sudo: pam_unix(sudo:session): session closed for user root
+Oct  7 00:27:56 master login[1271]: pam_unix(login:session): session closed for user hadoop
+Oct  7 00:42:23 master sshd[1994]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 00:42:44 master sshd[2105]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 00:42:45 master sshd[2105]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:17:01 master CRON[2261]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  7 01:17:01 master CRON[2261]: pam_unix(cron:session): session closed for user root
+Oct  7 01:23:26 master sshd[2321]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:23:26 master sshd[2321]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:23:48 master sshd[2410]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:24:26 master sshd[2453]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:24:26 master sshd[2453]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:34:09 master sshd[18840]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:34:09 master sshd[18840]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:37:27 master sshd[18945]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:37:27 master sshd[18945]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:37:37 master sshd[18979]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:37:37 master sshd[18979]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:37:41 master sshd[19015]: pam_unix(sshd:session): session opened for user hadoop by (uid=0)
+Oct  7 01:37:41 master sshd[19015]: pam_unix(sshd:session): session closed for user hadoop
+Oct  7 01:39:01 master CRON[19050]: pam_unix(cron:session): session opened for user root by (uid=0)
+Oct  7 01:39:01 master CRON[19050]: pam_unix(cron:session): session closed for user root
+Oct  7 01:48:20 master sshd[2410]: pam_unix(sshd:session): session closed for user hadoop
+
+==============================| LAST LOGINS |==============================
+
+./nixdfir: line 678: lastlog: command not found
+/var/log/lastlog is empty...
+
+==============================| APACHE CONFIG |==============================
+
+Apache is not installed...
+
+==============================| WEB LOGS |==============================
+
+Apache logs do not exist...

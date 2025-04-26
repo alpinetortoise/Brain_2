@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       cd44d783-e167-4dba-981a-b5b9c0585189
+:END:
+#+title: Conversion Script
+#+author: Joshua Chubb
+
+* Problem:
+Create a script that converts between metric and imperial
+
+* Write up:
+We can first of all store the ratio between cm and inches, to do this we write out with intelligible variable names:
+
+#+begin_src python
+  cm_to_inches = 0.3937008
+  inches_to_cm = 2.54
+#+end_src
+
+Next we will need some input, we want to have the user tell us which way they want to convert and also give us the length they want to convert, again we will store these as variables. We will use the `input` keyword from python, which will take a string. We can use this string to ask our user a question:
+
+#+begin_src python
+    choice = input("""Are you converting from cm to inches (1),
+    or inches to cm (2)?""")
+    length = input("what is the length that you are wanting to convert?")
+#+end_src
+
+If we were to find the type of choice/length at this point in time we would find that they are of type string, you can check the type of a variable like so:
+
+#+begin_src python
+  print(type(choice))
+#+end_src
+
+the type function is inbuilt in python and is helpful when we do not know the type of a variable. Since the two most recent variables are strings we will need to have them in more usable forms, we have set our conversion variables above as floats, a numerical type that holds decimal numbers, it makes sense to turn length into a float so that it matches type with the conversion ratios above.
+
+#+begin_src python
+  length = float(length)
+#+end_src
+
+This line takes what the length value used to be "<input>" runs it through the float typecast function and assigns it to the length variable.
+
+We can then move to choice, we can just leave it as is and just compare string with string, or we could typecast it to an int. Let's leave it as is.
+
+We can now start to do some logic, having pulled everything into our program so far. We need to now have a branch we can do this by using an if ... else block. We will compare our choice variable to a string to make the branch. Recalling that (1) is for cm to inches and (2) is for inches to cm
+
+We are checking whether the string "1" occurs in the string contained in variable choice. We now want to make our conversion, and print out a string. We use the str() typecasting function to turn the length variable back into a string to be able to print it. In python adding two strings together will smoosh them together into one longer string in the same order that you add them together.
+
+#+begin_src python
+  if "1" in choice:
+     length = length * cm_to_inches
+     print("That's " + str(length) + " inches long")
+  else
+     length = length * inches_to_cm
+     print("That's " + str(length) + " cm long")
+#+end_src

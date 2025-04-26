@@ -1,0 +1,476 @@
+:PROPERTIES:
+:ID:       599b208a-4dcf-460f-a2ca-26565fff99fe
+:END:
+#+title: Conduct basic Cyber Security Tasks
+* Day 1
+** Lesson 1 - Common Security Threats and Vulnerabilities
+:PROPERTIES:
+:ID:       2d5aa62a-ad18-4a15-93ee-a0ab4e5bdb2f
+:END:
+*** Security Threats
+In computer security, a threat is a potential negative action or event enabled by a vulnerability that results in an unwanted impact to a computer system or application. A threat can be either a negative "intentional" event or an "accidental/unintentional” negative event.
+
+Intentional security threats are most often conducted by what we call Threat Actors. This term is used to indicate an individual or group that can manifest as a threat to a system, network or entire infrastructure.
+
+It is key to understand the motivations and capabilities of Threat Actors. Due to this, security researchers put them into the following groups with motivations and likely targets.
+
+Most common types of security threats used by Threat Actors:
+ - Malware
+ - Denial-of-Service (DoS)
+ - Phishing
+ - Spoofing
+**** Malware
+Malware is the most common type of intentional security threat to modern IT systems. The term Malware is a broad term for a variety of different types of threats that can be found on a compromised system. Usually stemming from a malicious file placed by a threat actor, or downloaded by an unaware user. Malware can come in just one form or can be a combination of multiple types during an attack.
+***** Ransomware
+A type of malware usually designed for blackmail, financial gain or large disruption. The purpose of ransomware is to block all access to a user’s data on their system, essentially rendering the system useless. All the user’s files and data is encrypted with the only way to unencrypt the data being with an encryption key that the Threat Actor has. The key is held as a ransom, with the Threat Actor only willing to give it to the user if a sum of money is paid or a condition of their choosing is met.
+
+ The most common Threat Actors to use ransomware include:
+
+ - Cyber Criminals/Organized Crime – With the intention to restore files once payment has been transferred =
+ - Nation States – Usually no intention to restore files, their main goal is to encrypt all files with no decryption key to cause mass disruption
+***** Spyware
+Spyware is another type of malware that aims to spy on the user’s system. This could be anything from simply monitoring a user performing commands and tasks to gathering data and sending it back to the Threat Actor.
+
+
+
+One of the most common types of Spyware is the Key Logger. A Key Logger will record the users key strokes and send the key strokes back to the Threat Actor. This is an easy way for the threat actor to steal username and password combinations or bank details.
+
+
+In addition to the key logger, Threat Actors may also use a System Monitor type of Spyware. This will record all the actions the user makes, what programs are installed and even the hardware specifications of the system.
+
+One of the most notable real world cases of spyware was the Bangladeshi bank heist. Where Threat Actors spied on users for months to understand how their systems worked and the operational procedures on how to use them before gaining access.
+***** Worms
+A computer worm is a type of malware that can automatically propagate or self-replicate without human interaction, enabling its spread to other computers across a network. A worm often uses the victim organization’s internet or a local area network (LAN) connection to spread itself.
+
+
+Worm malware visualised replicating through a network
+
+A worm usually isn’t the only piece of malware during an attack, when used it is often paired with another piece of malware that is used for a separate task.
+
+We spoke about the Wannacry virus briefly in the ransomware section. Wannacry used both a worm to self-replicate and propagate through connected networks but also once replicated to a new system it dropped a second piece of malware that was the ransomware.
+
+It’s important to note a worm will not infect every system in comes in contact with. When I worm arrives on a system it will:
+
+ 1. scan all other systems connected on the same network.
+ 2. check if any of those systems are vulnerable
+ 3. Infect only the systems that are vulnerable to the worm’s code/payload.
+
+In the case of Wannacry, it used an at the time unknown vulnerability called ‘Eternal Blue’. This vulnerability affected almost all windows systems making it one of the most impactful worms of all time affecting more than 230,000 computers in over 150 countries within a single day.
+***** Trojans
+Named after the Trojan horse technique the ancient Greeks used to sneak into the city of Troy. Computer Trojans implement a similar concept. The purpose of a Trojan is to disguise itself as a legitimate piece of software and once executed by the user will usually drop another piece of malware to serve the intended purpose of the Threat Actor. Like a worm a Trojan will usually work in conjunction with another type of malware like Ransomware or Spyware.
+
+Trojans can have devastating effects due to the nature that they are disguised as legitimate programs. Once of the most famous examples of a Trojan was Stuxnet.
+
+Stuxnet was a specialized Windows Trojan designed to attack Industrial Control Systems (ICS). It was allegedly used to attack Iran’s nuclear facilities. The virus caused operator monitors to show business as usual, while it changed the speed of Iranian centrifuges, causing them to spin too long and too quickly, and destroying the equipment.
+***** Botnets
+A Botnet is large number of hijacked computers under the control of a single attacking party or Threat Actor. The hijacked computers are infected with malware to give the Threat Actor, also known in this case as the “bot-herder” control of them individually. Once infected the malware will send a connection back to the Threat Actors Command and Control Server where the bot-herder can dictate commands and join the computer into the botnet. These computers once part of the botnet are known as “bots”.
+
+A single Command and Control Server Controlling its bots
+
+A botnet’s size can range from a small group of 10-20 machines all the way into the millions. Larger scale botnets are still under the control of a single attacker. Because of this they can receive updates and be repurposed for a different use. This leads to many of these botnets being rented out on the black market, broken up into smaller areas for different buyers.
+
+Due to their large scale and single control mechanism, botnets are very good at a few tasks which they are often used for:
+
+ - Email Spam – In 2009, The Cutwail botnet was able to send out 51 million emails per minute and at its peak comprised of 1.5 million infected machines. Cutwail is still available and active for rent on the black market today to conduct spam campaigns.
+
+ - DDoS attacks – Distributed Denial-of-Service (DDoS) attacks are most effective when used in a botnet. Using a large number of bots, it is very easy to send a high number of network requests to a victim server and crash it due to it receiving more requests then the server can handle.
+**** Distributed Denial of Service
+
+
+A Distributed Denial-of-Service (DDoS) is when a website or web server is overwhelmed with a large number of requests and traffic, that it disrupts or completely renders the service non-functional.
+
+Denial-of-Service is most commonly used as an intentional attack on a network connected system or website by a Threat Actor, to disrupt or bring down the network.
+
+
+A DDoS attack using a botnet to overwhelm resources on a targeted server
+
+
+
+DDoS attacks are often the most common type of attack, due to their low level of complexity. Even low skilled threat actors can pull of a successful DDoS attack as it only requires the attacker to send a large number of requests or network traffic to flood a website or service. All websites and services will have a limited number of resources to handle requests, once there is more request than resources the server, website or service will crash.
+
+Although most DDoS attacks are a result of a botnet, it is possible for a Threat Actor to achieve this type of attack without one. In 2018 GitHub was hit with a massive DDoS attack that resulted in 127 million packets per second being sent to their servers. This was all done without the use of a botnet and instead utilised spoofing request within their database caching system.
+**** Phishing & Spoofing
+Phishing and Spoofing are two similar techniques that in themselves are not very technical. Both these techniques heavily rely on deception and making sure the targeted victim is fooled. Phishing hides the Threat Actors true intent, while Spoofing hides the Threat Actors true identity. These two techniques will often go hand in hand but can also be used independently.
+***** Phishing
+Phishing is a technique in which a Threat Actor sends mass amounts of generic messages, usually through email, in an attempt to get the recipient to click a malicious link or download a malicious attachment. The email will disguise itself to look professional and legitimate to deceive the user into thinking it is safe. The phishing technique relies heavily on building trust with the victim. This can result in Threat Actors sending none malicious emails for months to gain a user’s trust, then when they believe they have it, finally send one that is actually malicious.
+
+The above image shows Phishing being used. The Threat Actor spoofs the FedEx email template and tries to build a sense of trust with the legitimacy. Once the user clicks on the link to manage their delivery, they will be sent to another spoofed website that looks like a FedEx login page. Once the user logs into this fake page under the assumption it is legitimate, the user credentials will be sent straight to the Threat Actor.
+***** Spoofing
+As we have seen Spoofing is often used alongside Phishing, but Spoofing is a technique that can be used alone. One common technique is to spoof IP or MAC addresses, once again relying on the idea of building false trust.
+
+IP or MAC address spoofing is when a Threat Actor will hide their true IP or MAC and replace it with one that is already trusted by the victim network. If the attacker can successfully spoof their address to one that is trusted, they can potentially gain a connection or access to the network, or at the very least go unnoticed to monitoring systems.
+
+It’s important to keep in mind that bad actors can use MAC spoofing to pretend to be network equipment and launch man-in-the-middle (MITM) attacks. A Man-in-the-Middle attack happens when an unauthorized third party listens in on conversation between two networked devices and claims to be one of the devices to the other.
+
+The previously mentioned Bangladeshi Bank Heist Attack employed this method, where the attacker altered their MAC to match a Bank employee’s allowing them to obtain access to the SWIFT payment system and steal 81 million dollars.
+*** Security Vulnerabilities
+
+
+Vulnerabilities or unintentional security threats usually stem from negligence, laziness or general lack of knowledge about best security practices in an IT environment. In a modern environment most of these basic threats should not be an issue if properly configured, but they are still the foundation of good security and important to know.
+
+Unintentional security threats, while being threats are more commonly referred to as vulnerabilities. Going forward that is how we will refer to them.
+
+Vulnerability vs. Threat
+
+To put it simply a Vulnerability is a weakness or flaw in a system, network or application. While a Threat is any danger or harmful event that can occur due to the presence of a vulnerability. Consider the below examples:
+
+Vlnerability: Outdated and unpatched Windows version
+
+Threat: Ransomware that can exploit the outdated Windows version
+
+Vulnerability: SSH network port with weak password
+
+Threat: Brute force attack that can easily crack the password and gain access to the port
+
+What are the most common types of Windows vulnerabilities?
+
+ - Unpatched systems
+
+ - Unpatched software
+
+ - Weak passwords
+
+ - Misconfigured user privileges
+
+ - Unsecured network ports
+***** Unpatched Systems & Software
+Out of date and unpatched systems are one of the biggest vulnerabilities facing modern computing. With Threat Actors constantly on the rise both in number and skill, places like Microsoft are constantly trying to get ahead of the curve by finding and patching vulnerabilities before anyone else can exploit them.
+
+I recent survey IBM study identified that 60% of data breaches could have been prevented simply by patching software sooner. While 88% of IT employees said they avoided or postponed patches due to not wanting to disrupt business flow or operations. Another reason identified for poor patching was that 25% of IT employees said they had a lack of visibility across their entire network. Meaning they had vulnerable devices on their network they weren’t even aware existing.
+
+Key takeaways for patch management
+
+ - Strive to maintain up to date network diagrams of your network and regular auditing of all devices to ensure effective deployment of updates
+
+ - Integrate patch management into the normal flow of business operations, therefore making it easier and less troublesome to push our updates quickly
+
+ - Avoid manually having to update endpoints, invest in an endpoint solution that can push updates automatically
+***** Weak Passwords & Policy
+
+
+Avoiding having weak passwords is the quickest and easiest way to create some good cyber hygiene. Although with the large amount of online accounts people use daily, it can seem hard and overwhelming to follow best password practices. This is to the point where it has been reported up to 65% of people use the same password for multiple accounts.
+
+With simply the word “Password” being used more than 4 million times as the only thing protecting their account. Key points to remember:
+
+ - Password re-use means only one of the accounts you use has to be breached, for potentially all your accounts to be compromised.
+
+ - Non-complex passwords can be cracked in under 5 minutes if they have only 8 characters and no special characters
+
+
+
+Good Password Policy
+
+The easy way as a system administrator or an individual to make sure you aren’t vulnerable to weak passwords, is to employ a good password policy. So what does that a basic password policy look like?
+
+ - Character length of 14 or more
+
+ - Use of special characters and capitals
+
+ - Password expiry enabled
+
+ - Account lockout if too many incorrect password attempts
+
+Multi-Factor Authentication
+
+MFA is the cherry on top of good password policy, it is recommended wherever possible to implement MFA especially if you have employees logging in remotely and from offsite.
+
+Recently multi authentication have been broken into four types:
+
+ - Type 1 – Something you know (password, passcode etc)
+
+ - Type 2 – Something you have (your phone to receive OTP code)
+
+ - Type 3 – Something you are (fingerprint, facial recognition)
+
+ - Type 4 – Somewhere you are (location of access)
+
+Using a combination of these is good practice and can take away the vulnerability of weak passwords, or at least can reduce it significantly.
+***** Misconfigured User Privileges
+Correctly configured user privileges is essential to the basic security of a network and organizational environment. Not only from threat actors, but also from users themselves. Standard users within an organizational can easily do damage by having too much access and not proper training. For example, a receptionist with admin privileges on a network could accidently delete important files or software or download untrusted software onto the system. This is why the first rule to follow when assigning user privileges is the principle of least privilege.
+****** Principle of Least Privilege
+
+This principle simply states that users should only have a level of access they require to complete their role or day to day tasks. Even if a user for some reason temporarily requires higher privileges, you can raise their privilege but must always remember to revoke those privileges when they are no longer needed.
+
+This is why usually when it comes to the principal of least privilege, when a user requires elevated privileges for a task, instead of elevating their current account you can set them up with a new admin account that will expire once their task is done. This way they can use the admin account when they need to conduct admin tasks and go back to using their standard user account when they don’t require those privileges.
+
+This concept can extend to all sorts of privileges, such as what applications a user can run and what files they can access. It is usually recommended to use windows built in AppLocker to limit standard users to only be able to use the programs they require and blocking things like a CMD terminal for example.
+
+
+Level of privileges can also be dictated by their exposure to threats. For example, a receptionist that is dealing with a lot of external emails would be at risk to phishing, so it’s important her account has only the most basic and necessary privileges to lessen any type of compromise.
+****** Group Policy
+
+Group Policy is an important element to being able to manage user privileges. Group policy is the windows function that allows you to assign privileges and other administration for user accounts. It is important when dealing with privileges that we also assign use groups. This makes it easier to both manage privileges and other things, but also monitor the most important a privileged account.
+
+If you think about a large organization, there could be thousands of standard users, but often a much smaller number of admins. If we make sure to keep our admins in once group and our standard users in another group, it is much easier to monitor admin accounts, especially ones we have created temporarily and need to keep an eye on.
+
+
+You can usually go one step further and assign standard users into their specific departments, once again this makes it easier to manage them as a whole, as each department may require a slightly different set of privileges (like what software they need to use).
+***** Unsecured Network Ports
+
+
+The most common avenue threat actors take to compromising a network or organization, is from the outside. This means they are always looking for a way to get from their network into yours. This will always be done through one or more network ports.
+
+For example, when you access a company’s website you are usually accessing it through port 443 (HTTPS). But the company is okay with this as they have that port hopefully secured enough that it isn’t a risk to keep it open and it is also necessary to allow users to reach their page.
+
+It is important to always be aware of what ports you have open on your network; this can be done with a simple NMAP scan. Any network port you do not need open, should be closed, so you can lower your overall network attack surface. But what about the ports you do need open?
+****** Securing Network Ports
+
+Like previously mentioned the first step to securing your network ports is by figure out which one are needed and closing off the rest (which can be simply done through the windows firewall). But with the ports you do need to keep open there are a few techniques we can employ that will allow us some level of security.
+
+ - Set firewall rules to allow only specific IP addresses or subnets to connect to a port
+
+ - Using a VPN service when logging in remotely to ports, adding an extra layer of verification and security
+
+ - Using a public/private key pair instead of just username and password for ports like SSH
+
+ - Using MFA for network ports that enable users to log in remotely
+*** Summary
+In this lesson you have learnt about common malware based security threats to Windows systems including:
+
+ - Ransomware
+
+ - Worms
+
+ - Trojans
+
+ - Botnets
+
+
+You have also learnt about other common threats such as DDoS attacks, Phishing, Spoofing and Man-in-the-middle attacks.
+
+Additionally, you have learnt about common security vulnerabilities you may find and be exposed to in a windows environment including:
+
+ - Unpatched systems and software
+
+ - Weak passwords and policy
+
+ - Misconfigured user privileges
+
+ - Unsecured network ports
+
+
+You have been taught these as these are common things you may find and be exposed to in a windows environment. They are the foundations of understanding and implementing basic windows security.
+** Lesson 2 - Open Source Vulnerability Information Repositories
+*** Introduction to Common Vulnerabilities and Exposures
+This lessson will look into the Common Vulneabilites and Exposure (CVE).
+
+Is good to be aware of the CVE, as it provides a risk information of security flaws.
+**** What is a CVE?
+CVE, short for Common Vulnerabilities and Exposures, is a list of publicly disclosed computer security flaws. When someone refers to a CVE, they mean a security flaw that's been assigned a CVE ID number. This allows the trackability of security flaws.
+
+Security advisories are writeups issued by vendors and researchers and they almost always mention at least one CVE ID. CVEs help IT professionals coordinate their efforts to prioritise and address these vulnerabilities to make computer systems more secure.
+
+Often, a CVE ID is assigned before a security advisory is made public. It’s common for vendors to keep security flaws secret until a fix has been developed and tested. That reduces opportunities for attackers to exploit unpatched flaws.
+
+Once made public, a CVE entry includes the CVE ID (in the format "CVE-2019-1234567"), a brief description of the security vulnerability or exposure, and references, which can include links to vulnerability reports and advisories.
+**** CVE Criteria
+In order to be classified as a CVE the following must be met;
+
+ 1. The flaw can be fixed independently of any other bugs.
+ 2. The software or hardware vendor acknowledges the bug and that it has a negative impact on security. Or, the reporter must have shared a vulnerability report that demonstrates the negative impact of the bug AND that it violates the security policy of the affected system.
+ 3. Flaws that impact more than one product get separate CVEs. In cases of shared libraries, protocols or standards, the flaw gets a single CVE only if there’s no way to use the shared code without being vulnerable. Otherwise each affected codebase or product gets a unique CVE.
+**** Understanding how to read a CVE Identifier
+Each CVE has a unique identifier which is made up of three parts. The prefix will always contain the letters “CVE”. The middle section will contain the year of publication. The last section is the unique numerical identifier.
+
+CVE-2024-1214
+
+Prefix-Year-Numbering
+**** Searching for Specific CVEs
+“www.cvedetails.com” gives you the ability to quickly and efficiently search through known CVEs that have been published. It allows the user to search by fields such as but not limited to:
+
+ - Date
+ - Type
+ - CVE Score
+ - Vendor
+ - Product
+ - CVE Number
+
+There are many websites that CVEs can be found on. Google “CVE” and search for yourself when you have some time.
+Pictured below is a snapshot from www.cvedetails.com showing known and published CVEs for Microsoft.
+
+ - The X axis displays CVEs by impact types
+ - The Y axis displays the year the CVE was published/discovered
+**** Understanding the Common Vulnerability Scoring System
+CVSS is designed to assign severity scores to vulnerabilities, allowing responders to prioritise responses and resources according to threat. Scores are calculated based on a formula that depends on several metrics that approximate ease and impact of an exploit. Scores range from 0 to 10, with 10 being the most severe.
+
+While many use only the CVSS base score for determining severity, temporal and environmental scores also exist to factor in availability of mitigations and how widespread vulnerable systems are within an organisation, respectively.
+*** Relevance and Application to Windows Environments
+**** Attackers Perspective
+Attackers can utilise CVEs as a library for potential attacks. They scour the CVE’s details to identify vulnerabilities that can be exploited in target systems. This is followed by developing or adapting exploit tools to take advantage of these weaknesses.
+
+According to UNIT42, threat actors start scanning the web for vulnerable endpoints within 15 minutes of a given CVE being made public.
+
+For large scale corporations it can often be quite difficult to keep a track of what software and versions they utilise. This can lead to current installed versions having vulnerabilities, leaving them open for attack.
+
+When considering small businesses, they are often run by individuals whom are not technologically savvy. This lack of knowledge and understanding may lead to complacency with regards to maintaining up-to-date software.
+**** Defenders Perspective
+In an ideal world, when any new CVE is announced, cybersecurity professionals immediately assess the impact and relevance of the CVE to their organisation. They check if patches or mitigations are available and promptly apply them to minimise exposure.
+
+Defenders can conduct vulnerability scanning, pen testing and then inform relevant stakeholders about the potential risks. But the world is not always ideal. In the real world, 66% of security organisations have a vulnerability backlog of over 100,000 vulnerabilities, and are able to patch less than 50% of these.
+**** Patch Tuesday
+Patch Tuesday is the commonly known name of Microsoft's monthly release of security fixes for the Windows operating system and other Microsoft software. It is also referred to as Update Tuesday occurring on the second Tuesday of each month.
+
+The Microsoft Security Response Centre publishes bulletins using the Common Vulnerabilities and Exposures identification numbers for each vulnerability on the Security Update Guide website. Each bulletin gives remediation information and a link to a Microsoft Knowledge Base article with more details on the update.
+
+Microsoft releases most of its security patches on Patch Tuesdays. Fixes for more serious vulnerabilities, called out-of-band patches, are the exception. Optional non security preview releases are typically released on the fourth Tuesday of the month at 10:00 AM Pacific Time (PST/PDT). These releases are only offered to the most recent, supported versions of Windows.
+** Lesson 3 - Vulnerability Scanning for Threat Awareness
+*** Overview of Vulnerability Scanning
+**** What is a vulnerability scanner
+A vulnerability scanner is an automated tool that is used to identify vulnerabilities within a network, host, application or database. Scanners can also be used to enumerate devices within a network, running services on hosts amongst many other things.
+
+NIST (National Institute of Standards and Technology) define vulnerability as:
+
+“A flaw or weakness in a computer system, its security procedures, internal controls, or design and implementation, which could be exploited to violate the system security policy.”
+**** Types of vulnerability scanning
+There are two main types of vulnerability scanners: authenticated and unauthenticated. The following sections will dig deeper into the differences between the two types as well as addressing the pros and cons of each.
+*** Unauthenticated Scans - Overview
+Unauthenticated scans are conducted from a machine external to the network and do not require credentials to access any devices. The focus of this type of scan is but not limited to:
+
+ - Open ports and Services
+ - Identification of open ports on a network or device
+ - Detection of services running on those open ports (eg, SSH, FTP)
+ - Potentially vulnerability services exposed to the internet
+ - Network-level vulnerabilities
+ - Insecure protocols or outdated versions of network services (HTTP vs HTTPS)
+ - Misconfigured or exposed devices such as routers, switches or firewalls
+ - Detections of active network devices and their IP addresses.
+ - Web application vulnerabilities
+ - Basic web application security issues such as cross site scripting, SQL injection or remote file inclusion.
+ - Insecure or missing input validation in web forms
+ - Detection of outdated or vulnerable plugins and themes.
+ - Enumeration information
+ - Collection of banner information that might reveal software versions and operating systems
+ - Enumeration of users, directories, or other resources through exposed services
+**** Pros of unauthenticated scans
+ - External View
+   Unauthenticated scans give perspective to security professionals as to what their network looks like from the outside. It will identify possible vulnerabilities that attackers can leverage without the need for privileged access. It is well suited to devices on networks that are externally facing such as web servers/ applications.
+ - Early Detection
+   Unauthenticated scans are generally a fast and easy way to do detect widespread vulnerabilities within a network. Time is on the side of the attackers, meaning that the defender is at the disadvantage.
+ - Resource Requirements
+   Unauthenticated scans are generally less resource intensive which means that they can be conducted more often than authenticated scans. This is due to the scans not requiring logging in or interact with the devices that they scan. This will result in faster scan times and less impacts on system resources.
+ - Less invasive
+   Because unauthenticated scans don't require access to the system's internals, they are less likely to cause disruptions, crashes, or other adverse effects on the systems being scanned. These scans typically have a lower performance impact on the target systems since they do not require access to system resources, files, or logs.
+ - No Risk of Credential Misuse
+   Since no credentials are required, there is no risk of compromising sensitive login information, either through mishandling or during the scan itself. Without the need to provide elevated privileges, the risks associated with potential misuse or escalation of these privileges are eliminated.
+**** Cons of Unauthenticated scans
+ - Limited visibility
+   Due to the scanner not having credentials, it will have a limited field of view. What this means for security professionals is that it will not provide the entire picture but only a partial view. It is important when utilising unauthenticated scanners that the individual recognises what visibility they require versus what visibility the scanner can provide.
+ - Missed vulnerabilities
+   Having an external view of your vulnerabilities is great as it allows you to view your network from an attacker’s perspective. However, if an attacker was to gain access to your network, you would be left in the dark. This is as result of the limited access unauthenticated scanners have. Whilst unauthenticated scanners have their place, they should not be the sole source of information with regards to vulnerabilities within your network.
+ - Limited value for security teams
+   The results from unauthenticated scans often provide less actionable information for security teams, as they focus on perimeter issues rather than internal security controls that may require adjustment or hardening. Without access to the internal workings of a system, unauthenticated scans can only detect symptoms of potential issues (like open ports) without understanding the underlying causes.
+ - Ineffective for Internal Networks
+   Unauthenticated scans are less effective for assessing the security of internal networks and systems since they primarily focus on what an external attacker can see. They won't reveal vulnerabilities related to internal services, user permissions, or sensitive data access if the scan is conducted externally. These scans focus mainly on perimeter security, leaving internal systems, which might be just as critical, unassessed.
+*** Authenticated Scans - Overview
+Authenticated scans unlike unauthenticated scans, utilise credentials to log into devices to conduct more in-depth analysis of the potential vulnerabilities within your network. Authenticated scans can detect such things as:
+ - Operating system vulnerabilities
+   - Missing security patches
+   - Outdated operating system versions (end of life)
+   - Misconfigurations or weak security settings
+ - Application vulnerabilities
+   - Unpatched or outdated software applications
+   - Insecure application configurations
+ - User and Group Permissions
+   - Insecure accounts (weak passwords, unused accounts)
+   - Misconfigured user permissions
+   - Administrator accounts with weak passwords
+ - Malware and Malicious Scripts
+   - Detection of known malware signatures
+   - Suspicious scripts or binaries that may indicate a compromise
+ - Log and Event Monitoring
+   - Improperly configured logging or lack of logging
+   - Indicators of compromise in system logs
+ - Network Configurations
+   - Misconfigured network devices (routers, firewalls)
+   - Detection of unauthorised devices on the network
+   - Issues with VLANs or network segmentation
+**** Pros of authenticated scans
+ - Comprehensive Assessment
+   Authenticated scans provide detailed visibility into the system's internal configurations, installed software, and settings, allowing for a thorough assessment of potential vulnerabilities. These scans can detect vulnerabilities that are not visible from the outside, such as unpatched software, insecure configurations, and misconfigured security settings.
+ - Visibility into Patch Management
+   Authenticated scans can detect missing patches on operating systems, applications, and third-party software, ensuring that systems are up to date with the latest security updates. Organisations can use authenticated scans to verify that all systems are compliant with patch management policies, helping to reduce the attack surface.
+ - User and Permission Auditing
+   Authenticated scans can audit user accounts and permissions, identifying accounts with weak passwords, excessive privileges, or that are inactive and should be disabled. These scans can detect potential privilege escalation vulnerabilities, such as users with inappropriate administrative rights or services running with elevated privileges.
+**** Cons of authenticated scans
+ - Complex Setup
+   Authenticated scans require valid credentials to access the systems being scanned. Managing and securely storing these credentials can be complex and time-consuming. Configuring access for the scan may require significant effort, especially in large environments with diverse systems and platforms.
+ - Security Risks
+   If the credentials used for authenticated scans are compromised, they could be exploited by attackers to gain unauthorised access to the systems. If the scanning tool or credentials have elevated privileges, there is a risk that vulnerabilities in the scanning tool itself could be exploited to escalate privileges.
+ - Performance Impact
+   Authenticated scans can place a significant load on the systems being scanned, potentially affecting their performance, especially if the scans are resource intensive. In some cases, scans might cause disruptions or instability in the systems, such as slowing down processes, filling up logs, or triggering false alerts.
+*** NMAP (Unauthenticated)
+Nmap (Network Mapper) is a powerful, open-source tool used for network discovery and security auditing. It offers a wide range of capabilities, including:
+ - Network Discovery
+   Nmap can identify active devices on a network, discover open ports, and determine the services and applications running on those ports.
+ - Port Scanning
+   It supports various scanning techniques (e.g., TCP, UDP, SYN scans) to probe open ports and identify potential points of entry.
+ - Service and Version Detection
+   Nmap can determine the specific services running on a port and their versions, helping identify outdated or vulnerable software.
+ - OS Detection
+   Nmap can identify the operating system of a target by analysing network responses, providing insights into potential vulnerabilities.
+ - Scriptable Interaction (NSE)
+   The Nmap Scripting Engine (NSE) allows users to write or use pre-existing scripts for automating tasks like vulnerability detection, exploitation, and network auditing.
+ - Security Auditing
+   Nmap can be used to check for known vulnerabilities, misconfigurations, and security flaws within a network.
+ - Network Inventory
+   Nmap helps in creating an inventory of network devices, providing detailed information on each discovered host.
+ - IPv6 Support
+   Nmap supports both IPv4 and IPv6, allowing for comprehensive network scanning in modern environments.
+
+Overall, Nmap is a versatile tool used by network administrators, security professionals, and hackers alike to map networks, assess security, and identify potential vulnerabilities.
+*** Nessus (Authenticated)
+Nessus is a widely used vulnerability scanner that helps organisations identify and address security vulnerabilities. It offers a range of capabilities, including:
+ - Vulnerability scanning:
+   Nessus performs comprehensive scans to detect known vulnerabilities in operating systems, applications, and network devices, including missing patches, misconfigurations, and weak passwords.
+ - Compliance Auditing:
+   Nessus helps organisations meet regulatory requirements by auditing systems against industry standards (e.g., PCI-DSS, HIPAA) and internal security policies.
+ - Configuration Assessment:
+   It checks for insecure configurations across various platforms, such as servers, databases, and network devices, ensuring systems are set up according to best practices.
+ - Patch Management:
+   Nessus identifies missing patches and outdated software, providing guidance on how to update and secure systems.
+ - Malware Detection:
+   Nessus can detect known malware and backdoors on scanned systems by comparing files against a database of known malicious signatures.
+ - Web Application Scanning:
+   It scans web applications for vulnerabilities such as SQL injection, cross-site scripting (XSS), and other web-based threats.
+ - Customisable Reports:
+   Nessus generates detailed, customisable reports that categorise vulnerabilities by severity, helping organisations prioritise remediation efforts.
+ - Continuous Monitoring:
+   Nessus supports continuous scanning, allowing organisations to monitor their networks in real-time and quickly respond to new vulnerabilities as they emerge.
+ - Plugin-Based Architecture:
+   Nessus uses a plugin system that is regularly updated with new vulnerability checks, ensuring the scanner remains effective against the latest threats.
+ - Integration with Security Tools:
+   Nessus integrates with various security tools and platforms, such as SIEMs (Security Information and Event Management), to enhance overall security management and incident response.
+
+Overall, Nessus is a powerful tool for vulnerability management, offering in-depth scanning, compliance auditing, and continuous monitoring to help organisations maintain a strong security posture.
+
+Note: Nessus is a paid commercial product that offers trials and non-commercial licensing (16 IP’s). OpenVAS is the non-commercial version that is free to all users.
+* Day 2
+** Lesson 1 - Unauthorised Granting of Permissions in a Windows Domain
+*** Group Policy Objects
+Standalone machine: A windows machine that is not joined to a Windows domain.
+
+Windows domain: A set of machines that are centrally configured by a Domain Controller (DC). Being centrally configured means that mass changes can be made on a DC and these changes can be pushed out to the machines that the DC oversees. This is the main function of GPOs on a DC – applying settings at scale.
+
+PowerShell: A native windows program that is largely used by system administrators for configuration. PowerShell is a Command Line Interface (CLI) tool. If a GPO can’t be used to set configurations, use PowerShell scripts within GPO’s.
+
+Command Line Interface: An interface used so rather than seeing icons and folders to navigate your environment, you see a blinking cursor that you type commands into. Two examples of this on a Windows machine are PowerShell (powershell.exe) and Command Prompt (cmd.exe).
+
+Graphical User Interface (GUI): The graphical desktop that a user sees on their computer. If you can see files, folders, drives etc as icons on your screen, you are logged in with a GUI. This is a much more user-friendly way for the average user to interact with their machine.
+
+Native programs: From a high level, these are applications that are on machine that have been installed by the OS automatically. From a cyber security perspective, this can be expanded to any program that is also placed on the system by any legitimate user of a system.
+**** Group Policy
+Group Policies are used in Windows domains for mass configuration. Think of them as containers. At a high level, they work by first creating a new empty GPO on a DC, changing settings within that GPO and then applying the GPO to Windows machines in a domain. A system administrator could push out the GPO to every single Windows machine or to only a few depending on the architecture of the domain.
+
+Configurations within GPO’s are also not static after they are first applied – they can be edited for the changing needs of the environment and then re-applied. In fact, many actions cause GPO’s to be applied such as machine boot and user logons so GPOs are applied in the background automatically.
+
+Be aware that you will find differing language online of what a GPO is. Is it the container? Or is it the setting within the container? The easiest way to think of it as described here: a GPO is a container that holds settings that is used to configure computers.
+
+In a Windows domain, it is common practice to have many GPOs applied across the environment. Think of a network properly segmented: you would likely have a GPO that applies to the logon polices for all machines and other security settings that you wish to have on all machines. You may then need to have different GPOs for different subnets as they have differing roles.
+**** Local vs. Domain Group Policies
+Domain and local group policies are separate but can co-exist with careful management. However, it is recommended to only use domain GPOs on domain joined workstations and servers. GPOs are applied initially to workstations when they successfully join the domain. In regard to GPO’s being applied to machines, Windows will apply the local group policy first and then any domain group policies. As the domain group policy is applied second, it overrides settings in the local group policy. You will see this a lot through Windows domain environments – whatever is configured/processed last will be the final setting.
+
+In terms of hardening, the two most important hardening tools in a Windows domain are GPO’s and PowerShell. For this lesson, we will be focusing on domain group policies applied through the GUI tool ‘Group Policy Management Console’ in Server Manager.
+*** Layout of GPOs
+Virtual Machine: A machine that is not installed on bare metal but rather is run through an application within another Operating System (OS). On your issued laptops, Windows is the bare metal OS while programs such as VMWare, Hyper-V and VirtualBox can be installed on the OS and you run other OSs such as more Windows OS’s, Ubuntu and Kali Linux.
+
+Scheduled tasks: Used in Windows environments (standalone and domain) to automatically perform actions that a user will not see. An example of this is the scheduled task that reaches out periodically to check Microsoft to see if any updates are available for the Windows OS. The user does not initiate this – a scheduled task is pre-configured to do this for the user on a time basis. Scheduled tasks can be created, modified and deleted by users if they hold the correct privileges. If you can think of something that you want to do on a periodic basis or when a certain condition is met, you can likely utilise scheduled tasks to achieve it.

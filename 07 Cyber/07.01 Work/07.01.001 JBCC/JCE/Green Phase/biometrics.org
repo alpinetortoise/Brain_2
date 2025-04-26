@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       63ad41c8-7896-42fc-9ca7-91689108036b
+:END:
+#+title: Biometrics
+Biometrics are a measurement of certain biological factors to identify a specific person.
+Factors are based on parts of the human body that are unique – fingerprints, retina or iris of the eye etc.
+Devices should be coupled into security-oriented computer systems that record all access attempts, and should be under surveillance in order to prevent individuals from bypassing them.
+Prone to false positives and false negatives.
+Biometrics is considered as Personal Identifiable Information (PII). PII is any data that can be used to uniquely identify an individual.
+Biometrics can be used in multifactor authentication methods, where it uses two or more processes to login.
+
+[[id:689f540d-1d23-4f6b-b95c-e3cbf2ce2f5c][Authentication]]

@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       8ed1fd45-1103-4c4c-97c6-f7517ea0a129
+:END:
+#+title: Swap data recovery/mining
+* Swap digger
+Swap digger is your 500ft view of your swap spcae, partially created as a password recovery tool, part forensics ally. Our concern with swap digger is to be looking for abnormal things.
+
+** Outputs:
+  - Passwords
+  - Most accessed
+    - HTTP urls
+    - FTP urls
+    - Onion/TOR urls
+    - Files
+    - SMB shares
+    - IP Addresses
+  - Hashes
+** Making educated guesses
+Looking at the most accessed HTTP URLs there are two that stand out instantly to me when looking for malicious actors, github and pastebin, these are both one of the "It is known" things in cyber security, but essentially when you don't know something fucking google it ya spud. Google is your most useful tool for OSINT and research, it is powerful, use it.
+*** Some common sites hosting malware
+  - [[https://en.wikipedia.org/wiki/Pastebin][Wiki:Pastebin]] and sites like it
+  - [[https://en.wikipedia.org/wiki/GitHub][Wiki:Github]] and sites like it
+  - [[https://en.wikipedia.org/wiki/Amazon_Web_Services][Wiki:aws]] and other free cloud services
+* Strings
+Having taken our 500ft view we can now be a bit more surgical in what we're looking at. We can do this with ~strings~. Again if we don't know what a tool does we have a number of ways to find out what they do of course there is the --help flag, and then we can also read the ~man~ page by calling ~man <command>~ even google searching ~man <command>~ will give us the same man page.
+
+From the man page we can see that strings will "print the sequences of printable characters in files" and we also have usage, etc from here. Running strings on the whole of the swap file will give us gigabytes to sift through and so we should pipe it into grep to be a bit more manageable.
+
+~strings scenario_swap | grep http~ will get us all the strings containing http, using this and chaining your grep calls will let you solve the rest of the questions.

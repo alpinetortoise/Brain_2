@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       7ae39167-d06b-4434-821f-6826118b8d0c
+:END:
+#+title: shadow bunny
+        #+created: [2024-12-05 Thu 14:56]
+        #+last_modified: [2024-12-05 Thu 14:56]
+[[https://embracethered.com/blog/posts/2020/shadowbunny-virtual-machine-red-teaming-technique/][Shadow Bunny tutorial]]

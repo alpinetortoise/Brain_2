@@ -1,0 +1,104 @@
+:PROPERTIES:
+:ID:       a4248771-ba52-4658-9d10-473d6fb2e01e
+:END:
+#+title: Describe the ASD mitigation strategies
+* Strategies to Mitigate Cyber Security Incidents
+
+To compliment advice taken from the ISM, ACSC prioritise a list of mitigation strategies to assist organisations in protecting their systems.
+
+In 2017, strategies that are rated as most effective in establishing a secure baseline where complied together and are known as the “[[id:1ce8544f-a39f-4d5d-969e-3544081fba21][essential eight]]"
+* Essential eight
+:PROPERTIES:
+:ID:       1ce8544f-a39f-4d5d-969e-3544081fba21
+:END:
+[[id:96368ecf-43d3-4181-805b-adc93a9ddc9b][Information Security Manual]]
+While there is no mitigation strategy guaranteed to prevent cyber security incidents, in Defence we implement the eight essential mitigation strategies as a baseline, and this is done to make it much harder for adversaries to compromise systems. The essential eight mitigation strategies include;
+
+ - Application Control
+ - Patch Applications
+ - Restrict administrative privileges
+ - Patch Operating Systems
+ - Disable untrusted Microsoft Office macros
+ - User application hardening
+ - Multi-factor authentication
+ - Daily backup of important data
+
+If you look at the diagram, you will see different mitigation strategies that protect us from different threats.
+** Application Control
+
+Application Control is a security approach designed to protect against malicious code executing on systems, from unapproved/malicious programs including .exe, DLL, scripts (e.g. Windows Script Host, PowerShell and HTML Applications) and installers.
+
+Why: All non-approved applications (including malicious code) are prevented from executing.
+
+The introduction of EDLAN and JACKSTAY will have an Application Whitelisting solution through Windows Defender Application Control and McAfee.
+** Patch Applications
+
+Patches are a set of changes to a computer program or its supporting data designed to update, fix, or improve it. Patches can also rectify vulnerabilities and other bugs, which is why it's important to keep all your devices and software up to date. Vulnerabilities that are identified as 'extreme risk' are recommended to by patched within 48 hours of the patch release.
+
+Why: Security vulnerabilities in applications can be used to execute malicious code on systems.
+
+Note: DSOE/DLAN use DSOE Patch Management System (DPMS) to patch applications.
+** Patch Operating Systems
+
+Operating systems are just like software and require to be updated through patches. This also includes things such as your internet of things and network devices. Operating systems that are no longer supported should not be used as any future discovered vulnerabilities will not be patched.
+
+According to SANS Internet Storm Centre, the average survival time of an unpatched Windows PC on the Internet is less than 60 minutes! (http://isc.sans.org/survivaltime.html)
+Why: Security vulnerabilities in operating systems can be used to further the compromise of systems.
+
+Note: DSOE/DLAN use DSOE Patch Management System (DPMS) to maintain OS patches.
+** Restrict Administrator Privileges
+
+Restrict administrative privileges to operating systems and applications based on user duties, and identifying which tasks require administrator privileges to be performed. Regularly revalidate the need for privileges. Don't use privileged accounts for reading email and web browsing.
+
+Why: Users with administrative privileges for operating systems and applications are able to make significant changes to their configuration and operation, bypass critical security settings and access sensitive information.
+
+Adversaries often use malicious code to exploit security vulnerabilities in workstations and servers. Restricting administrative privileges makes it more difficult for an adversary’s malicious code to elevate its privileges, spread to other hosts, hide its existence, persist after reboot, obtain sensitive information or resist removal efforts.
+** Configure Microsoft Office Macro Settings
+
+Microsoft Office files can contain embedded code (known as a macro) written in the Visual Basic for Applications (VBA) programming language. Configure Microsoft Office macro settings to block macros from the Internet, and only allow vetted macros either in ‘trusted locations’ with limited write access or digitally signed with a trusted certificate.
+
+Why: A macro can contain a series of commands that can be coded or recorded and replayed at a later time to automate repetitive tasks. Macros are powerful tools that can be easily created by novice users to greatly improve their productivity. However, an adversary can also create macros to perform a variety of malicious activities, such as assisting in the compromise of workstations in order to exfiltrate or deny access to sensitive information.
+** User Application Hardening
+
+User application hardening (UAH) - Configure web browsers to block Flash (ideally uninstall it), ads and Java on the internet. Disable unneeded features in Microsoft Office (e.g. OLE), web browsers and PDF viewers.
+
+Why: Flash, ads and Java are popular ways to deliver and execute malicious code.
+
+User application hardening is used to allow only the required areas of a given application to run.  By limiting these applications to only do what they are supposed to do, you reduce the risk of abnormal tasks from being executed. Specifically, the Essential Eight refers to application hardening to control browser plugins such as Flash, Java and Web-advertisement content. By restricting these potentially malicious programs from running, you greatly reduce the chances of attack as this behaviour can sidestep standard antivirus monitoring.
+
+What are the advantages - By disabling add-ons like Flash and Java, there are fewer applications you need to worry about patching. Why would you need to patch something that isn’t allowed to be used? Utilising the vulnerabilities in these types of add-ons is a hacker’s favourite route. They are simple but effective methods for spreading their nefarious agendas.
+
+In particular, Flash is considered to be a dated technology and is already on its way out. Google and Firefox have already started phasing this out, and many web-developers are working with other tools. While this is great news and a step in the right direction, there are still millions of websites using it. So, for now, we still have to live with it.
+** Hardening Windows 10
+
+Read the below guide to hardening Windows 10: Specifically, it looks at application hardening such as disabling unwanted features, not using credential caching (storing passwords in a browser) and Microsoft Edge Group Policy options to harden the application such as disabling developer tools.
+
+[[https://www.adele.edu.au/pluginfile.php/1186133/mod_lesson/page_contents/55442/PROTECT%20-%20Hardening%20Microsoft%20Windows%2010%20version%201709%20Workstations%20%28April%202020%29.pdf][Hardening Windows 10 version 1709 workstation]]
+** Multi-factor Authentication
+
+Multi-factor authentication is a method of authentication that uses two or more authentication factors to authenticate a single user to a single authentication verifier. The authentication factors that make up a multi-factor authentication request must come from two or more of the following.
+
+ - Something the user knows - password or PIN
+ - Something the user has - physical token, smartcard or software certificate
+ - Something the user is - fingerprint or iris scan
+
+Multi-factor authentication including for VPNs, RDP, SSH and other remote access, and for all users when they perform a privileged action or access an important (sensitive/high availability) data repository.
+
+Why: When multi-factor authentication is implemented correctly, it is significantly more difficult for an adversary to steal a complete set of credentials as the user has to prove they have physical access to a second factor that either they have or are.
+** Daily Backups
+
+A backup, or data backup is a copy of computer data taken and stored elsewhere so that it may be used to restore the original after a data loss event. This could be due to deletion (intentional/unintentional), hardware failure, environmental damage or from malware.
+
+It is important to conduct daily backups of important new/changed data, software and configuration settings. Backups should be stored disconnected and retained for at least three months. Test restoration initially, annually and when the IT infrastructure changes.
+
+Why: To ensure information can be accessed again following a cyber security incident (e.g. a ransomware incident).
+* ASD Strategies to Mitigate Cyber Security Incidents
+
+Previously known as the ASD Top 35-'Strategies to Mitigate Targeted Cyber Intrusions'.
+
+The Strategies to Mitigate Cyber Security Incidents guide and website is provided via the cyber.gov.au website to help cyber security professionals in all organisations mitigate cyber security incidents caused by various cyber threats.
+
+This guidance addresses targeted cyber intrusions ransomware and external adversaries with destructive intent, malicious insiders, ‘business email compromise’, and industrial control systems.
+
+https://www.cyber.gov.au/sites/default/files/2020-06/PROTECT%20-%20Strategies%20to%20Mitigate%20Cyber%20Security%20Incidents%20%28February%202017%29.pdf
+https://www.cyber.gov.au/acsc/view-all-content/publications/strategies-mitigate-cyber-security-incidents

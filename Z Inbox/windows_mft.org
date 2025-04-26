@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       3f4b8ca0-2ca8-450d-91db-16b3bf47560a
+:END:
+#+title: Windows MFT
+        #+created: [2025-04-23 Wed 12:03]
+        #+last_modified: [2025-04-23 Wed 12:03]
+https://andreafortuna.org/2017/07/18/how-to-extract-data-and-timeline-from-master-file-table-on-ntfs-filesystem/
+* Extracting from E01
+#+BEGIN_SRC bash
+  mmls <image.E01>
+  ## mft is the first "unallocated" partition
+  icat -o <length> <image.E01> <start> > mft.raw
+  analyzeMFT.py -f mft.raw -o mftanalyzed.csv
+#+end_src

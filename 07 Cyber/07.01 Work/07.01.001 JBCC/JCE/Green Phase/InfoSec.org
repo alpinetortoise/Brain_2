@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       b080f19b-3237-4a72-a43f-3e82aded0401
+:END:
+#+title: Information Security
+* Why InfoSec is important
+
+The impact on our national interests can cause a disadvantage against our adversaries. A loss of revenue causes an effect on businesses and the public alike, as well as the leaking of confidential information. If you recall from the Classified Document Handling course, it can cause catastrophic damage to Australia and its interests.
+
+
+That’s why it is crucial to discuss Information Security. InfoSec is the practice of preventing unauthorised access, use, disclosure, disruption, modification, inspection, recording or destruction of information.
+
+
+The internet is where the world now conducts its business. Almost every part of society depends on electronic systems and information stored electronically. The internet has become an essential tool for all government officials. It helps all levels of government in Australia to deliver services and conduct business flexibly and efficiently. Online has become the primary means of interaction.
+
+
+Australia’s reliance on information and communications technology also makes us vulnerable to cyber intrusions that could disrupt government business.
+
+
+This reliance means that the security of electronic information is increasingly important.
+* ASD provides the Australian Government with:
+
+ - Advice and assistance to federal and state authorities on matters relating to the security and integrity of information
+ - Greater understanding of sophisticated cyber threats
+ - Coordination of and assistance with operational responses to cyber incidents of national importance across government and systems of national importance.
+
+* Information Security Manual (ISM)
+
+The Information Security Manual (ISM) is produced by ASD and assists in the protection of information that is processed, stored and communicated by Government and organisations’ systems.
+
+The Australian Cyber Security Centre (ACSC) within ASD is responsible for the production of the ISM.
+
+The ISM will be covered in greater detail in the next lesson of this course.
+
+[[id:96368ecf-43d3-4181-805b-adc93a9ddc9b][Information Security Manual]]

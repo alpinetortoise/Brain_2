@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       88dfd410-fc74-49a5-abcc-0b75c6d9bf07
+:END:
+#+title: Animal Farm (Orwell)
+            #+created: [2024-11-24 Sun 07:37]
+            #+last_modified: [2024-11-24 Sun 07:37]

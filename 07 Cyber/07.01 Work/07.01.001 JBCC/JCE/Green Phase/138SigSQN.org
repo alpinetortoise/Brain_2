@@ -1,0 +1,48 @@
+:PROPERTIES:
+:ID: 3f88dea3-a995-4533-bb40-b937492a2c00
+:END:
+#+title: Army - 7 Signal Regiment
+* Mission:
+
+7th Signal Regiment executes EW, SIGINT and Cyberspace activities to deliver specialist combat support across a spectrum of operations.
+
+7th Signal Regiments cyberspace capabilities is split across 2 seperate sub-units;
+
+ - 138 SIG SQN - located in Simpson Barracks Melbourne, and
+ - 273 Tp - Part of 73 SQN at Borneo Barracks Cabarlah.
+** 138 SIG SQN
+:PROPERTIES:
+:ID: 51c872b0-b27b-489a-99d6-fae124647d1b
+:END:
+*** Mission:
+
+138 Signal Squadron enables decision advantage in the Joint Operating Environment through the conduct of Cyberspace Operations in order to enable land combat operations.
+
+Decision advantage is what results when intelligence enables a decision-maker to better understand and address an issue. It requires:
+
+1) Intelligence that is timely, accurate, and relevant to a given issue and;
+
+2) At least one decision-maker who possesses the expertise and resources needed to evaluate and action the intelligence within the context of the issue.
+*** Vision:
+
+138 Signal Squadron is a scalable and proactive Defensive Cyber Operations (DCO) squadron able to provide and support the range of active and passive defensive effects.
+*** Commander's Intents:
+**** Purpose:
+Provide Mission Assurance (MA) to land combat operations.
+**** Method:
+
+ - Conduct of passive and active Defensive Cyberspace Operations through the spectrum of operations.
+ - Support to land component planning in the conduct of joint operations.
+ - Delivery of support to Cyber Security and Worthiness Operations.
+ - Support to Joint, Coalition, and interagency operations
+**** End State:
+Decision advantage is enabled through the provision of mission assurance on operationally critical land combat systems during a phase or type of warfare.
+** 273 TP:
+
+A troop within 73 Squadron, 7 SIG REG.
+
+273 Tp holds the Advanced Wireless Capability for 7 SIG REG.
+
+Which includes:
+ - Personal Communications systems (PCS), and
+ - Proximal Access (PA).

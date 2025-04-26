@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       6fde8d06-77fe-4f95-aadc-836d76b79269
+:END:
+#+title: Windows Server
+
+* [[id:84e32c94-bf6f-48f9-b6a7-09fdb0d08a36][Powershell]]
+** [[id:54d6a069-b8f6-4014-a5bf-6016b3f4fb1b][Powershell Commands]]
+* Windows OS
+The Windows operating system is an object oriented operating system.
+* Server
+** Active Directory
+:PROPERTIES:
+:ID:       d7007179-00f3-4dc0-aa82-7539d9ef3e67
+:END:
+Active Directory is the Windows Server system for providing [[id:2089cab8-2788-4b82-b3bf-eb50bfb62b2e][AAA]], it also provides a level of hierarchy to the network
+*** Forest
+An active directory forest is a collection of one or more AD DS trees that share a common *schema*
+*** Tree
+Is a collection of one or more AD DS domains that form a contiguous namespace
+*** Domains
+It is a logical grouping of user, computer, and group objects that share a common Active Directory
+*** Trust Relationships
+Authentication pipelines between different domains
+** Security

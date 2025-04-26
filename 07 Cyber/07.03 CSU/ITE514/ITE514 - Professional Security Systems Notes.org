@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       cc6549b9-f356-4cff-ad89-80163e05809b
+:END:
+#+title: ITE514 - Professional Security Systems
+
+* Assignments
+  - [[id:cc6549b9-f356-4cff-ad89-80163e05809b][ITE514 - Professional Security Systems]]
+  - [[id:6fd4c6f4-7077-4f02-bfea-8b84aff41825][ITE514-Assignment 2]]
+
+* Weekly Subtopics
+- #next/ITE514/subtopics
+  - [ ] Subtopic 1
+  - [ ] Subtopic 2
+  - [ ] Subtopic 3

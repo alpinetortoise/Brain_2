@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       bd6c456c-ea0f-4dee-b63b-f449ef9b03c9
+:END:
+#+title: Berkeley Software Distribution
+        #+created: [2025-03-18 Tue 09:53]
+        #+last_modified: [2025-03-18 Tue 09:53]
+A [[id:b9e79c8b-95e3-4640-aca5-5267c321925e][Unix]] based [[id:5eb73df0-aeeb-41d3-87f5-5284d6b3068e][operating system]] originally created and distributed by [[id:f48fa38a-001c-41fc-aaa6-8eda215d5b46][Berkely Software]]

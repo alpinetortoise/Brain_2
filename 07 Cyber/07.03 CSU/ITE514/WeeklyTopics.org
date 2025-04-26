@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       bb375bb6-67f4-4d16-b87f-af26c2797771
+:END:
+#+title: Weekly Topics
+#+LATEX_CLASS: article
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \doublespacing{}
+#+LATEX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage[style=apa, backend=biber, url=true]{biblatex}
+#+LATEX_HEADER: \addbibresource{~/Brain_2/references.bib}
+
+[[id:cc6549b9-f356-4cff-ad89-80163e05809b][ITE514 - Professional Security Systems]]
+
+* Q3
+The IT systems manager informs me that many of the business systems at ACME are using TLS but often with self-signed certificates. Aren't self-signed certificates insecure? What general recommendations do you have for improving the security of information in transit at ACME?
+** Response
+\textcite[359]{maymi_2022_cissp} states that while self-signing digital certificates might be allowed it should be suspicious when it comes to interactions with external entities. Therefore, using self-signed certificates within ACME networks is not necessarily terrible. The concerns that come from utilising self-signed certificates within an enterprise network come down to man in the middle attacks from intruders or other malicious actors on the ACME networks. This arises because there is no third-party that is in essence asserting that indeed the certificate holder is who they say they are.
+
+One of the simplest ways we can increase our security position given the use of self-signed certificates we can begin by simply setting up a certificate authority within ACME. To do this we will need to set up Public Key Infrastructure(PKI), preferrably on one of the central servers, to avoid self-signing we could setup a virtual server which only provides the PKI. Of course in remote access this only holds once our user has already gained access within the ACME infrastructure. For this we can utilise external certificate authorities such as Symantec or GeoTrust. \parencite[361]{maymi_2022_cissp} Another concern with using internal certificate authorities comes from ensuring that these internal certificates are not utilised externally, external use would also be a potential vulnerability, but more importantly utilisation of these certificates externally would decrease customer/client trust. Given that ACME now has a contract with the Australian Government it is probably better to utilise external certificate authorities for all external portals.
+* Q4
+An external contractor noticed that the warehouse WiFi network uses WEP security. When I spoke to the warehouse manager he dismissed the concern saying that all staff still need a password to access WiFi. What would be your recommendation here and why?
+** Response
+The utilisation of WEP based access is currently deemed deprecated. \parencite[575-576]{maymi_2022_cissp} The reasons for this include the simplicity of the security, \textcite[575]{maymi_2022_cissp} points to three core deficiencies, the use of static encryption keys, ineffective use of initialization vectors, and the lack of packet integrity assurance. The use of the stream-symmetric RC4 algorithm cipher by WEP means that the access point and user utilise the same key for the encryption and decryption of the data being transmitted. \parencite[575]{maymi_2022_cissp} The so what for our current application of WEP security in the warehousing network means that once users are authenticated to the server their requests are vulnerable to man in the middle attacks so any http, or other unencrypted network usage is vulnerable. Further we know that users password habits don't generally follow best practices, such as reuse, or using passwords that don't meet complexity rules, using the excuse that users still need to authenticate onto the network means that attackers have one less hurdle to overcome due to the use of WEP security.
+
+In comparison Wi-Fi Protected Access 3 Enterprise can utilise an authentication server such as our federated identity server. Further, encryption can be set up utilising 256-bit and using Protected Extensible Authentication Protocol (PEAP) provide secure authentication to the access point. \parencite[578-581]{maymi_2022_cissp} These provide greater control over access and provide best practices in setting up enterprise access points, further best practices include, deployment of a wireless intrusion detection system, set up the AP within a de-militarized zone, and configure the AP to use MAC blocking. \parencite[582]{maymi_2022_cissp}
+* Q5
+There have been a lot of software supply chain security incidents in the press. I am concerned that we have a potential exposure in our GitHub software repository. Is there a benefit in configuring federated SSO? If so why, and what are the constraints in doing this?
+** Response
+Github provides a great tool for software developers to be able to work from home without logging in to the ACME infrastructure, however this could lead to inadvertant loss of proprietary code. There are indeed a number of benefits in configuring a federated single sign on solution
+*** Introduction
+*** Benefits
+*** Contraints
+Currently with our current configuration when working from home our developers ustilise ssh commits from their own devices. Moving to a federated IAM system for this could lock WFH commits from our software developers out.
+*** Conclusion
+
+\printbibliography

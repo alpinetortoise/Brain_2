@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       fc4b6cb0-7c3c-47ef-a716-b857bbfd1921
+:END:
+#+title: NIST Special Publication 800-30 Guide for Conducting Risk Assessments
+
+[[file:nistspecialpublication800-30r1.pdf][Guidelines]]
+
+* Brief Description
+ - Purpose – provides guidance for conducting risk assessments of federal information systems and organisations, amplifying the guidance in Special Publication 800-39.
+ - Role - provides guidance to organisations on identifying specific risk factors to monitor on an ongoing basis.
+ - Function - provides guidance for carrying out each of the steps in the risk assessment process.
+ - National Institute of Science and Technology (US Dept of Commerce)
+
+** Four Components
+
+ - How organisations frame risk or establish risk context
+ - How organisations assess risk
+ - How organisations respond to risk
+ - How organisations monitor risk

@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       cdc6fdc4-5f80-4261-b243-9264d11d260d
+:END:
+#+title: metasploitable2 on machine
+        #+created: [2025-02-28 Fri 13:23]
+        #+last_modified: [2025-02-28 Fri 13:23]
+* Intro
+A writeup on exploiting metasploitable 2. Utilising Kali.
+
+** Login
+msfadmin:msfadmin
+
+* Recon
+  - Target IP: 192.168.204.129
+* Enumeration
+#+BEGIN_SRC bash
+    uname -r
+    ## output: 2.6.24-16-server
+
+    lsb_release -a
+    ## output:
+    ## No LSB modules are available.
+    ## Distributor ID: Ubuntu
+    ## Description: Ubuntu 8.04
+    ## Release: 8.04
+    ## Codename: hardy
+
+#+END_SRC

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2f587ce3-3fe8-4336-90dc-882c6e392f4d
+:END:
+#+title: Penetration Testing
+        #+created: [2024-11-24 Sun 09:04]
+        #+last_modified: [2024-11-24 Sun 09:04]
+[[id:85d9e715-778e-45fe-b96c-7afc6f7c2e28][VSCodeExploit]]

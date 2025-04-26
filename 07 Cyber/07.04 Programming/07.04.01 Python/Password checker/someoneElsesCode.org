@@ -1,0 +1,175 @@
+:PROPERTIES:
+:ID:       11a48f30-5b38-4866-a892-4e89d31df44a
+:END:
+#+title: Someone Else's Code
+#+author: Joshua Chubb
+* Situation
+Your boss emails you a file, a python script (pass_check.py) and wants you to work out what it does. The only information he was given is that it is a small script that does some "checking" on passwords, and that it might be useful for the team.
+* Code: pass_check.py
+#+BEGIN_SRC python
+  #!/usr/bin/python3
+  import re
+  specchar = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+  acceptable_password = 0
+
+  password_input = input("Please choose a password: ")
+
+  if re.search(r'\d', password_input):
+          print("Good - this password contains a number")
+  else:
+        print("Sorry - this password does not contain a number")
+        acceptable_password = True
+
+  if len(password_input) < 8:
+          print("Sorry - this password is not at least eight characters in length")
+          acceptable_password = True
+  else:
+          print("Good - this password is " +str(len(password_input))+ " characters in length")
+
+  if any(aCharacter.isupper() for aCharacter in password_input):
+          print("Good - this password contains a capital letter")
+  else:
+          print("Sorry this password does not contain a capital letter")
+          acceptable_password = True
+
+  if(specchar.search(password_input) != None):
+          print("Good - This password contains at least one special character")
+  else:
+          print("Sorry - This password does not contain at least one special character")
+          acceptable_password = True
+
+  if acceptable_password:
+          print("Password accepted")
+  else:
+          print("Password rejected")
+#+END_SRC
+* Analysis
+** Some thoughts
+Ultimately we have control of the scripts that we run, these are not immutable objects. We can edit the scripts to provide ourselves some intelligible feedback. If we add ~print(<something we're unsure about>)~ to our program, near our place of uncertainty, we can see when it trips and see the value that it contains/returns, for instance we could wrap the first regular expression line in print(), ie. ~print(re.search(r'\d', password_input) before our first if statement to know which branch it will go down.
+** Initialisation
+#+BEGIN_SRC python
+  #!/usr/bin/python3
+  import re
+  specchar = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+  acceptable_password = 0
+#+END_SRC
+We can see that we are importing the regex package with ~import re~ we're also
+setting a special character variable ~specchar~ and initialising the
+~acceptable_password~ variable to 0, This is concerning because everywhere else
+we treat it as a boolean. While ~bool(acceptable_password)~ will be ~False~. My first recommendation would be to change that line to ~acceptable_password = True~
+** First Block
+#+BEGIN_SRC python
+  password_input = input("Please choose a password: ")
+
+  if re.search(r'\d', password_input):
+          print("Good - this password contains a number")
+  else:
+        print("Sorry - this password does not contain a number")
+        acceptable_password = True
+#+END_SRC
+The first of four checks that this script does, however the line
+~acceptable_password = True~ is misplaced, since the strings we're feeding back
+to the user say that it is acceptable if it contains a number. We should modify
+the line to ~acceptable_password &= True~ [fn:1] and move this line up into the ~if~ block, and add ~acceptable_password &= False~ we should also look at making sure all the subsequent blocks look the same.
+** Second Block
+#+BEGIN_SRC python
+  if len(password_input) < 8:
+          print("Sorry - this password is not at least eight characters in length")
+          acceptable_password = True
+  else:
+          print("Good - this password is " +str(len(password_input))+ " characters in length")
+#+END_SRC
+We still have the boolean issues mentioned above here, and again we're setting ~acceptable_password~ to ~True~ when it should be false. We could fix this inconsistency in the code by using the ~>=~ operator rather than the ~>~ operator.
+** Third Block
+#+BEGIN_SRC python
+  if any(aCharacter.isupper() for aCharacter in password_input):
+          print("Good - this password contains a capital letter")
+  else:
+          print("Sorry this password does not contain a capital letter")
+          acceptable_password = True
+#+END_SRC
+The conditional being checked is somewhat complicated, so what we can do is pull out the input line and this block to test, we can do this like so.
+*** Test
+#+BEGIN_SRC python
+  password_input = input("Please choose a password: ")
+  acceptable_password = True
+
+  for aCharacter in password_input:
+      print(aCharacter + "is upper" + str(aCharacter.isupper()))
+#+END_SRC
+*** Research
+We can also look up the ~any()~ function and find that it works on an iterable,[fn:2] and that we can utilise it as it appears in the script, let's add a comment here to elucidate what the function is doing. This is something that in general we can look at doing, let's add comments to show what it is that we are doing.
+** Fourth Block
+#+BEGIN_SRC python
+  if(specchar.search(password_input) != None):
+          print("Good - This password contains at least one special character")
+  else:
+          print("Sorry - This password does not contain at least one special character")
+          acceptable_password = True
+#+END_SRC
+Again we will look up our python documentation[fn:3] to check the usage of ~re.compile~ which we utilised to initialise the ~specchar~ object which we're now using to check against the string. We should probably check what it returns and can do so in much the same manner as we did for the Third Block, the documentation however tells us that the logic is well formed.
+
+** Return block
+#+BEGIN_SRC python
+  if acceptable_password:
+          print("Password accepted")
+  else:
+          print("Password rejected")
+#+END_SRC
+
+* Rewrite
+Taking all our recommendations from above we can rewrite the script like so:
+#+BEGIN_SRC python
+  #!/usr/bin/python3
+  import re
+  # We have a list of special characters we defined here
+  specchar = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+  acceptable_password = True
+
+  password_input = input("Please choose a password: ")
+
+  # Check that password_input contains a number
+  if re.search(r'\d', password_input):
+      print("Good - this password contains a number")
+      acceptable_password &= True
+  else:
+      print("Sorry - this password does not contain a number")
+      acceptable_password &= False
+
+  # Check that the length of password_input is greater or equal to 8
+  if len(password_input) >= 8:
+      print("Good - this password is {} characters in length".format(len(password_input)))
+      acceptable_password &= True
+  else:
+      print("Sorry - this password is not at least eight characters in length")
+      acceptable_password &= False
+
+  # Check if any of the characters in the password are upper case
+  if any(aCharacter.isupper() for aCharacter in password_input):
+      print("Good - this password contains a capital letter")
+      acceptable_password &= True
+  else:
+      print("Sorry this password does not contain a capital letter")
+      acceptable_password &= False
+
+  # Check that password_input contains one of our special characters
+  if(specchar.search(password_input) != None):
+      print("Good - This password contains at least one special character")
+      acceptable_password &= True
+  else:
+      print("Sorry - This password does not contain at least one special character")
+      acceptable_password &= False
+
+  # If our checks all pass, the password is accepted, if not we tell the user it is not
+  if acceptable_password:
+      print("Password accepted")
+  else:
+      print("Password rejected")
+#+END_SRC
+* Footnotes
+
+[fn:1] In ~acceptable_password &= True~ the ~&=~ operator will and the current value of ~acceptable_password~ with ~True~ and set it to ~acceptable_password~ This is why we set ~acceptable_password~ to ~True~ in the initialisation.
+
+[fn:2] https://docs.python.org/3/library/functions.html#any
+
+[fn:3] https://docs.python.org/3/library/re.html

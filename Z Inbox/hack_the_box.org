@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       11e5e02f-48cf-4281-b266-0141020ecf7f
+:END:
+#+title: Hack the Box
+        #+created: [2025-04-25 Fri 19:06]
+        #+last_modified: [2025-04-25 Fri 19:06]

@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       18c4f646-20e6-49e0-a51e-5b53045744d4
+:END:
+#+title: GTD
+
+- Getting things done utilises tasks and task states
+- The paper flow of GTD that I have found most useful is [[id:197f7642-0c5f-4dc1-92d7-9b6e1b7d6c5c][Bullet Journalling]]
+- I utilise [[id:17c4db4a-bbdd-4c20-9889-2519487f0474][org-roam]] to organise the digital side of my GTD and [[id:ec4e6233-8c32-4371-b2b4-9bf918eef737][PKMS]]

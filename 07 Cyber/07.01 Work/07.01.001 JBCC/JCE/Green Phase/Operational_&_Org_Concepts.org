@@ -1,0 +1,194 @@
+:PROPERTIES:
+:ID: -    83581516-7ba1-4c8f-ba33-e6de0f6dbf73
+:END:
+#+title: Review Operational and Organisational Concepts
+* Introduction to Security Trends and General Concepts
+** Computer Security
+The definition of Computer Security is always changing. Hardware was considered the main concern for decades due to the sheer expense of it. However with the constant advancement of technology, focus has now turned towards the security of information within the device rather than the hardware itself. So you may have heard the term Information Security, and more recently, Information Assurance. So what’s the difference?
+
+Computer Security and Information Security both refer to a state where the hardware and software perform only desired actions, information is protected from unauthorised access or alteration, and is available to authorised users when required.
+
+/Computer Security/: The field of computer security is constantly evolving. It entails the methods used to ensure the system is secure. Computer Security is defined as a system operating in a manner where it does what it is supposed to do and only what it is supposed to do.
+
+/Information Security/: Is defined by the information being protected from unauthorised access and is available to authorised individuals when required.
+
+/Information Assurance/: - a branch of Cyber Security, deals with knowing the level of protection required for information as well as the assurance of systems and information being available when required.
+
+/Network Security/: Refers to the protection of multiple computers and other devices that are connected together.
+
+With each new software and hardware advancement, we see more security incidents and threats.
+** Attributes of Threat Actors
+
+As threat actors become more common and their methods complex, it's important to understand that breakdown of threat actors and the potential risk that can place on systems.
+
+Threats can be categorised by:
+*** Internal/External
+
+ - An external threat actor or agent is one that has no account or authorized access to the target system. A malicious external threat must infiltrate the security system using malware and/or social engineering. Note that an external actor may perpetrate an attack remotely or on-premises (by breaking into the company's headquarters, for instance). It is the threat actor that is defined as external, rather than the attack method.
+
+ - Conversely, an internal (or insider) threat actor is one that has been granted permissions on the system. This typically means an employee, but insider threat can also arise from contractors and business partners.
+*** Intent / Motivation
+
+ - Intent describes what an attacker hopes to achieve from the attack, while motivation is the attacker's reason for perpetrating the attack. A malicious threat actor could be motivated by greed, curiosity, or some sort of grievance, for instance. The intent could be to vandalize and disrupt a system or to steal something. Threats can be characterized as structured or unstructured (or targeted versus opportunistic) depending on the degree to which your own organization is targeted specifically. For example, a criminal gang attempting to steal customers' financial data is a structured, targeted threat; a script kiddie launching some variant on the "I Love You" email worm is an unstructured, opportunistic threat.
+
+ - Malicious intents and motivations can be contrasted with accidental or unintentional threat actors and agents. Unintentional threat actors represents accidents, oversights, and other mistakes.
+*** Level of sophistication/capability and Resources/Funding
+
+ - You must also consider the sophistication and level of resources/funding that different adversaries might possess. Capability refers to a threat actor's ability to craft novel exploit techniques and tools. The least capable threat actor relies on commodity attack tools that are widely available on the web or dark web. More capable actors can fashion zero-day exploits in operating systems, applications software, and embedded control systems. At the highest level, a threat actor might make use of non-cyber tools, such as political or military assets. Capability is only funded through a substantial budget. Sophisticated threat actor groups need to be able to acquire resources, such as customized attack tools and skilled strategists, designers, coders, hackers, and social engineers. The most capable threat actor groups receive funding from nation states and criminal syndicates.
+* Threats to Security
+
+Administrators will constantly face threats as the attempt to protect their computer systems and networks. You may have come across some of them in your workplace or learnt about it in your career.
+
+Threats to Security can include:
+
+ - Viruses and Worms
+ - Intruders
+ - Insiders
+ - Criminal Organisations
+ - Nation-States, Terrorists and Information Warfare
+** Viruses
+are a type of malware designed to replicate and spread from computer to computer, usually by "infecting" executable applications or program code. There are several different types of viruses and they are generally classified by the different types of file or media that they infect:
+ - Non-resident/file infector—the virus is contained within a host executable file and runs with the host process. The virus will try to infect other process images on persistent storage and perform other payload actions. It then passes control back to the host program.
+ - Memory resident—when the host file is executed, the virus creates a new process for itself in memory. The malicious process remains in memory, even if the host process is terminated.
+ - Boot—the virus code is written to the disk boot sector or the partition table of a fixed disk or USB media, and executes as a memory resident process when the OS starts or the media is attached to the computer.
+ - Script and macro viruses—the malware uses the programming features available in local scripting engines for the OS and/or browser, such as PowerShell, Windows Management Instrumentation (WMI), JavaScript, Microsoft Office documents with Visual Basic for Applications (VBA) code enabled, or PDF documents with JavaScript enabled.
+
+What these types of viruses have in common is that they must infect a host file or media. An infected file can be distributed through any normal means—on a disk, on a network, as an attachment to an email or social media post, or as a download from a website.
+** Worms
+
+Are memory-resident malware that can run without user intervention and replicate over network resources. A virus is executed only when the user performs an action such as downloading and running an infected executable process, attaching an infected USB stick, or opening an infected Word document with macros enabled. By contrast, a worm can execute by exploiting a vulnerability in a process when the user browses a website, runs a vulnerable server application, or is connected to an infected file share.
+
+The primary effect of the first types of computer worm is to rapidly consume network bandwidth as the worm replicates. A worm may also be able to crash an operating system or server application (performing a Denial of Service attack). Also, like viruses, worms can carry a payload that may perform some other malicious action.
+** [[id:a4248771-ba52-4658-9d10-473d6fb2e01e][ASD mitigation strategies]]
+ASD mitigation strategies can assist in mitigating against a large portion of these threats.
+
+Strategies system administrators can implement to help eliminate threats include:
+
+ - Antivirus
+ - Patching Operating Systems
+ - Patching Applications
+** Intruders
+
+The act of deliberately accessing computer systems and networks without authorisation is the act of Hacking. Individuals who conduct this type of activity are called Hackers. Hacking can also be referred to as someone exceeding their authority in a system. This includes authorised users gaining access to files/information that they aren’t permitted to access.
+
+Hackers can be placed into three categories:
+*** Script Kiddies
+
+A script kiddie is someone who uses hacker tools without necessarily understanding how they work or having the ability to craft new attacks. Script kiddie attacks might have no specific target or any reasonable goal other than gaining attention or proving technical abilities. Mostly conduct small form attacks by an individual/small group, they fall into the unstructured threat category:
+ - Conducted over short periods of time
+ - Do not involve a large number of individuals
+ - Have little financial backing
+ - Accomplished by insiders/outsiders
+ - Generally script kiddies – low technical capability
+*** Script Writers
+
+Script writers are the next level up from script kiddies. They are capable of writing scripts to exploit known vulnerabilities.
+*** Elite Hackers
+
+Elite Hackers are top level hackers and are highly technical individuals which:
+
+ - Have ability to write scripts to exploit vulnerabilities
+ - Are capable of discovering new vulnerabilities
+** Insiders
+
+Insider Threats are one of the hardest threats that security professionals have to address. Additional mechanisms need to be put in place to detect these types of attacks by insiders and to lessen the ability of their attacks to succeed. Within this group of internal threats, you can distinguish insiders with permanent privileges - such as employees - from insiders with temporary privileges - such as contractors and guests.
+
+The main motivators for malicious insider threats are sabotage, financial gain, and business advantage. Like external threats, insider threats can be opportunistic or targeted. Again, the key point here is to identify likely motivations, such as employees who might harbor grievances or those likely to perpetrate fraud. An employee who plans and executes a campaign to modify invoices and divert funds is launching a structured attack; an employee who tries to guess the password on the salary database a couple of times, is perpetrating an opportunistic attack. You must also assess the possibility that an insider threat may be working in collaboration with an external threat actor or group.
+
+Insider threats can be categorized as unintentional. An unintentional or inadvertent insider threat is a vector for an external actor, or a separate—malicious—internal actor to exploit, rather than a threat actor in its own right. Unintentional threats usually arise from lack of awareness or from carelessness, such as users demonstrating poor password management.
+** Criminal Organisations
+
+As businesses and the general public become more reliant on technology to conduct work, banking and save information, it was inevitable that criminal organisations would eventually move to the electronic world to exploit.
+
+Fraud, extortion, theft, embezzlement and forgery all happen within cyberspace as they do in the physical world.
+
+Criminal Organisations have more money to spend to accomplish the criminal activity. This gives them more resources and manpower, which allows them to spend extra time on accomplishing the task, provided the level of reward at the conclusion is great enough.
+
+Attacks by criminal organisations usually fall into the structured threat category:
+
+ - Requires a great amount of planning
+ - Takes a longer period of time to conduct the activity
+ - More financial backing to accomplish the task
+ - Can have possible corruption of, or collusion with insiders
+ - Focused on financial gain
+** Nation-states, Terrorists
+
+Nation-states and terrorists – These fall under the category of organised hackers. They are generally cyber criminals made up of a group of professionals (criminals) focused on control, power and wealth. They are highly sophisticated and organised and may even run cybercrime as a service. Their attacks are usually focused on specific goals that are beneficial to their government. Some state-sponsored attackers are members of their nation’s armed forces.
+** Information Warfare
+
+Information Warfare – is warfare conducted against the information and information processing equipment used by adversaries. Information is not only the target but can also be the weapon. Falls under the highly structured threat category:
+
+ - Threat is characterised by longer periods of preparation
+ - High Levels of financial backing
+ - Large and organised group of attackers
+
+The larger resources and structure allows attackers to target critical infrastructure, such as water, gas, electricity, banking & finance, telecommunications etc.
+** Targets and Attacks
+
+There are two general reasons a particular computer system is attacked:
+
+ - Specific Target – This is when the attacker has chosen the target for a reason i.e. political reasons. An attack of this nature is decided upon before the attacker knows what hardware and software the organisation has.
+ - Opportunistic Target – An Opportunistic Attack is conducted against a target that has a known vulnerability to a specific exploit.
+
+Targeted attacks are more difficult to persecute and take more time than an opportunistic attack.
+* Security Triad
+:PROPERTIES:
+:ID:       17dbeab2-b89c-42d7-9805-30900520e7a8
+:END:
+[[id:8b69ff1c-44f6-45c0-b480-61426bbda056][CIA Triad]]
+Additional security goals have been added to the CIA of Security as a result of increased use of networks for e-commerce:
+
+ - Authentication – ensures that an individual is who they claim to be.
+ - Non-Repudiation – This deals with the ability to verify that a message has been sent and received and that the sender can be identified and verified.
+ - Auditability – refers to whether a control can be verified to be functioning properly.
+** Approaches to Computer Security
+
+While much of the discussion of computer security focuses on how systems are attacked, it is equally important to consider the structure of defences from attacks.
+
+Three major considerations when securing a system are:
+
+ - Correctness – This is ensuring the system is fully up to date, with patches installed and proper security controls in place.
+ - Isolation – This is protecting the system from unauthorised use, by means of access control and physical security. It begins with infrastructure and access control including cryptography.
+ - Obfuscation – Obfuscation is making it difficult for the adversary to know when they have succeeded. Accomplished by obscuring, randomising or obfuscation, this increases the workload of an attacker and makes it more difficult for them to succeed.
+
+All of these approaches, when used together, assist in providing a stronger system for defence.
+** Security Principles
+
+Principles are useful in secure system design and operation. Design principles include:
+
+ - Least Privilege, or using the minimum level of privileges necessary to perform a task
+ - Separation of Privilege/Duties, is basing access on more than one item
+ - Fail-Safe Defaults, denying by default and only granting permission explicitly
+ - Economy of Mechanism, keep security as small and simple as possible
+ - Complete Mediation, protection mechanisms should cover access to every object
+ - Open Design, the security mechanism shouldn't be dependent on the secrecy of the mechanism itself
+ - Least Common Mechanism, protection mechanisms should be shared to the least degree among users
+ - Psychological Acceptability, this is about whether users will accept the protection mechanism. Mechanisms should impact users minimally, or not at all
+ - Defence in Depth, this security principle is the use of multiple different defence mechanisms, with the goal of improving defence.
+ - Diversity of defence, is a concept which combines with defence in depth. It involves making layers of security dissimilar so that an attacker needs to change methodology to get through multiple layers of defence.
+** Least Privilege
+
+Least privilege is applicable to physical environments, network and host security associated with rights and permissions. Least Privilege states that the subject should only have the necessary rights and privileges to perform its tasks with no-additional permissions.
+
+Least privilege policy should be used when assigning permissions, giving users only the permissions that they need to do their work and no more.
+** Separation of Privilege
+
+Separation of Privilege states that the protection mechanism should be constructed so that it uses more than one piece of information to make access decisions. Therefore states that critical items should require multiple parties.
+
+Separation of Privilege is applicable to physical environments as well as network and host security.
+
+Applying this principle to the people side of security function results in the concept of Separation of Duties.
+
+Separation of duties specifies that for any given task, more than one individual needs to be involved. A task is broken down into different duties, each of which is accomplished by a separate individual.
+** Defense in Depth
+
+Also know as layered security, defence in depth is a principle that is characterised by the use of multiple differing defence mechanisms with the goal of improving the defensive response to an attack.
+
+Remember that a single point of failure in your network provides an opportunity to fail. By using multiple defences with differing points of failure enables the system to be stronger.
+
+The mechanisms that can be employed in this strategy are:
+
+ - Layered security – It's important that every environment has multiple layers of security – routers, firewalls, network segments, IDS, encryption, authentication software, physical security and traffic control.
+ - Diversity of defence – A concept that involves making different layers of dissimilar security, so that if attackers do get through the system to compromise one layer, they may not know how to get through a different type of layer that employs a different system for security. E.g. DMZ, multiple firewalls, VLAN segregation.
+
+* [[id:5bfd8e77-044d-4011-bcba-3db5b7d7282b][Policies, Procedures, and Standards]]

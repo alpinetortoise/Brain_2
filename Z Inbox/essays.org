@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       4c1c231d-0cac-4c51-be15-93189b703d42
+:END:
+#+title: Writings
+        #+created: [2024-10-27 Sun 16:58]
+        #+last_modified: [2024-10-27 Sun 16:58]

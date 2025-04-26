@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       538ff933-f299-42c4-a33a-0c197140fe02
+:END:
+#+title: Media manipulation (Linux)
+        #+created: [2025-04-12 Sat 08:57]
+        #+last_modified: [2025-04-12 Sat 08:57]
+* Music format conversion
+#+BEGIN_SRC bash
+  for a in ./*.[format1]; do ffmpeg -i "$a" -qscale:a 0 "${a[@]/%[format1]/[format2]}"; done
+#+END_SRC
+* handbrake conversion
+
+* borg backup
+~sudo borg -r /home/jpc/backup/backups rcreate --encryption=repokey-aes-ocb~
+~sudo borg -r /home/jpc/backup/backups/ create Sunday-samba /cloud/samba~
+** [[id:e195483b-6b24-4d9a-a29b-7b3a43705d0a][backup-comparison]]

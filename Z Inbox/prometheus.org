@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5c1fdb86-08d8-408f-86d5-db2e4f31f573
+:END:
+#+title: Prometheus
+        #+created: [2024-11-22 Fri 16:54]
+        #+last_modified: [2024-11-22 Fri 16:54]

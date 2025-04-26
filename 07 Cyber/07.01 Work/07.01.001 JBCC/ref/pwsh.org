@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       54d6a069-b8f6-4014-a5bf-6016b3f4fb1b
+:END:
+#+title: Powershell Commands
+
+[[id:84e32c94-bf6f-48f9-b6a7-09fdb0d08a36][Powershell]] utilizes a number of aliases that are familiar to users of [[id:a351413f-6352-4994-82f4-50b3c1cfa88b][Windows CMDs]], or [[id:2824cc6c-c82e-455d-8532-05289a55fccb][Bash]].
+
+#+BEGIN_SRC
+Set-Alias
+   [-Name] <string>
+   [-Value] <string>
+   [-Description <string>]
+   [-Option <ScopedItemOptions>]
+   [-PassThru]
+   [-Scope <string>]
+   [-Force]
+   [-WhatIf]
+   [-Confirm]
+   [<CommonParameters>]
+#+end_src

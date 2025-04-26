@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       f5708270-3674-4fb0-912a-ba69dd6c7294
+:END:
+#+title: Popper, Karl
+        #+created: [2024-11-21 Thu 20:25]
+        #+last_modified: [2024-11-21 Thu 20:25]
+

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       c16c83af-86b4-4349-9989-c8e7efab3b10
+:END:
+#+title: it is known
+        #+created: [2024-11-23 Sat 21:06]
+        #+last_modified: [2024-11-23 Sat 21:06]
+A Truism.
+
+There are a number of times that people make claims without having the evidence to back it up. Sometimes these are claims that have been made in the past that have been transmitted through time. [fn:1]
+
+* Footnotes
+
+[fn:1] cf. [/We Fell For The Oldest Lie On The Internet/, Kurzgesagt 2024], [/Tiffany/, CGP Grey, 2021]

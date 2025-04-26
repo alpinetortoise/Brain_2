@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4034661b-a621-4bf4-a7bf-fbd5e36e5ff1
+:END:
+#+title: self discovery
+        #+created: [2024-11-21 Thu 20:49]
+        #+last_modified: [2024-11-21 Thu 20:49]
+

@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       831f7a7c-932d-4aad-8be3-0cbe4d20489d
+:END:
+#+TITLE: Joint Basic Cyber Course
+
+* Meta
+** [[id:ec4e6233-8c32-4371-b2b4-9bf918eef737][PKMS]]
+This is a discussion about the methodology of hypertextual note taking that I utilise.
+** [[id:c5bfd0a4-d141-4b3d-9b4b-e5049a49366c][Org Roam]]
+The specific software that I utilise, you could also use [[https://obsidian.md/][Obsidian]] to much the same effect.
+
+** [[id:643d8e49-fb67-434c-8136-4c6275c932e7][References]]
+
+* JCE
+[[https://studentweb.bhtafe.edu.au/][BHI Student Web]]
+** [[id:98e285ea-850f-487b-9580-5d648556e546][CCNA 1: Introduction to Networks]]
+#+attr_org: :width 700px
+[[./JCE/CCNA1/img/CCNA1sched.PNG]]
+** [[id:6fde8d06-77fe-4f95-aadc-836d76b79269][Windows Server]]
+** [[id:18e8d685-d128-4f2b-b473-daa3ab96e3c2][Green Phase]]
+* [[id:6634ecab-1617-421b-9308-5b2fb6f9834c][Python]]
+* JIA
+** [[id:6f406fb1-e8a8-4c47-9008-f439948a4de4][Module 1]]
+** [[id:ca237ea9-c1f5-4b59-bde9-259772ba4294][Module 2]]
+*** [[id:77459503-ee7f-4a9b-abc7-af7ce154a374][JIA: Assessments]]
+** [[id:6171f833-689f-4cc0-95e6-f033ff287132][The Cyber Kill Chain]]
+** [[id:78d5b573-f69b-4fb3-af36-45837621f5c3][Incident Handling Phases]]

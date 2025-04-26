@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       4cef077c-f4a4-48ef-81ed-a3f9b509dbcf
+:END:
+#+title: Network Forensics
+* Netflow
+Router view of network traffic
+ - includes congestion information
+** Consists
+ - Flow exporter
+ - Flow collector
+ - Analysis Application
+* tcpdump
+[[id:55aee438-d451-462d-880e-5b426144d3f1][tcpdump reference]]
+*

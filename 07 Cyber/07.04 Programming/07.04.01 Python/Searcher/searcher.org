@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       4f650ffa-b47b-4112-85d0-db3cae454ab8
+:END:
+#+title: searcher.py
+
+* Initial program
+To start with let's mock up a simple file to be searched.
+#+BEGIN_SRC :tangle fruit.txt
+  apples
+  bananas
+  kiwi
+  bird
+#+END_SRC
+
+We can then initialise our hardcoding for this
+
+#+BEGIN_SRC python :tangle searcher.py
+  pathOf_fileToSearch = "./fruit.txt"
+  stringToSearch = "bird"
+
+  fileToSearch = open(pathOf_fileToSearch)
+
+  for line in fileToSearch:
+      if stringToSearch in line:
+          print(line)
+#+END_SRC
+
+For a more robust test I generated a Lorem Ipsum excerpt from loremipsum.io and move over to that. We also believe that there may be some whitespace that we should strip.
+
+#+BEGIN_SRC python :tangle searcher.py
+  pathOf_fileToSearch = "./lorem.txt"
+  stringToSearch = "ex"
+
+  fileToSearch = open(pathOf_fileToSearch)
+
+  for line in fileToSearch:
+      if stringToSearch in line:
+          print(line.rstrip())
+#+END_SRC
+
+* Requesting user input
+
+We can modify the script to request input including the path of the file we want to search, and the string to search for.
+#+BEGIN_SRC python :tangle searcher.py
+  pathOf_fileToSearch = input("Input the path of the file we want to search: ")
+  stringToSearch = input("Input the substring we want to search for: ")
+
+  fileToSearch = open(pathOf_fileToSearch)
+
+  for line in fileToSearch:
+      if stringToSearch in line:
+          print(line.rstrip())
+#+END_SRC

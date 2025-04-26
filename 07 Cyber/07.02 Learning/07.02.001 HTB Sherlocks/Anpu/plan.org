@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       aceb54af-48a8-460c-868f-3087d10b6a04
+:END:
+#+Title: [[id:bd118486-b1c3-485a-a4e0-d9ac175bc195][HTB: Anpu]] Plan
+* Hosts
+| | |
+* IOCs provided
+* Evidence
+* Initial Access
+* Privilege Escalation
+* Lateral Movement
+* Persistence
+* Post Exploitation
+* Signatures

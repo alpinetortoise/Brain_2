@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6334f7d3-d93e-4d54-8602-3b46942793d9
+:END:
+#+title: Charismata
+        #+created: [2024-11-21 Thu 20:11]
+        #+last_modified: [2024-11-21 Thu 20:11]
+

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       f077f5e3-ed0c-44da-b8c9-aa0670da8f42
+:END:
+#+title: Decompilation
+        #+created: [2025-03-12 Wed 09:10]
+        #+last_modified: [2025-03-12 Wed 09:10]
+
+* Interactive Disassembler (IDA)
+I have licence keys for IDA Free, findable on [[hex-rays.com]]

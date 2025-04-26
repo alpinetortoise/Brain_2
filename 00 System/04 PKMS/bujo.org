@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       197f7642-0c5f-4dc1-92d7-9b6e1b7d6c5c
+:END:
+#+title: BuJo
+
+ - Bullet Journaling is a paper GTD system.
+ - There are a few major symbols that I utilise.
+   - a simple dot indicates an open task
+   - a cross through that dot indicatesa closed task
+   - an arrow through that dot indicates a migrated or delegated task
+   - a struckthrough task indicates that it is no longer relevant

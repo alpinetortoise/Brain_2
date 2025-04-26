@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       04157dd3-80fc-40d9-9e1c-b39e7d83a878
+:END:
+#+title: Reformation
+        #+created: [2024-11-24 Sun 08:52]
+        #+last_modified: [2024-11-24 Sun 08:52]
+[[id:5f81bf60-3a42-4af1-9218-d4ef10c0985c][Reformed Movement]]
+[[id:03a62295-1947-4c8b-b508-a8ed83ea92ba][Five Solas]]
+[[id:cb183184-08a0-48d4-a95d-9983115b6ecc][Counter Reformation]]
+[[id:8b40091f-910d-43ab-a974-3a2552e82bd9][Lutheranism]]

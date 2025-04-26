@@ -1,0 +1,144 @@
+:PROPERTIES:
+:ID:       7e0081b9-edfe-49c9-b0f0-526c5ebbe797
+:END:
+#+Title: FA3 Report
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
+GNB inc. commissioned a pen test on their main server.
+
+* Reconnaissance
+:PROPERTIES:
+:CUSTOM_ID: reconnaissance
+:END:
+** Network
+:PROPERTIES:
+:CUSTOM_ID: network
+:END:
+Reconnaissance was conducted on the 192.168.204.0/24 network using
+netdiscover to enumerate the valid hosts on the network (T0846) The
+target host GNB was discovered through this methodology at
+192.168.204.130.
+
+** Host
+:PROPERTIES:
+:CUSTOM_ID: host
+:END:
+An nmap scan was then conducted on GNB revealing a vulnerable service
+disccd running on port 3632 (T1406) Also of note were ftp, ssh, and http
+services running on the host.
+
+[[file:media/image1.png]]
+
+* Initial Access
+:PROPERTIES:
+:CUSTOM_ID: initial-access
+:END:
+Metasploit was used to gain initial access through the distccd service
+using the exploit/unix/misc/distcc_exec module (CVE-2004-2687). The user
+that was found running this service was jason. Within his home directory
+the files flag1 and files/notes contained the first flag and a list of
+usernames and passwords respectively. (T1552.001)
+
+[[file:media/image2.png]] [[file:media/image3.png]]
+
+* Persistence and Lateral Movement
+:PROPERTIES:
+:CUSTOM_ID: persistence-and-lateral-movement
+:END:
+** 1: Hydra/FTP
+:PROPERTIES:
+:CUSTOM_ID: hydraftp
+:END:
+Having exfiltrated the data from /home/jason/files/notes (T1567) a hydra
+brute force attack (T1110.003) was launched against the running FTP
+service, the combination bak:Ohpheequee6Eich2ohkohPee0phiSai8xo was
+discovered and ftp access was acquired (T1078), subsequently
+etc.old/flag2 and etc.old/shadow were downloaded over ftp (T1567)
+
+[[file:media/image4.png]]
+
+** 2: John the Ripper/SSH
+:PROPERTIES:
+:CUSTOM_ID: john-the-ripperssh
+:END:
+A John the ripper attack was performed on the exfiltrated shadow file
+(T1110.002) this yielded the following user:password combinations.
+
+jason:jasonkid123\\
+mysql:hondatyper100@ [[file:media/image5.png]]
+
+None of the three above users are sudoers. SSH was used to access each
+of these user accounts (T1078) Under /var/lib/mysql (the mysql users'
+home) flag3 was found within their .bash_history file.
+
+[[file:media/image6.png]]
+
+** 3: MySQL
+:PROPERTIES:
+:CUSTOM_ID: mysql
+:END:
+From here we looked at the /var/www/ folder and found that there was
+/var/www/admin/index.php so we decided to launch burp suite to look at
+whether we could get some sql injection on the page. The server seems
+immune to injection, however we have access to mysql server side.
+Providing the mysql username as root and password to be mysql's lets us
+add a valid user. And reveals the 4^{th} flag.
+
+[[file:media/image7.png]]
+
+* Privilege Escalation
+:PROPERTIES:
+:CUSTOM_ID: privilege-escalation
+:END:
+In the ping command box, running ‘; whoami' returns root, run ‘; cat
+/root/flag5' and flag 5 is revealed.
+
+* Conclusion
+:PROPERTIES:
+:CUSTOM_ID: conclusion
+:END:
+Removing or upgrading the distccd service on the server provided the
+main access and subsequent lateral movement. Jason needs to be trained
+concerning the placement of credentials in plain text within his user
+folder, and sensitive files such as /etc/shadow should not be included
+in backups.
+
+* Services
+:PROPERTIES:
+:CUSTOM_ID: services
+:END:
+| Service            | Port |
+|--------------------+------|
+| ProFTPD 1.3.1      | 21   |
+| OpenSSH            | 22   |
+| Apache httpd 2.2.8 | 80   |
+| distccd v1         | 3632 |
+
+* Found Users
+:PROPERTIES:
+:CUSTOM_ID: found-users
+:END:
+| Username | Password                           |
+|----------+------------------------------------|
+| bak      | Ohpheequee6Eich2ohkohPee0phiSai8xo |
+| jason    | jasonkid123                        |
+| mysql    | hondatyper100@                     |
+| Frank    |                                    |
+| Root     |                                    |
+
+* Found Flags
+:PROPERTIES:
+:CUSTOM_ID: found-flags
+:END:
+1. *e84a8ea438ae46a6aa54c1a91e7c3901fc731d4420817231dcbe3214f28dade677104c14b49b06afc8215b721320a1a9e7563ee8fe2d4987b07cdc4dfb7db8ff*
+
+2. *58985a8021fbf580547929ef478e6e34f4979f0ecb8043d71b0292c57c799be65bb8233a35f651e2fc091e22a5ddd23f6b695597e5abda302e0c1c0d19f9e897*
+
+3. *flag3:b742d395dbacaa7bd9d8500f809dcd32e1a8af233525cc8905d80f4d44484a17388fc37936ece5239615dbd8669c82faf5afc652c53edc8f0654950e774f4ee2*
+
+4. *Flag4:
+   b3db9c69233388f219ffe1d9e78c2327dd795263e39b6c8f7ca6db739c23904580232968ddaa835299f21cdcd73f35f389cef8536ef2f6aa6aea6e686515c6f3*
+
+5. *flag5:35250167698cd9a9741e2b2d7aa21062576aad7daeb0eb2a8546d07b8e10352aba0df1fa241b385b919020ef3c25bcc3e41cab7162f560db0d8bcef5c12a1f8d*

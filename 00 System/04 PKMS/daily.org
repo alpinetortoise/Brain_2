@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       168eee3d-367e-4f1e-8e99-92626af6db42
+:END:
+#+title: daily
+          #+created: [2024-07-31 Wed 09:18]
+          #+last_modified: [2024-07-31 Wed 09:18]
+[[id:2ae35dbf-1ff3-484e-97cf-ef115b380673][routines]]
+
+Daily notes form the basis of fleeting notes, these are then compiled and synthesized into permanent notes.

@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       60a7181f-eff6-465a-8ffe-306a1b93d86a
+:END:
+#+title: redemption
+        #+created: [2024-11-21 Thu 21:03]
+        #+last_modified: [2024-11-21 Thu 21:03]
+

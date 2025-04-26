@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       6eecadd1-40bb-4957-8845-cc9ceed31297
+:END:
+#+title: Wireshark query reference
+* HTTP/S
+(http.request or tls.handshake.type eq 1) and !(ssdp)
+** [[id:277b7b64-cc7b-4636-b50a-5c59547e9556][trickbot]]
+tls.handshake.type eq 1 and (tcp.port eq 447 or tcp.port eq 449)
+(http.request.uri contains /81 or http.request.uri contains /83 or http.request.uri contains /90) and http.request.uri contains mor
+http.request.uri contains .png
+** [[id:5647acb4-f731-427f-b846-fcd3717c327b][qakbot]]
+tls.handshake.type eq 11 and !(x509sat.CountryName == US)
+tcp.port eq 65400
+tls.handshake.extensions_server_name contains speedof
+http.host contains strandsglobal
+* SMTP
+smtp.data.fragment

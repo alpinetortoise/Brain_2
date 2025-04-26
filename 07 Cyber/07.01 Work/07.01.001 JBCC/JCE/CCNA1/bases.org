@@ -1,0 +1,90 @@
+#+Title: An excursus on bases
+* Introduction
+Generally we work in base 10, that means that every position is a power of ten, eg.
+| 100 | 10 | 1 |
+This could also be thought of as such
+| 10^2 | 10^1 | 10^0 |
+
+We could generalise this to x^y where x is the base of our number system and y is the position. Formally we call x the radix.
+
+So if we were to take the decimal number 211 and place it into a table
+
+| Value | 10^2 | 10^1 | 10^0 |
+|-------+------+------+------|
+| Digit |    2 |    1 |    1 |
+
+So we can also express this as:
+(2 * 10^2) + (1 * 10^1) + (1 * 10^0)
+
+* Binary
+For binary we have a base of 2
+| 2^7 | 2^6 | 2^5 | 2^4 | 2^3 | 2^2 | 2^1 | 2^0 |
+| 128 |  64 |  32 |  16 |   8 |   4 |   2 |   1 |
+
+If we were to have 10010011
+| Value | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+|-------+-----+----+----+----+---+---+---+---|
+| Digit |   1 |  0 |  0 |  1 | 0 | 0 | 1 | 1 |
+
+So we can easily convert from binary to decimal using the same idea as for decimal,
+
+(1 * 2^7) + (0 * 2^6) + (0 * 2^5) + (1 * 2^4) + (0 * 2^3) + (0 * 2^2) + (1 * 2^1) + (1 * 2^0)
+
+Simplifying:
+(1 * 2^7) + (1 * 2^4) + (1 * 2^1) + (1 * 2^0)
+2^7 + 2^4 + 2^1 + 2^0
+128 + 16 + 2 + 1
+147
+
+* Hexadecimal
+And for Hexadecimal we have a base of 16
+| 16^1 | 16^0 |
+|   16 |    1 |
+
+In the same manner if we were to take AE
+
+| Value | 16 |  1 |
+|-------+----+----|
+| Digit | 10 | 14 |
+
+Converting to base 10:
+(10 * 16^1) + (14 * 16^0)
+160 + 14
+174
+
+* Converting between bases
+Converting an integer n from base b_1 to b_2 can be done by dividing by the the radix of b_2 and taking the remainder for each of the positions.
+
+For instance 168_10 -> 0b:
+
+#+BEGIN_EXAMPLE
+168 / 2 = 84 r 0  <- This 0 goes in the 2^0 column
+84 / 2 = 42 r 0 <- This 0 goes in the 2^1 column, etc...
+42 / 2 = 21 r 0
+21 / 2 = 10 r 1
+10 / 2 = 5 r 0
+5 / 2 = 2 r 1
+2 / 2 = 1 r 0
+1 / 2 = 0 r 1
+#+END_EXAMPLE
+
+So 10101000
+
+So also if we were to convert 10101000 to base10
+#+BEGIN_EXAMPLE
+10101000 / 1010 = 10000 r 1000 <- ie 8
+10000 / 1010 = 1 r 0110 <- 6
+1 / 1010 = 0 r 1 <- 1
+#+END_EXAMPLE
+
+So also with hexadecimal
+#+BEGIN_EXAMPLE
+168 / 16 = 10 r 8
+10 / 16  = 0 r 10 <- This becomes A
+#+END_EXAMPLE
+Hence A8
+
+** Side note
+For converting between bases where one radix is a power of the other you can use a subset of the lower base. This follows from above.
+
+ie since 2^4 = 16 you can express 1 digit of hexadecimal in 4 digits of binary.

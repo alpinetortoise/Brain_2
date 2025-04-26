@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       e24bac1a-cebd-4731-9d83-06951ff0d572
+:END:
+#+title: Over The Wire: Leviathan
+        #+created: [2024-10-11 Fri 09:48]
+        #+last_modified: [2024-10-11 Fri 09:48]
+* Leviathan 1
+Grepped hidden file for password
+3QJ3TgzHDq
+* Leviathan 2
+ltrace on 'check' binary file for calls
+String comparison to sex
+feeding this into sex gives us a leviathan 2 shell
+NsN1HwFoyN
+* Leviathan 3
+passing a number of files and a file with a space into the printfile bin
+f0n8h2iWLP
+* Leviathan 4
+Another string comparison bin tackled in the same way as 2
+WG1egElCvO
+* Leviathan 5
+There is a bin file at ~/.trash/bin that outputs the password in binary
+0dyxT7F4QD
+* Leviathan 6
+Another ln puzzle like lev3
+szo7HDB88w
+* Leviathan 7
+4 digit pin code, brute forced
+#+BEGIN_SRC bash
+#!/bin/bash
+
+for a in {0000..9999}
+do
+~/leviathan6 $a
+done
+#+END_SRC
+
+qEs5Io5yM8

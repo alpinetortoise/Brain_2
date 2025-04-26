@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       cb183184-08a0-48d4-a95d-9983115b6ecc
+:END:
+#+title: Counter Reformation
+        #+created: [2024-11-24 Sun 08:53]
+        #+last_modified: [2024-11-24 Sun 08:53]

@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       ee1130a5-f237-4a8d-a739-2a2ffadd7467
+:END:
+#+title: Cyber Deck
+        #+created: [2024-11-10 Sun 13:57]
+        #+last_modified: [2024-11-10 Sun 13:57]
+* Use case
+** Work
+ - SDR
+ - WiFi sniffing
+ - pineapple stuffs
+** EDC
+ - Digital notetaking
+* Parts
+** TODO SBC - Pi5?
+** TODO Screen
+** TODO Case
+** TODO I/O
+*** TODO Keyboard
+*** TODO SDR
+*** TODO WiFi/5G
+** TODO Power
+* Prebuilt contenders
+** Clockwork uConsole
+** Beepy
+** 3DS
+** Netbook?

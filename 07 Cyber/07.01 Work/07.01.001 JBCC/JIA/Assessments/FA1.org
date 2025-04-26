@@ -1,0 +1,139 @@
+:PROPERTIES:
+:ID:       ea4265df-639c-423e-80a8-c2fff801421f
+:END:
+#+Title: JIA: FA1
+* Introduction
+:PROPERTIES:
+:CUSTOM_ID: introduction
+:END:
+This task was to install and configure an Ubuntu virtual machine, Ubuntu
+is a user friendly and polished Debian based GNU/Linux distribution.
+
+* VM Configuration Options
+:PROPERTIES:
+:CUSTOM_ID: vm-configuration-options
+:END:
+** Ubuntu -- FA1
+:PROPERTIES:
+:CUSTOM_ID: ubuntu-fa1
+:END:
+We were provided an Ubuntu installer disc image (ISO file) but it can be
+found here:
+
+- [[https://releases.ubuntu.com/24.04.1/ubuntu-24.04.1-desktop-amd64.iso]]
+
+To circumvent VMware's unattended install feature select “I will install
+the operating system later.”
+
+[[file:media/image1.png]]
+
+We selected the appropriate settings for the guest operating system and
+named it FA1, choosing to store the virtual disk in a single file.
+
+During Install we will utilise the NAT adapter, and subsequently change
+to Host-Only
+
+| ISO/Release     | Ubuntu-24.04.1-desktop-amd64.iso        |
+|-----------------+-----------------------------------------|
+| HDD size        | 25 GB                                   |
+| RAM             | 4096 MB                                 |
+| CPU cores       | 2                                       |
+| Network Adapter | NAT (during install)                    |
+|                 |                                         |
+|                 | Host-Only (during connectivity testing) |
+
+These settings are in line with the system requirements for Ubuntu found
+here:
+
+- [[https://help.ubuntu.com/community/Installation/SystemRequirements]]
+
+[[file:media/image2.png]]
+
+** Kali -- Kali
+:PROPERTIES:
+:CUSTOM_ID: kali-kali
+:END:
+The Kali install is an imported virtual appliance downloaded from the
+kali.org website:
+
+- https://cdimage.kali.org/kali-2024.4/kali-linux-2024.4-vmware-amd64.7z
+
+* Ubuntu Install
+:PROPERTIES:
+:CUSTOM_ID: ubuntu-install
+:END:
+The first step of the install given the choices made in setting up the
+virtual machine is to add the CD to the VM. Select “Edit virtual machine
+settings”
+
+[[file:media/image3.png]]
+
+And add the installation ISO like so.
+
+[[file:media/image4.png]]
+
+Power on the virtual machine and the installer should load up.
+
+[[file:media/image5.png]]
+
+Choose the relevant Language, Accessibility, and Keyboard Layout
+selections (the defaults will often suffice)
+
+Connect to the internet via a wired connection.
+
+[[file:media/image6.png]]
+
+- Skip the update for the installer and choose to Install Ubuntu.
+
+- Then choose the Interactive Installation, and default selection of
+  apps.
+
+- Don't install proprietary software.
+
+- Choose advanced features and select LVM[fn:1]
+
+#+begin_quote
+[[file:media/image7.png]]
+#+end_quote
+
+- Fill out the account details as follows
+
+[[file:media/image8.png]]
+
+- Choose the relevant location details and then hit install.
+
+- Once the install is finished shutdown the guest and remove the ISO
+  from its drive.
+
+* Testing connectivity
+:PROPERTIES:
+:CUSTOM_ID: testing-connectivity
+:END:
+- Modify both FA1 and Kali to be on the Host-only network
+
+[[file:media/image9.png]]
+
+- Due to the provisioned hardware of the two virtual machines you should
+  be able to run both concurrently
+
+[[file:media/image10.png]]
+
+| FA1  | 192.168.101.134 |
+|------+-----------------|
+| Kali | 192.168.101.133 |
+
+[[file:media/image11.png]]
+
+[[file:media/image12.png]]
+
+* A1 - Decision of LVM
+:PROPERTIES:
+:CUSTOM_ID: a1---decision-of-lvm
+:END:
+Logical Volume Manager (LVM) is a pooling management system within Linux
+for the grouping of physical disks, while less relevant in a virtualised
+environment, due to the extensibility that it provides it is almost
+becoming best practice to utilise, as per
+https://www.redhat.com/en/blog/lvm-vs-partitioning
+
+[fn:1] This decision is outlined in A1 -- Decision of LVM

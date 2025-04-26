@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       d96e5e38-adae-4eef-9fdb-7d8b003e9c08
+:END:
+#+title: digitalAnalog
+
+One of the keys to properly developing a PKMS and GTD system is to have [[id:2ae35dbf-1ff3-484e-97cf-ef115b380673][routines]]

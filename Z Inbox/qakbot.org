@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       5647acb4-f731-427f-b846-fcd3717c327b
+:END:
+#+title: qakbot
+        #+created: [2025-04-04 Fri 12:22]
+        #+last_modified: [2025-04-04 Fri 12:22]
+* IOC
+ - HTTPS traffic over standard and non-standard TCP ports for HTTPS.
+ - Certificate data for Qakbot HTTPS traffic has unusual values for the issuer fields, and the certificate is not issued by an authority based in the United States.
+ - TCP traffic over TCP port 65400.
+ - Prior to late November 2020, Qakbot commonly generated HTTPS traffic to cdn.speedof[.]me.
+ - Prior to late November 2020, Qakbot commonly generated HTTP GET requests to a.strandsglobal[.]com.

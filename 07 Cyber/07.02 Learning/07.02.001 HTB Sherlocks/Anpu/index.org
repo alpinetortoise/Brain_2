@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       bd118486-b1c3-485a-a4e0-d9ac175bc195
+:END:
+#+title:  HTB: Anpu
+* Meta
+ - Author: Hack The Box
+ - Year:
+ - Outputs: [[id:aceb54af-48a8-460c-868f-3087d10b6a04][Plan]],
+ -
+* Evidence
+* Machines
+* Investigation Notes

@@ -1,0 +1,153 @@
+:PROPERTIES:
+:ID:       43eef652-b5b6-4078-83c0-e0844a1102d7
+:END:
+#+title: Install, Configure and Operate Linux
+* Vim
+:PROPERTIES:
+:ID:       dcd52410-dc00-40e8-9776-21d90a40e456
+:END:
+
+** Cheat Sheet
+ - h,j,k,l - left, down, up, right
+ - i - insert mode
+ - esc - normal mode
+ - A - append
+ - /,? - search forward/backward, n,N will repeat the search
+*** Exec mode
+ - :q quit
+ - :w write
+ - :e find file
+ - :set nu turn line numbers on
+* Screen - Terminal multiplexer
+ - C-a S - split horizontally
+ - C-a | - split vertically
+ - C-a -> (tab) - Move between mx terminals
+ - C-a c - new tty
+ - C-a spc - next tty
+ - C-a backspace - prev tty
+ - C-a [0-9] - go to nth tty
+ - C-a " - list tty
+ - C-a a - send C-a to tty
+* Neovim
+
+** Org-mode
+** Org-Roam
+
+
+pin
+
+Running sheet for Project: Install and configure Linux
+
+Name, Date
+
+Below is the running sheet for Joshua Chubb:
+
+    Download Kali Linux VM virtual appliance from https://cdimage.kali.org/kali-2024.4/kali-linux-2024.4-vmware-amd64.7z
+    Download Alpine linux ISO from https://dl-cdn.alpinelinux.org/alpine/v3.14/releases/x86/alpine-extended-3.14.0-x86.iso
+    Cloned Ubuntu VM machine from lab work
+    Setup Alpine Virtual Machine
+        Custom, next, next
+        Choose alpine iso, next
+        2 processors, 2 cores, next
+        512MB memory, next
+        Do not use a network connection, next
+        next, next
+        Create virtual disk 8GB, store as a single file, next, next
+        Customize hardware
+            Add 1x NAT
+            Add 2x Internal Networks VMnet 3 and 4
+            Close
+        Finish
+    Open Virtual Network Editor "Edit > Virtual Network Editor"
+        Change Settings
+        Add Networks VMnet3 and VMnet4
+            Uncheck connect a host virtual adapter to this network
+            Uncheck Use local DHCP service to distribute IP addresses to VMs
+        Apply
+    Power on Alpine virtual machine
+    Login as root, no password
+    run setup-alpine
+        keyboard layout: us us
+        hostname: alpine
+        initialize eth0 interface
+        set eth0 to acquire ip via dhcp
+        enter done for no further interface configuration
+        Enter n for no further interface configuration
+        Enter the new root password 7457ych1ck3n
+        Timezone: Australia
+        Sub-timezone: Melbourne
+        Set no proxy
+        Set Chrony (default) as NTP client
+        Use the default mirror [1]
+        Use the default SSH server
+        Choose sda
+        Choose sys install
+        choose y to format the drive and install Alpine Linux
+    While alpine is  change over ubuntu and kali onto networks vmnet3 and vmnet4 respectively
+        Settings > Network Adapter > Change IANet to repective network
+    Reboot Alpine, command: reboot
+    run vi /etc/network/interfaces
+        Add the following lines
+        auto eth1
+        iface eth1 inet static
+        address 192.168.1.100/24
+
+        auto eth2
+        iface eth2 inet static
+        address 192.168.2.100/24
+    run apk search vim
+    run apk add vim
+    run which vi, noting the location of vi
+    run rm /usr/bin/vi
+    run ln -s /usr/bin/vim /usr/bin/vi
+    run adduser operations
+    Set password: mcorrrABC000
+    run adduser admin
+    Set Password: agm101cc75
+    run addgroup ops
+    run adduser admin ops
+    run adduser operations ops
+    run rc-update add sshd
+    run rc-status
+    run vi /etc/ssh/sshd_config
+        Add the following lines
+        Port 22
+        ListenAddress 192.168.1.100
+    run rc-service sshd restart
+    reboot Alpine
+    Add a network adapter to Kali
+        Edit virtual machine settings
+        Add Network adapter: NAT
+    Power on kali
+    login with kali:kali
+    open a terminal emulator
+    run ip add noting the ip addresses
+        eth0: internal, no address
+        eth1: NAT, 192.168.23.133
+    run sudo ip address add 192.168.1.1/24 dev eth0
+    run ping 192.168.1.100 -I eth0
+    run ssh operations@192.168.1.100
+        At the signature prompt: yes
+        enter operations password: mcorrrABC000
+        exit
+    run sudo vi /etc/ssh/sshd_config
+        Add the following lines
+        Port 22
+        ListenAddress 192.168.1.1
+    run sudo systemctl enable ssh && sudo systemctl start ssh
+    ssh operations@192.168.1.100:w
+    enter operations password
+    ssh kali@192.168.1.1
+        At the signature prompt: yes
+        enter kali password
+        exit, exit
+    Power on Ubuntu clone
+    login user:user
+    In a terminal emulator run
+        sudo ip address add 192.168.2.1/24 dev ens33
+        sudo ip route add 192.168.1.0/24 via 192.168.2.100
+    On Alpine run sysctl net.ipv4.ip_forward
+    run sysctl -w net.ipv4.ip_forward=1
+    On kali run sudo route add -net 192.168.2.0/24 gw 192.168.1.100
+
+   

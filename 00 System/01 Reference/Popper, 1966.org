@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       91a7fcd1-2097-45f5-9a49-ca397cf15b1d
+:END:
+#+title: Popper, 1966
+            #+created: [2024-11-22 Fri 16:51]
+            #+last_modified: [2024-11-22 Fri 16:51]

@@ -1,0 +1,85 @@
+:PROPERTIES:
+:ID:       6dbddcac-bc5c-4c00-b739-72952d23dc64
+:END:
+#+Title: Australian Cyber Security Centre (ACSC)
+
+The Australian Cyber Security Centre (ACSC) began its operations in 2014 and formally became part of the [[id:701d5737-61d0-4035-993e-58064902fb22][Australian Signals Directorate (ASD)]] on July 2018.
+
+ACSC leads the Australian Government's efforts to improve the nation's [[id:0c6051d3-c4e8-4ae0-9573-96802ccbb211][Cyber Security]].
+
+Working alongside nearly 200 industry, Government and academic partners, ACSC monitors cyber security issues and threats 24/7 so they can alert Australians early and provide advice about protecting individuals and businesses.
+* Mission Statement
+ACSC drives cyber resilience across the whole of the economy, including critical infrastructure and systems of national interest.
+** Additionally, ACSC:
+ - Responds to cyber security threats and incidents as Australia's Computer Emergency Response Team (CERT)
+ - Collaborating with the private and public sector to share information on threats and increase resilience (ACSC Threat Report)
+ - Working with government, industry and the community to increase awareness of cyber security (Information Security)
+ - Providing information, advice and assistance to all Australians.
+
+* ROLES
+https://www.cyber.gov.au/acsc
+ - The ACSC leads the Australian Government in improving cyber security.
+ - Monitor current and emerging cyber security threats 24/7.
+ - Part of the Australian Signals Directorate (ASD).
+ - Alert services
+ - Links to ISM
+ - Essential 8
+ - ASD information
+ - Information for individuals and families
+ - Small to medium businesses
+ - Large Organisations and infrastructure
+ - Government
+
+* Co-located agencies
+
+ASD is a member of the National Intelligence Community. Each of the Government agencies perform a role that protects Australia and its national interests, nationally and internationally.
+
+ACSC includes staff from the;
+ - Australian Criminal Intelligence Commission (ACIC) - Discovers, understands and prioritises cybercrime and threat intelligence.
+ - Australian Federal Police (AFP) - Investigate and respond to cybercrime.
+ - Australian Security Intelligence Organisation (ASIO) - Cyber investigations and telecommunications security specialists.
+ - Defence Intelligence Organisation (DIO) - Strategic intelligence analysts.
+ - Department of Home Affairs Cyber security Policy Division - Staff are collocated with ACSC staff.
+* Co-located agencies - National Intelligence Community
+The reason why these organisations are co-located in one location is fundamental. It allows for quick dissemination of information between the groups, and depending on the situation; only specific organisations may have jurisdiction.
+
+* www.cyber.gov.au
+ACSC’s initiative, cyber.gov.au, is a repository of information, services and points of contact for all things Cyber in Australia.
+
+Hub for private and public sector collaboration and information-sharing to increase cyber resilience across the whole of the Australian economy.
+
+Provides a central point for the latest threat information, publications and incident reporting tools.
+
+Visit http://cyber.gov.au and browse the website.
+
+* Computer Emergency Response Team (CERT)
+
+CERT Australia is the national computer emergency response team.
+
+CERT Australia provides advice and support on cyber threats and vulnerabilities to the owners and operators of Australia's critical infrastructure and other systems of national interest.
+
+It is an office within the ACSC.
+* Incident Management
+
+A cyber security incident is a single or series of unwanted or unexpected events that have a significant probability of compromising an organisation’s business operations. Cyber security incidents can impact the confidentiality, integrity or availability (CIA) of a system and the information that it stores, processes or communicates.
+
+
+All Australian Governments, businesses and the community are encouraged to report cyber incidents to the ACSC.
+
+
+The ACSC assess all reported cyber incidents against an incident categorisation framework that considers the scope, impact and severity of an incident and its potential to harm Australia.
+
+
+ACSC helps to mitigate the effects of an incident by identifying the tools, tactics and procedures of malicious actors and vectors of compromise and determining the priority tasks based on critical assets.
+
+
+When a national cyber incident is declared, coordinating an inter-jurisdictional response with cyber security leads from affected Australian Governments.
+* ACSC Threat Report
+With cyber security being an ever-increasing concern, ACSC publishes threat reports to raise awareness. The report provides a consolidated variety of topics such as an executive summary, the year’s current challenges, trends and what you can do to stay safe. You can locate these reports in the publications tab on the cyber.gov.au website.
+
+These reports contain:
+
+ - An executive summary - Quick breakdown of the identified challenges and trends, including reporting statistics.
+ - A breakdown of current challenges - Current challenges faced by individuals, businesses and government agencies.
+ - An explanation of broader trends - Provides a better understanding of the ease of cyber-attacks in recent years, how techniques are evolving, and the increase of specific cyber-criminal activity and targeted threats.
+ - Further information on how to stay safe - Contains references to information that can be used to increase cyber security further.

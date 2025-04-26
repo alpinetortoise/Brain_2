@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       30140612-3c31-4a4c-ad51-765ded951fa7
+:END:
+#+title: soc
+        #+created: [2025-04-25 Fri 19:07]
+        #+last_modified: [2025-04-25 Fri 19:07]

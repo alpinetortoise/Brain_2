@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       9725fe05-3d4a-44c8-a4f3-0ed3e71ddd5e
+:END:
+#+title: Linux Tools for Windows Forensics
+[[id:8bf87ef3-6c85-459a-8fb8-dcee0da5aaa5][dfir]], [[id:55ee25ef-7028-4fbb-9a48-97dbe1446fb2][windows]]
+
+https://github.com/stars/alpinetortoise/lists/linux-tools-for-win-dfir
+* Eric Zimmerman's tools
+Eric Zimmerman is a leading Windows Forensics analyst, he has a number of tools available for this purpose here:
+https://ericzimmerman.github.io/#!index.md
+** WINE
+Wine is a translation layer between Windows binaries (exe) and Linux libraries. Most, if not all of Zimmerman's tools are Windows binaries, however they can be easily run under WINE
+#+begin_src bash
+  sudo dpkg --add-architecture i386
+  sudo mkdir -pm755 /etc/apt/keyrings
+  sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+  sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/trixie/winehq-trixie.sources
+  sudo apt update
+  sudo apt install --install-recommends winehq-stable
+#+end_src
+** .NET 6.0
+You will also need .NET 6.0
+https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+Download the x64 Windows Desktop runtime file.
+
+You should now be able to install the tools
+* Procmon
+https://github.com/microsoft/ProcMon-for-Linux

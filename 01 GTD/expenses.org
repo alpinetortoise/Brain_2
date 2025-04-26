@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       9ec13cc9-a210-44c3-b416-2738ac953e54
+:END:
+#+title: Expenses
+
+* <2025-01-12 Sun>
+ - Coffee with Georgina $6

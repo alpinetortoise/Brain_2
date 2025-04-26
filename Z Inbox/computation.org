@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       609bacb2-1380-4fcc-8b39-851d949f9587
+:END:
+#+title: Computation
+        #+created: [2024-11-08 Fri 19:06]
+        #+last_modified: [2024-11-08 Fri 19:06]

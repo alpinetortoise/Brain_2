@@ -1,0 +1,29 @@
+:PROPERTIES:
+:ID:       cafa2d1d-736f-4584-8518-49270eca9026
+:END:
+#+title: Over The Wire: Krypton
+        #+created: [2024-10-11 Fri 11:54]
+        #+last_modified: [2024-10-11 Fri 11:54]
+[[id:cefe5a65-dc45-4fd0-8cea-d1e9abf536ba][Over The Wire]]
+* Krypton 1
+Base 64
+S1JZUFRPTklTR1JFQVQ= > KRYPTONISGREAT
+* Krypton 2
+ROT13
+YRIRY GJB CNFFJBEQ EBGGRA > LEVEL TWO PASSWORD ROTTEN
+* Krypton 3
+Run the binary on /etc/issue to find it is a caesar(12)
+GNGZFGXFEZX > UBUNTULTSNL
+Krypton3 file:
+OMQEMDUEQMEK >CAESARISEASY
+* Krypton 4
+Decoded with dcode.fr
+BRUTE
+* Krypton 5
+Vigenere cipher
+key=frekey
+HCIKV RJOX > CLEAR TEXT
+* Krypton 6
+Vignere cipher
+key=keylength
+BELOS Z > RANDOM

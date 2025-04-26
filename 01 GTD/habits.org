@@ -1,0 +1,53 @@
+:PROPERTIES:
+:ID:       ebd028a5-4558-457b-9279-c624d807f0ca
+:END:
+#+title: Habits
+        #+created: [2024-10-11 Fri 21:07]
+        #+last_modified: [2024-10-11 Fri 21:07]
+
+* Workout
+** Bodyweight
+*** TODO Pushups
+    SCHEDULED: <2024-10-22 Tue 06:00 .+1d>
+    :PROPERTIES:
+    :LAST_REPEAT: [2024-10-16 Wed 20:11]
+    :END:
+
+*** TODO Situps
+    SCHEDULED: <2024-10-22 Tue 06:00 .+1d>
+    :PROPERTIES:
+    :LAST_REPEAT: [2024-10-16 Wed 20:11]
+    :END:
+
+*** TODO Calf raises
+    SCHEDULED: <2024-10-22 Tue 06:00 .+1d>
+    :PROPERTIES:
+    :LAST_REPEAT: [2024-10-16 Wed 20:11]
+    :END:
+
+*** TODO Yoga
+    SCHEDULED: <2024-10-22 Tue 18:00 .+1d>
+    :PROPERTIES:
+    :LAST_REPEAT: [2024-10-16 Wed 20:11]
+    :END:
+
+** Tactical Barbell
+*** TODO Set A
+    SCHEDULED: <2024-10-21 Mon 06:00 .+1w>
+    :PROPERTIES:
+    :LAST_REPEAT: [2024-10-14 Mon 06:47]
+    :END:
+
+*** TODO Set B
+    SCHEDULED: <2024-10-22 Tue 06:00 .+1w>
+    :PROPERTIES:
+    :LAST_REPEAT: [2024-10-15 Tue 07:50]
+    :END:
+
+*** TODO Set A
+    SCHEDULED: <2024-10-24 Thu 06:00 .+1w>
+
+*** TODO Set B
+    SCHEDULED: <2024-10-25 Fri 06:00 .+1w>
+
+* Other

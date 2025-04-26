@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       50c0fbae-c282-4fb0-8f2d-b375b0c29752
+:END:
+#+title: Politics
+        #+created: [2024-10-27 Sun 17:35]
+        #+last_modified: [2024-10-27 Sun 17:35]
+* Links
+ - [[id:8a840ac7-5ee6-483a-bd77-ac21be95fcb6][anthropology]]

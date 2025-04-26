@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       c642c23c-a7a9-4bd3-8fa8-ac629b086c45
+:END:
+#+title: Digital Minimalism
+        #+created: [2024-11-10 Sun 13:28]
+        #+last_modified: [2024-11-10 Sun 13:28]
+
+* Problem
+I have found that a lot of my productivity is used up by mindless scrolling, whether that is on my computer, or on my tablet/youtube, or phone, and so I would like to recapture some of my productivity by simplifying how I interact with the world/internet.
+** Aims
+To properly ground myself and not just find other outlets for my doomscrolling.
+ - [[id:ec4e6233-8c32-4371-b2b4-9bf918eef737][PKMS]] both further developing my workflows and further increasing the utility of my notes system
+ - I'd like to actually have some time set aside to read.
+* Phone
+I have started this by utilising mlauncher from f-Droid, I am also currently looking at pulling out functions that my phone doesn't need to have.
+ - Music/audio book playback
+ - note taking ([[id:ee1130a5-f237-4a8d-a739-2a2ffadd7467][cyber deck]]/[[id:197f7642-0c5f-4dc1-92d7-9b6e1b7d6c5c][BuJo]])
+ - gaming (3DS)
+I'm thinking of whether I should look at having the one tool for note taking and gaming, because in some respects it might end up being a very similar device just with different input

@@ -1,0 +1,99 @@
+:PROPERTIES:
+:ID:       352be65f-a033-4152-a93a-60e94cb2b4e9
+:END:
+#+title: SBL-shortnames
+
+* Bible
+** Old Testament
+| Title             | Abbr.      |
+|-------------------+------------|
+| Genesis           | Gen        |
+| Exodus            | Exod       |
+| Leviticus         | Lev        |
+| Numbers           | Num        |
+| Deuteronomy       | Deut       |
+| Joshua            | Josh       |
+| Judges            | Judg       |
+| Ruth              | Ruth       |
+| 1-2 Samuel        | 1-2 Sam    |
+| 1-2 Kingdoms      | 1-2 Kgdms  |
+| 1-2 Kings         | 1-2 Kgs    |
+| 3-4 Kingdoms      | 3-4 Kgdms  |
+| 1-2 Chronicles    | 1-2 Chr    |
+| Ezra              | Ezra       |
+| Nehemiah          | Neh        |
+| Esther            | Esth       |
+| Job               | Job        |
+| Psalm(s)          | Ps(s)      |
+| Proverbs          | Prov       |
+| Ecclesiastes      | Eccl       |
+| Qoheleth          | Qoh        |
+| Song of Songs     | Song       |
+| Canticles         | Cant       |
+| Isaiah            | Isa        |
+| Jeremiah          | Jer        |
+| Lamentations      | Lam        |
+| Ezekiel           | Ezek       |
+| Daniel            | Dan        |
+| Hosea             | Hos        |
+| Joel              | Joel       |
+| Amos              | Amos       |
+| Obadiah           | Obad       |
+| Jonah             | Jonah      |
+| Micah             | Mic        |
+| Nahum             | Nah        |
+| Habakkuk          | Hab        |
+| Zephaniah         | Zeph       |
+| Haggai            | Hag        |
+| Zechariah         | Zech       |
+| Malachi           | Mal        |
+** Apocrypha
+*** Roman Catholic/Eastern Orthodox
+| Title                       | Abbr.    |
+|-----------------------------+----------|
+| Tobit                       | Tob      |
+| Judith                      | Jdt      |
+| Additions to Esther         | Add Esth |
+| Wisdom of Solomon           | Wis      |
+| Sirach/ Ecclesiasticus      | Sir      |
+| Baruch                      | Bar      |
+| Epistle of Jeremiah         | Ep Jer   |
+| Additions to Daniel         | Add Dan  |
+| Prayer of Azariah           | Pr Azar  |
+| Song of the Three Young Men | Sg Three |
+| Susanna                     | Sus      |
+| Bel and the Dragon          | Bel      |
+| 1-2 Maccabees               | 1-2 Macc |
+*** Eastern Orthodox
+| Title              | Abbr.      |
+|--------------------+------------|
+| 1 Esdras           | 1 Esd      |
+| Prayer of Manasseh | Pr Man     |
+| Psalm 151          | Ps 151     |
+| 3 Maccabees        | 3 Macc     |
+| 2 Esdras           | 2 Esd      |
+| 4 Maccabees        | 4 Macc     |
+** New Testament
+| Title              | Abbr.      |
+|--------------------+------------|
+| Matthew            | Matt       |
+| Mark               | Mark       |
+| Luke               | Luke       |
+| John               | John       |
+| Acts               | Acts       |
+| Romans             | Rom        |
+| 1-2 Corinthians    | 1-2 Cor    |
+| Galatians          | Gal        |
+| Ephesians          | Eph        |
+| Philippians        | Phil       |
+| Colossians         | Col        |
+| 1-2 Thessalonians  | 1-2 Thess  |
+| 1-2 Timothy        | 1-2 Tim    |
+| Titus              | Titus      |
+| Philemon           | Phlm       |
+| Hebrews            | Heb        |
+| James              | Jas        |
+| 1-2 Peter          | 1-2 Pet    |
+| 1-2-3 John         | 1-2-3 John |
+| Jude               | Jude       |
+| Revelation         | Rev        |

@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       4ccd9fed-a112-4dfa-b667-4c4743473731
+:END:
+#+title: Storage $/GB
+        #+created: [2025-03-29 Sat 11:08]
+        #+last_modified: [2025-03-29 Sat 11:08]
+* 5TB Elements SE external mini
+$216 - 4.2¢/GB
+* 10TB Elements desk external
+$460 - 4.5¢/GB
+* Refurbished 10TB Internal
+$270 - 2.6¢/GB
+* 512GB SD
+$235 - 45¢/GB
+* Optical
+** BD
+Writer $279
+Disc 5*25GB - 15¢/GB
+** DVD
+*** RW
+8*4.5GB - $5.5/GB

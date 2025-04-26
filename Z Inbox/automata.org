@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8975a602-041f-4810-9ed2-59cb8cb78bb4
+:END:
+#+title: Automata
+        #+created: [2024-11-08 Fri 20:47]
+        #+last_modified: [2024-11-08 Fri 20:47]

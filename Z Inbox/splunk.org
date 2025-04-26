@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e2132abc-42a1-49d8-a0fa-96b3dfaa3100
+:END:
+#+title: Splunk
+        #+created: [2024-11-26 Tue 11:02]
+        #+last_modified: [2024-11-26 Tue 11:02]
+* SPL Reference manual
+:PROPERTIES:
+:ID:       59194e23-f4b4-457a-8919-7ab361f9b9a0
+:END:
+https://docs.splunk.com/Documentation/Splunk/9.3.2/SearchReference/WhatsInThisManual

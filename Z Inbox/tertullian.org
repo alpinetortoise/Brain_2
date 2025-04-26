@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       18d3fa77-37cf-4c54-9974-ad522b36a67c
+:END:
+#+title: Tertullian
+        #+created: [2024-11-21 Thu 20:14]
+        #+last_modified: [2024-11-21 Thu 20:14]
+

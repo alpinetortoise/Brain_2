@@ -1,0 +1,36 @@
+:PROPERTIES:
+:ID:       e6a0a7c4-3b11-4ca1-9d0b-a8f5c360e848
+:END:
+#+title: Peterson's reading list
+        #+created: [2024-11-13 Wed 21:13]
+        #+last_modified: [2024-11-13 Wed 21:13]
+This list was a formative list of reading for me within my [[id:50bb03fc-3ef6-4826-94cf-2be8bfbfc5c2][Deconstruction]] of [[id:e66388f2-27f1-4ff0-88f3-ea2eac31438f][Alt-Right]] ideas and my great [[id:6b365d07-f1f6-4935-9737-307181d84e65][unplug]]
+ - [[id:ba3d5f19-575f-4e8b-baef-fa39720edd6e][Brave New World (Huxley)]]
+ - [[id:acf22dd6-187a-45af-9033-28af5fbaf501][Orwell, George]][fn:1]
+   - [[id:8140a52e-063b-459a-80c6-6d4aec5a1799][Down and Out in Paris and London (Orwell)]]
+   - [[id:6f0776d4-5f7e-4d3c-bebb-24513854fea3][Burmese Days (Orwell)]]
+   - [[id:d96bf6c1-2e1d-459e-8a5a-58332f194470][A Clergyman's Daughter (Orwell)]]
+   - [[id:e4d1f3ec-afbb-4012-aa95-a09abee3469b][Keep the Aspidistra Flying (Orwell)]]
+   - [[id:bbce65a0-2de4-49b0-a55a-6858c29afe4c][Road To Wigan Pier (Orwell)]]
+   - [[id:902b9d0c-c811-44d6-9b1e-19575326f6d0][Homage to Catalonia (Orwell)]]
+   - [[id:1721b6dc-e214-45a8-8afd-5cf2baa264cb][Coming Up for Air (Orwell)]]
+   - [[id:88dfd410-fc74-49a5-abcc-0b75c6d9bf07][Animal Farm (Orwell)]]
+   - [[id:62596bde-4e63-46e7-baae-b5a9827b2032][1984 (Orwell)]]
+ - [[id:4c6f7086-81df-41ae-9cf9-fa5a66a016b5][Crime and Punishment (Dostoyevsky)]]
+ - [[id:daa75b8c-dec3-4fdf-812f-5a1a645927c1][Demons (Dostoyevsky)]]
+ - [[id:916c4731-1b65-4d61-8886-17db268b63a5][Beyond Good And Evil (Nietzsche)]]
+ - [[id:98fb5eb6-c6a9-4a36-be76-0c75944ff4a8][Ordinary Men (Browning)]]
+ - [[id:6ad71bda-9496-4473-b079-61341b2fe081][The Rape of Nanking (Chang)]]
+ - [[id:0f5260a9-57a2-4829-b6b2-768852a41c35][The Gulag Archipelago (Solzhenitsyn)]]
+ - [[id:d334e90b-9d03-44f3-b39a-20961a604f42][Man's Search for Meaning (Frankl)]]
+ - [[id:af506cef-0b19-44a4-9e2e-58b630faddf9][Modern Man in Search of A Soul (Jung)]]
+ - [[id:ba9b9771-1707-419a-93d9-5c86bb72e5e9][Kingdom of God (Tolstoy)]]
+
+* References
+ - [[https://www.jordanbpeterson.com/blog/book-list/][Original Book List]]
+ - [[https://www.jordanbpeterson.com/blog/book-list/][Maps of Meaning Suggested Reading List]]
+ - [[https://www.jordanbpeterson.com/books][Current Book list]]
+
+* Footnotes
+
+[fn:1] While [[id:9c7108b6-ab3f-41aa-9f0a-1696b73910f3][Peterson]] only included certain works of Orwell I decided to read through all of his major works

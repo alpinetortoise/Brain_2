@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6ca86265-5a30-4424-b312-340fb5e75a68
+:END:
+#+title: Linux Log Analysis
+        #+created: [2025-04-23 Wed 10:44]
+        #+last_modified: [2025-04-23 Wed 10:44]
+sed -e 's/\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\).*$/\1/' -e t -e d access.log | sort | uniq -c

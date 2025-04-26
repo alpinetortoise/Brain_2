@@ -1,0 +1,96 @@
+#+title: ACME Remote Working and Access Security Policy
+  :PROPERTIES:
+  :CUSTOM_ID: acme-remote-working-and-access-security-policy
+:ID: 365d8187-5630-42e3-b6bd-ff88e996088e
+  :END:
+[[id:cc6549b9-f356-4cff-ad89-80163e05809b][ITE514 - Professional Security Systems]]
+
+** Intent
+The ability to securely and reliably connect to ACME Widgets Incorporated (ACME) Information and Communications Technology (ICT) resources from a remote location provides ACME employees with hybrid working arrangements.
+
+Following an enforced trial period of remote work for all non-factory workers during the COVID-19 pandemic, the benefits of remote work on employee morale and retention were seen. Therefore, during the review of all security postures following ACME gaining a substantial government contract it was decided that this policy would be updated to fall in line with general standards and government advice.
+
+A consistent and secure approach must be maintained within the policy. This is done by ensuring consistency while maintaining confidentiality, integrity, authentication, and non-repudiation of information. This document is aligned with the Australian Cyber Security Centre Information Security Manual. ## Audience This policy applies to all employees who access, implement and manage the ICT resources for ACME remotely, whether utilising ACME devices, or their own devices (including external individuals requiring remote access to ACME systems based on business requirements) ## Scope The aim of providing a remote working and access security policy is to ensure that best practices are followed so that all sensitive corporate and customer information is protected when being sent, received, processed and stored. To ensure that the best preventative, detective and responsive security controls are being implemented.
+
+** Statement of Compliance
+This policy is designed to be compliant with the Privacy Act (1998) and to be consistent with advice from the Australian Cyber Security Centre (ACSC) Information Security Manual (ISM) and the information security standards and guidance, ISO 27001 (Information Security Management Systems -- Requirements) and NIST SP 800-53 (Security and Privacy Controls)
+
+** Policies
+*** Virtual desktop and application access
+Access to ACME systems should be primarily done through virtual desktops. Best practices for utilising virtual desktop applications include Zero Trust policy as encapsulated within; 1. Multifactor authentication 2. Audit logs 3. Endpoint security 4. Application restriction
+
+To this end, ACME will develop and maintain best practices and comprehensive procedures to enable the hybrid work that is beneficial for the corporate aims of ACME and the benefit of its employees to ensure that client outcomes are achieved.
+
+*** Bring Your Own Device policy
+When employees connect to their remote work virtual instance the device with which they connect must conform to specific standards. This is to be in line with the ACME Bring Your Own Device (BYOD) policy standards.
+
+Further to the ACME BYOD policy employees must have a stable internet connection. Broadband internet, therefore is the preferred connection type.
+
+*** Sensitive information
+In accordance with the ACME BYOD policy, employees should avoid utilising their BYOD for the storage of ACME or ACME client data.
+
+*** Cloud access
+For some non-mission-critical information such as payslips and other Human Resources (HR) management, the provision of a secured portal is adequate to provide employees access to these functions. It is important that such access also adheres to remote access policies. This includes multifactor authentication being utilised to access the HR Portal.
+
+Both the HR portal and the web portal through which the virtual desktop is accessed must be secure and must be monitored for abnormal access.
+
+** Control Standards
+*** Multifactor authentication
+Multifactor authentication (MFA), is divided into three types of factors, what you know, what you have, and what you are. is the industry standard for secure access to all computer systems. To this end to properly implement both access to ACME systems from outside of the ACME network and from within the ACME network multifactor authentication is to be utilised.
+
+For internal access, an ID card with an ID card reader and username and password will function as the two factors utilised. This provides "something you have" and "something you know" as the two factors utilised for access.
+
+For external access to ACME's virtual desktop infrastructure (VDI), the two factors will be a token app providing a one-time password (OTP) and the same username and password. For external access to ACME's HR portal employees will access utilising OTP via SMS or email, and their username and password.
+
+Privileged accounts are to be accessed in accordance with the policy concerning Identification and Authentication. This means that further multi-factor authentication is required to access the system remotely.
+*** Audit logs
+Audit logs are to be implemented in accordance with ACME Audit and Accountability Policy. As such in regards to remote working and access security the main concern is the logging of all access attempts.
+
+As part of ensuring that all access and actions taken on the network cohere with ACME Security and access policies, logs will be centrally collated in a Security Information and Event Management (SIEM) system. This enables the Information Security (InfoSec) team to respond quickly and easily to any potential incident and track any requirements to upscale system resources.
+
+Logging should include not only successful login attempts but also unsuccessful attempts, considering that (MFA) is required as part of the ACME access standards any attempts that are made without one or more of the factors should be flagged for further investigation.
+*** Endpoint security
+Following best practices for endpoint security as outlined in ACME, a configuration management policy is essential. With regards to remote access, this relies on the proper configuration of the VDI and the resources that end up being accessed through the virtual connection to the networks.
+
+Appropriate end-point security is to be applied to the virtual image and keep the image updated. Furthermore, the principle of least privilege should be followed, ideally, this means that there are no local users on the VDI image, only domain users, thus ensuring the enforcement of the principle of least privilege.
+
+Logging of started and connected virtual endpoints is essential, as well as pruning older instances, to accomplish this as a general rule of thumb the instances are to be configured to automatically be pruned within a time-out period of half an hour. The creation, connection and termination of each virtual endpoint and all event and error logs are to be logged in the centralized SIEM system. (p673)
+
+*** Application restriction
+Remote access provides a unique vector for attack, applications must be restricted as vulnerabilities are found to ensure that only appropriate actions are taken within the ACME network. To ensure that applications are appropriately restricted within the VDI privilege escalation tools should be disabled for all unprivileged users in accordance with the ACME Access Control Policy.
+
+*** Software checks
+As part of the initial handshake to initialise a VDI session software checks are to be made to ensure that the employee is accessing the VDI utilising the appropriate required software. To ensure compliance with the installation of software updates, employees will be provided with advisory emails in a timely manner. The emails will outline the system update and requirements for the software update to be successful.
+
+*** Data Management Standards
+In accordance with the general data handling policies outlined in the ACME Data Management Policy and the ACME Client and Employee Identifiable Information Processing and Transparency Policy, all data management is to be overseen by the Chief Information Security Officer (CISO)
+
+All data is to be managed considering its classification, and segregated for access as required. Access to data is to be done on a need-to-access basis.
+
+Regarding remote access to data, employees will only have remote access to data that is critical and relevant to their designated role. Under no circumstances should there be the ability to either copy to or from ACME systems through the interface between the VDI and the employee BYOD.
+
+*** Data classification standards
+ACME and client data must be handled appropriately, to achieve this a data classification system is essential.
+
+**** Client Data
+Should clients not employ a data management system that is self-managed and accessed by our employees, then the company will assist with the creation or provision of a data classification system.
+
+When a client has a classification system already in place ACME employees must interact with and uphold the integrity of that data classification system. Customer data that is managed by and administered by ACME clients should be accessible within ACME systems.
+
+ACME employees should as first preference access client data through client remote services as provided to the ACME company employees by the client. If the client has not implemented remote access then by no means should attempts be made to access the client's data remotely.
+
+**** ACME Data
+Data managed by ACME is to be segregated into the following categories.
+ - *Public* - data that is generally released to the public through our media channels, predominantly this information is accessible on our website. There are no special controls that need to be placed on the access of this data remotely.
+ - *Sensitive* - This data is predominantly to be accessed by those that require it. For example, the finance data is to be accessed by those within the finance group only.
+ - *Private* - This data is data that we are obligated under the Privacy Act (1998) to keep secure. This data should also be made accessible on a role-based need. This data contains two subcategories related to ACME's interactions with other entities, namely its employees and Clients.
+   - /Client Identifiable Information/ - This information should only be accessible to those that require it, this category also includes any information that is owned by ACME's clients but managed by ACME. As a general rule, only employees that are tasked with a specific client should have access to that client's data.
+   - /Employee Identifiable Information/ - While this data should be protected, by nature of it being utilised and accessible through the HR portal further controls ensure that employees only have access to their information through this portal.
+
+*** Web portal hardening
+Both the HR and the VDI login portals should adhere to best practices for web-based logins. Following Open Web Application Security Project recommendations and ensuring that all software utilised for the web portals does not have any open vulnerabilities that require covering.
+
+** Accountabilities
+The management of all systems and ensuring that they are in line with ACME policy standards is to be handled by the ITC team in conjunction with the InfoSec team.
+
+To ensure that as ACME systems grow quarterly audits from an external security audit team handled at this time by CyberCX will audit the ACME system through penetration testing to better enable the ITC and InfoSec teams to implement more robust security in line with current security advice. In addition, a small team within the InfoSec department will perform more routine penetration testing audits every month.

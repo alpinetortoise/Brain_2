@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       5eb73df0-aeeb-41d3-87f5-5284d6b3068e
+:END:
+#+title: operating system
+        #+created: [2025-03-18 Tue 09:54]
+        #+last_modified: [2025-03-18 Tue 09:54]
+[[id:07693376-ade5-4190-ad17-08c02e3897c5][Computing]]

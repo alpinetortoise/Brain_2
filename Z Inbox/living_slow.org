@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       bf34505a-01e6-4dc7-adb6-b7048514fb01
+:END:
+#+title: living slow
+        #+created: [2024-11-13 Wed 20:24]
+        #+last_modified: [2024-11-13 Wed 20:24]
+
+[[id:6b365d07-f1f6-4935-9737-307181d84e65][unplugging]]

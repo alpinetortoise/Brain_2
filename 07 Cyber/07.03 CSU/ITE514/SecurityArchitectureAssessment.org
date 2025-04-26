@@ -1,0 +1,91 @@
+:PROPERTIES:
+:ID:       6fd4c6f4-7077-4f02-bfea-8b84aff41825
+:END:
+#+title: ITE514-Assignment 2
+#+subtitle: Security Architecture Assessment
+#+LATEX_CLASS: article
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \doublespacing{}
+#+LATEX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage[style=apa, backend=biber, url=true]{biblatex}
+#+LATEX_HEADER: \addbibresource{~/Brain_2/references.bib}
+[[id:cc6549b9-f356-4cff-ad89-80163e05809b][ITE514 - Professional Security Systems]]
+\newpage
+* Executive Summary
+Following the commissioning of an external Red Team audit of ACME ICT systems a number of findings were delivered. The following report will detail the ways in which the Red Team findings expose ACME systems to cyberattacks, and the ways in which the security division will be seeking to address these findings. The Red Team made the following findings;
+
+   - ACME users only ever authenticate with a username and password, regardless of how they access the information systems and whether the systems are on-premises or in the cloud.
+   - Unprotected documents were located on the ACME network that contained sensitive customer information including credit card numbers and CVV codes.
+   - Critical servers in the ACME data centre are accessible from every workstation, including those in the offices and warehouses.
+   - The ACME customer portal software was vulnerable to cross-site scripting (XSS) and session fixation attacks.
+   - A dummy file of 'stolen' sensitive corporate and customer information was successfully sent externally from an ACME workstation.
+
+These findings lead to the following recommendations that align with the ACME Cyber Security Standards (ACSS)
+
+   - ACME users are to authenticate utilising Single-Sign-On (SSO) and Multifactor Authentication. (MFA)
+   - Sensitive Customer payment information should only be held within/by our payment processing partner.
+   - Other sensitive customer information should be encrypted at rest.
+   - Critical servers will be access-controlled based on user role.
+   - ACME web portals should be hardened to prevent XSS and session fixation.
+   - Email filters will be put in place including role-based ability to attach files to external emails
+\newpage
+* Introduction
+Following the successful tender for a defence contract with the Australian Government ACME Widgets Inc. (ACME) was required to bring their information security systems in line with the Privacy Act (1988) and the Australian Cyber Security Centre's (ACSC) Essential 8. (E8) As part of contractual obligations to the Australian Government following this rescaling ACME was required to commission a Red Team (RT) audit of ACME systems. This report constitutes the ACME briefing of the Red Team Findings and justification of a number of recommendations that arise from the Red Team Findings.
+* Risk Assessment
+Based on Red Team Findings (RTF) there are two main domains through which risks are likely to come. These domains are unauthorised access and loss of data. The red team findings can be divided thus;
+- Unauthorised Access
+  - Single factor authentication. (SFA)
+  - Promiscuous access control to critical servers.
+  - XSS attacks on the ACME customer portal.
+- Data Loss
+  - Unprotected financial and personal identifiable documents.
+  - Exfiltration of data via email attachment.
+** Risk Rating System
+In order to appropriately manage the risks that might arise from the discovered vulnerabilities it is important that a risk rating system is utilised. The Australian Cyber Security Centre's (ACSC) Information Security Manual (ISM) recommends the National Institute of Standards and Technology's (NIST) /Risk Management Framework for Information Systems and Organizations: A System Life Cycle Approach for Security and Privacy/ for evaluating and managing risks. \parencite{ISM, NIST_risk}
+** Unauthorised Access
+In the Red Team Findings there were a number of instance of unauthorised access documented. This unauthorised access continues to be a critical risk to the company and our clients. At the core of this concern of unauthorised access is single factor authentication. Single factor authentication goes against the ACSS as it generates a number of risks to our systems. Foremost is password reuse, if our users have passwords that have been involved in user database dumps that can be traced to them only using SFA risks unauthorised access by malicious third parties, along side this is the use of simple or weak passwords, again resulting in the same risk. Once our systems have been accessed our next concern is the integrity of the data, the red team found many instances of lateral movement across the network.
+
+*** Passwords
+Given the finding of SFA the as the norm it is highly likley that password reuse is common. The vector that an external threat actor might take in exploiting password reuse arises from Open Source Intelligence (OSINT) investigations, discovering both likely candidates from social media and finding their external accounts and investigating whether these accounts are linked to any username/password data-breaches that have been widely circulated. \parencite{navisec_OSINT} Alongside password reuse one of the risks of single factor authentication, is weak passwords. Subsequently the same concerns around the use of hacking with rockyou.txt includes a large number of commonly used passwords.
+
+Despite the proliferation and encouragement of the use of password-management tools, it is common for users to not utilise these tools. \parencite{Pearman} This leads to password reuse, \textcite{Wang} developed methodology for brute forcing passwords given common password reuse tactics by users. This, paired with password breaches commonly being able to be bought or available freely such as rockyou.txt. \parencite{Mikalauskas_2021} Users utilising the same passwords for more than one application creates vulnerabilities, this can be overcome with multi-factor authentication(MFA). \parencite{alese_2018_multilevel} The ACSS already requires MFA for most login usecases.
+
+The likelihood of such an attack increases the longer and more public ACME's contract with the Australian Government becomes. It is therefore essential that this be addressed.
+
+*** Access Control
+One of the easily apparent risks following that of authenitication is that of access. The RTF displayed a large amount of lateral movement accross the network including critical data service access. This along with the data loss vulnerabilities creates a high likelihood that anyone with access to the network has access to critical and customer data. Furthermore, this data is easily exfiltrated as found in the RTF. \textcite[796]{maymi_2022_cissp} state that most security incidents are enabled through misconfigured or compromised access control, or authentication. Given both the weakness of the authentication and the ability for lateral movement the implementation of access control across the network will help strengthen the security position of ACME systems. \parencite[766]{maymi_2022_cissp}
+** Loss of Data
+Hand in hand with Unauthorised Access is loss of data. There are two primary concerns with data loss, loss of customer confidence in our ability to maintain their data, and loss of our customer's confidentiality. Data loss constitutes many financial and reputational risks, predominantly data loss arises out of user negligence. \parencite[265-266]{maymi_2022_cissp} In this case, however, it is just as likely that proper processes have not been put in place.
+*** Customer Data Loss
+As ACME continues to grow and tender more and more critical contracts especially with the Australian Government ACME's holding of data that is client specific becomes more inevitable. The more likely we are to hold on to client data the more liekly it is that malicious third-party actors are to seek out that same ciritcal data.
+*** Customer Financial Data
+Of great concern is the discovery of data that by no means should have been held in ACME systems, Customer payment data under ACSS is to be stored only in our payment processing system. The consequences of this data becoming exposed does not directly impact ACME, however our integrity in handling this information just as any other piece of information is critical. If our customers were to lose money then our products could be considered not critical enough to pay for.
+* Realignment with ACSS
+The RTF showed a number of places where ACME systems do not yet, or no longer align with the ACSS. In the follow up from the security audit conducted by the RT it is essential to reimplement security controls to bring the systems in line with the ACSS. Due to the serious nature of the RTF and to further confirm controls, a follow-up audit will be scheduled for 6 months time.
+
+The following controls are in place under the ACSS but are not present in the ACME Systems according to the RTF;
+- MFA is to be utilised for all logins and elevation of privilege.
+- Critical customer and enterprise data is to be encrypted at rest and in motion.
+  - Customer payment data is to be stored in our partner's payment processing system and not in ACME systems.
+- All authentication and privilege elevation is to be logged in ACME Security Information and Event Management system. (SIEM)
+* Security Controls
+** Authentication
+To overcome the flaws of Single Factor Authentication Multifactor Authentication is to be implemented as per the ACSs for sign on and privilege escalation. Once authenticated to ACME systems lateral movement and app usage that requires the same level of authentication will utilise Single-Sign-On. (SSO) Any systems that require further points of authentication will be prompted for another factor. Along side this user education on passphrase and password use will be incorporated into annual mandatory security training.
+*** Passwords and MFA
+Password length is the key determinant in password strength and complexity.\parencite{brecht_2021} It is important, therefore, that this is included in the annual security awareness training. Encouraging users to utilise 4+ word passphrases instead of random character passwords would also ensure that username/password authentication is strong.\parencite{ACSC_passphrase} These implementation alongside introducing smart-card based MFA will ensure that ACME systems can only be accessed by auhorised users.\parencite{ACSC_mfa}
+
+As per the ACSS further controls for privilege escalation will need to be ensured that they are in place. Alongside the smart-card and username/password combination for authenticating to elevate one's privileges should require a further factor for authentication. At this stage the ACSS requires a soft-token in order to authenticate a request for privilege escalation. This ensures that no user automatically has administrator access on first login, thus ensuring that if in the unlikely event that a member of the administrator role group is compromised that no administrator actions can be taken.
+*** Access Control
+As mentioned above access control creates numerous avenues for data loss and authenitication risks. To mitigate these risks role-based access control will be implemented. Role-based access control (RBAC) is now the industry standard as it enables a single control point for access to the systems. As each user is assigned a number of roles, access to particular resources can be controlled at this level rather than based on location in the organisational structure. \parencite{NIST_RBAC} \textcite{oconnor_RBAC} found that over $1.1 billion could be saved through utilising RBAC in comparison to other forms of access-control.
+** Data Encryption
+*** Encryption
+There are fundamentally three states that data could be in, data at rest, data in motion, and data in use. \parencite[254]{maymi_2022_cissp} It is important to avoid unauthorised access that data is encrypted as much as possible. To combat the possibility of data loss through physical access, encryption of data at rest shall be utilised this ensures that even were the physical medium that was used to store the data were compromised or stolen that the data could not be exfiltrated. \parencite[255]{maymi_2022_cissp} Encryption of data in motion helps to avoid network attacks, the common attacks include man-in-the-middle and XSS \parencite[255-256]{maymi_2022_cissp}
+*** Payment data
+As per the ACSS payment data should be stored in our payment collection provider's system, there is no scope for ACME systems to hold such data as the risk of the loss of this data is too high for ACME. There is a necessity if we are to hold on to this data to comply with the PCI DSS \parencite[156]{maymi_2022_cissp} since it is not our primary business to hold or track this information then the credit card information must be held with our payment processor.
+** Logging
+The use of a SIEM in order to aggregate all security data provides the security team valuable leverage in responding to and tracking anomalous events that could turn into incidents. \parencite[979-980]{maymi_2022_cissp} It is important to make sure that all events are classified properly in order that as the SIEM develops and is fine-tuned it can provide more meaningful alerts. \parencite[979-980]{maymi_2022_cissp}
+* Conclusion
+The red team findings enumerated a number of key issues that must be addressed. A number of these issues were already addressed within the ACSS, however merely stating standards does not automatically implement them. Having taken on an Australian Government contract it now behooves us to correct these shortfalls in our security posture to better provide confidence and trust in our ability to provide our customers with the solutions that they require. A number of recommendations arose out of this report in aligning the ACME systems with the ACSS, these were primarily in the domains of authentication/authorisation and data loss prevention. Addressing these recommendations will not only put us in a good place for subsequent pen-testing security audits, but also to protect our customer and proprietary information.
+
+\newpage
+\printbibliography

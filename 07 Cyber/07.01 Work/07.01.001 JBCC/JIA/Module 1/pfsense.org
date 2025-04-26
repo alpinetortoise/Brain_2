@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       0be39941-81e9-4adf-a8a3-62502e3ed82f
+:END:
+#+title: pfsense
+A [[id:bd6c456c-ea0f-4dee-b63b-f449ef9b03c9][BSD]] based [[id:43b84603-16e8-43b7-a1de-d3a6b7f19f0b][router]] centric [[id:5eb73df0-aeeb-41d3-87f5-5284d6b3068e][operating system]]

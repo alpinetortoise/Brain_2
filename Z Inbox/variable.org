@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       3b94eedd-13e3-4897-a365-d6df3e81f99f
+:END:
+#+title: variable
+        #+created: [2024-11-08 Fri 13:49]
+        #+last_modified: [2024-11-08 Fri 13:49]

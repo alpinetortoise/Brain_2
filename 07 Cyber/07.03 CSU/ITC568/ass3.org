@@ -1,0 +1,140 @@
+:PROPERTIES:
+:ID:       71b65c00-ae0d-4745-8144-c376a38f3c12
+:END:
+#+title: ITC568-Assignment 3
+#+subtitle: Research Project on Cloud Security
+#+LATEX_CLASS: article
+#+LATEX_HEADER: \usepackage{setspace}
+#+LATEX_HEADER: \doublespacing{}
+#+LATEX_HEADER: \usepackage{csquotes}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage[style=apa, backend=biber, url=true]{biblatex}
+#+LATEX_HEADER: \addbibresource{~/Brain_2/references.bib}
+\pagestyle{fancy}
+\fancyfoot[R]{Joshua Chubb - 11753121}
+
+\newpage
+* Introduction
+High-Tech Alarms (HTA) is an Australian based company looking to strengthen its position as a provider of alarm systems in Australia and other countries. To achieve this position strengthening HTA will leverage its current use of Amazon Web Services (AWS) Cloud infrastructure to acheive four ends;
+ - Relocate HTA manufacturing processes to cheaper manufacturing facilities internationally.
+ - Negotiate with Industrial Control Systems (ICS) a contract for the sale of HTA products within the European Union.
+ - Provide HTA customers with cloud based monitoring systems for HTA products.
+ - Increase Data Protection and prevention of privacy loss.
+In pursuing these ends it is important that the best security practices be followed in implementing these new features.
+
+There are a number of security architectural paradigms that could be implemented. Best practices in a mixed cloud and on premesis infrastructure (onprem) approach is zero-trust architecture combined with identity federation through Identity Access Management. (IAM) This ensures that not only is access restricted based on "where" the connection is coming from, but also "who" it is coming from. Zero Trust is a security in depth philosophy that in best practice is whole of enterprise, to this end we shall be seeking to implement Zero Trust across the whole of HTA infrastructure including both the AWS cloud expansion and the legacy onprem infrastructure. In making the case for Zero Trust this proposal will elaborate the benefits of AWS based Zero Trust infrastructure, the risks and challenges of deploying Zero Trust, including discussion of alternatives, and a deployment plan in implementing Zero Trust across HTA.
+
+* Benefits of AWS Zero Trust Models
+\textcite{peiris_2021} narrows Zero Trust security to explicit verification, least privileged access, and assumption of breaches. The combination of these three principles in contrast to location based access control ensures that lateral movement across the network is limited. \parencite{peiris_2021} \textcite{Foltz_2021} states that the five elements of a Zero Trust Enterprise are;
+ 1. Two-Way Authenticated Communication
+ 2. Endpoint Device Management
+ 3. End-to-End Encryption and Integrity
+ 4. Policy-Based Authorization
+ 5. Accountability for Actions
+AWS implements each of these in a number of different ways in order to strengthen the security posture of their implementation. Amazon Web Services defines Zero Trust as a conceptual model and associated set of mechanisms that provide security controls that do not rely upon traditional controls or network perimeters. \parencite{AWS_ZeroTrust} This is done through the use of identity over location as the primary method of access control, with the aim to diminish the trust placed upon the actor's location within the network. \parencite{AWS_ZeroTrust} This identity focus ties into Foltz's elements 1. and 5. Further, combined with strong activity logging this aspect ties into the principle of non-repudiation \parencite[5]{Foltz_2021, pfleeger}
+** Strengths of Zero Trust Models
+Due to the nature of the zero-trust philosophy it is essential that it is implemented enterprise wide in a hybrid onprem/cloud implementation. This ensures that no misconfigurations from a mix of perimeter and zero-trust security focuses lead to vulnerabilities that could be exploited to move from HTA onprem to the cloud and vice versa.
+*** Identity and Role Based Authentication
+One of the first advantages that Zero Trust and IAM provides over traditional, more castle oriented security architectures includes the creation of role-based authentication. \parencite{peiris_2021, gilmanzero} This limits the access of user's/actors to only those things that they have the role attributes of, or roles they have access to. Role Based Access can be defined either as an inherent part of the user, or as an adoptable attribute or "hat" that an actor can wear.
+
+*** Endpoint Device Management
+Onprem devices should be a part of the endpoint device management ensuring that data is encrypted at rest and that data in onprem networks be transmitted encrypted. We also ensure that devices onprem are up to date and managed to ensure user intention is preserved. \parencite{Foltz_2021}
+** Specific Point-to-Point Authentication Tunnels
+:PROPERTIES:
+  :ALT_TITLE: Point-to-Point Authentication
+:END:
+\textcite{AWS_ZeroTrust} identify specific flows between components as a configurational point around which Zero Trust security can be implemented. While this could be thought of as going back to location based, it significantly differs in that all lateral movement is limited to only those movements which have been predefined in the setup of the AWS solution, a trust by exception model. \parencite{peiris_2021} In comparison the perimeter model would allow all traffic that originates within each trusted perimeter as being "safe" for all other points within that trusted perimeter. \parencite{gilmanzero}
+** Encryption in Motion
+\textcite{gilmanzero} states that one of the understated strengths of zero trust is the use of encryption in motion. It follows from Peiris' "explicit verification" and Foltz's "Two-Way Authenticated Communication" and "End-to-End Encryption and Integrity" \parencite{peiris_2021, Foltz_2021} that every packet should be encrypted, this gives us the advantage that to an extent it does not matter whether the packets end up outside of the cloud, they remain legible only to those within our trusted system. \parencite{gilmanzero} \textcite{gilmanzero} further points out that due to AWS' hardware topography this end-to-end encryption of data in motion ensures that any obfuscated infrastructure is not vulnerable.  In fact in many ways utilising Zero trust across a cloud implementation is recommended exactly for these obfuscations. \parencite{gilmanzero, peiris_2021}
+
+** Auditable Logs
+The utilisation of SIEM logging can enable fast reactions to vulnerabilities and attacks. \parencite[979-980]{maymi_2022_cissp} There are a number of AWS products that will provide us with logging ability, this integration ensures that monitoring is done that makes sense. However, logging does need to be set up, zero-trust forms the philosophical basis and direction that tells us what we should log. Attempts to access non-role related instances for instance should be logged along with any other forms of lateral movement.
+* Risks & Challenges of Deploying AWS Zero Trust Models
+:PROPERTIES:
+  :ALT_TITLE: Risks & Challenges
+:END:
+There are a number of challenges that arise from deploying a Zero Trust model within AWS, some of these are unique to AWS, and some are universal to Zero Trust models in general.
+
+Once a  Zero-trust implementation is put in place it does not necessarily mean that there is no risk present, \parencite{shore2021zero} one of the primary avenues through which risk is both introduced and remains is through the misconfiguration of the zero-trust architecture. \parencite{ncsc_netarch} However, as \textcite{gilmanzero} states, the benefits of zero-trust over perimeter based access control are numerous as has been discussed above.
+
+\textcite{csfd} points out that developing a true zero trust framework could be a multi-year endeavour, especially in HTA position where we are integrating our legacy infrastructure as we expand our operations into the cloud. Further he enumerates the following challenges that may arise as we continue to manage a zero trust framework;
+- Inevitability of change
+- Legacy systems integration
+- Full Visibility
+- Lack of complete solutions
+- Lack of business collaboration
+- Zero Trust agility requirements
+- Multiple standards
+- Responsibility in building the right team. \parencite{csfd}
+
+Predominantly these challenges arise from Zero trust being a next-generation defense-in-depth risk-based strategy, its nature demands a large amount of overhead both in authentication, and in security management. \parencite{peiris_2021} This overhead, however, does provide a robust security position that is more difficult for the attacker to overcome.
+** Alternative Zero-Trust solutions
+Given that Zero Trust is a philosophy for network security the strength of AWS in comparison to other service providers resides in the tools offered that can be used to implement a zero trust framework. As there is not one tool utilised in the creation of a zero trust framework on any cloud provider the mix of tools must be evaluated.
+
+Given our requirements the following tools are required;
+ - Encryption in transit.
+ - Encryption at rest.
+ - Logging.
+ - Identity Access Management.
+ - Multiple locations
+*** Oracle
+Due to Oracle adopting a Zero Trust philosophy from the start the security and logging controls that are provided are simpler to implement. \parencite{OCI_ZeroTrust} Of most importance as noted above the biggest weakness of zero trust implementations comes down to misconfiguration, Oracle Cloud Infrastructure (OCI) provides monitoring services for possible misconfigurations to be brought to the system administrator's attention. \parencite{OCI_ZeroTrust} If HTA weren't predisposed to using AWS OCI would be the best service provider to use given the focuses on Zero Trust implementation, the use of edge computing and the regions for focus in expansion, namely the EU and South East Asia.
+* Zero Trust implementation & deployment plan for High-tech Alarms
+:PROPERTIES:
+  :ALT_TITLE: Implementation & Deployment
+:END:
+
+** Implementation Strategy
+\textcite{csfd} and \textcite{gilmanzero} give us a good starting point in developing a zero trust framework;
+1. Determine the scope of the cloud based resources.
+2. Map the data flow pattern.
+3. Design and segment the network.
+4. Define and implement access policies
+5. Monitor and Maintain the network
+*** Determine the scope of the cloud based resources.
+Given the aims of HTA in this expansion we know that the following will be required in the HTA AWS cloud solution,
+- Cloud-based manufacturing control system. \\
+  This will likely be made up of a compute instance and a storage instance at a minimum.
+- Wholesale ordering platform. \\
+  This will be a typical client web portal accessible to ICS.
+- Monitoring systems for customers. \\
+  Again the focus will be on having both compute and storage instances. To enhance privacy a templated sub-cloud will be implemented per customer involving the control systems for their monitoring systems. This also provides us another point for sales to be able to market or provide these templates for when customers would prefer to either implement their own solution in house, or in AWS.
+
+In addition this report recommends the implementation of a central processing system (CPS), and a retail web portal to be moved into the cloud. The retail web portal can also be host to the public documentation for HTA systems.
+
+Zero trust as a philosophy of control begins at the network design stage, \parencite{peiris_2021} cloud computing provides the ability to have virtual machines that provide limited functions \parencite[551]{pfleeger} to this end where data needs to be deidentified such as in handling diagnostic data from clients we will utilise a form of proxy server so that the data that is fed back to the CPS can not be identified via the private IP address of the sending instance.
+*** Map the data flow pattern.
+There are currently three distinct systems that have been proposed for cloud services. It is in some respects essential that these systems need not talk to each other, however, the implementations of each should be similar enough that we need only generate one flow pattern. In addition to the proposed systems the CPS will tie together wholesaler and retail web portal orders and the manufacturing system.
+**** Cloud-based manufacturing system.
+data will flow from each of the manufacturing locations to the AWS instances. These instances will then flow their information through to the central processing system. This information will present stock-on-hand figures and take requests for manufacturing from the CPS.
+**** Wholesaler and retail systems.
+These systems while being distinct will function very similarly. These systems will communicate orders directly to the CPS.
+**** Central Processing System.
+The Central Processing system will take in orders from both the wholesaler and the retail systems and ensure that stock is replenished and manufacturing is maintained. If wholesale orders exceed the stock-on-hand reported by the Manufacturing system an order to the manufacturing system will be placed, whereas normally they would simply request the stock on hand.
+**** Monitoring Systems.
+The monitoring systems will be largely stand alone and purely provide customers with cloud space to be able to monitor their security alarms. There will be some deidentified data passed back to the CPS through a proxy server that receives the deidentified data.
+*** Design and segment the network.
+Considering that the current cloud implementation is our first big push into expansion it seems an opportune time to federate identity within HTA On-Premises(on-prem) networks in conjunction with our increasing reliance upon AWS services. This will involve the transition from a perimeter model on-prem to a zero trust model, this can ensure uniformity across security policies and enhance security posture as the amount of communication between on-prem and AWS increases.
+*** Define and implement access policies.
+Each of the systems that we have identified will be wholly contained within themselves, We will use perimeter based firewalls around these. There are some use cases
+
+Sales users will be able to traverse the Wholesale/Retail systems and input requests to this system that will then be passed on to the Manufacturing and Warehouse system via the CPS.
+
+Monitor users will be external customers and their security staff. (including those offered by HTA/ICS) Ultimately we strongly suggest that each customer of our cloud based security systems have an internal administrator (possibly the CISO) who grants admin access on the monitoring instance to the security staff. Apart from supplying diagnostic data back to the CPS via the deidentifying proxy there are no requests that a monitor role can make in any other part of HTA systems without adopting another role. Primarily the other foreseeable role would be as a customer or sales user.
+
+Wholesaler contractors in addition to being sales users will also be able to assist in the management of monitoring instances.
+
+Manufacturing and warehouse users will only work within the manufacturing and warehouse systems.
+
+CPS staff will be able to assess the data that they receive from the other systems to be able to make forecasts and provide management from above. They are able to make requests of the manufacturing/warehousing system.
+*** Monitor and Maintain the network.
+This step of the process is to be completed as the system is used and continues to grow in line with the growth of HTA.
+** Network Map
+[[./network.png]]
+* Summary
+Amazon Web Services provides a robust and manageable solution for High-Tech Alarms' expansion of goals and implementation of the Zero Trust philosophy of security. The benefits of Zero Trust models include identity and role based authentication and access control over perimeter access control, Point to Point Authentication tunnels, Encryption in motion and auditable logging.
+
+Because of the nature of Zero Trust it is highly recommended that Zero Trust is implemented enterprise wide and not just over the cloud portions of the enterprise. This along with other risks of implementing Zero Trust including but not limited to agility, misconfiguration, and inevitability of change, do not detract from the ability of the Security Team to overcome these challenges and provide a workable solution if an implementation were to be made following the implementation plan laid out above.
+
+\newpage
+\printbibliography

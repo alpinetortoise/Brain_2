@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       6af11c0b-d22b-47c7-9a88-f1424178a8c4
+:END:
+#+title: West
+        #+created: [2024-11-21 Thu 21:09]
+        #+last_modified: [2024-11-21 Thu 21:09]
+

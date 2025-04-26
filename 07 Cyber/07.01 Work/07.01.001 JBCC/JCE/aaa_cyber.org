@@ -1,0 +1,27 @@
+:PROPERTIES:
+:ID:       2089cab8-2788-4b82-b3bf-eb50bfb62b2e
+:END:
+#+title: AAA (Cyber)
+        #+created: [2024-10-28 Mon 10:33]
+        #+last_modified: [2024-10-28 Mon 10:33]
+* Authentication
+:PROPERTIES:
+:ID:       689f540d-1d23-4f6b-b95c-e3cbf2ce2f5c
+:END:
+Authentication is the proving that you are who you say you are, there are a number of ways in which it is done, normally it is split between three modes.
+** Something you are
+This is [[id:63ad41c8-7896-42fc-9ca7-91689108036b][Biometrics]], often it is a fingerprint, facescan or iris/retina scan
+** Something you know
+This is the most common form of authentication, it will be a username and password combination
+** Something you have
+This is often utilised with a phone or some other device.
+* Authorisation
+:PROPERTIES:
+:ID:       3ace4601-e52a-4f55-b702-af1f63474dfa
+:END:
+Authorisation is the delegation of certain permissions to the authorised user.
+* Accounting
+:PROPERTIES:
+:ID:       9da1e390-3bf2-44d4-8ff5-3841a9d069f2
+:END:
+Accounting logs all the actions of Authorised and Authenticated users and systems

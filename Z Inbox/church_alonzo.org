@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6345243e-fa55-492a-afb1-d50b48d986e6
+:END:
+#+title: Church, Alonzo
+        #+created: [2024-11-08 Fri 13:48]
+        #+last_modified: [2024-11-08 Fri 13:48]
+[[id:589b86e7-0bd7-41bd-a79b-964395ff146c][Biographies]]
+
+[[id:ae8ebbe6-3103-42fd-b92d-5150d6a5de43][Turing, Allan]]

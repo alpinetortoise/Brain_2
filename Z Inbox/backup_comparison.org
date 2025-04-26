@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       e195483b-6b24-4d9a-a29b-7b3a43705d0a
+:END:
+#+title: backup-comparison
+        #+created: [2025-04-13 Sun 21:05]
+        #+last_modified: [2025-04-13 Sun 21:05]
+* borgbase
+$6.25/TB/Mth (first 2TB)
+$5/TB/Mth (Every subsequent TB)
+* Backblaze B2
+$6/TB/Mth

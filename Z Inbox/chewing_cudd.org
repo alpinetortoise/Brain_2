@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       bbec9269-0aa2-4040-925c-32f2a9c7a128
+:END:
+#+title: chewing cudd
+        #+created: [2024-11-13 Wed 20:23]
+        #+last_modified: [2024-11-13 Wed 20:23]
+as with my other thoughts on [[id:3aca1e9b-f86d-4293-ad0e-ef714b706f26][thinking slow]] and [[id:bf34505a-01e6-4dc7-adb6-b7048514fb01][living slow]]. I think there is something to be said, or thought about in ruminating over the the media that we consume.
+
+the [[id:6fed262d-7304-4dd6-9382-3f99ba44cd68][status quo]] doesnt like this, instead we're numbed to it through the constant progression of [[id:5a141f2f-f445-43a1-9911-e57289b88e02][*The Algorithm*]]

@@ -1,0 +1,153 @@
+:PROPERTIES:
+:ID:       f25717d6-7aca-4114-bd95-bd8c9a06e288
+:END:
+#+title: Python Tutorial
+          #+created: [2024-08-05 Mon 15:24]
+          #+last_modified: [2024-08-05 Mon 15:24]
+* Meta
+This is an exercise in [[https://en.wikipedia.org/wiki/Literate_programming][literate programming]]. Which means the code blocks in this tutorial are executable. A tangled file is also included.
+
+These are my notes from following the [[https://developers.google.com/edu/python][Google Developers Python tutorial]], [[https://www.w3schools.com/python][W3 Schools Python Tutorials]], and [[id:d56f5236-7ed2-49b4-982b-b36c3c38c44a][Matthes (2016)]]
+
+* Introduction
+Python is a "quick and light" language, good for scripting and writing easily.
+
+ - Quick turnaround.
+ - Automation
+
+** Python environments
+
+
+* Strings
+
+#+BEGIN_SRC python :tangle pythontut.py
+  # Comments being with '#'
+  string = "Strings are defined with"
+  string2 = 'double or single quotes'
+  longString = """Sextuple quotes will define strings
+  that go over multiple lines
+  like so"""
+#+END_SRC
+* Variables
+We have seen that we have a number of variables, so far we have created a number of them
+#+Begin_src python :tangle pythontut.py
+    print(string)
+  # We also have
+    print(string2 + " also " + longString)
+#+END_SRC
+
+Variables are named values the syntax of a variable declaration is
+
+#+begin_src python :tangle pythontut.py
+  variableName = "variable value"
+#+end_src
+* Types
+Python has a number of types largely divided into a few larger type buckets
+** Numerical
+Of course numerical types make up part of the different types, there are two basic types of numericals in Python.
+#+BEGIN_SRC python :tangle pythontut.py
+  integerNum = 5
+  floatNum = 2.0
+#+END_SRC
+These are somewhat compatible on the face of things, but some operations may need some compatibility testing.
+*** Numerical operations
+There are of course a number of common numerical operations;
+#+BEGIN_SRC python :tangle pythontut.py
+  division = integerNum / 2 # Integer arithmetic rules do apply,
+  # you would expect that this would produce '2.5', however that is a
+  # float not an integer.
+  print(division)
+  # The corollary of division is our modulus operation
+  modulus = integerNum % 2
+  print(modulus)
+  # We can of course utilise float casting to produce a float
+  floatDivision = float(integerNum) /2
+  print(floatDivision)
+
+  # There are the other operations
+  multiply = integerNum * 2
+  print(multiply)
+
+  addition = integerNum + 2
+  print(addition)
+
+  subtraction = integerNum - 2
+  print(subtraction)
+
+  # We can also use prefix operations to modify variables eg
+  addition += 4 # This will add 4 to 'addition' and store it again as addition
+  print(addition)
+#+END_SRC
+** Boolean
+Boolean variables are values that are either [True | False]
+
+We can use booleans for testing
+#+BEGIN_SRC python :tangle pythontut.py
+  boolean = True
+  if 10 > 9:
+      print("yes")
+  # There are other conditionals and we can test multiple using elif and else
+  a = 33
+  b = 33
+  if b > a:
+      print("b is greater than a")
+  elif b < a:
+      print("b is less than a")
+  else a == b:
+      print("a and b are equal")
+  # The logical operators and and or work as expected
+  if b >= a and b <=a: print ("a and b are equal")
+  elif b > a or b < a: print ("one is larger than the other")
+  # We see from the above that we can condense our code
+#+END_SRC
+* Lists
+#+BEGIN_SRC python :tangle pythontut.py
+  listA = [ "One string", "Another String", "A third string"]
+#+END_SRC
+Lists can be manipulated easily, for instance we can grab the ith element of a list with the syntax list[i]
+#+BEGIN_SRC python :tangle pythontut.py
+  firstElem = listA[0] # indexation of lists starts at 0
+  secondElem = listA[1]
+  # Further we can treat strings themselves as lists
+  print(firstElem[4])
+#+END_SRC
+** List operations
+There are a number of list operations
+#+BEGIN_SRC python :tangle pythontut.py
+  # Concatenation
+  listB = listA + [ string, string2]
+  listB.extend(listA) # Will do the same as the above
+  listB.append('hi') # Appending works much the same
+  # The contents of a list don't have to be the same
+  listB.append(4)
+  index = 2
+  listB.insert(index, "elem") # Inserts "elem" at index
+  listB.remove(4) # Will remove the first instance of 4
+  listB.sort() # Sorts the elements of a list
+  listB.reverse() # Reverses the elements in a list
+  listB.pop(index) # will remove and return the element at the given index
+  listB.len() # returns the length of the list
+#+END_SRC
+* Iteration
+The traversal and manipulation of lists is one of the main things that programming is concerned with. The construct *for* /var/ *in* /list/ is a simple iterator.
+#+BEGIN_SRC python :tangle pythontut.py
+  # This code will sum the contents of the list squares
+  squares = [1, 4, 9, 16]
+  sum = 0
+  for num in squares:
+      sum += num # As mentioned above the prefix addition looks simpler
+      # the alternative looks as follows:
+      # sum = sum + num
+  print(sum) # 30
+  # There are also functions which produce lists for us to iterate over
+  for i in range(20):
+     print(i)
+  # We can also iterate otherways for instance with a while loop we can
+  # iterate over every 3rd item
+  i = 0
+  while i < len(listB):
+      print(listB[i])
+      i += 3
+#+END_SRC
+* input output
+Utilising the variables we've set up previously

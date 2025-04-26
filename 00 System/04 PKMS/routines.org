@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       2ae35dbf-1ff3-484e-97cf-ef115b380673
+:END:
+#+title: routines
+
+Routines in a GTD/PKMS help to ensure that there is synchronization between digital and analogue collection systems

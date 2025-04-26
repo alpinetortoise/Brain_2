@@ -1,0 +1,220 @@
+:PROPERTIES:
+:ID:       55889257-8ae7-4868-bd33-9a0a84b1fdd0
+:END:
+#+title: C++ Refresh
+        #+created: [2024-10-23 Wed 18:53]
+        #+last_modified: [2024-10-23 Wed 18:53]
+/Notes from following:/ [[id:83403c9b-8983-425d-bbe9-770f35df44f1][Rao 2016]] /[[file:C++ in One Hour a Day 8e (2017).pdf][C++ In One Hour a Day]]/
+
+* History
+* Starting [fn:1]
+#+BEGIN_SRC C++ :tangle hello.cpp
+#include <iostream>
+
+int main() {
+  std::cout << "Hello World!\n";
+  return 0;
+}
+#+END_SRC
+We see redirection on the 5th line of the above, redirecting the string "Hello..." to the std::cout object/reference.
+
+We can simplify first using "using" or "using namespace"
+** Variables
+#+begin_SRC C++ :tangle list3.1.cpp
+  #include <iostream>
+  using namespace std;
+  int main () {
+      cout << "This program will help you multiply two numbers" << endl;
+
+      cout << "Enter the first number: ";
+      int firstNumber = 0;
+      cin >> firstNumber;
+
+      cout << "Enter the second number: ";
+      int secondNumber = 0;
+      cin >> secondNumber;
+
+      // Multiply two numbers, store result in a variable
+      int multiplicationResult = firstNumber * secondNumber;
+
+      // Display result
+      cout << firstNumber << " X " << secondNumber;
+      cout << " = " << multiplicationResult << endl;
+
+      return 0;
+  }
+#+end_src
+* Functions
+Functions provide organisational and code refactoring
+** Fibonacci in C++
+:PROPERTIES:
+:ID:       eb50d40a-0c3e-4ced-abcd-3dc6988a9583
+:END:
+#+begin_src C++
+  #include <iostream>
+  using namespace std;
+
+  int GetFibNumber (int fibIndex) {
+      if (fibIndex < 2)
+          return fibindex;
+      else // recursion if fibIndex >= 2
+          return GetFibNumber(fibIndex - 1) + GetFibNumber(fibIndex - 2);
+  }
+
+  int main() {
+      cout << "Enter 0-based index of desired Fibonacci Number: ";
+      int index = 0;
+      cin >> index;
+
+      cout << "Fibonacci number is: " << GetFibNumber(index) << endl;
+      return 0;
+  }
+#+end_src
+[[[id:83403c9b-8983-425d-bbe9-770f35df44f1][Rao 2016]] Listing 7.5]
+** Reference Parameter (C++)
+:PROPERTIES:
+:ID:       ae1a121f-9b09-4c50-a24b-9228d2b6a8e6
+:END:
+#+begin_src C++
+  #include <iostream>
+  using namespace std;
+
+  const double Pi = 3.1416;
+
+  // output parameter result by reference
+  void Area(double radius, double& result) { // the & following the type of the second parameter points to the output variable
+      result = Pi * radius * radius;
+  }
+
+  int main(){
+      cout << "Enter radius: ";
+      double radius = 0;
+      cin >> radius;
+
+      double [[id:ae1a121f-9b09-4c50-a24b-9228d2b6a8e6][Reference Parameter (C++)]]areaFetched = 0;
+      Area(radius, areaFetched);
+
+      cout << "The area is: " << areaFetched << endl;
+      return 0;
+  }
+#+end_src
+[[[id:83403c9b-8983-425d-bbe9-770f35df44f1][Rao 2016]] Listing 7.9]
+
+** Inline Functions
+:PROPERTIES:
+:ID:       51015631-5417-432c-9da2-bda7884e860e
+:END:
+#+BEGIN_src C++
+  #include <iostream>
+  using namespace std;
+
+  // define an inline function that doubles
+  inline long DoubleNum (int inputNum){
+      return inputNum * 2;
+  }
+
+  int main() {
+      cout << "Enter an integer: ";
+      int inputNum = 0;
+      cin >> inputNum;
+
+      // Call inline function
+      cout << "Double is: " << DoubleNum(inputNum) << endl;
+
+      return 0;
+  }
+#+end_src
+[[[id:83403c9b-8983-425d-bbe9-770f35df44f1][Rao 2016]] Listing 7.10]
+
+Inline functions are often interpreted by compilers to place the code snippets in place of the call. Upside of increasing execution speed, but can result in code bloat.
+** Lambda Expressions (C++)
+:PROPERTIES:
+:ID:       a9058c61-1cbf-4c42-b4ca-388e35283061
+:END:
+cf. [[id:da146e18-ff60-422a-a9ab-aab0dc15b3b1][Lambda Calculus]]
+
+#+begin_src C++
+  #include <iostream>
+  #include <algorithm>
+  #include <vector>
+  using namespace std;
+
+  void DisplayNums(vector<int>& dynArray){
+      for_each (dynArray.begin(), dynArray.end(), \
+                [] (int Element) {cout << Element << " ";} );
+      cout << endl;
+  }
+
+  int main() {
+      vector<int> myNums;
+      myNums.push_back(501);
+      myNums.push_back(-1);
+      myNums.push_back(25);
+      myNums.push_back(-35);
+
+      DisplayNums(myNums);
+
+      cout << "Sorting them in descending order" << endl;
+
+      sort (myNums.begin(), myNums.end(), \
+            [] (int Num1, int Num2) {return (Num2 < Num1); } );
+
+      DisplayNums(myNums);
+
+      return 0;
+#+end_src
+[[[id:83403c9b-8983-425d-bbe9-770f35df44f1][Rao 2016]] Listing 7.12]
+*** Syntax
+[optional parameters] (parameter list) { statements; }
+* Pointers and References
+#+begin_src C++
+  // pointers or the dereference operator *
+  PointedType * PointerVariableName;
+  int *pointsToInt = NULL;
+
+  // reference operator &
+  int integer;
+  &integer
+#+end_src
+hence as per [[id:ae1a121f-9b09-4c50-a24b-9228d2b6a8e6][above]].
+
+* Memory allocation and deallocation
+#+begin_src C++
+  #include <iostream>
+  using namespace std;
+
+  int main(){
+
+      int* PointstoAnAge = new int;
+
+      cout << "Enter your dog's age: ";
+      cin >> *pointsToAnAge;
+
+      cout << "Age " << *pointsToAnAge << " is stored at 0x" << hex << pointsToAnAge << endl;
+
+      delete pointsToAnAge;
+
+      return 0;
+#+end_src
+[[[id:83403c9b-8983-425d-bbe9-770f35df44f1][Rao 2016]] Listing 8.7]
+
+
+* Classes and Objects
+#+BEGIN_SRC C++
+  class human {
+      // member attributes:
+      string name;
+      string dateOfBirth;
+      string placeOfBirth;
+      string gender;
+
+      // Member functions
+      void Talk(string textToTalk);
+#+END_SRC
+There are two operators to access the members, the dot operator (.) and the pointer operator (->) if the object has been dynamically assigned then the pointer operator is to be used., otherwise either can be used (?)
+* Footnotes
+
+[fn:1] I prefer Java [[id:356de127-2e2d-4bfa-9e2d-132cca93770e][coding style]]
+
+* Links
+ - [[id:78905830-a46f-4e11-93dc-ea77cb105d17][literate programming]]

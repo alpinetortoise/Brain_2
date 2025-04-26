@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6e7479bb-bd4e-4358-b95d-72f1d675b271
+:END:
+#+title: postfallen
+        #+created: [2024-11-21 Thu 21:04]
+        #+last_modified: [2024-11-21 Thu 21:04]
+[[id:5fcd86f7-24d5-42c0-bbed-c30ce9ca558a][Fall]]
+[[id:4c0ebe51-3842-44bf-bbb2-6edc29520f77][Original Sin]]
+[[id:e192a4e0-a063-4306-b15d-f0260b1eac34][Total Depravity]]

@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       f48fa38a-001c-41fc-aaa6-8eda215d5b46
+:END:
+#+title: Berkely Software
+        #+created: [2025-03-18 Tue 09:57]
+        #+last_modified: [2025-03-18 Tue 09:57]

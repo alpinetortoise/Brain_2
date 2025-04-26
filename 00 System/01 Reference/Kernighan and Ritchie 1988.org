@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       080c8ca6-8394-4e82-be4e-fa29f10981b9
+:END:
+#+title: Kernighan and Ritchie 1988
+                  #+created: [2024-10-23 Wed 20:17]
+                  #+last_modified: [2024-10-23 Wed 20:17]

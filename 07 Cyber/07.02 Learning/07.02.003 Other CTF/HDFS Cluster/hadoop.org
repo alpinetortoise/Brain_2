@@ -1,0 +1,94 @@
+:PROPERTIES:
+:ID:       bb5987c3-b35a-41ac-aecb-28214f6cf59f
+:END:
+#+title: Compromised Hadoop (HDFS) Cluster
+        #+created: [2025-04-25 Fri 11:49]
+        #+last_modified: [2025-04-25 Fri 11:49]
+* Meta
+ - Author: [[id:b9c42c9c-0319-4c04-ac49-13bda5c9648c][Hadi, Ali]]
+ - Year: 2019
+ - [[id:8bf87ef3-6c85-459a-8fb8-dcee0da5aaa5][dfir]], [[id:6ac67c0d-aa6a-4632-9a2d-11dd0172dd2d][ctf]], [[id:a476676e-5c1d-44d8-8e54-41046422191c][Linux]]
+ - Outputs: [[id:9e96cd21-7d52-4868-a23f-569c31a19dee][Plan]], [report]
+
+* Evidence
+| File            |       Size | Hash                             |
+|-----------------+------------+----------------------------------|
+| HDFS-Master.E01 | 3324279151 | a751e67a7577a8eda0eb36f2e7e030db |
+| HDFS-Slave1.E01 | 3160115976 | 347bb1253834d4c7ac3eae48b01b7b25 |
+| HDFS-Slave2.E01 | 3159445015 | a0da85381f05c8a67020ddf8267cc560 |
+* Machines
+| Hostname                  | OS                 |                          IP |
+|---------------------------+--------------------+-----------------------------|
+| master.champforensics.com | Ubuntu 16.04.3 LTS | 172.16.64.137 192.168.2.100 |
+| slave1.champforensics.com | Ubuntu 16.04.3 LTS |               192.168.2.101 |
+| slave2.champforensics.com | Ubuntu 16.04.3 LTS |               192.168.2.102 |
+TimeZone: Asia/Amman (UTC +3)
+** Master
+*** Users
+ - root
+   - shell: /bin/bash
+   - password: no
+ - [[hadoop]]
+   - shell: /bin/bash
+   - password: yes
+*** hadoop
+ - cat Master/fs/home/hadoop/.bash_history
+   - lots of lateral movement between all three boxes, most importantly no removal of 45010
+   - creation of /usr/local/hadoop/bin/cluster.php
+     - md5: c1312bd3190eb4d0128260ecb74b7be5
+     - No hits on virus total
+     - Reverse shell C2
+ - stat Master/fs/home/hadoop/45010
+   - 07/10/2019 01:24
+ - md5sum Master/fs/home/hadoop/45010
+   - 4a55d3e8fccf3e000ce34e7cf3dada8a
+   - CVE 2017-16995: Local Privilege Escalation
+ - grep "Oct  7" Master/fs/var/log/auth.log | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | sort | uniq -c | sort
+   1 0.0.0.0
+   1 192.168.2.1
+   3 127.0.0.1
+   3 192.168.2.100
+   346 192.168.2.129    !!!
+   9 192.168.2.102
+ - grep 192.168.2.129 Master/fs/var/log/auth.log | less
+   - 07/10/2019 00:42 - brute force attack over ssh
+   - 07/10/2019 00:42 - successful on user hadoop
+   - 07/10/2019 01:23 - login for user hadoop
+   - These logons are user:pass logins, not as is normal: sshkey
+*** [[id:8bff3573-fee5-4c1e-a76b-4c44ee150e28][Master nixdfir output]]
+** Slave 1
+*** Users
+ - root
+   - shell: /bin/bash
+   - password: noq
+ - hadoop
+   - shell: /bin/bash
+   - password: yes
+ - [[hdfs]]
+   - shell: /bin/bash
+   - password: yes
+*** hdfs
+ - grep useradd Slave1/fs/var/log/auth.log
+   - 7/10/2019 - 01:43 hdfs added
+ - grep hdfs Slave1/fs/var/log/auth.log
+   - 7/10/2019 - 01:47 hdfs login via ssh
+   - 7/10/2019 - 01:48 hdfs sign out
+ - cat Slave1/fs/usr/hdfs/.bash_history
+   pwd
+   ll
+   ld
+   logout
+ - grep "Oct  7" Slave1/fs/var/log/auth.log
+   - 7/10/2019 01:46 - ssh session 7 for user hadoop from 192.168.2.100
+ - cat Slave1/fs/home/hadoop/.bash_history
+   - 45010 and removal in last session
+*** [[id:8b7d34d6-b364-4073-8101-46fbef87895a][Slave1 nixdfir output]]
+** Slave 2
+*** Users
+ - root
+   - shell: /bin/bash
+   - password: no
+ - hadoop
+   - shell: /bin/bash
+   - password: yes
+*** [[id:50c1393b-ae57-4d22-8e08-b72ae5d9ebdc][Slave2 nixdfir output]]

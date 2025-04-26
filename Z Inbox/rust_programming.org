@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       1c99c3ee-ed52-410c-b7f7-75ce31cbc34f
+:END:
+#+title: Rust (programming)
+        #+created: [2024-11-08 Fri 20:46]
+        #+last_modified: [2024-11-08 Fri 20:46]

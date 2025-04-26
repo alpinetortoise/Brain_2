@@ -1,0 +1,166 @@
+:PROPERTIES:
+:ID:       f2811037-0ccc-46e4-80e6-476a8811335c
+:END:
+#+Title: Workout Log (archive)
+[[id:6c025d0d-7525-4763-8d25-c6b4d47c425a][Workout Program]]
+
+* Misc Workout Log
+** August 2024
+*** [2024-08-23 Fri 06:30]
+
+ - Assisted Pull-ups
+   - Reps: 5, Sets: 5, Weight: 47kg
+ - Stationary Cycling
+   - 20min, 12km
+ - Leg Curls
+   - Reps: 10, Sets: 3, Weight: 47kg
+ - Hanging Leg Raises
+   - Reps: 10, Sets: 3
+
+*** [2024-08-26 Mon 06:30]
+
+ - 30 on 30 off
+   - Rowing
+   - Lying raises
+   - Torsion bar row
+   - Banded RDL
+   - Dead hang/wall sit
+   - Assault Bike
+   - Hand Release Pushups/High Plank
+   - Butterfly situps
+   - Lunges
+
+*** [2024-08-27 Tue 06:41]
+
+ - Assisted Pull Ups
+   - Reps: 5, Sets: 5, Weight: -47kg
+ - Chest Fly
+   - Reps: 5, Sets: 5, Weight: 63kg
+ - Crunches
+   - Reps: 5, Sets: 5, Weight: 60kg
+ - Cycling
+   - 20 mins
+
+** October
+*** <2024-10-13 Sun>
+
+ - Farmers carry 25kg 4 lengths x3
+ - Kettlebell swings 16kg 15/3
+
+*** Mon
+
+Lat pull 3/10 @50
+** 2025
+*** Jan
+Row 15kg 5/5
+*** Feb
+**** <2025-02-05 Wed>
+ - Lat pull 3/10 @60
+ -
+* TacBarbell
+** 2024
+|-------+----------------+----------+-----------+----------------|
+|       | SQ             | BP       | DL        | SP             |
+|-------+----------------+----------+-----------+----------------|
+| 12/8  | 5/5 54kg       | 5/5 34kg | -         | -              |
+| 23/8  | -              | -        | 5 /5 60kg | 5/5 20 kg      |
+| 24/8  | 5/5 60kg       | 5/5 34kg | -         | -              |
+| 26/8  | -              | -        | 5/5 60kg  | 5/5 20kg       |
+| 27/8  | (LP) 5/5 200kg | 5/5 45kg | -         | -              |
+| 28/8  | -              | -        | 5/5 60kg  | 5/2 50, 5/3 45 |
+| 20/9  | -              | 5/5 15kg | 5/5 20kg  | -              |
+| 1/10  | 5/5 70kg       | 5/5 40kg | -         | -              |
+| 7/10  | 5/5 80kg       | 5/5 30kg | -         | -              |
+| 11/10 | -              | -        | 5/5 60kg  | 5/5 20kg       |
+| 14/10 | 5/5 40kg       | 5/5 20kg | -         | -              |
+| 15/10 | -              | -        | 5/5 40kg  | 5/5 20kg       |
+| 23/11 | 5/5 40kg       | 5/5 20kg | -         | -              |
+| 24/11 | -              | -        | 5/5 40kg  | 5/5 10kg       |
+| 25/11 | 5/5 50kg       | 5/5 30kg | -         | -              |
+| 26/11 | -              | -        | 5/5 50kg  | 5/5 15kg       |
+| 30/11 | 5/5 50kg       | 5/5 30kg | 5/5 50kg  | 5/5 15kg       |
+| 01/12 | 5/5 50kg       | 5/5 30kg | 5/5 50kg  | 5/5 20kg       |
+** 2025
+|       | SQ       | BP       | DL       | SP       | Oth |
+|-------+----------+----------+----------+----------+-----|
+| 27/01 | 5/5 40kg | 5/5 30kg | -        | -        | ^   |
+| 28/01 | -        | -        | 5/5 50kg | 5/5 20kg | -   |
+| 01/02 | 5/5 50kg | 5/5 30kg | 5/5 50kg | 5/5 20kg | -   |
+| 04/02 | 5/5 50kg | 5/5 30kg | -        | -        | -   |
+| 05/02 | -        | -        | 5/5 50kg | -        | ^   |
+| 08/02 | 5/5 60kg | 5/5 40kg | -        | -        | -   |
+| 11/02 | -        | -        | 5/5 60kg | 5/5 20kg | -   |
+* Shin Splints Recovery
+** Functional Circuit 19/9-11/10
+| Date  | Pushups | Squats | Situps | Pullups   | Lunges | Glute Bridge | Bird Dog | Calf Raise | Balance |
+|-------+---------+--------+--------+-----------+--------+--------------+----------+------------+---------|
+| 19/9  | 25/3    | 30/3   |     60 | 5/5 -47kg | -      | 10/2         | 20       |         25 | -       |
+| 20/9  | 25/3    | 30/3   |     60 | -         | -      | -            | -        |         25 | 1min    |
+| 26/9  | 25/3    | 30/3   |     58 | 5 BW      | 20/2   | -            | -        |         25 | -       |
+| 1/10  | 25/3    | 30/3   |     60 | -         | 20/3   | 10kg 20/3    | -        |         25 | -       |
+| 3/10  | 30/3    | 30/3   |     60 | 5/5 -40kg | 20/3   | -            | -        |         25 | -       |
+| 10/10 | 25/3    | 30/3   |     60 | -         | -      | SL 7k 5/2/6  | 20/2     |         25 | 1min    |
+| 11/10 | 25/3    | 30/3   |   20/3 | -         | 20/3   | SL 7k 10/2/3 | 20/2     |         25 | -       |
+** Return to Run
+| Date  |  On | Off | Total | Notes |
+|-------+-----+-----+-------+-------|
+| 26/9  | 0.5 | 4.5 | 20min |       |
+| 30/9  |   1 |   4 | 20min |       |
+| 02/10 | 1.5 | 3.5 | 20min |       |
+| 04/10 |   2 |   3 | 20min |       |
+| 06/10 | 3.5 | 1.5 | 20min | [fn:1]    |
+| 08/10 | 2.5 | 2.5 | 20min |       |
+| 10/10 |   3 |   2 | 20min | [fn:2]    |
+| 12/10 |   3 |   2 | 20min | [fn:3]    |
+| 14/10 | 3.5 | 1.5 | 20min |       |
+| 16/10 |   4 |   1 | 20min |       |
+[fn:1] Stiffness, however this was done out of sequence, to be expected
+[fn:2] Stiffness
+[fn:3] No Stiffness, stretches added before/after run, I think I absolutely need to stop paying it off
+* Cardio
+** Aug 24
+
+| Date | Ex    | Dist           | Duration |
+|------+-------+----------------+----------|
+| 12/8 | Run   | 400m intervals | 5:30 avg |
+| 24/8 | Cycle | 5.5km          | 10mins   |
+| 24/8 | Swim  |                | 10mins   |
+
+** Sep 24
+
+| Date | Ex    | Dist | Duration |
+|------+-------+------+----------|
+| 19/9 | Cycle |    6 | 10m      |
+| 20/9 | Row   |  3.5 |          |
+| 26/9 | Cycle |    5 | 10m      |
+
+** Oct 24
+
+| Date  | Ex    | Dist | Duration |
+|-------+-------+------+----------|
+| 12/10 | cycle | -    | 20min    |
+| 13/10 | cycle | -    | 20min    |
+** Nov 24
+| Date  | Ex    | Dist | Duration |
+|-------+-------+------+----------|
+| 23/11 | Cycle | -    | 15min    |
+
+** Dec 24
+| Date  | Ex         | Dist  | Duration |
+|-------+------------+-------+----------|
+| 09/12 | Stomp 20kg | 5.4km | 58min    |
+| 21/12 | Run        | 4km   | 28min    |
+| 25/12 | Run        | 4km   | 26min    |
+* Bodyweight
+| Date  | PushUps | S/U  | Pull/ups      | Other                |
+|-------+---------+------+---------------+----------------------|
+| 12/10 | 25/3    | 20/3 | 4-3-2-1<      | 25 Calf raise        |
+| 13/10 | 25/3    | 20/3 | 4-3-2-1<      | 25 ibid              |
+| 14/10 | 25/3    | 20/3 | 5/5 wa -40kg  | 25 ibid              |
+| 15/10 | 25/3    | 20/3 | -             | 25 single calf raise |
+| 23/11 | 30/1    | 81/1 | 5/5 wa -40k[fn:4] | -                    |
+
+* Footnotes
+
+[fn:4] 3x full lock out
+>>>>>>> 3acd242 (neglected phone)

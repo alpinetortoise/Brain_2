@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       5d8a8f5e-ed44-405e-ab19-db52f94d464b
+:END:
+#+title: Apologetics
+        #+created: [2024-11-24 Sun 14:05]
+        #+last_modified: [2024-11-24 Sun 14:05]

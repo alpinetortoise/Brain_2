@@ -1,0 +1,34 @@
+:PROPERTIES:
+:ID:       faad32e1-da6a-4183-941b-2e49f421f8ce
+:END:
+#+title: Python Programming activities
+
+* ChatGPT problem #1
+Sure! Here's a Python problem for you:
+
+**Problem: Anagram Checker**
+
+Write a Python function that checks if two given strings are anagrams of each other. Two strings are anagrams if they contain the same characters with the same frequency, but possibly in a different order.
+
+**Function Signature:**
+```python
+def are_anagrams(str1: str, str2: str) -> bool:
+    pass
+```
+
+**Example:**
+```python
+print(are_anagrams("listen", "silent"))  # Output: True
+print(are_anagrams("triangle", "integral"))  # Output: True
+print(are_anagrams("apple", "pale"))  # Output: False
+```
+
+**Requirements:**
+1. The function should be case-insensitive.
+2. Ignore spaces while checking for anagrams.
+
+**Hints:**
+- You might find the `collections.Counter` class helpful for counting character frequencies.
+- Consider converting both strings to lowercase and removing any spaces before comparing them.
+
+Good luck!

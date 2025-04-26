@@ -1,0 +1,28 @@
+:PROPERTIES:
+:ID:       42e32cf9-56a6-45b3-a8a1-7fd03ae38c2f
+:END:
+#+title: Python datetime strings
+
+| Directive | Meaning                                | Output Format        |
+|-----------+----------------------------------------+----------------------|
+| %a        | Abbreviated weekday name               | Sun, Mon,...         |
+| %A        | Full weekday name                      | Sunday, Monday,...   |
+| %w        | Weekday as a decimal                   | 0,1,2...6            |
+| %d        | Day of month as a decimal w leading 0  | 01,02...31           |
+| %-d       | Day of month as a decimal              | 1,2,...31            |
+| %b        | Abbreviated month name                 | Jan, Feb,..., Dec    |
+| %B        | Full month name                        | January, February... |
+| %m        | MM  (also %-m)                         | 01,02,...,12         |
+| %y        | YY  (also %-y)                         | 00,01,..,99          |
+| %Y        | YYYY                                   | 2000,2001,...,2099   |
+| %H        | Hour(24hr) w leading 0 (also %-H)      | 00,01,...,23         |
+| %l        | Hour(12hr) w leading 0 (also %-l)      | 01,02,...,12         |
+| %p        | Locale's AM or PM                      | AM, PM               |
+| %M        | minute w leading 0 (also %-M)          | 00,01,...,59         |
+| %S        | Second w leading 0 (also %-S)          | 00,...,59            |
+| %f        | microsecond                            |                      |
+| %z        | UTC offset (+HHMM or -HHMM)            |                      |
+| %Z        | Timezone name                          |                      |
+| %j        | Day of the year (also %-j)             |                      |
+| %U        | Week number of the year (Sunday first) |                      |
+| %W        | Week number of the year (Monday first) |                      |

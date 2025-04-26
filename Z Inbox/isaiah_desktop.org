@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       a95777b9-a35d-45cd-ad14-ec34c96738da
+:END:
+#+title: Isaiah (Desktop)
+        #+created: [2024-10-29 Tue 08:54]
+        #+last_modified: [2024-10-29 Tue 08:54]
+Plan is to build [[id:fb55d096-cfea-4406-a26a-b6f3188cfb3e][Bethsaida]] up in terms of hardware then repurposing the internals for this desktop (again)
+
+** Current Specs
+ - i5-4570T
+ - 8GB RAM
+   - 16GB max
+ - 500GB SSD
+* Future Specs
+ - Fractal Ridge Case
+ - i7
+ - NVIDIA GTX 1650 4GB
+* Links
+ - [[id:e5376a5d-d57e-486e-9059-ab3f774b70a9][Home Network]]

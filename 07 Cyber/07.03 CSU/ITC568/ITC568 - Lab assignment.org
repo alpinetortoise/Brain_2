@@ -1,0 +1,477 @@
+:PROPERTIES:
+:ID:       c22ca23f-996c-4372-88aa-025856b3f328
+:END:
+#+AUTHOR: Joshua Chubb
+#+TITLE: ITC568 - Lab assignment
+#+LATEX_CLASS: article
+#+LATEX_HEADER: \usepackage{graphicx}
+
+* Lab 3.1: Using Resource-Based Policies to Secure an S3 Bucket
+[[./Ass2/Screenshots/2023-09-10_14-14.png]]
+** Task 1: Login to AWS as devuser
+[[./Ass2/Screenshots/2023-09-10_14-18.png]]
+[[./Ass2/Screenshots/2023-09-10_14-19.png]]
+** Task 2: Attempting Read-Level Access
+[[./Ass2/Screenshots/2023-09-10_14-22.png]]
+[[./Ass2/Screenshots/2023-09-10_14-23.png]]
+[[./Ass2/Screenshots/2023-09-10_14-23_1.png]]
+[[./Ass2/Screenshots/2023-09-10_14-24.png]]
+[[./Ass2/Screenshots/2023-09-10_14-25.png]]
+[[./Ass2/Screenshots/2023-09-10_14-28.png]]
+[[./Ass2/Screenshots/2023-09-10_14-29.png]]
+[[./Ass2/Screenshots/2023-09-10_14-29_1.png]]
+** Task 3: Analyzing the identity-based policy applied to the IAM user
+[[./Ass2/Screenshots/2023-09-10_14-31.png]]
+[[./Ass2/Screenshots/2023-09-10_14-32.png]]
+[[./Ass2/Screenshots/2023-09-10_14-33.png]]
+[[./Ass2/Screenshots/2023-09-10_14-33_1.png]]
+[[./Ass2/Screenshots/2023-09-10_14-34.png]]
+[[./Ass2/Screenshots/2023-09-10_14-36.png]]
+*** DeveloperGroup policy
+#+begin_src JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "cloudformation:Describe*",
+                "cloudformation:Get*",
+                "cloudformation:List*",
+                "iam:Describe*",
+                "iam:GetAccountAuthorizationDetails",
+                "iam:GetGroup",
+                "iam:GetGroupPolicy",
+                "iam:GetPolicy",
+                "iam:GetRole",
+                "iam:GetRolePolicy",
+                "iam:GetUser",
+                "iam:GetUserPolicy",
+                "iam:List*",
+                "logs:Desc*",
+                "logs:Get*",
+                "logs:List*",
+                "s3:CreateBucket",
+                "s3:ListAllMyBuckets",
+                "s3:ListBucket",
+                "s3:PutAccountPublicAccessBlock",
+                "s3:PutBucketOwnershipControls",
+                "s3:PutBucketPublicAccessBlock",
+                "sts:AssumeRole"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+#+end_src
+
+We see in the DeveloperGroupPolicy JSON that there are no EC2 roles and only limited S3 object-related actions.
+** Task 4: Attempting write-level access to AWS services
+[[./Ass2/Screenshots/2023-09-10_14-43.png]]
+[[./Ass2/Screenshots/2023-09-10_14-44.png]]
+[[./Ass2/Screenshots/2023-09-10_14-44_1.png]]
+[[./Ass2/Screenshots/2023-09-10_14-45.png]]
+[[./Ass2/Screenshots/2023-09-10_14-46.png]]
+[[./Ass2/Screenshots/2023-09-10_14-47.png]]
+
+We see in the DeveloperGroupPolicy that there are only the folloring actions are available.
+#+begin_src JSON
+"s3:CreateBucket",
+"s3:ListAllMyBuckets",
+"s3:ListBucket",
+"s3:PutAccountPublicAccessBlock",
+"s3:PutBucketOwnershipControls",
+"s3:PutBucketPublicAccessBlock"
+#+end_src
+Here, there isn't statements for uploading files
+** Task 5: Assuming an IAM role and reviewing a resource-based policy
+[[./Ass2/Screenshots/2023-09-10_15-05.png]]
+[[./Ass2/Screenshots/2023-09-10_15-06.png]]
+[[./Ass2/Screenshots/2023-09-10_15-06_1.png]]
+[[./Ass2/Screenshots/2023-09-10_15-07.png]]
+[[./Ass2/Screenshots/2023-09-10_15-07_1.png]]
+[[./Ass2/Screenshots/2023-09-10_15-08.png]]
+[[./Ass2/Screenshots/2023-09-10_15-09.png]]
+[[./Ass2/Screenshots/2023-09-10_15-10.png]]
+[[./Ass2/Screenshots/2023-09-10_15-12.png]]
+[[./Ass2/Screenshots/2023-09-10_15-13.png]]
+[[./Ass2/Screenshots/2023-09-10_15-13_1.png]]
+[[./Ass2/Screenshots/2023-09-10_15-14.png]]
+[[./Ass2/Screenshots/2023-09-10_15-15.png]]
+[[./Ass2/Screenshots/2023-09-10_15-15_1.png]]
+[[./Ass2/Screenshots/2023-09-10_15-17.png]]
+[[./Ass2/Screenshots/2023-09-10_15-30.png]]
+[[./Ass2/Screenshots/2023-09-10_15-31.png]]
+[[./Ass2/Screenshots/2023-09-10_15-32.png]]
+*** GrantBucket1Access.json
+#+begin_src JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetObject",
+                "s3:ListObjects",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::c88361a1902269l4538556t1w388762059837-bucket1-ywpjni016hit",
+                "arn:aws:s3:::c88361a1902269l4538556t1w388762059837-bucket1-ywpjni016hit/*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+#+end_src
+[[./Ass2/Screenshots/2023-09-10_15-34.png]]
+[[./Ass2/Screenshots/2023-09-10_15-35.png]]
+[[./Ass2/Screenshots/2023-09-10_15-42.png]]
+[[./Ass2/Screenshots/2023-09-10_15-43.png]]
+[[./Ass2/Screenshots/2023-09-10_15-44.png]]
+** Task 6: Understanding Resource-based policies
+[[./Ass2/Screenshots/2023-09-10_15-45.png]]
+[[./Ass2/Screenshots/2023-09-10_15-46_1.png]]
+** Challenge Task
+[[./Ass2/Screenshots/2023-09-10_15-48.png]]
+[[./Ass2/Screenshots/2023-09-10_15-50.png]]
+[[./Ass2/Screenshots/2023-09-10_15-51.png]]
+[[./Ass2/Screenshots/2023-09-10_15-52.png]]
+[[./Ass2/Screenshots/2023-09-10_15-54.png]]
+[[./Ass2/Screenshots/2023-09-10_15-54_1.png]]
+By adopting the OtherBucketAccessRole we should be able to upload.
+[[./Ass2/Screenshots/2023-09-10_16-01.png]]
+[[./Ass2/Screenshots/2023-09-10_16-02.png]]
+[[./Ass2/Screenshots/2023-09-10_16-02_1.png]]
+* Lab 4.1: Securing VPC Resources by Using Security Groups
+[[./Ass2/Screenshots/2023-09-10_16-14.png]]
+** Task 1: Analyzing the VPC and private subnet resource settings
+[[./Ass2/Screenshots/2023-09-10_16-15.png]]
+[[./Ass2/Screenshots/2023-09-10_16-16.png]]
+[[./Ass2/Screenshots/2023-09-10_16-19.png]]
+[[./Ass2/Screenshots/2023-09-10_16-20.png]]
+[[./Ass2/Screenshots/2023-09-10_16-21.png]]
+[[./Ass2/Screenshots/2023-09-10_16-25.png]]
+[[./Ass2/Screenshots/2023-09-10_16-25_1.png]]
+[[./Ass2/Screenshots/2023-09-10_16-26.png]]
+[[./Ass2/Screenshots/2023-09-10_16-32.png]]
+[[./Ass2/Screenshots/2023-09-10_16-32_1.png]]
+[[./Ass2/Screenshots/2023-09-10_16-33.png]]
+[[./Ass2/Screenshots/2023-09-10_16-34.png]]
+** Task 2: Analyzing the public subnet resource settings
+[[./Ass2/Screenshots/2023-09-10_16-36.png]]
+[[./Ass2/Screenshots/2023-09-10_16-38.png]]
+[[./Ass2/Screenshots/2023-09-10_16-39.png]]
+[[./Ass2/Screenshots/2023-09-10_16-40.png]]
+[[./Ass2/Screenshots/2023-09-10_16-40_1.png]]
+[[./Ass2/Screenshots/2023-09-10_16-41.png]]
+[[./Ass2/Screenshots/2023-09-10_16-42.png]]
+[[./Ass2/Screenshots/2023-09-10_16-43.png]]
+[[./Ass2/Screenshots/2023-09-10_16-43_1.png]]
+[[./Ass2/Screenshots/2023-09-10_16-45.png]]
+** Task 3: Testing HTTP connectivity from public EC2 instances
+[[./Ass2/Screenshots/2023-09-10_16-47.png]]
+** Task 4: Restricting HTTP access by using an IP address
+| Hostname     | Public IP Address | Private IP Address |
+|--------------+-------------------+--------------------|
+| ProxyServer1 |       3.82.108.26 |         10.0.1.102 |
+| ProxyServer2 |       3.81.27.122 |         10.0.2.161 |
+| AppServer    |                 - |        10.0.11.202 |
+
+
+[[./Ass2/Screenshots/2023-09-10_16-53.png]]
+[[./Ass2/Screenshots/2023-09-10_16-54.png]]
+[[./Ass2/Screenshots/2023-09-10_16-57.png]]
+** Task 5: Scaling restricted HTTP access by referencing a security group
+[[./Ass2/Screenshots/2023-09-10_16-59.png]]
+[[./Ass2/Screenshots/2023-09-10_17-00.png]]
+[[./Ass2/Screenshots/2023-09-10_17-01.png]]
+[[./Ass2/Screenshots/2023-09-10_17-02.png]]
+** Task 6: Restricting HTTP access by using a network ACL
+[[./Ass2/Screenshots/2023-09-10_17-04.png]]
+[[./Ass2/Screenshots/2023-09-10_17-05.png]]
+[[./Ass2/Screenshots/2023-09-10_17-08.png]]
+[[./Ass2/Screenshots/2023-09-10_17-11.png]]
+[[./Ass2/Screenshots/2023-09-10_17-12.png]]
+** Task 7: Connecting to the AppServer by using a bastion host and SSH
+[[./Ass2/Screenshots/2023-09-10_17-15.png]]
+[[./Ass2/Screenshots/2023-09-10_17-16.png]]
+[[./Ass2/Screenshots/2023-09-10_17-17.png]]
+[[./Ass2/Screenshots/2023-09-10_17-18.png]]
+[[./Ass2/Screenshots/2023-09-10_17-19.png]]
+[[./Ass2/Screenshots/2023-09-10_17-26.png]]
+** Task 8: Connecting directly to a host in a private subnet by using Session Manager
+[[./Ass2/Screenshots/2023-09-10_17-28.png]]
+[[./Ass2/Screenshots/2023-09-10_17-29.png]]
+[[./Ass2/Screenshots/2023-09-10_17-30.png]]
+[[./Ass2/Screenshots/2023-09-10_17-31.png]]
+* Lab 5.1: Encrypting Data at Rest by Using AWS KMS
+[[./Ass2/Screenshots/2023-09-10_17-37.png]]
+** Task 1: Creating an AWS KMS key
+[[./Ass2/Screenshots/2023-09-10_17-40.png]]
+[[./Ass2/Screenshots/2023-09-10_17-40_1.png]]
+[[./Ass2/Screenshots/2023-09-10_17-41.png]]
+[[./Ass2/Screenshots/2023-09-10_17-41_1.png]]
+[[./Ass2/Screenshots/2023-09-10_17-42.png]]
+** Task 2: Storing an encrypted object in an S3 bucket
+[[./Ass2/Screenshots/clock.png]]
+[[./Ass2/Screenshots/2023-09-10_17-44.png]]
+[[./Ass2/Screenshots/2023-09-10_17-46.png]]
+[[./Ass2/Screenshots/2023-09-10_17-47.png]]
+[[./Ass2/Screenshots/2023-09-10_17-47_1.png]]
+[[./Ass2/Screenshots/2023-09-10_17-48.png]]
+[[./Ass2/Screenshots/2023-09-10_17-48_1.png]]
+** Task 3: Attempting public access to the encrypted object
+[[./Ass2/Screenshots/2023-09-10_17-49.png]]
+[[./Ass2/Screenshots/2023-09-10_17-51.png]]
+[[./Ass2/Screenshots/2023-09-10_17-51_1.png]]
+[[./Ass2/Screenshots/2023-09-10_17-52.png]]
+[[./Ass2/Screenshots/2023-09-10_17-53.png]]
+[[./Ass2/Screenshots/2023-09-10_17-54.png]]
+[[./Ass2/Screenshots/2023-09-10_17-54_1.png]]
+[[./Ass2/Screenshots/2023-09-10_17-54_2.png]]
+[[./Ass2/Screenshots/2023-09-10_17-55.png]]
+[[./Ass2/Screenshots/2023-09-10_17-55_1.png]]
+** Task 4: Attempting signed access to the encrypted object
+[[./Ass2/Screenshots/2023-09-10_17-56.png]]
+#+begin_src
+https://c88361a1902273l4712779t1w801724649369-imagebucket-1dva0effaonf6.s3.us-east-1.amazonaws.com/clock.png
+?
+response-content-disposition=inline
+&
+X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDmFwLXNvdXRoZWFzdC0yIkcwRQIgdhQkVVvbe5WU2qFEI6or668zntUY3qnTFyIbsSme7eQCIQD8pThVLczdAQQavWu1UbugFjUvVoqDiVCKsmk%2BihtE7iqCAwjR%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDgwMTcyNDY0OTM2OSIMO2mOCR%2BO6SaFeB86KtYCujojYbRxt7ZELtqDR3Q10nA1wMHTt8vcukuzKNc1jWnCv%2BVPxtmnygQTVDfs%2BfWen2rD9yX%2FzyJBqJ2LDVDPQeIOc%2BFxqr0WsKeTASA9qpiLYoF8R9mryiUD3ply8XzAhb7EkxRqJY7o%2F4WdozoHhMlSdqHhY4cI7lqArOyldkXdpvM2o6vbipNG5aPkuAqqDbAHVcbbvRfpMcmsnBXOCzdz0jRAtWv0wps0oX95EmAc%2Bo%2BFmcQb7gSHZ2cFHFBb3nVcqnCeJR5iaNnwdte5jQp1ytKoFBgao6wRJyUUZX%2BpDxvZl3yQfcSHK%2B2z4DGL9yMqXIUTebSgMR%2F%2F1kYb8gTzqfVwrtvWLEmPfBl65g%2Bg028fzZ7A3qm3%2BStETDydg1Hw6EwzluDs1DnbqoASEtPgSTEDjv59ci9lUX1ifvlaIfkvaraMnc68%2FcUg%2F9uEcc4K1ppmMIzj9acGOocCPH0TNTjxRTA%2Fcx%2BzM%2BNcei0GQIVCDDwqaY3iYeUAJIqxJ3ssE0U1MIQS9iEFch5lvXPQmdfwQrjDICZU5EYjh2%2FpfJOhwtaSvEmBKSElsxH%2BDP4UHCfYCnfbyt8aOxh8FR8MHUfVn2fF%2FyxGcpX17Sz4NaOrkrPj%2BlFWPP12u%2Bzo9Nid3x7MgXjyHktbXgLe6gX%2FWV1hRk0fJIULvT22m%2BVVhkS0pd%2B62aTh40gnn5QzyTJbeLo11tNpy4sGuNPhnzjKQJcLlX7lzpvaeOpNgHp93qKrlZhHjl8oF888uln7Q%2FdqUME9wZyD0LXP3wfXxxxisSg7mIZx6gNGmyg6wva6G718g30%3D
+&
+X-Amz-Algorithm=AWS4-HMAC-SHA256
+&
+X-Amz-Date=20230910T075639Z
+&
+X-Amz-SignedHeaders=host
+&
+X-Amz-Expires=300
+&
+X-Amz-Credential=ASIA3VKUDJ6M7YLI3NMO%2F20230910%2Fus-east-1%2Fs3%2Faws4_request
+&
+X-Amz-Signature=608e75471c18549f541fa1578cadcf4868bae9a31c8174783925f89cccd1af23
+#+end_src
+
+We can see that opening the image file from inside the Amazon S3 console provides a number of arguments to decrypt the image.
+** Task 5: Monitoring AWS KMS activity by using CloudTrail
+[[./Ass2/Screenshots/2023-09-10_18-03.png]]
+[[./Ass2/Screenshots/2023-09-10_18-06.png]]
+[[./Ass2/Screenshots/2023-09-10_18-08.png]]
+** Task 6: Encrypting the root volume of an existing EC2 instance
+[[./Ass2/Screenshots/2023-09-10_18-10_1.png]]
+[[./Ass2/Screenshots/2023-09-10_18-12.png]]
+[[./Ass2/Screenshots/2023-09-10_18-13.png]]
+Availability Zone: us-east-1b
+[[./Ass2/Screenshots/2023-09-10_18-14.png]]
+[[./Ass2/Screenshots/2023-09-10_18-15.png]]
+[[./Ass2/Screenshots/2023-09-10_18-17.png]]
+[[./Ass2/Screenshots/2023-09-10_18-18.png]]
+[[./Ass2/Screenshots/2023-09-10_18-21.png]]
+[[./Ass2/Screenshots/2023-09-10_18-22.png]]
+[[./Ass2/Screenshots/2023-09-10_18-23.png]]
+** Task 7: Disabling the encryption key and observing the effects
+[[./Ass2/Screenshots/2023-09-10_18-25.png]]
+[[./Ass2/Screenshots/2023-09-10_18-26.png]]
+[[./Ass2/Screenshots/2023-09-10_18-26_1.png]]
+[[./Ass2/Screenshots/2023-09-10_18-27.png]]
+[[./Ass2/Screenshots/2023-09-10_18-28.png]]
+[[./Ass2/Screenshots/2023-09-10_18-29.png]]
+*** CloudTrail
+*DisableKey*
+#+begin_src JSON
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA3VKUDJ6MZJPGSEIZ5:user2684850=alpinetortoise@jpc.id.au",
+        "arn": "arn:aws:sts::801724649369:assumed-role/voclabs/user2684850=alpinetortoise@jpc.id.au",
+        "accountId": "801724649369",
+        "accessKeyId": "ASIA3VKUDJ6MXXYAS74D",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA3VKUDJ6MZJPGSEIZ5",
+                "arn": "arn:aws:iam::801724649369:role/voclabs",
+                "accountId": "801724649369",
+                "userName": "voclabs"
+            },
+            "webIdFederationData": {},
+            "attributes": {
+                "creationDate": "2023-09-10T07:34:36Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2023-09-10T08:26:12Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "DisableKey",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "124.183.193.175",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/117.0",
+    "requestParameters": {
+        "keyId": "57fe4541-f2b0-456b-a951-1dd4247ff069"
+    },
+    "responseElements": {
+        "keyId": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069"
+    },
+    "requestID": "e35eae44-8d56-4f58-af54-7315bf353658",
+    "eventID": "31bfd455-eacb-4d90-a677-b285b611c396",
+    "readOnly": false,
+    "resources": [
+        {
+            "accountId": "801724649369",
+            "type": "AWS::KMS::Key",
+            "ARN": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069"
+        }
+    ],
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "801724649369",
+    "eventCategory": "Management",
+    "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_256_GCM_SHA384",
+        "clientProvidedHostHeader": "kms.us-east-1.amazonaws.com"
+    },
+    "sessionCredentialFromConsole": "true"
+}
+#+end_src
+*StartInstances*
+#+begin_src JSON
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA3VKUDJ6MZJPGSEIZ5:user2684850=alpinetortoise@jpc.id.au",
+        "arn": "arn:aws:sts::801724649369:assumed-role/voclabs/user2684850=alpinetortoise@jpc.id.au",
+        "accountId": "801724649369",
+        "accessKeyId": "ASIA3VKUDJ6M4NQSD3AI",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA3VKUDJ6MZJPGSEIZ5",
+                "arn": "arn:aws:iam::801724649369:role/voclabs",
+                "accountId": "801724649369",
+                "userName": "voclabs"
+            },
+            "webIdFederationData": {},
+            "attributes": {
+                "creationDate": "2023-09-10T07:34:36Z",
+                "mfaAuthenticated": "false"
+            }
+        }
+    },
+    "eventTime": "2023-09-10T08:27:04Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "StartInstances",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "124.183.193.175",
+    "userAgent": "AWS Internal",
+    "requestParameters": {
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-0013016824d5a9be9"
+                }
+            ]
+        }
+    },
+    "responseElements": {
+        "requestId": "3892c780-f10e-4976-ab8a-78033b663a81",
+        "instancesSet": {
+            "items": [
+                {
+                    "instanceId": "i-0013016824d5a9be9",
+                    "currentState": {
+                        "code": 0,
+                        "name": "pending"
+                    },
+                    "previousState": {
+                        "code": 80,
+                        "name": "stopped"
+                    }
+                }
+            ]
+        }
+    },
+    "requestID": "3892c780-f10e-4976-ab8a-78033b663a81",
+    "eventID": "81018f73-3cf4-4add-bdb7-7ba1e4f2250d",
+    "readOnly": false,
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "801724649369",
+    "eventCategory": "Management",
+    "sessionCredentialFromConsole": "true"
+}
+#+end_src
+*CreateGrant*
+#+begin_src JSON
+{
+    "eventVersion": "1.08",
+    "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROA3VKUDJ6MZJPGSEIZ5:user2684850=alpinetortoise@jpc.id.au",
+        "arn": "arn:aws:sts::801724649369:assumed-role/voclabs/user2684850=alpinetortoise@jpc.id.au",
+        "accountId": "801724649369",
+        "accessKeyId": "ASIA3VKUDJ6MU7RVY4O7",
+        "sessionContext": {
+            "sessionIssuer": {
+                "type": "Role",
+                "principalId": "AROA3VKUDJ6MZJPGSEIZ5",
+                "arn": "arn:aws:iam::801724649369:role/voclabs",
+                "accountId": "801724649369",
+                "userName": "voclabs"
+            },
+            "webIdFederationData": {},
+            "attributes": {
+                "creationDate": "2023-09-10T07:34:36Z",
+                "mfaAuthenticated": "false"
+            }
+        },
+        "invokedBy": "ec2-frontend-api.amazonaws.com"
+    },
+    "eventTime": "2023-09-10T08:27:06Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "CreateGrant",
+    "awsRegion": "us-east-1",
+    "sourceIPAddress": "ec2-frontend-api.amazonaws.com",
+    "userAgent": "AWS Internal",
+    "errorCode": "DisabledException",
+    "errorMessage": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069 is disabled.",
+    "requestParameters": {
+        "granteePrincipal": "arn:aws:sts::801724649369:assumed-role/aws:ec2-infrastructure/i-0013016824d5a9be9",
+        "retiringPrincipal": "ec2.us-east-1.amazonaws.com",
+        "keyId": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069",
+        "constraints": {
+            "encryptionContextSubset": {
+                "aws:ebs:id": "vol-0f02f9a5a22874af0"
+            }
+        },
+        "operations": [
+            "Decrypt"
+        ]
+    },
+    "responseElements": null,
+    "requestID": "3892c780-f10e-4976-ab8a-78033b663a81",
+    "eventID": "8baca37e-4128-4779-9ea7-6f6780477431",
+    "readOnly": false,
+    "resources": [
+        {
+            "accountId": "801724649369",
+            "type": "AWS::KMS::Key",
+            "ARN": "arn:aws:kms:us-east-1:801724649369:key/57fe4541-f2b0-456b-a951-1dd4247ff069"
+        }
+    ],
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "801724649369",
+    "eventCategory": "Management",
+    "sessionCredentialFromConsole": "true"
+}
+#+end_src
+We can see in the CreateGrant event that EC2 attempted to decrypt the new volume for the instance to initialize.
+[[./Ass2/Screenshots/2023-09-10_18-35.png]]
+[[./Ass2/Screenshots/2023-09-10_18-37.png]]
+[[./Ass2/Screenshots/2023-09-10_18-38.png]]
+* Lab 6.1

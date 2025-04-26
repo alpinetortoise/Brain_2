@@ -1,0 +1,122 @@
+:PROPERTIES:
+:ID:       1d4b7be3-32b9-4a56-9423-038fbdfb8bd7
+:END:
+#+title: Interoperability Agreements
+Anytime your system needs to integrate with third parties, there are new security issues introduced into your network. Interoperability agreements ensure that both organisations maintain a minimum level of privacy and protection.
+
+These issues need to be addressed with the following questions:
+
+ - Does the third party have security controls that meet/exceed your minimum standards?
+
+ - What is their auditing policy?
+
+ - What is their incident response policy?
+
+ - How will you handle integrating your two organisations different security policies and procedures?
+
+All of the issues above need to be address into interoperability agreements. They can take the form of any of the following agreement types:
+** Service Level Agreement
+A SLA is a contractual agreement between entities that describe specified levels of service that the servicing entity agrees to guarantee for the customer.
+
+Generally part of a service contract and set the level of technical expectations and are negotiated between customer and supplier which represents the agreed-upon terms.
+
+A good SLA will satisfy two simple rules:
+
+ - It will describe the entire set of product or service functions in sufficient detail that their requirement will be unambiguous
+
+ - SLA will provide a clear means of determining whether a specified function or service has been provided at the agreed upon level of performance.
+** Business Partnership Agreement
+Legal agreement between partners establishing terms, conditions and expectations of the relationship.
+
+Will cover a range of issues including:
+
+ - Sharing of profit and loss
+
+ - Responsibilities of each partner
+
+ - The addition or removal of partners
+
+ - Any other issues
+** Memorandum of Understanding
+Legal document to describe bilateral agreements between parties and outlines which party is responsible for what portion of the work.
+
+A MOU expresses a set of intended actions between the parties with respect to some common pursuit or goal.
+
+It is common to find a MOU between different units within an organisation to detail expectations associated with a common business interest.
+
+While it is a legal document, it differs to a contract and more like a "handshake" agreement.
+** Interconnection Security Agreements
+Specialised agreement between organisations that have interconnected IT systems.
+
+Its purpose is to document the security requirements associated with the interconnection.
+
+ISA can be part of a MOU detailing the specific technical security aspects of a data interconnection
+
+Is an agreement between two organisations that have connected systems. The agreement documents the technical requirements of the connected system.
+** Non Disclosure Agreement
+Is a standard corporate document used to explain the boundaries of company material.
+
+Frequently used to delineate the level and type of information, and with whom it can be shared with.
+
+Need to consider privacy within these agreements, not just on policies and procedures, backups etc. But the agreements should include details about Privacy and who owns the data – Data Ownership, as well as the technical requirements for the protection of the data and what physical controls are in place. What happens to the data if you separate from the third party? Who owns it?
+* Risk Awareness
+When working with third parties you need to be risk aware. Once two or more systems have been connected and the technical aspects are completed, consideration should be made to the security of the connection.
+
+This can include:
+
+ - Identifying the risk
+ - Assessing the risk and;
+ - Taking appropriate steps to reduce the risk to an acceptable level.
+** Risk
+*** Risk Awareness with Third Parties
+
+Security and privacy concerns should be written into interoperability agreements.
+
+Some factors to consider regarding Security Policies are:
+
+ - Balancing available resources
+ - The business requirements of the relationship
+
+This requires an understanding of the risks and how these risks are handled throughout the relationship with other parties.
+
+This involves both organisations:
+
+ - Communicating with each other to share information regarding risk.
+ - Putting mechanisms in place to facilitate sharing between the organisations.
+ - The level and frequency of information sharing is contingent on the security needs of the organisations involved and how extensive the partnership between the organisations is.
+*** Following Security Policy and Procedures
+
+Integrating systems and data with third parties or partners it can combine complexity and inefficiency, leading to increased risk for the organisation.
+
+Risks in partnerships are usually only analysed during the on-boarding process and once the relationship is established organisations generally forget about associated risks.
+
+Security policies and procedures need to be followed to identify risks and security controls that will be implemented to protect the CIA of any connected system and the data that will pass between them or accessed.
+
+Controls should be appropriate for the environment and contain centralised platform to monitor the range of assessments, tasks and responsibilities of all parties.
+
+Policies should define ownership and accountability.
+
+It is critical that both organisations maintain clear lines of communication and communicate regularly.
+
+Regular risk assessments and audits should occur and a record of compliance should be established so that there is documentation pertaining to the due diligence performed.
+*** Enforce Policy and Procedures
+
+When designing the security infrastructure, you should take care to address concerns of data loss or theft. Precautions, prevention and deterrents must be implemented that reduce the risk of data theft from external entities as well as internal workers. Additionally data loss due to accident, oversight, malicious code or intentional attack can be prevented with a proper backup and restoration solution. Data loss or data leakage that leads to disclosure of information to unauthorised third parties should be prevented using a data loss prevention (DLP) solution.
+*** Enforcing Licensing and Technical Controls
+
+An organisation may have policies and procedures covering licensing which may have disciplinary or financial implications for a company but also act as a technical control for security purposes. Illegitimate software may expose an organisation to additional threats.
+*** Compliance and Performance Standards
+
+Monitoring risk should be a standard part of scheduled reviews, should periodically verify that the third party is abiding by the terms of the contractual agreement and that the identified risk is appropriately controlled.
+
+Organisations should conduct regular assessments of business relationships to verify that it conforms to laws, regulations and established policies and procedures.
+
+Steps an organisation can take to ensure compliance and performance standards are met include:
+
+ - Approve and review third-party arrangements and performance annually
+
+ - Maintain an updated list of third party relationships and review the list periodically
+
+ - Take appropriate action with any relationship that presents evaluated risk
+
+ - Review all contracts for compliance.

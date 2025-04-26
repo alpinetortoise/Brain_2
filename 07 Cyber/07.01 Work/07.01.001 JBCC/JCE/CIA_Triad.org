@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       8b69ff1c-44f6-45c0-b480-61426bbda056
+:END:
+#+title: CIA Triad
+* Confidentiality
+* Integrity
+* Availability

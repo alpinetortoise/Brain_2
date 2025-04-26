@@ -1,0 +1,46 @@
+:PROPERTIES:
+:ID:       6171f833-689f-4cc0-95e6-f033ff287132
+:END:
+#+TITLE: The Cyber Kill Chain
+* Unified Kill Chain
+** Initial Foothold
+*** Reconnaissance
+
+*** Weaponization
+*** Delivery
+*** Social Engineering
+*** Exploitation
+*** Persistence
+*** Defense Evasion
+*** Command & Control
+*** Pivoting
+** Network Propagation
+*** Discovery
+*** Privilege Escalation
+*** Execution
+*** Credential Access
+*** Lateral Movement
+*** Access
+** Action on Objectives
+*** Collection
+*** Exfiltration
+*** Target Manipulation
+*** Objectives
+* MITRE ATT&CK
+:PROPERTIES:
+:ID:       ebe5f893-a58d-4828-a3df-bc13940a03f3
+:END:
+** Reconnaissance
+** Resource Development
+** Initial Access
+** Execution
+** Persistence
+** Privilege Escalation
+** Defense Evasion
+** Credential Access
+** Discovery
+** Lateral Movement
+** Collection
+** Command and Control
+** Exfiltration
+** Impact

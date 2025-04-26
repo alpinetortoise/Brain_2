@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       ec4e6233-8c32-4371-b2b4-9bf918eef737
+:END:
+#+title: PKMS
+
+- My Personal Knowledge Management System will be formed off of Zettelkasten, my mind leans that way at the moment and it seems likely that it will most helpfully use it.
+
+- The basic unit of the PKMS is a [[id:7fcd2eeb-a490-4435-83bc-e033d684bde7][Zettel]]
+
+- Because one of the first goals of my PKMS is to index my Journals there are a few indexation points that I want to touch on
+  - The JX prefix will deliminate the journal number in which the information originated.
+    - This can be followed by a Page No.
+    - Where I do not know what volume no. I will use X.
+    - Following therefore, BX and WX will stand for [[BuJo]] and Work Journal notes respectively
+  - The Z prefix will indicate that I'm referring into my Zettelkasten system notes
+    - System/Archive notes will be duplicated and maintained in both paper and digital
+  - I will follow [[id:352be65f-a033-4152-a93a-60e94cb2b4e9][SBL shortnames]] for referencing Scripture and other ancient documents
+
+* Organisation
+The file structure of the digital kasten is important, there are a few main categories that are required and I will utilise my File Hierarchy to achieve this.
+
+- 000 Archive
+  - 0000 Reference Notes
+- 001 Getting Things Done
+  - 001a Daily
+  - 001b... Projects
+- 002 Literature Notes
+  - 002a Journal Index and Transcribed Notes
+  - 002b Bible Notes
+- 003 Permanent Notes
+  - 003.0 Zettelkasten
+  - 003a Theology
+  - 003b Computer Documentation
+    - 003b1 Hack the Box
+  - 003c Electronic Warfare
+
+* References
+J20.232

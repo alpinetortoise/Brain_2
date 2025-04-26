@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       c567a4d9-cb98-4d8b-840f-89608c7d0726
+:END:
+#+title: Fleeting Thoughts
+        #+created: [2024-10-27 Sun 18:12]
+        #+last_modified: [2024-10-27 Sun 18:12]
+[[id:6dc0e001-dcbe-457f-aba6-47aee1cf5904][Notes]]

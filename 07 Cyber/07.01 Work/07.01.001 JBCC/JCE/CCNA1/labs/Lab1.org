@@ -1,0 +1,24 @@
+:PROPERTIES:
+:ID:       86d4385f-17dc-4894-ac15-790d413c0396
+:END:
+#+Title: CCNA1: Lab 1
+* Step 1
+ 1. /List the intermediary device categories:/
+    - Layer 3
+      - Router
+      - L3 Switch
+    - Layer 2
+      - Switch
+      - Bridge
+    - Layer 1
+      - Hub
+      - Access Point
+      - Repeater
+ 2. /Without entering into the internet cloud or intranet cloud, how many icons in the topology represent endpoint devices (only one connection leading to them)?/
+    17
+ 3. /Without counting the two clouds, how many icons in the topology represent intermediary devices (multiple connections leading to them)?/
+    13
+ 4. /How many end devices are not desktop computers?/
+    10
+ 5. /How many different types of media connections are used in this network topology?/
+    4

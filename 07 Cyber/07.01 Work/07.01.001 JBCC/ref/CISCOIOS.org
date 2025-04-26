@@ -1,0 +1,20 @@
+#+Title: CISCO IOS Command Reference Page
+* Global
+- *exit*: quit the current shell
+* User Exec
+#+BEGIN_SRC
+Switch>
+#+END_SRC
+
+ - *enable*: elevates to Privileged User Exec
+* Privileged User Exec
+#+BEGIN_SRC
+Switch#
+#+END_SRC
+ - *configure terminal*: Enters Global Config Mode
+* Global Mode
+#+BEGIN_SRC
+Switch(Config)#
+#+END_SRC
+
+* Interface Mode

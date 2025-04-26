@@ -1,0 +1,257 @@
+:PROPERTIES:
+:ID:       18e8d685-d128-4f2b-b473-daa3ab96e3c2
+:END:
+#+title: Green Phase
+* 3.1
+** Identify Relevant Acts, policies, legislation and principles
+:PROPERTIES:
+:ID: -    b62fb24a-5497-44f4-ad63-c38023ebf1fc
+:END:
+*** Telecommunications (Interception and Access) Act 1979
+:PROPERTIES:
+:ID: -    1af5faa7-4bc9-4dde-9423-2ecc3ddd3c3b
+:END:
+ - Function - To obtain intelligence relating to security.
+ - Role - The TIA Act makes it an offence for a person to intercept or access private telecommunications without the knowledge of those involved in that communication. The TIA Act permits access to communications content for law enforcement and national security purposes.
+ - Purpose - An act to prohibit the interception of, and other access to, telecommunications except where authorised in special circumstances or for the purpose of tracing the location of callers in emergencies and for related purposes.
+
+*** Criminal Code Act 1995
+:PROPERTIES:
+:ID: -    13b26ef5-510d-48a0-ab20-b7ad0fe0056d
+:END:
+ - Function - The Criminal Code is expected to provide an integrated and coherent statement of the major offences against Commonwealth law.
+ - Role - Allow prosecution of individuals/Corporations who break the Act.
+ - Purpose - Codify the general principles of criminal responsibility under laws of the Commonwealth.
+ - Two Parts
+ - Part 2 Reference Cybercrime Act 2001.
+*** Australian Privacy Principles
+:PROPERTIES:
+:ID: -    4d8fba6e-5666-4535-8660-acfb57bf24a8
+:END:
+ - Function - provides organisation or agency flexibility to tailor their personal information handling practices to their business models and the diverse needs of individuals.
+ - Role - to protect the privacy of individuals.
+ - Purpose - to promote the protection of the privacy of individuals.
+*** [[id:96368ecf-43d3-4181-805b-adc93a9ddc9b][Information Security Manual]]
+ - Function - is to provide practical guidance on how organisactions can protect their systems and information from cyber threats.
+ - Role - is to provide strategic guidance on how organisations can protect their systems and infromation from cyber threats.
+ - Purpose - the purpose of the ISM is to outline a cyber security framework that organisations can apply, using their risk management framework, to protect their systems and information from cyber threats.
+*** Intelligence Services Act
+:PROPERTIES:
+:ID: -    a461fc27-287c-42fa-9d39-d1488a4566e3
+:END:
+ - Function - provides the legislative framework for the work of ASIS, AGO and ASD. The legislation outlines the functions of the agencies, including what the agencies may, and may not, do.
+
+Under the ISA, the Parliamentary Joint Committee on Intelligence and Security (PJCIS) has responsibility for the review of ASIS's expenditure and administration. The ISA also specifies that the Foreign Minister protect the privacy of Australian citizens. These Rules were made in accordance with the ISA and regulate ASIS's handling of intelligence information concerning Australian persons.
+*** [[id:fc4b6cb0-7c3c-47ef-a716-b857bbfd1921][NIST Special Publication 800-30 Guide for Conducting Risk Assessments]]
+
+ - Purpose – provides guidance for conducting risk assessments of federal information systems and organisations, amplifying the guidance in Special Publication 800-39.
+ - Role - provides guidance to organisations on identifying specific risk factors to monitor on an ongoing basis.
+ - Function - provides guidance for carrying out each of the steps in the risk assessment process.
+ - National Institute of Science and Technology (US Dept of Commerce)
+
+**** Four Components
+
+ - How organisations frame risk or establish risk context
+ - How organisations assess risk
+ - How organisations respond to risk
+ - How organisations monitor risk
+
+*** Misc DRN documents on Governance
+ - http://defweb.cbr.defence.gov.au/home/documents/data/DEFPUBS/DEPTMAN/ICTMAN/ICTMAN.pdf
+ - http://drnet/CIOG/ask/ICTS/CM/Pages/default.aspx
+ - http://drnet.defence.gov.au/navy/NIWB/NEW_SITE/SiteAssets/NIWB_NC.aspx#cyber-worthiness
+ - http://drnet.defence.gov.au/Army/CSAP/Pages/Home.aspx
+ - https://objcdc1/id:BI1563297/document/versions/latest
+** [[id:6ce880c2-3a77-48c9-99d3-19f02ca67c58][Research Cyber Publications]]
+** Describe Function, Roles and Responsibilities of Australian Cyber Organisations
+:PROPERTIES:
+:ID: -    2fe0c806-d2f1-4952-b20b-aa6a97ff8d26
+:END:
+*** Australian Cyber Security Organisation and Interactions
+Cyber Security is constantly evolving and being implemented within ICT-based Units and the whole of Defence. It is important to realise, however, that there are Government Divisions and Specialised Units in all branches of Defence that provide policy, guidance and support across all matters of Cyber. This lesson will focus on the following:
+**** Australian Government-based cyber groups:
+ - [[id:701d5737-61d0-4035-993e-58064902fb22][Australian Signals Directorate (ASD)]]
+ - [[id:0017d906-595e-4af7-b596-1d548ad33584][Australian Cyber Security Centre (ACSC)]]
+**** Defence-specific cyber groups: ##DEPRECATED##
+ - Information, Communications & Technology Security Branch (ICTSB) - within resides
+ - - Defence Security Operations Centre (DSOC)
+ - - Information Warfare Division (IWD)
+ - - Joint Cyber Unit (JCU)
+**** Specialised Defence Units:
+ - RAAF - 462 SQN
+ - Army - 138 Sig SQN
+ - Navy - Fleet Cyber Unit (FCU)
+*** [[id:701d5737-61d0-4035-993e-58064902fb22][Australian Signals Directorate (ASD)]]
+*** [[id:6dbddcac-bc5c-4c00-b739-72952d23dc64][Australian Cyber Security Centre (ACSC)]]
+*** [[id:b080f19b-3237-4a72-a43f-3e82aded0401][Information Security]]
+*** ICT Security Branch
+:PROPERTIES:
+:ID: -    a32c0381-1adf-48f2-a322-631c86b4fa0a
+:END:
+ICTSB is part of the ICT Operations Division (ICTOD) within the Chief Information Officer Group (CIOG). The branch’s two core functions are:
+
+ - Supporting leadership and governance of Defence’s cyber and info security capabilities
+ - Provide cyber and ICT security advice and provide cyber & information security advice and Defence Cyber Security Operations services to CIOG and Defence Customers.
+**** Mission:
+ICTSB will ensure that information systems and ICT capabilities used to deliver Defence objectives are secure, trusted and cyber-resilient.
+
+ICTSB will provide practical ICT security advice and guidance that enables secure ICT capabilities to support ADF operations and Defence business objectives.
+
+ICTSB advises and assists with protecting and defending deployed joint communications enterprises.
+**** Key stakeholder relationships:
+ - Australian Signals Directorate (ASD)
+ - Defence Security & Vetting Services (DS&VS)
+ - Australian Cyber Security Centre (ACSC)
+ - Joint Capabilities Group (JCG)
+**** ICT Security Branch - Directorates and Key Roles
+
+ICTSB provides ICT security advice, assistance and support to Defence through carious directorates, shown below.
+[[file:~/Brain_2/30-39 Personal Development/37 JBCC/img/ictsb.png]]
+**** Directorate of ICT Security Operations (DICTSO)
+
+Conducts Computer Network Defence (CND) operations supporting Defence’s strategic, tactical networks and connected systems classified to SECRET and below. DICTSO provides continuous detection and response management, analysing and reporting suspicious and malicious computer and computer network activity. The DICTSO consists of three sub-directorates:
+
+ - Defence Security Operations Centre (DSOC) - This will be the main focus of this lesson
+ - Cyber Threat Intelligence (CTI)
+ - ITSO Training
+**** Directorate of ICT Security Management (DICTSM)
+
+As the Whole-of-Defence cyber security service provider, it provides leadership, direction, governance, and management services for the Defence cyber security capability. Strengthens the security posture of Defence ICT systems through the proactive identification, analysis and remediation or mitigation of ICT system vulnerabilities. DICTSM provides advice and guidance to inform risk-based assessments in developing, deploying and maintaining secure Defence ICT systems and capabilities.
+**** Directorate of Insider Threat and Investigative Support (DITIS)
+
+Provides proactive investigative services of ICT networks to detect and mitigate insider threats that pose a significant threat to ADF operations and Defence Business. This includes providing investigative support to address both malicious and inappropriate use of Defence ICT that threatens the security of the SIE.
+**** Directorate of Integrated Risk Management (DIRM)
+
+Responsible for the ICT system certification capability used to certify ICT systems. DIRM enables system owners and accreditation authorities to make informed risk-based decisions as to whether accreditation should be awarded to specific ICT systems through:
+
+ - Assisting in identifying, analysing and evaluating threats and vulnerabilities to specific ICT systems and information stored and processed through those specific ICT systems.
+ - Provide ICT security advice and guidance to projects to ensure that ICT systems and capabilities are secure by design.
+*** Defence Security Operation Centre (DSOC)
+:PROPERTIES:
+:ID:       d9b3fd53-f4ee-46bd-a9f6-37f195142c23
+:END:
+**** Vision
+DSOC is a world-class strategic apparatus that is a recognised centre for excellence in the conduct of cyber security operations to defeat the cyber threat posed to Defence.
+**** Mission:
+DSOC is to defeat the cyber threat posed to Defence ICT in order to maintain Defence’s mission continuity in a contested cyber environment.
+
+DSOC has three distinct lines of effort:
+
+ - Monitoring, Analysis and Incident Management
+ - Cyber Analytics
+ - Cyber Assessment
+**** Monitoring, Analysis and Incident Management
+
+The DSOC maintains a watch rotation comprising a Watch Officer, Monitoring and Analysis and Incident Management cyber security analysts. The watch provides ongoing support beyond regular business hours. It is responsible for identifying, analysing, mitigating, remediation and reporting on cyber security incidents.
+Additionally, the watch is to:
+
+ - Analyse malicious and suspicious computer and computer network activity on Defence Networks and connected systems to determine the root cause of the event and the potential (or actual) impact of the event has on Defence;
+ - Coordinate continuous detection and response management (incident response) with the Australian Cyber Security Centre (ACSC), CERT Australia and allied computer security incident centres;
+ - Maintain awareness of new vulnerabilities, detection methods and signatures, exploits, security events and threats; and provide guidance and support to the fleet, deployed units, and standalone systems.
+**** Cyber Analytics
+
+DSOC's Cyber Analytics (CAN) delivers enhanced cyber defence measures through; proactive searching to discover network anomalies, processing cyber threat reporting to identify indicators of compromise on Defence ICT systems, and forensic analysis of targeted assets.
+
+The role of Cyber Analytics is to:
+
+ - Conduct hunt activities to identify suspicious and malicious activity on Defence Networks and connected systems.
+ - Conduct forensic analysis of targeted assets. Process external cyber threat reporting to identify indicators of compromise on Defence ICT systems.
+**** Cyber Assessment
+
+DSOC Cyber Assessment (CAS) is comprised of two teams, the Vulnerability Assessment Team (VAT) and the Vulnerability Exploitation Team (VET).
+***** Vulnerability Assessment Team (VAT)
+
+VAT conducts comprehensive vulnerability assessments of systems, technologies and processes to minimise Defence's exposures to cyber threats. VAT activities typically use a combination of automated vulnerability scanners and manual verification to identify as many vulnerabilities as possible within the timeframe and scope of the activity.
+***** Vulnerability Exploitation Team (VET)
+
+ - VET provides a range of penetration testing services to Defence customers to demonstrate the risk posed by security vulnerabilities. VET activities include web applications penetration tests, infrastructure penetration tests, red team activities, threat emulation, vulnerability research, and exploit development.
+
+** Describe ADF cyber units and organisations
+*** Information Warfare Division
+Formed in July 2017, IWD leads the developments of ADF IW capabilities
+
+Head of Information Warfare (HIW) is the commander for Information Warfare, which creates a fifth domain of warfare for Defence. HIW has overarching command and control of the Information Warfare Division. HIW is also the Deputy Chief of Joint Capabilities.
+
+ADF iWar capabilities include, but are not limited to command, control, and communications; joint data networks; battlespace situational awareness; cyberspace operations; electronic warfare; space warfare; influence activities; targeting; and joint intelligence capabilities such as human intelligence, counter-intelligence, biometrics, advanced analytics, and production, exploitation and dissemination.
+
+IWD is tasked with building of new offensive and defensive Cyber capabilities, to address ADF’s critical capability need. The immediate focus is the development of the ADF’s Defensive Cyber Operations Capability; the fast-tracking of a trained cyber workforce to populate the Joint Cyber Unit (JCU) and to contribute to single-Service Cyber capabilities, and equipping this workforce with tools, including cyber ranges.
+**** Branches
+Joint Cyber Unit (JCU) - Conduct cyber warfare in support of ADF Operations and Exercises.
+
+Information Warfare Branch (IWB) - Who coordinate capabilities including cyber, information OPS, EW, space and intelligence.
+
+Joint Command, Control, Communications and Computers Capability Branch (JC4C) - Provides advice and oversee C4 integration and interoperability of Defence C4I projects.While continuing to grow JCU capabilities, IWD will expand its focus on the development of proximal/tactical cyber operations capabilities and accelerating the development of cyber as a non-kinetic option for Commanders.
+**** Directorate of Joint Cyber (JCD)
+***** Mission
+
+To coordinate the transformative step-change required of ADF cyberwarfare capability around a holistic concept that manages risk, FIC and governance and is integral to ADF success.
+***** Key Responsibility
+
+JCD is responsible for the capability development and coordination of joint cyber warfare capabilities across the ADF and broader Defence.
+**** Joint Cyber Unit
+
+JCU plans and conducts both offensive and defensive cyberspace operations in support of CJOPS and support the normalisation of cyberspace operations in the ADF.
+
+The Joint Cyber Unit's mission is to conduct cyber warfare in support of ADF operations and exercises. Much of the information surrounding what they do is restricted to high side.
+
+Jobs for Army, Navy and RAAF at CPL/LS and above. May expand to junior ranks.
+
+OC IWD:  OC IWD is responsible for the provision of specialist OPSEC advice and support to OPSEC evaluation through 462SQN, specialist intelligence advice and support that exceeds the capacity of locally available intelligence resources
+
+While continuing to grow JCU capabilities, IWD will expand its focus on the development of proximal, or tactical, Cyber operations capabilities, and accelerating the development of Cyber as a nonkinetic option for Commanders.
+*** ADF Cyber Units
+**** [[id:fc6a5151-e376-4728-a3e4-cfd263698245][RAAF - 462 SQN]]
+**** [[id:3f88dea3-a995-4533-bb40-b937492a2c00][Army - 138 Sig SQN]]
+**** [[id:6fc73595-d9c4-400a-9333-1fb74a0fe13b][Navy - Fleet Cyber Unit]]
+** Identify Organisational and Operational Security
+:PROPERTIES:
+:ID:       f4e35cf2-0b44-454d-a4bf-41a713038267
+:END:
+*** [[id:fd7dced4-8981-425f-9bef-6cceaa2f4f9f][Physical Security]]
+*** [[id:886acc72-cf28-4af0-a0e8-4b02575186d1][Risk Awareness and the Importance of Policies]]
+*** [[id:5bfd8e77-044d-4011-bcba-3db5b7d7282b][Policies, Procedures, and Standards]]
+**** [[id:d0e51239-f364-4cf2-a488-06adc3158a7c][Data Policies]]
+**** [[id:4cea317a-4575-4ebd-9189-a40595b87746][Password and Account Policies]]
+*** [[id:1d4b7be3-32b9-4a56-9423-038fbdfb8bd7][Interoperability Agreements]]
+*** [[id:63ad41c8-7896-42fc-9ca7-91689108036b][Biometrics]]
+** [[id:-    83581516-7ba1-4c8f-ba33-e6de0f6dbf73][Review Operational and Organisational Concepts]]
+** [[id:a4248771-ba52-4658-9d10-473d6fb2e01e][Describe the ASD mitigation strategies]]
+** Describe ADF Systems Accreditation Processes
+*** Incorrect in FA1
+ - In accordance with the Criminal Code Act, A member is not Liable for certain acts, if in proper function of the agency inside/outside of Australia? OCO Task - ASIS or DSD (at the time of the Act).
+   - True
+ - Identify the Defence specific cyber groups:
+   - Information, Communications & Technology Security Branch
+   - Information Warfare Division
+   - Joint Cyber Unit
+ - The Strategies to Mitigate Cyber Security Incidents guide and website is provided via the cyber.com.au website to help foreign security professionals in all organisations stop cyber security incidents caused by various cyber threats
+   - False
+* Friday
+** Powershell Host Framework
+- remote access
+- native tools in Win
+- SIEM integration (Splunk)
+- Backwards compatible - Powershell v2
+*** Requirements
+ - HostFramework
+ - PSRemoting/WinRM
+ - Domain joined
+*** Use Cases
+ - Baseline
+ - Enumeration
+ - Identify and retrieve artefacts
+ - Maintain key terrain
+ - implement mitigations
+*** Benefits
+ - LoL
+ - Minimal setup
+ - relatively sys owner friendly
+ - Operator friendly
+*** Technologies
+ - PS
+ - Python
+ - Splunk
+ https://docs.splunk.com/Documentation/Splunk/9.3.2/SearchReference/WhatsInThisManual
+* [[id:599b208a-4dcf-460f-a2ca-26565fff99fe][3.2 Conduct basic Cyber Security Tasks]]
+* [[id:cde5b930-ac60-42d2-91f7-6e727ca1f6eb][Describe ADF Systems Accreditation Processes]]
+*

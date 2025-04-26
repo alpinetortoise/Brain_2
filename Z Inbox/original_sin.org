@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       4c0ebe51-3842-44bf-bbb2-6edc29520f77
+:END:
+#+title: Original Sin
+        #+created: [2024-11-21 Thu 21:17]
+        #+last_modified: [2024-11-21 Thu 21:17]
+

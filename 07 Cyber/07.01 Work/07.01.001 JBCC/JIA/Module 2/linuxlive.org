@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       d14ff0e8-78e2-44ef-b356-2e6a245b7cb1
+:END:
+#+Title: Live Linux Baselining
+[[id:b62a9c94-d626-4a5a-87e7-7d9150327d07][DFIR toolkit]]
+
+The purpose of this script is to provide some live baselining for Linux distros.
+
+#+begin_src bash :tangle nixlive_dfir.sh
+  echo "===================="
+  echo "Hostname"
+  echo "===================="
+  uname -r
+
+  echo "\n===================="
+  echo "Timezone information"
+  echo "===================="
+  date +"%Z %z"
+  cat /etc/timezone
+
+  echo "\n===================="
+  echo "Network Configuration"
+  echo "===================="
+  ifconfig
+  netstat -r
+
+  echo "\n===================="
+  echo "DNS and DHCP Settings"
+  echo "===================="
+
+#+end_src

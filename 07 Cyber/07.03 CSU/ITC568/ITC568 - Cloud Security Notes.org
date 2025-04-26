@@ -1,0 +1,97 @@
+:PROPERTIES:
+:ID:       3a9e8c41-5b9f-4ce3-9645-c21951a7cabe
+:END:
+#+title: ITC568 - Cloud Security
+[[id:71b65c00-ae0d-4745-8144-c376a38f3c12][ITC568-Assignment 3]]
+[[id:c22ca23f-996c-4372-88aa-025856b3f328][ITC568 - Lab assignment]]
+* Notes
+** Shared Responsibility Model
+
+[[file:SmartSelect_20230801_142647_Adobe Acrobat.jpg]]
+
+*** AWS
+[[file:SmartSelect_20230801_142617_Adobe Acrobat.jpg]]
+
+*** Azure
+[[file:SmartSelect_20230801_142519_Obsidian.jpg]]
+
+*** Google Cloud Platform
+[[file:SmartSelect_20230801_142720_Adobe Acrobat.jpg]]
+
+** Securing VMs
+1) Select Machine Type
+2) Select preinstalled Image
+3) Configure Storage
+4) Configure network settings
+5) Configure permissions to access cloud resources
+6) Deploy an application
+7) Begin using the service
+8) Carry out ongoing maintenance of the operating system
+
+*** EC2 best practices
+- Use only trusted AMI when deploying EC2 instances
+- Use a minimal number of packages inside an AMI, to lower the attack surface.
+- Use Amazon built-in agents for EC2 instances (backup, patch management, hardening, monitoring, and others)
+- Use the new generation of EC2 instances, based on the AWS Nitro System, which offloads vrtualization functions (such as network, storage, and security) to dedicated software and hardware chips. This allows the customer to get much better performance, with much better security and isolation of customer's data. ## Azure security Managing Azure security is much similar to managing any other microsoft product, follow the same workflows ## SSH key management
+- Keep your private keys in a secured location
+- Avoid storing private keys on a bastion host (machine instances directly exposed to the internet)
+- Periodically rotate SSH keys used to access compute instances.
+- Periodically review public keys inside the compute instance or SSH key metadata and remove unneeded public keys
+- Join Windows or Linux instances to an AD domain and use AD credentials to log in to the VMs ## GCP best practices
+- Limit source IP to well-known addresses
+- Human readable names and descriptions for firewall rules
+- tagging on firewall rules
+- limit the number of ports allowed in a firewall rule # Auditing
+- Audit logging
+  - Azure Monitor
+- Limit access to logs
+- SSH/remote access audits
+- Logging of Severless function calls (spikes?)
+
+** Infrastructure diffs VM, Container, Severless
+[[file:SmartSelect_20230802_105525_Adobe Acrobat.jpg]]
+
+- The differing infrastructure provides different overhead and differing security requirements
+- AWS serverless can be within or without the VPC # Chapter 3 Storage Because they're managed these tend to be located outside of the Virtual Network (AWS/GCP: VPC, Azure: VNet)
+- Amazon buckets
+  - Keep storage private
+  - AWS PrivateLink
+  - specific end to end access control
+  - encryption at rest
+  - Amazon CloudWatch
+- Azure Blob
+  - Azure AD group
+  - Shared Key Authorization (SAS)
+  - Minimal permissions
+  -
+
+** IAM
+[[https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html][IAM Documentation from AWS]] Identity and Access Management
+
+This is user management for cloud services. - Granular Permissions - Shared access - Secure access to AWS resources - multi-factor authentication - identity federation - identity information for assurance - PCI DSS Compliance - Payment Card Industry Data Security Stadards
+
+*** Eventual Consistency
+Distributed computing consistency model. /Eventual Consistency/ is a liveness guarantee for distributed systems and handling conflict resolutions, concerned with multiple copies of the instance across a number of distributed servers.
+
+* AWS Mod 2
+- AWS "strives" to make security familiar with what is being done "in-house"
+  - visibility
+  - auditability
+  - controllability
+  - agility
+  - automation
+- Security Design Principles
+  - Least Privilege
+  - Traceability
+  - Secure all Layers
+  - Automate security
+  - Protect data in transit and at rest
+  - Prepare for security events
+  - minimise attack surface
+
+* Zoom Meeting 3
+1. Some popular Cloud storage services
+
+2. Data, it's classification & threats
+
+3. Data satorage services in the cloud and its security

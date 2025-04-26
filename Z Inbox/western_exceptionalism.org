@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       29ba0f2a-eb86-4d35-9fd4-451917e6c064
+:END:
+#+title: Western Exceptionalism
+        #+created: [2024-11-24 Sun 07:54]
+        #+last_modified: [2024-11-24 Sun 07:54]
+[[id:db80d11e-ee51-49d9-8be0-10e51f52318b][Idealisation of the past]]
+[[id:3cf4c38c-090d-4156-a0d5-969660a00ca2][Hume, David]]
+[[id:70336cba-9e67-4971-be8e-12ee42d718b2][Christian Nationalism]]

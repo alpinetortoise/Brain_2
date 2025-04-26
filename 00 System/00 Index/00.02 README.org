@@ -1,0 +1,57 @@
+* Second Brain
+  :PROPERTIES:
+  :CUSTOM_ID: second-brain
+  :ID:       a51321f3-397b-4c10-b442-769a90d1882f
+  :END:
+
+Attempting to create for myself a second brain. Some thoughts on second brains to be placed here
+
+* Collection basis
+
+This is an [[id:d96e5e38-adae-4eef-9fdb-7d8b003e9c08][Analog/Digital]] hybrid system that makes use of the following subsytems:
+
+** *[J]* Journal
+** *[B]* Bullet Journal
+
+ . task
+ X Completed task
+ > Migrated task
+ < Scheduled task
+ - information
+ o event
+
+*** Threading
+*** Referencing
+** *[W]* Work Journal
+** *[Z]* Zettelkasten
+** *[R]* Org Roam
+* Referencing
+
+To keep the PKMS [[id:6420a04c-8217-416d-a63c-f6ce50eefdaf][Surfable]] referencing is required, this also helps the entries within the PKMS to be relevant in the future. Taking the above collection basis the PKMS uses the following reference methodology.
+- [<Medium><Vol#>.<Pg#>/<ID>]
+
+Where mediums do not have volume numbers this is omitted, whether a page number or ID is utilised is dependent on the medium.
+
+* Organisation
+
+The file structure of the digital kasten is important, there are a few main categories that are required and I utilise my File Hierarchy to achieve this.
+
+* Some Important Places
+ - [[id:fb001b27-083e-4e97-92e0-53d52471ee40][Inbox]]
+ - [[id:3d1d88cd-6821-4fab-8645-a41136b2f98d][Budget]]
+ - [[id:ebd028a5-4558-457b-9279-c624d807f0ca][Habits]]
+   - [[id:f2811037-0ccc-46e4-80e6-476a8811335c][Workout Log]]
+ - [[id:6dc0e001-dcbe-457f-aba6-47aee1cf5904][Notes]]
+   - [[id:0c6051d3-c4e8-4ae0-9573-96802ccbb211][Cyber Security]]
+   - [[id:300cbb31-e54d-4971-8bd5-923cd2ab5ac7][Theology]]
+   - [[id:b8c378dc-ab4b-4acc-8486-3c392fb77bd6][Journal Entries]]
+   - [[id:4c1c231d-0cac-4c51-be15-93189b703d42][Essays]]
+   - [[id:bce9ad76-d85e-41fc-bdd4-580a9ed6c059][Website]]
+   - [[id:4a1452a1-54aa-46b7-bf31-4b590c9fb62a][Recipes]]
+   - [[id:e5376a5d-d57e-486e-9059-ab3f774b70a9][Home Network]]
+
+
+* Daily Notes
+[[id:7735e81d-5d2f-4d2b-a84f-48aa4248a215][2023]]
+[[id:02bc90ba-c394-4980-8b1b-f30e28bda640][2024]]
+[[id:5b798b9a-bb60-4780-ab31-9f33b6172b88][2025]]

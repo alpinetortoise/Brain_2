@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       4e47ec8f-248b-49ff-a680-9600703a356a
+:END:
+#+title: the nut
+        #+created: [2024-11-24 Sun 09:20]
+        #+last_modified: [2024-11-24 Sun 09:20]
+
+This is a tentative response to [[id:fb37c936-58b8-4ebe-8b1a-b7f9e86381c0][Enlightenment]] ideals and the elevation of [[id:0623dc01-9888-426f-a545-7b2b2ecddcc0][rationalism]] to the chief good of man's [[id:8a840ac7-5ee6-483a-bd77-ac21be95fcb6][being]]. I consider in some ways that this is a [[id:fd71b408-0b9c-49ad-bac6-c19abdb97149][Meta-Modernist]] response to both [[id:047c3922-2074-45b3-a197-6779a659a0a4][Modernism]] and [[id:7208df2b-b7d2-4434-89ef-8b5b079df472][Post-modernism]]. We cannot get back to [[id:21584b33-fe93-402c-a1c8-e1eccdad8370][pre-modernism]] without falling into the trap of [[id:db80d11e-ee51-49d9-8be0-10e51f52318b][Idealisation of the past]], this is done also from with a [[id:5f81bf60-3a42-4af1-9218-d4ef10c0985c][Reformed theological]] outlook.
+
+ - [[id:3cf4c38c-090d-4156-a0d5-969660a00ca2][Hume, David]]
+   - [[id:29ba0f2a-eb86-4d35-9fd4-451917e6c064][Western Exceptionalism]]
+ - [[id:564c2fef-3281-4b61-90a2-3d8579ba0c2f][Kant, Immanuel]]
+ - [[id:c0d95ada-a4ab-452d-a5e9-f7ec171a9263][Kierkegaard, Soren]]
+ - [[id:9f2250ff-17ca-46b0-b584-fe33b426b329][Marx, Karl]]
+ - [[id:9cd67540-366b-4720-837b-106932405404][Hegel, GWF]]
+ - [[id:beaa6698-62af-444f-bbb6-981f31c305c8][Van Til, Cornelius]]
+ - [[id:2eb3621b-381d-4461-9cd4-eef137b6f217][Warfield, B. B.]]
+
+
+ * Implications
+   * [[id:6334f7d3-d93e-4d54-8602-3b46942793d9][Charismata]]
+     [[id:21005a26-09d0-47da-80c0-0158d2c0c020][Ruthven, 2011]], argues that [[id:2eb3621b-381d-4461-9cd4-eef137b6f217][Warfield's]] [[id:42bc9812-bf09-4b40-aa5a-29c453c7854d][waterfall argument]] is fundamentally flawed due to it's reliance upon [[id:3cf4c38c-090d-4156-a0d5-969660a00ca2][Hume's]] definition of [[id:22377a87-2138-4382-9be8-f1c6b1764e77][common sense]] which in the end is simply a form of [[id:fb37c936-58b8-4ebe-8b1a-b7f9e86381c0][Enlightenment]] and [[id:29ba0f2a-eb86-4d35-9fd4-451917e6c064][Western Exceptionalism]]
+   * [[id:5d8a8f5e-ed44-405e-ab19-db52f94d464b][Apologetics]]
+   * [[id:45edd769-f914-4def-8c02-0b2c76b153a5][New-Thought]]
+   * [[id:395da94b-c379-4888-9db9-a9d8955cfd36][Depravity of the Mind]]

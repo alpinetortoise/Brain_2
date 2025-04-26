@@ -1,0 +1,52 @@
+:PROPERTIES:
+:ID:       fd7dced4-8981-425f-9bef-6cceaa2f4f9f
+:END:
+#+title: Physical Security
+* Compliance and Performance Standards
+
+Monitoring risk should be a standard part of scheduled reviews, should periodically verify that the third party is abiding by the terms of the contractual agreement and that the identified risk is appropriately controlled.
+
+Organisations should conduct regular assessments of business relationships to verify that it conforms to laws, regulations and established policies and procedures.
+
+Steps an organisation can take to ensure compliance and performance standards are met include:
+
+ - Approve and review third-party arrangements and performance annually
+
+ - Maintain an updated list of third party relationships and review the list periodically
+
+ - Take appropriate action with any relationship that presents evaluated risk
+
+ - Review all contracts for compliance.
+* Physical Security
+
+Physical Security consists of all mechanisms used to ensure that physical access to the computer system and network is restricted to only authorised users.
+
+Additional physical security measures can be used to provide increased security for sensitive systems i.e. servers, routers, firewalls, IDS.
+
+When considering physical security, access from all sides should be considered, not just obvious points such as doors and windows. Consider other access points:
+
+ - Is there a false ceiling?
+
+ - Is there a raised floor?
+
+ - How are important systems situated?
+
+ - Who has access?
+
+ - Are there alarms?
+
+ - Are people allowed to be unsupervised? (No-lone-zones)
+* Physical Access Controls
+
+Physical access controls restrict access to only those who are authorised to have it. Requiring the individual to somehow authenticate that they have the right/authority to have the desired access. This can be something the individual has (DCAC), something they know ( lock combination), and something they are (Fingerprint).
+
+Some controls can be included if applicable to your environment:
+
+ - Fencing – used to increase physical security and safety. Fences can keep out unwanted entities and funnel those entering/leaving for easier management
+
+ - Lighting - can aid physical controls. An area that is not well lit can be easily compromised
+
+ - Locks – need to be easy enough to work that those who are authorised can effectively navigate them but strong enough to keep unauthorised entities out
+
+ - CCTV – Closed Circuit TV – surveillance can help lessen the success of unauthorised access attempts
+ - Guard dogs - patrol the area and act as a deterrent

@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       cefe5a65-dc45-4fd0-8cea-d1e9abf536ba
+:END:
+#+title: Over The Wire
+        #+created: [2024-10-27 Sun 14:51]
+        #+last_modified: [2024-10-27 Sun 14:51]
+
+Over The Wire is a [[id:6ac67c0d-aa6a-4632-9a2d-11dd0172dd2d][Capture the Flag]] platform that teaches tool use helpful in [[id:163ac72a-3893-4617-9c7d-77c61658c551][Ethical Hacking]] among other [[id:0c6051d3-c4e8-4ae0-9573-96802ccbb211][Cyber Security]] disciplines.
+
+
+[[id:253cca5b-731b-4a32-8f5f-a6b47fc28c25][OTW: Bandit]]
+[[id:e24bac1a-cebd-4731-9d83-06951ff0d572][Over The Wire: Leviathan]]
+[[id:c2ca18bb-8c99-4495-9baa-8b4346989a73][Over The Wire: Natas]]

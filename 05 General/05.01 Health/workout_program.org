@@ -1,0 +1,45 @@
+:PROPERTIES:
+:ID:       6c025d0d-7525-4763-8d25-c6b4d47c425a
+:END:
+#+title: Workout Program
+[[id:f2811037-0ccc-46e4-80e6-476a8811335c][Workout Log]]
+* Template
+| Day       | Mon | Tue | Wed | Thu | Fri      | Sat | Sun |
+|-----------+-----+-----+-----+-----+----------+-----+-----|
+| Strength  |     |     |     |     |          |     |     |
+| Condition |     |     |     |     |          |     |     |
+| Unit      | Run |     | Run | Run | Movement |     |     |
+
+* Block 1: Base Building
+** Conditioning
+| Day | Wk 1    | Wk 2    | Wk 3    | Wk 4   | Wk 5    | Wk 6    | Wk 7    | Wk 8    |
+|-----+---------+---------+---------+--------+---------+---------+---------+---------|
+|   1 | SE3x20  | SE3x30  | SE3x40  | SE1x50 | SE3x50  | M S     | M S     | M S     |
+|   2 | Ex30    | Ex40    | Ex50    | Ex60   | Ex45-60 | HIC     | HIC     | HIC     |
+|   3 | Ex30    | Ex40    | Ex50    | Ex60   | Ex45-60 | Rec     | Rec     | Rec     |
+|   4 | SE2x20  | SE2x30  | SE2x40  | SE1x50 | SE2x50  | M S     | M S     | M S     |
+|   5 | Rec     | Rec     | Rec     | Rec    | Rec     | HIC     | HIC     | HIC     |
+|   6 | Ex35-2h | Ex45-2h | Ex55-2h | Ex1-2h | Ex45-2h | Ex30-60 | Ex30-60 | Ex30-60 |
+** Strength
+Bench Press/Squat/Overhead Press/Deadlift
+
+* August 2024
+** WC 05AUG24
+| Day       | Mon | Tue | Wed | Thu | Fri | Sat | Sun |
+|-----------+-----+-----+-----+-----+-----+-----+-----|
+| Strength  | TBA | TBB |     | TBA | TBB | BDY |     |
+| Condition |     | CBR |     |     |     | WGT |     |
+| Unit      | Run |     | BFA | Run | Str |     |     |
+*** CBR
+ - [ ] 2.4km run
+ - [ ] 10 x Kettle Bell Swings
+ - [ ] 10 x Goblet Squats
+ - [ ] 10 x pushups
+*** Sat Body Weight
+ - 20 to 50
+   - Push-Ups
+   - Squats
+   - Inverted Rows
+   - Bicycle Crunches
+   - Dips
+   - Back Extensions

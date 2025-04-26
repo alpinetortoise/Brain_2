@@ -1,0 +1,6 @@
+* Part 2
+1. The module for switching is HWIC-4ESW
+2. 4
+3. PT-Switch-NM-1FGE
+* Part 4
+5.

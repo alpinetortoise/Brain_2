@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       ff376956-385e-49f2-baf7-297517bcb3f6
+:END:
+#+Title: Workout Log
+[[id:6c025d0d-7525-4763-8d25-c6b4d47c425a][Workout Program]]
+[[id:f2811037-0ccc-46e4-80e6-476a8811335c][Workout Log (archive)]]
+
+* 1 Rep max
+** Upper Body
+ - Bench Press: 56.3kg
+ - Lat Pull Down: 67.5kg
+ - Dumbbell Shoulder Press: 16.9kg
+ - Single Arm Row: 19.7kg
+ - Chest Fly: 76.5kg
+ - Pullups: -47.6kg
+ - Seated Row: 78.8kg
+ - Rear Delt Fly: 67.5kg
+ - Tricep pushdowns: 33.8kg
+* Shin Splints Recovery
+** Upper Body
+*** Session 1
+| Exercise                | Session 1 |
+|-------------------------+-----------|
+| Bench                   | 30/12/4   |
+| Lat Pulldown            | 35/12/3   |
+| Dumbbell Shoulder       | 10/12/3   |
+| Single arm dumbbell row | 10/12/3   |
+| Chest Fly               | 40/12/3   |
+| shoulder fly            | 5/7/3     |
+| sit ups                 | -         |
+| prone hold              | -         |

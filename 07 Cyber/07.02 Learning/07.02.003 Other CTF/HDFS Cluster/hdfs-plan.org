@@ -1,0 +1,78 @@
+:PROPERTIES:
+:ID:       9e96cd21-7d52-4868-a23f-569c31a19dee
+:END:
+#+Title: Compromised Hadoop (HDFS) Cluster - Plan
+#+Author: SIG Joshua Chubb
+#+Date:25 APR 25
+* Hosts available for investigation:
+| master.champforensics.com (master) | Ubuntu 16.04 | 192.168.2.100/24 |
+| slave1.champforensics.com (slave1) | Ubuntu 16.04 | 192.168.2.101/24 |
+| slave2.champforensics.com (slave2) | Ubuntu 16.04 | 192.168.2.102/24 |
+
+* IOCs provided by victim:
+- Suspicious activity noticed on the network during last 10 days
+- Access to Master and Slaves from unusual host
+- New software found on the system
+* Initial focus for investigation:
+Following a baselining of the Linux systems, I will identify the new
+software, and the suspicious network activity.
+
+* Investigation Considerations:
+- This Investigation will be done in line with the Defence Security
+  Principles Framework, and Information Security Manual.
+- MITRE ATT&CK v17 will be utilised for TTP mapping.
+* Other capabilities and organisations:
+- None required
+
+* Identified sources of Evidence:
+| Evidence        | Size             | Volatility   | Md5sum                           |
+|-----------------+------------------+--------------+----------------------------------|
+| HDFS-Master.E01 | 3324279151 bytes | Non-volatile | a751e67a7577a8eda0eb36f2e7e030db |
+| HDFS-Slave1.E01 | 3160115976 bytes | Non-volatile | 347bb1253834d4c7ac3eae48b01b7b25 |
+| HDFS-Slave2.E01 | 3159445015 bytes | Non-volatile | a0da85381f05c8a67020ddf8267cc560 |
+
+* Network Diagram
+
+* Initial Access
+
+- *07 OCT 2019 -- 00:42-01:23 UTC +3*: The attacker (~192.168.2[.]129~)
+  attempted an SSH brute force attack
+  [[[https://attack.mitre.org/versions/v17/techniques/T1190/][T1190]]]
+
+- *07 OCT 2019 -- 01:23 UTC +3*: The attacker logs in with brute forced
+  credentials ~hadoop:<hash>@master~
+  [[[https://attack.mitre.org/versions/v17/techniques/T1078/][T1078]]]
+
+* Privilege Escalation
+
+- *07 OCT 2019 -- 01:24 UTC +3:* ~hadoop@master~ compiles ~~/45010~ [[[https://attack.mitre.org/versions/v17/techniques/T1068/][T1068]], [[https://attack.mitre.org/versions/v17/techniques/T1014/][T1014]], [[https://www.exploit-db.com/exploits/45010][CVE 2017-16995]]]
+
+- *07 OCT 2019 -- 01:41 UTC +3:* ~hadoop@master~ copies ~~/45010~ to ~slave1.champforensics.com~ and ~slave2.champforensics.com~ via ssh [[[https://attack.mitre.org/versions/v17/techniques/T1570/][T1570]]]
+
+* Lateral Movement
+- *07 OCT 2019 -- 01:36 UTC +3:* ~hadoop@master~ uses pre-existing private
+  keys to login to ~slave2.champforensics.com~ via ssh [[[https://attack.mitre.org/versions/v17/techniques/T1021/004/][T1021.004]]]
+- *07 OCT 2019 -- 01:41 UTC +3:* ~hadoop@master~ copies ~~/45010~ to ~slave1.champforensics.com~ and ~slave2.champforensics.com~ via ssh [[[https://attack.mitre.org/versions/v17/techniques/T1570/][T1570]]]
+
+* Persistence
+
+- *07 OCT 2019 -- 01:31 UTC +3:* ~master:/usr/local/hadoop/bin/cluster.php~ is added to be called from ~master:/etc/systemd/system/cluster.service~ [[[https://attack.mitre.org/versions/v17/techniques/T1037/][T1037]]]
+
+- *07 OCT 2019 -- 01:43 UTC +3:* ~hdfs@slave1~ is created as a sudoer [[[https://attack.mitre.org/versions/v17/techniques/T1136/001/][T1136.001]]]
+
+* Post Exploitation
+
+- *07 OCT 2019 -- 01:29 UTC +3:* The reverse shell: ~master:/usr/local/hadoop/bin/cluster.php~ is created [[[https://attack.mitre.org/versions/v17/techniques/T1059/][T1059]]]
+
+- *07 OCT 2019 -- 01:41 UTC +3:* ~hadoop@slave2~ deletes ~~/45010~ and recopies it from ~hadoop@master:~/45010~ to ~~/temp/~ [[[https://attack.mitre.org/versions/v17/techniques/T1070/004/][T1070.004]]]
+
+- *07 OCT 2019 -- 01:41 UTC +3:* ~hadoop@slave1~ deletes  ~slave1:/home/hadoop/45010~ [[[https://attack.mitre.org/versions/v17/techniques/T1070/004/][T1070.004]]]
+
+- *07 OCT 2019 -- 01:47 UTC +3:* ~hdfs@slave1~ logs in via ssh [[[https://attack.mitre.org/versions/v17/techniques/T1078/][T1078]]]
+
+* Table of Signatures
+
+| Host | Signature | Location                        | md5sum                           |
+|--------+-------------+-----------------------------------+----------------------------------|
+| master | 45010       | /home/hadoop/45010                | 4a55d3e8fccf3e000ce34e7cf3dada8a |
+|        | cluster.php | /usr/local/hadoop/bin/cluster.php | c1312bd3190eb4d0128260ecb74b7be5 |

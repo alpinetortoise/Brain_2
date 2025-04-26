@@ -1,0 +1,63 @@
+#+Title: CCNA 2: Switching, Routing, and Wireless Essentials
+
+* Basic Device Configuration
+** Switch Boot Sequence
+ 1. POST
+ 2. Bootloader
+ 3. CPU init
+ 4. Flash init
+ 5. IOS load
+
+* Switching Concepts
+
+* VLANs
+
+
+
+** Dynamic Trunking
+|                   | Dynamic Auto | Dynamic Desirable | Trunk   | Access |
+|-------------------+--------------+-------------------+---------+--------|
+| Dynamic Auto      | Access       | Trunk             | Trunk   | Access |
+| Dynamic Desirable | Trunk        | Trunk             | Trunk   | Access |
+| Trunk             | Trunk        | Trunk             | Trunk   | Access |
+| Access            | Access       | Access            | Limited | Access |
+|                   |              |                   | Conn    |        |
+|                   |              |                   |         |        |
+* Inter-VLAN Routing
+
+* STP Concepts
+
+** Operational State
+|
+* EtherChannel
+
+* DHCPv4
+Dynamic Host Configuration Protocol assigns IPv4 addresses and other network configuration information dynamically.
+1. DHCP Discover
+2. DHCP Offer
+3. DHCP Request
+4. DHCP Acknowledgement
+* SLAAC and DHCPv6
+** RA Flags
+A = Autoconfiguration flag - Stateless
+O = Other configuration flag - Stateless DHCPv6
+M = Managed configuration flag - Stateful DHCPv6
+** Config
+
+* FHRP Concepts
+
+* LAN Security Concepts
+
+* Switch Security Configuration
+
+* WLAN Concepts
+
+* WLAN Configuration
+
+* Routing Concepts
+ - Every router makes its decision alone, based on the information it has in its own routing table.
+ - The information in a routing table of one router does not necessarily match the routing table of another router.
+ - Routing information about a path does not provide return routing information
+* IP Static Routing
+
+* Troubleshoot Static and Default Routes

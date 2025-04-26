@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       55ee25ef-7028-4fbb-9a48-97dbe1446fb2
+:END:
+#+title: windows
+        #+created: [2025-04-25 Fri 18:06]
+        #+last_modified: [2025-04-25 Fri 18:06]

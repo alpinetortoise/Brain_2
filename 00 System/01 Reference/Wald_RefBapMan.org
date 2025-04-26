@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       40688aa4-84ff-4d9f-9477-197f32d30b97
+:END:
+#+title: Wald_RefBapMan
+                    #+created: [2024-07-31 Wed 16:50]
+                    #+last_modified: [2024-07-31 Wed 16:50]
+/A Reformed Baptist Manifesto/, Waldron, S., 2004, Reformed Baptist Academic Press

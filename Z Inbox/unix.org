@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       b9e79c8b-95e3-4640-aca5-5267c321925e
+:END:
+#+title: Unix
+        #+created: [2025-03-18 Tue 09:55]
+        #+last_modified: [2025-03-18 Tue 09:55]

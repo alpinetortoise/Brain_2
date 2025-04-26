@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       e09f486b-2ba2-416e-96c3-c5bb6b68dd73
+:END:
+#+title: [J20.267] Exg. on Isa 53
+        #+created: <2024-02-23 Fri 18:20>
+        #+last_modified: [2024-11-24 Sun 10:29]
+[[id:LEB/23-ISA53][Isaiah 53 (LEB)]]
+[[id:b8c378dc-ab4b-4acc-8486-3c392fb77bd6][Journal Entries]]
+[[id:8544d8b4-a3e6-4ce7-9b29-ea3b905d0591][Exegesis]]
+If we are to take in v1 זְר֥וֹעַ יְהוָ֖ה to be the [[id:47518286-c4e7-4294-a864-3faa9e710876][Messianic]] figure of v2 there is a clear [[id:acc5dd95-383f-4fa0-9102-3090259c8ee4][divinity]] of this figure. My current focus is the distinctive of dispensationalism [Z.4101/1b] So too this [[id:7030a890-9621-497b-b371-8c8fce054fac][Suffering Servant song]] is a good place to begin.
+
+ - v10 has the servant looking on his [[id:4119ed29-3a38-43e0-a1ac-cf13018ef55c][offspring]] because of his [[id:7cd19559-bdc2-4440-83d7-64c2757afc95][atoning]] work in suffering
+   A: "Will..."
+     B: "He has..."
+       C: "His soul makes offering..."
+     B: "He shall..."
+   A: "Will..."
+ - v11 Then talks of the scope of the servant's atoning suffering "many"

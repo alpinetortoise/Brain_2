@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       c2ca18bb-8c99-4495-9baa-8b4346989a73
+:END:
+#+title: Over The Wire: Natas
+        #+created: [2024-10-11 Fri 11:21]
+        #+last_modified: [2024-10-11 Fri 11:21]
+[[id:cefe5a65-dc45-4fd0-8cea-d1e9abf536ba][Over The Wire]]
+
+* Natas 1
+View the source of the page
+0nzCigAq7t2iALyvU9xcHlYN4MlkIwlq
+* Natas 2
+This should block right clicking via javascript
+TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
+* Natas 3
+There is a file at /files/users.txt which contains the pass
+3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+* Natas 4
+robots.txt points to a folder which has another users.txt
+QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+* Natas 5
+This one requires burp

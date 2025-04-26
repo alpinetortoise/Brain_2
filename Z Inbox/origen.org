@@ -1,0 +1,6 @@
+:PROPERTIES:
+:ID:       8c193ab8-83a1-4811-b024-1bd83738ecfc
+:END:
+#+title: Origen
+        #+created: [2024-11-23 Sat 21:04]
+        #+last_modified: [2024-11-23 Sat 21:04]
