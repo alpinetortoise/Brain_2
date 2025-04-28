@@ -18,4 +18,4 @@
 	url = git@git.gilead.jpc.id.au:alpinetortoise/Hobbies.git
 [submodule "05 General/05.04 Dotfiles"]
 	path = 05 General/05.04 Dotfiles
-	url = git@git.gilead.jpc.id.au:alpinetortoise/dots.git
+	url = git@github.com:alpinetortoise/dots.git
